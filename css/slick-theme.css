@@ -4,7 +4,13 @@
 	background: #fff url(../images/ajax-loader.gif) center center no-repeat
 }
 
-
+@font-face {
+	font-family: slick;
+	font-weight: 400;
+	font-style: normal;
+	src: url(../fonts/slick.eot);
+	src: url(../fonts/slick.eot?#iefix) format('embedded-opentype'), url(../fonts/slick.woff) format('woff'), url(../fonts/slick.ttf) format('truetype'), url(../fonts/slick.svg#slick) format('svg')
+}
 
 .slick-prev,
 .slick-next {
