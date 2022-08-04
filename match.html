@@ -100,166 +100,70 @@
         </nav>
     </header>
 
-    <div class="container-fluid page p-2 py-sm-5 py-3 account mb-3">
-        <div class="w-100 account-level d-flex p-sm-3 p-2 justify-content-between align-items-center">
-            <div class="account-level__info d-flex align-items-center">
-                <img class="account-level__icon mx-md-3 mx-0" src="./images/user.png" alt="">
-                <div class="account-level__user">
-                    <div>Hi, AAP222</div>
-                    <div>微商等级：1</div>
-                </div>
-            </div>
-            <ul class="account-level__balance mb-0 list-unstyled">
-                <li class="" data-title="余额：">$55.50</li>
-            </ul>
-        </div>
-        <div class="row m-0 position-relative flex-md-row flex-column-reverse align-items-stretch">
-            <div class="col-md-4 p-0 text-center p-3 ps-0">
-                <a href="https://max688888.com/mobile/member" class="account-manage d-flex flex-column justify-content-center align-items-center">
-                    <img class="p-3" src="./images/users.png" alt="">
-                    <div>会员管理</div>
-                </a>
-            </div>
-            <div class="col-md-8 p-0 position-relative">
-                <div class="row m-0 account-privacy p-2 py-4 mt-3">
+    <div class="container-fluid page p-2 py-sm-5 py-3">
+        <div class="dropdown filter ms-auto">
+            <select id="range" class="btn dropdown-toggle d-flex justify-content-between align-items-center w-100" style="background: #374874;color: #d8e1f2;" autocomplete="off">
+                <option value="last0">2022-08-03 ~ 2022-08-04</option>
+                <option value="last1">2022-08-02 ~ 2022-08-03</option>
+                <option value="last2">2022-08-01 ~ 2022-08-02</option>
 
-                    <div class="col-md-4 col-4 p-0">
-                        <a href="" class="d-block account-passwod" data-bs-toggle="modal" data-bs-target="#editPasswordModal">
-                            <img src="./images/padlock.png" alt="">
-                            <div>登入密码</div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-4 p-0">
-                        <a href="" class="d-block account-passwod" data-bs-toggle="modal" data-bs-target="#editWithdrawalPasswordModal">
-                            <img src="./images/padlock.png" alt="">
-                            <div>提领密码</div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-4 p-0">
-                        <a href="https://max688888.com/mobile/recharge" class="d-block account-transfer">
-                            <img src="./images/withdrawal.png" alt="">
-                            <div>存提</div>
-                        </a>
-                    </div>
+            </select>
+        </div>
+        <div class="my-4">
+            <div class="row table-lists table-th m-0 p-0 d-sm-flex d-none py-2 text-center">
+                <div class="row m-0 col-sm-5 col-12 p-0 flex-sm-row flex-column-reverse">
+                    <div class="col-sm-8 col-12 p-1">开赛时间</div>
+                    <div class="col-sm-4 col-12 p-1">联赛</div>
                 </div>
-                <div class="row m-0 position-relative text-center account-historys">
-                    <div class="col-md-3 p-0 d-md-block d-none p-2 py-3">
-                        <a href="https://max688888.com/trade" class="d-block account-transfer-history py-3">
-                            <img src="./images/icon-transfer.png" alt="">
-                            <div>存提纪录</div>
-                        </a>
+                <div class="col-sm-2 col-6 p-1">主队</div>
+                <div class="col-sm-2 col-6 p-1">客队</div>
+                <div class="col-sm-1 col-4 p-1">全场波胆</div>
+                <div class="col-sm-1 col-4 p-1">上半场波胆</div>
+                <div class="col-sm-1 col-4 p-1">总进球</div>
+            </div>
+            <div id="table-lists">
+                <div class="row table-lists table-td m-0 mt-sm-0 mt-3 p-0 py-3 text-center">
+                    <div class="row m-0 col-sm-5 col-12 p-0 flex-sm-row flex-column-reverse">
+                        <div class="col-sm-8 col-12 p-sm-0 table-list time">2022-08-02 22:00:00</div>
+                        <div class="col-sm-4 col-12 p-sm-0 table-list match">乌兹超</div>
                     </div>
-                    <div class="col-md-3 p-0 d-md-block d-none p-2 py-3 ps-0">
-                        <a href="https://max688888.com/investment" class="d-block account-trade-history py-3">
-                            <img src="./images/icon-history.png" alt="">
-                            <div>投资纪录</div>
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-12 p-0 p-2 py-3 pe-md-2 pe-0">
-                        <a href="https://max688888.com/mobile/recommend" class="d-block account-recommend-history py-3">
-                            <img src="./images/icon-good.png" alt="">
-                            <div>微商分润</div>
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-12 p-0 p-2 py-md-3 py-0 pe-0">
-                        <a class="d-block account-recommend py-3" data-bs-toggle="modal" data-bs-target="#qrCodeModal">
-                            <img src="./images/icon-qrcode.png" alt="">
-                            <div>推荐码</div>
-                        </a>
-                    </div>
+                    <div class="col-sm-2 col-6 p-0 ps-2 mt-sm-0 mt-3 table-list team" data-title="主队">库鲁维奇科坎</div>
+                    <div class="col-sm-2 col-6 p-0 pe-2 mt-sm-0 mt-3 table-list team" data-title="客队">费尔干纳夫兹</div>
+                    <div class="col-sm-1 col-4 p-0 ps-2 mt-sm-0 mt-2 table-list ball" data-title="全场波胆">3-3</div>
+                    <div class="col-sm-1 col-4 p-0 mt-sm-0 mt-2 table-list ball" data-title="上半场波胆">0-1</div>
+                    <div class="col-sm-1 col-4 p-0 pe-2 mt-sm-0 mt-2 table-list ball" data-title="总进球">4</div>
                 </div>
+
+                <div class="row table-lists table-td m-0 mt-sm-0 mt-3 p-0 py-3 text-center">
+                    <div class="row m-0 col-sm-5 col-12 p-0 flex-sm-row flex-column-reverse">
+                        <div class="col-sm-8 col-12 p-sm-0 table-list time">2022-08-02 22:35:00</div>
+                        <div class="col-sm-4 col-12 p-sm-0 table-list match">卡塔尔联</div>
+                    </div>
+                    <div class="col-sm-2 col-6 p-0 ps-2 mt-sm-0 mt-3 table-list team" data-title="主队">阿拉比SC</div>
+                    <div class="col-sm-2 col-6 p-0 pe-2 mt-sm-0 mt-3 table-list team" data-title="客队">卡塔尔SC</div>
+                    <div class="col-sm-1 col-4 p-0 ps-2 mt-sm-0 mt-2 table-list ball" data-title="全场波胆">2-0</div>
+                    <div class="col-sm-1 col-4 p-0 mt-sm-0 mt-2 table-list ball" data-title="上半场波胆">0-0</div>
+                    <div class="col-sm-1 col-4 p-0 pe-2 mt-sm-0 mt-2 table-list ball" data-title="总进球">2</div>
+                </div>
+
+                <div class="row table-lists table-td m-0 mt-sm-0 mt-3 p-0 py-3 text-center">
+                    <div class="row m-0 col-sm-5 col-12 p-0 flex-sm-row flex-column-reverse">
+                        <div class="col-sm-8 col-12 p-sm-0 table-list time">2022-08-02 23:00:00</div>
+                        <div class="col-sm-4 col-12 p-sm-0 table-list match">乌兹超</div>
+                    </div>
+                    <div class="col-sm-2 col-6 p-0 ps-2 mt-sm-0 mt-3 table-list team" data-title="主队">纳萨夫</div>
+                    <div class="col-sm-2 col-6 p-0 pe-2 mt-sm-0 mt-3 table-list team" data-title="客队">曼干纳弗巴霍</div>
+                    <div class="col-sm-1 col-4 p-0 ps-2 mt-sm-0 mt-2 table-list ball" data-title="全场波胆">0-1</div>
+                    <div class="col-sm-1 col-4 p-0 mt-sm-0 mt-2 table-list ball" data-title="上半场波胆">0-1</div>
+                    <div class="col-sm-1 col-4 p-0 pe-2 mt-sm-0 mt-2 table-list ball" data-title="总进球">1</div>
+                </div>
+
             </div>
         </div>
     </div>
 
-<!--    推广链结-->
-    <div class="modal fade" id="qrCodeModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content light-purple-bg p-4 text-center">
-                <div id="qrcode">
-                    <img width="200px" height="200px"  src="" alt="">
-                </div>
-                <div style="text-align:left;">
-                    推广链结：https://max688888.com/?P=AAP222
-                    <button type="button" class="copy btn btn-primary btn-sm" data-clipboard-text="https://max688888.com/?P=AAP222">复制</button>
-                </div>
-                <div style="text-align:left;">
-                    推荐码：AAP222
-                    <button type="button" class="copy btn btn-primary btn-sm" data-clipboard-text="AAP222">复制</button>
-                </div>
-                <div class="d-flex justify-content-center mt-4">
-                    <div class="modal-btn mx-2" data-bs-dismiss="modal">关闭</div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-<!--    修改登入密码-->
-    <div class="modal fade" id="editPasswordModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content p-4 pb-5 text-center">
-                <form id="login-password-form" action="https://max688888.com/account/login-password" autocomplete="off">
-                    <div class="modal-close" data-bs-dismiss="modal">X</div>
-                    <h1 class="modal-content__title p-3">修改登入密码</h1>
-                    <div class="row m-0 form-group my-2 align-items-center justify-content-end">
-                        <label class="col-3 p-0 my-2 pe-1 text-end">手机号码</label>
-                        <div class="col-9 p-0 ps-1 my-2">
-                            <input type="tel" value="136XXXX4793" placeholder="" readonly="readonly" name="phone" required="" class="w-100" autocomplete="off">
-                        </div>
-                        <label class="col-3 p-0 my-2 pe-1 text-end">短信码</label>
-                        <div class="col-6 p-0 ps-1 my-2">
-                            <input type="text" name="code" required="" class="w-100" autocomplete="off">
-                        </div>
-                        <div class="col-3 p-0 ps-1 my-2">
-                            <button class="send-sms2 modal-btn mx-2">发送</button>
-                        </div>
-                        <hr>
-                        <label class="col-3 p-0 my-2 pe-1 text-end">新密码</label>
-                        <div class="col-9 p-0 my-2">
-                            <input type="password" name="password" required="" class="w-100" autocomplete="off">
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-center mt-4">
-                        <button class="modal-btn mx-2">送出</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-<!--    修改提领密码-->
-    <div class="modal fade" id="editWithdrawalPasswordModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content p-4 pb-5 text-center">
-                <form id="withdrawal-password-form" action="https://max688888.com/account/withdrawal-password" autocomplete="off">
-                    <div class="modal-close" data-bs-dismiss="modal">X</div>
-                    <h1 class="modal-content__title p-3">修改提领密码</h1>
-                    <div class="row m-0 form-group my-2 align-items-center justify-content-end">
-                        <label class="col-3 p-0 my-2 pe-1 text-end">手机号码</label>
-                        <div class="col-9 p-0 ps-1 my-2">
-                            <input type="tel" value="136XXXX4793" placeholder="" readonly="readonly" name="phone" required="" class="w-100" autocomplete="off">
-                        </div>
-                        <label class="col-3 p-0 my-2 pe-1 text-end">短信码</label>
-                        <div class="col-6 p-0 ps-1 my-2">
-                            <input type="text" name="code" required="" class="w-100" autocomplete="off">
-                        </div>
-                        <div class="col-3 p-0 ps-1 my-2">
-                            <button class="send-sms2 modal-btn mx-2">发送</button>
-                        </div>
-                        <hr>
-                        <label class="col-3 p-0 my-2 pe-1 text-end">新密码</label>
-                        <div class="col-9 p-0 my-2">
-                            <input type="password" name="password" required="" class="w-100" autocomplete="off">
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-center mt-4">
-                        <button class="modal-btn mx-2">送出</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
+    <div class="mb-5"></div>
     <!--    底部三件套-->
     <div class="side-menu-wrap">
         <div class="side-menu d-sm-block d-none">
@@ -317,7 +221,6 @@
             </div>
         </div>
     </div>
-
 
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/jquery-2.2.0.min.js" type="text/javascript"></script>
