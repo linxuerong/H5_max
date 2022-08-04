@@ -5,17 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9719a456-191b-4e38-86d5-33ef124b23c5" name="变更" comment="h5max">
-      <change afterPath="$PROJECT_DIR$/announcement.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/immediate-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/immediate-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/immediate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/match.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/promotion.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/announcement.html" beforeDir="false" afterPath="$PROJECT_DIR$/announcement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/immediate.html" beforeDir="false" afterPath="$PROJECT_DIR$/immediate.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market.html" beforeDir="false" afterPath="$PROJECT_DIR$/market.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/match.html" beforeDir="false" afterPath="$PROJECT_DIR$/match.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/app.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/promotion.html" beforeDir="false" afterPath="$PROJECT_DIR$/promotion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trade.html" beforeDir="false" afterPath="$PROJECT_DIR$/trade.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +84,7 @@
       <updated>1659578881108</updated>
       <workItem from="1659578882355" duration="450000" />
       <workItem from="1659579351831" duration="8050000" />
-      <workItem from="1659597240903" duration="7065000" />
+      <workItem from="1659597240903" duration="7492000" />
     </task>
     <task id="LOCAL-00001" summary="h5max">
       <created>1659579223422</created>
@@ -234,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659597279130</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="h5max">
+      <created>1659604535480</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1659604535480</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
