@@ -5,7 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9719a456-191b-4e38-86d5-33ef124b23c5" name="变更" comment="h5max">
+      <change afterPath="$PROJECT_DIR$/MAX.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/icon-good.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/icon-history.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/icon-qrcode.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/icon-transfer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/padlock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/users.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/withdrawal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/investment/notopen.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +28,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -26,6 +39,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/css/all.css" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/css/slick-theme.css" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/market.html" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -37,6 +51,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -54,6 +69,8 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\WebStorm\H5_max" />
+      <recent name="E:\WebStorm\H5_max\js" />
+      <recent name="E:\WebStorm\H5_max\images" />
       <recent name="E:\WebStorm\H5_max\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -69,7 +86,7 @@
       <option name="presentableId" value="Default" />
       <updated>1659578881108</updated>
       <workItem from="1659578882355" duration="450000" />
-      <workItem from="1659579351831" duration="1692000" />
+      <workItem from="1659579351831" duration="8050000" />
     </task>
     <task id="LOCAL-00001" summary="h5max">
       <created>1659579223422</created>
@@ -204,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659580576451</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="h5max">
+      <created>1659581085991</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1659581085991</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

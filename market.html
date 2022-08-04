@@ -1,0 +1,2453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAX</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/all.css">
+
+    <link rel="stylesheet" type="text/css" href="./css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/slick-theme.css"/>
+    <link href="./css/sweetalert2.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="loading">
+        <img src="images/MAX%20logo.png" alt="">
+    </div>
+    <!--头部-->
+    <header class="header-wrap">
+        <a class="navbar-brand header-logo" href="https://max688888.com/">
+            <img src="images/MAX%20logo.png" alt="">
+        </a>
+        <nav class="navbar navbar-expand-lg header py-lg-4 py-2">
+            <div class="container-fluid position-relative px-1">
+                <img class="navbar-toggler p-0" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                     aria-controls="offcanvasNavbar" src="images/menu-btn.png" alt="">
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                     aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-body justify-content-between align-items-center p-0">
+                        <div class="flex-column">
+                            <div class="header-info d-lg-block d-none px-2">
+                                2022/07/29 17:44 ( 北京标准时间 ) ｜ 线上人数 ：3636
+                            </div>
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item d-sm-none d-blck">
+                                    <a class="nav-link px-2 pb-0" href="./account.html">中心钱包</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link px-2 pb-0" href="./market.html">市场列表</a>
+                                </li>
+                                <li class="nav-item d-sm-none d-blck">
+                                    <a class="nav-link px-2 pb-0" href="./trade.html">存提纪录</a>
+                                </li>
+                                <li class="nav-item d-sm-block d-none">
+                                    <a class="nav-link px-2 pb-0" href="./investment.html">投资纪录</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link px-2 pb-0" href="./match.html">赛事结果</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link px-2 pb-0" href="./immediate.html">即时比分</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link px-2 pb-0" href="./promotion.html">优惠活动</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link px-2 pb-0" href="./announcement.html">最新消息</a>
+                                </li>
+                                <li class="nav-item dropdown d-sm-none d-blck">
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                                       role="button" aria-haspopup="true"
+                                       aria-expanded="false">线上客服</a>
+                                    <div class="dropdown-menu">
+                                        <a class="nav-link px-2 pb-0 text-black"
+                                           href="" target="_blank">线路1</a>
+                                        <a class="nav-link px-2 pb-0 text-black"
+                                           href="">线路2</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item d-sm-none d-blck">
+                                    <a class="nav-link px-2 pb-0" href="https://max688888.com/mobile/app">APP下载</a>
+                                </li>
+                                <li class="nav-item d-sm-none d-blck">
+                                    <a class="nav-link px-2 pb-0"
+                                       href="https://max688888.com/mobile/help/rule">规则条款</a>
+                                </li>
+                                <li class="nav-item d-sm-none d-blck">
+                                    <a class="nav-link px-2 pb-0" href="https://max688888.com/mobile/help">帮助中心</a>
+                                </li>
+                                <li class="nav-item d-sm-none d-blck">
+                                    <a class="nav-link px-2 pb-0" href="https://max688888.com/logout">登出</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-end">
+                    <div class="d-sm-block d-none p-2">Hi, 叶梅
+                        <br class="d-sm-none d-blck">
+                        欢迎
+                    </div>
+                    <a class="nav-link header-login text-end py-0 d-blck pe-2" href="https://max688888.com/logout">
+                        登出
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid page p-2 py-3 position-relative market">
+        <a class="p-2 mb-2 d-sm-none d-block text-center market-main__refresh w-100 rounded-3" href="./market.html">
+            <i class="fas fa-check-circle me-1"></i>刷新倒数: <span class="timer">00:53</span>
+            ｜
+            线上人数: 3821
+        </a>
+
+        <div class="d-sm-none d-block wallet d-flex p-2">
+            <div class="wallet-balance">
+                <a href="https://max688888.com/account">
+                    <div>中心钱包</div>
+                    <div>$55.50</div>
+                </a>
+            </div>
+            <div class="wallet-withdrawal text-center">
+                <a href="https://max688888.com/mobile/recharge">
+                    <img src="./images/icon_withdrawal.png" alt="">
+                    <div>存提</div>
+                </a>
+            </div>
+        </div>
+        <ul class="nav nav-pills member-pills w-100" id="pills-tab">
+            <li class="m-1 px-0">
+                <div class="nav-link member-pill active" data-bs-toggle="pill" data-bs-target="#pills-0" role="tab">
+                    全部(374)</div>
+            </li>
+            <li class="m-1 px-0">
+                <div class="nav-link member-pill" data-bs-toggle="pill" data-bs-target="#pills-1" role="tab">
+                    今日(28)
+                </div>
+            </li>
+            <li class="m-1 px-0">
+                <div class="nav-link member-pill" data-bs-toggle="pill" data-bs-target="#pills-2" role="tab">
+                    明日(83)
+                </div>
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade px-2  member-table show active" id="pills-0" role="tabpanel">
+                <div class=" market-lists__mobile mt-2">
+                    <div class="market-list" data-id="round-1659501077">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">中乙</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 15:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">湖北青年星</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">泉州亚新</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659517277">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">中乙</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 15:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">海门珂缔缘</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">丹东腾跃</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659569233">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">中乙</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 15:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">东莞莞联</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">江西黑马青年</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659558320">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">中甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 16:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">青岛青春岛</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">四川九牛</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659558381">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">中甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 16:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">广西平果哈嘹</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">南京城市</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659517338">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">缅甸联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 16:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">妙瓦底</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">汉达瓦底联</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659517457">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">澳昆女超</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 17:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">伊斯顿沙伯女足</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">昆士兰狮女足</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659517519">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">中乙</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 19:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">青岛红狮</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">延边龙鼎</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659564979">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">中甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 19:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">青岛海牛</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">上海嘉定汇龙</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659565098">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">印尼甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 21:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">巴厘联</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">西拉贡FC</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade px-2  member-table " id="pills-1" role="tabpanel">
+                <div class="market-lists__mobile mt-2">
+                    <div class="market-list" data-id="round-1659501077">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">中乙</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 15:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">湖北青年星</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">泉州亚新</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659517277">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">中乙</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 15:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">海门珂缔缘</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">丹东腾跃</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659569233">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">中乙</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 15:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">东莞莞联</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">江西黑马青年</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659558320">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">中甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 16:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">青岛青春岛</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">四川九牛</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659558381">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">中甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 16:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">广西平果哈嘹</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">南京城市</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659517338">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">缅甸联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 16:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">妙瓦底</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">汉达瓦底联</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659517457">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">澳昆女超</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 17:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">伊斯顿沙伯女足</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">昆士兰狮女足</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659517519">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">中乙</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 19:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">青岛红狮</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">延边龙鼎</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659564979">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">中甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 19:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">青岛海牛</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">上海嘉定汇龙</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659565098">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">印尼甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 21:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">巴厘联</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">西拉贡FC</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659536058">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">拉脱超</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 22:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">利耶帕亚</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">陶格夫匹尔斯</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659574815">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">约超联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 23:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">艾沙尔特</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">马恩</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659574874">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">球会友谊</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 23:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">特伦托</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">维罗纳青年队</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659418579">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧联杯</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 23:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">AEK拉纳卡</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">贝尔格莱德游击</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659418636">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">挪甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 23:59
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">布兰</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">斯达</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659418696">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">挪甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 23:59
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">腓特烈斯塔</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">斯塔贝克</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659418754">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">挪甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 23:59
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">KFUM奥斯陆</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">阿萨纳</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659418814">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">挪甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 23:59
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">康斯文格</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">布莱尼</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659418876">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">挪甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 23:59
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">莫达伦</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">诺霍斯</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659418936">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">挪甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 23:59
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">桑德尼斯</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">松达尔</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659418998">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">挪甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 23:59
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">斯吉德</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">兰黑姆</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659419054">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">挪甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 23:59
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">斯塔达尔斯</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">格鲁德</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659419117">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">芬甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 23:59
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">PEPO拉宾兰塔</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">格尼斯坦</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659419177">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">芬甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 23:59
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">PK35万塔</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">TPS图尔库</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659419232">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">芬乙</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 23:59
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">詹兹</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">穆莎</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659419294">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">芬乙</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 23:59
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">坦佩雷</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">洪卡学院</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659419416">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧协联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 23:59
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">里加足球学院</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">希伯尼安斯</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659419474">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧协联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/04 23:59
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">古比斯</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">年轻人</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade px-2  member-table " id="pills-2" role="tabpanel">
+                <div class="market-lists__mobile mt-2">
+                    <div class="market-list" data-id="round-1659419533">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">埃及超</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 00:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">史莫哈</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">瑟亚米卡</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659419594">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">埃及超</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 00:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">萨奇亚多坎</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">恩比</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659419659">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧协联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 00:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">特尔纳瓦斯巴达克</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">琴斯托霍瓦</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659419717">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧协联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 00:45
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">派德</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">安德莱赫特</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659419775">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">瑞典超甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 01:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">奥尔格里特</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">艾斯基斯杜拿</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659419834">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">瑞典超甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 01:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">延雪平南区</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">瓦斯特拉斯</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659419895">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">瑞典超甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 01:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">奥斯达</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">尤特斯科腾</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659419957">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧联杯</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 01:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">费内巴切</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">斯洛瓦茨科</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659420016">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧联杯</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 01:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">马尔默</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">迪德朗日</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659420078">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧协联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 01:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">索利戈尔斯克矿工</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">克卢日</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659420137">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧协联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 01:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">AIK索尔纳</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">斯肯迪亚</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659420195">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧协联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 01:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">维京</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">斯莱戈流浪者</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659420256">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧协联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 01:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">利勒斯特罗姆</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">安特卫普</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659420315">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧协联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 01:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">索非亚中央陆军</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">圣帕特里克竞技</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659420376">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧协联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 01:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">希腊人竞技</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">克孜勒扎尔</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659420437">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧协联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 01:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">特拉维夫马卡比</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">阿里斯</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659420495">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧协联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 01:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">莫尔德</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">基斯华达</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659420557">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧协联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 01:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">尼菲治巴库</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">维也纳快速</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659420615">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧协联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 01:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">布拉格斯拉维亚</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">帕纳辛纳科斯</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659420680">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧协联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 01:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">卢甘斯克索尔亚</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">克拉约瓦大学</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659499461">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">约超联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 01:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">莫哈耶尔萨尔汉</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">亚吉拉安曼</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659518776">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">奥丙</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 01:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">SV普贤</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">库弗斯甸</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659565276">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">冰女超</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 01:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">塞尔福斯女足</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">IBV韦斯文尼查女足</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659565342">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">球会友谊</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 01:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">埃登斯</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">阿尔巴塞特</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659565399">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">球会友谊</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 01:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">莱加内斯B队</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">富恩拉布雷达</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659420736">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧协联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 02:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">巴利卡尼</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">克拉克斯维克</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659420798">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧协联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 02:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">卢加诺</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">贝尔谢巴夏普尔</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659420856">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧协联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 02:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">阿姆伦斯巴达</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">索非亚列夫斯基</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659420915">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧协联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 02:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">古拉瑞奇</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">特温特</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659420975">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧协联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 02:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">瓦杜兹</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">科尼亚体育</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659421036">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧协联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 02:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">舍佩斯</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">尤尔加登</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659421097">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧联杯</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 02:15
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">马里博尔</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">赫尔辛基</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659421157">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧协联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 02:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">布隆德比</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">巴塞尔</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659421214">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧联杯</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 02:45
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">林菲尔德</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">苏黎世</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659421277">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧协联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 02:45
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">维京古</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">波兹南莱赫</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659421337">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧协联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 02:45
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">贝雷达比历克</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">伊斯坦布尔</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659519438">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧协联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 02:55
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">维迪奥顿</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">佩特罗古</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659421399">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">埃及超</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 03:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">马斯里</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">杰艾斯</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659421457">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧联杯</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 03:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">沙姆洛克流浪</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">斯库皮</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659421514">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧联杯</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 03:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">奥林匹亚科斯</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">布拉迪斯拉发斯拉夫人</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659421578">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧协联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 03:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">日林斯基</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">杜保尔</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659421637">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧协联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 03:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">哈伊杜克斯普利特</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">吉马良斯</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659421696">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">欧协联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 03:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">邓迪联</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">阿尔克马尔</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659565455">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">球会友谊</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 03:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">加的斯</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">马德里竞技</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659421759">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">阿根廷杯</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 03:10
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">罗萨里奥中央</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">基尔梅斯</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659436939">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">冰岛甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 03:15
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">沃古姆</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">塞尔福斯</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659421816">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">哥伦乙</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 04:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">瓦伦杜帕尔</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">拉尼洛斯</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659560234">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">冰女超</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 04:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">阿费查尔丁女足</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">图罗杜尔女足</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659560297">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">巴拉杯</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 04:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">费纳多</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">美洲太阳</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659580456">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">委内超</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 04:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">卡拉波波</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">阿拉瓜</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659421874">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">哥伦乙</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 04:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">乌伊拉竞技</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">福塔雷绍查</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659421935">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">巴西乙</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 06:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">布鲁斯基</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">森柏欧</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659421997">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">南美杯</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 06:15
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">梅尔加</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">巴西国际</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659422054">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">哥伦乙</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 07:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">利昂内斯</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">皇家桑坦德</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659422118">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">墨西甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 08:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">莫雷利亚</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">克雷卡米诺斯</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659565520">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">中北美联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 08:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">伊斯柏纳</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">皇家埃斯特利</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659422176">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">巴西乙</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 08:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">雷加塔斯巴西</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">庞特普雷塔</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659422233">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">解放者杯</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 08:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">巴拉纳竞技</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">拉普拉塔大学生</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659422300">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">哥伦乙</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 09:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">波哥大足球会</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">侨卡巴</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659422354">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">墨西超</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 10:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">阿特拉斯</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">克雷塔罗</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659565579">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">中北美联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 10:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">穆尼斯帕尔</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">马德里尔</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659565641">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">印尼甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 17:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">PSM马卡萨</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">佩西加雅加达</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659499769">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">中超</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 17:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">上海申花</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">长春亚泰</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659436997">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">韩K联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 18:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">城南FC</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">金泉尚武</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659437058">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">韩K联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 18:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">首尔FC</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">济州联队</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659519918">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">澳昆超</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 18:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">黄金海岸联</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">黄金海岸骑士</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659580514">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">越南联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 19:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">海防</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">岘港</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659580576">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">新加坡联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 19:45
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">后港联队</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">新泻天鹅乙队</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659580633">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">越南联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 20:15
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">西贡FC</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">黄英嘉莱</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659580696">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">越南联</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 20:15
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">电讯体工</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">平阳</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659565698">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">马来甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 21:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">吉兰丹</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">斯夸德项目组</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659580756">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">印尼甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 21:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">阿雷马</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">斯莱曼</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659560480">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">立陶甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 23:00
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">希奥利艾</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">黑格尔曼</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659465377">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">保甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 23:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">华纳斯巴达</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">赫巴</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659465442">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">斯亚甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 23:30
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">塔博塞扎纳</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">采列</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659499813">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">意杯</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 23:45
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">卡利亚里</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">佩鲁贾</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659465499">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">芬乙</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 23:59
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">PPJ学院</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">拉迪恩雷帕斯</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659466698">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">波兰甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 23:59
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">梅莱茨钢铁</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">克拉科维亚</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659466760">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">丹麦超</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 23:59
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">兰讷斯</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">霍森斯</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659466823">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">波兰乙</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 23:59
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">阿尔卡</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">桑德克亚</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659466876">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">罗甲</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 23:59
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">克卢日大学</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">佩特罗鲁</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659500535">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">意杯</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 23:59
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">乌迪内斯</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">费拉尔皮沙洛</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="market-list" data-id="round-1659565760">
+                        <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">捷乙</div>
+                        <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">
+                            08/05 23:59
+                        </div>
+                        <hr class="my-2">
+                        <div class="row text-center m-0">
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">主队</div>
+                                <div class="market-list__team">奥帕瓦</div>
+                            </div>
+                            <div class="col-6 px-0">
+                                <div class="market-list__label">客队</div>
+                                <div class="market-list__team">布拉格杜克拉</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="side-menu-wrap">
+        <div class="side-menu d-sm-block d-none">
+            <div class="side-menu__btns text-center">
+                <a href="./announcement.html" class="side-menu__btn">
+                    <img src="./images/icon_side-ann.png" alt="">
+                    <div>网站公告</div>
+                </a>
+                <a href="https://direct.lc.chat/14165448/" target="_blank" class="side-menu__btn">
+                    <img src="./images/icon_side-contact.png" alt="">
+                    <div>线上客服</div>
+                </a>
+                <a href="./mobile/app.html" class="side-menu__btn">
+                    <img src="./images/icon_side-download.png" alt="">
+                    <div>APP下载</div>
+                </a>
+                <a href="./account.html" class="side-menu__btn">
+                    <img src="./images/icon_side-balance.png" alt="">
+                    <div>中心钱包</div>
+                </a>
+                <a href="./mobile/recharge.html" class="side-menu__btn withdrawal">
+                    <img src="./images/icon_side-withdrawal.png" alt="">
+                    <div>充值提现</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrap">
+        <footer class="footer text-center py-2 d-sm-block d-none">
+            <a href="./help.html" class="footer-link mx-2">帮助中心</a>
+            <a href="javascript:location.reload();" class="footer-link mx-2">页面卡顿？</a>
+            <div class="float-sm-end pe-4">版权所有 © 2022 MAX</div>
+        </footer>
+    </div>
+    <div class="bottom-menu-wrap">
+        <div class="bottom-menu d-sm-none d-block">
+            <div class="bottom-menu__btns" style="font-size:0.75rem;">
+                <a href="./" class="bottom-menu__btn ">
+                    <img src="./images/icon_side-home.png" alt="">
+                    <div>首页</div>
+                </a>
+                <a href="./market.html" class="bottom-menu__btn active">
+                    <img src="./images/icon_side-list.png" alt="">
+                    <div>市场列表</div>
+                </a>
+                <a href="./investment/notopen.html" class="bottom-menu__btn ">
+                    <img src="./images/icon_trade-history.png" alt="">
+                    <div>交易明细</div>
+                </a>
+                <a href="./investment2.html" class="bottom-menu__btn ">
+                    <img src="./images/icon_side-history.png" alt="">
+                    <div>历史帐务</div>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="./js/slick.min.js"></script>
+    <script src="./js/sweetalert2.min.js"></script>
+    <script src="./js/moment-with-locales.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/clipboard.min.js"></script>
+    <script src="./js/imask.js"></script>
+    <script src="./js/CLDRPluralRuleParser.js"></script>
+
+
+    <script>
+
+		
+        var RATIO = 0;
+		$(document).ready(function(){
+            $('.loading').hide();
+            console.log("EEEEE")
+			 $('.market-lists').slick({
+			     centerMode: true,
+			     centerPadding: '60px',
+			     slidesToShow: 5,
+			     focusOnSelect: true,
+			     responsive: [{
+			         breakpoint: 768,
+			         settings: {
+			             arrows: true,
+			             centerMode: true,
+			             centerPadding: '40px',
+			             slidesToShow: 3
+			         }
+			     },{
+			             breakpoint: 576,
+			             settings: {
+			                 arrows: true,
+			                 centerMode: true,
+			                 centerPadding: '40px',
+			                 slidesToShow: 1
+			             }
+			         }
+			     ]
+			 });
+			 
+		 });
+       
+        function updateOddsList(round_id) {
+            //$('.loading').show();
+            $.post('https://max688888.com/market/json',{round_id: round_id}, function(response){
+                if(response.code == 0){
+                    $('.bet-table .td').remove();
+                    $.each(response.oddsList,function(k,v){
+                        $('.bet-table').append(`
+                        <div class="bet-table_lists td">
+                            <div>${v.way}</div>
+                            <div>${v.ratio == 0 ? '----' : (v.ratio * 100).toFixed(2) + '%'}</div>
+                            <div>${v.amount == 0 ? '----' : v.amount}</div>
+                            <button class="bet-table-button" data-bs-toggle="modal" data-bs-target="#betModal" data-ratio="${v.ratio}" data-way="${v.way}" data-bet_id="${v.id}" ${v.ratio == 0 && v.amount == 0 ? 'disabled="disabled"' : ""}>下单</button>
+                        </div>
+                    `);
+                    });
+                    $('.round-bet-amount').text(response.round_bet_amount);
+                    setTimeout(() => {
+                        $('.loading').hide();
+                    }, 1000);
+                }
+            });
+        }
+
+        $('.market-lists').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+            var currentSlide = $(slick.$slides[currentSlide]);
+            var round_id = currentSlide.attr('data-id');
+            $('.market-main__time').text(currentSlide.attr('data-datetime'));
+            $('.market-main__title').text(currentSlide.attr('data-league'));
+            $('.market-main__team').text(currentSlide.attr('data-vs'));
+            updateOddsList(round_id);
+        });
+
+        $('.modal-bet__btn').on('click', function(){
+            $('.modal-bet-amount').val($(this).data('amount'));
+            $('.modal-bet-amount').trigger('change');
+        });
+
+        $('.modal-bet-amount').on('change blur',function(){
+            var amount = $(this).val();
+            if(amount > 0) {
+                var profit = 0.9 * RATIO *  amount;
+                $('.modal-bet-profit').text("$" + profit.toFixed(2));
+                $('#bet-amount').text(amount);
+                $('.bet-amount').val(amount);
+            } else {
+                $(this).val('');
+            }
+        });
+
+        $(function(){
+            $('.market-lists').slick('slickGoTo', 0);
+        });
+
+        $(document).on('click', '.bet-table-button', function(){
+            RATIO = $(this).data('ratio');
+            $('.bet-id').val($(this).data('bet_id'));
+            $('.modal-bet-ratio').text((RATIO * 100).toFixed(2) + "%");
+            $('.modal-bet-way').text($(this).data('way'));
+            $('.modal-bet-amount').val('');
+            $('.modal-bet-profit').text(0);
+        });
+
+        $('.modal-next').on('click', function(){
+            if($('.modal-bet-amount').val() > 0){
+                $('#betModal').modal('hide');
+                $('#betCheckModal').modal('show');
+            } else {
+                $('.modal-bet-amount').val('');
+                $('.modal-bet-amount').focus();
+            }
+        });
+
+        $('#bet-form').on('submit', function(e){
+            e.preventDefault();
+            $('button').attr("disabled", true);
+            var form = $(this);
+            $.ajax({
+                type: 'POST',
+                data: form.serialize(),
+                url: 'https://max688888.com/bet',
+                success: function (response) {
+                    if(response.code == 0){
+                        $('.balance').text(response.balance);
+                        $('.data-balance').data('amount', response.balance);
+                        $('#betCheckModal').modal('hide');
+
+                        $('.show-bet-amount').text(response.amount);
+                        $('.show-bet-ratio').text(response.ratio);
+                        $('.show-bet-profit').text(response.profit);
+                        $('.show-bet-profit-rmb').text((response.profit*7).toFixed(2));
+                        $('.bill-number').text(response.bill_number);
+
+                        $('#betShowModal').modal('show');
+                        var currentSlide = $('.market-lists').slick('slickCurrentSlide');
+                        $('.market-lists').slick('slickGoTo', currentSlide);
+                    }
+                    else{
+                        swal(response.message, '', "error");
+                    }
+                    $('button').attr("disabled", false);
+                }
+            });
+        });
+
+        var TIMER = 300;
+        setInterval(() => {
+            if(--TIMER == 0) {
+                location.reload();
+            } else {
+                var minute = parseInt(TIMER/60);
+                var second = parseInt(TIMER%60);
+                $('.timer').text((minute<10?'0'+minute:minute)+':'+(second<10?'0'+second:second));
+            }
+        }, 1000);
+
+        $('.member-pill').on('click',function(){
+            $('.market-lists').slick('slickGoTo', 0);
+        });
+    </script>
+    <script>
+        var elements = document.getElementsByClassName('currency-mask')
+
+        for (var i = 0; i < elements.length; i++) {
+            //elements[i].addEventListener('click', myFunction);
+            var currencyMask = IMask(
+                elements[i],
+                {
+                    mask: Number,
+                    scale: 2,
+                    signed: false,  // disallow negative
+                    radix: '.',  // fractional delimiter
+                });
+        }
+    </script>
+
+</body>
+</html>
