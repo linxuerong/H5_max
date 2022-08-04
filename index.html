@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>MAX</title>
+		<link href="./css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="./css/main.css">
+		<link rel="stylesheet" href="./css/all.css">
+
+		<link rel="stylesheet" type="text/css" href="./css/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/slick-theme.css"/>
+		<link href="./css/sweetalert2.css" rel="stylesheet" type="text/css">
+		
+	</head>
+	<body>
+		<div class="loading">
+			<img src="images/MAX%20logo.png" alt="">
+		</div>
+		<!--头部-->
+		<header class="header-wrap">
+			<a class="navbar-brand header-logo" href="https://max688888.com/">
+				<img src="images/MAX%20logo.png" alt="">
+			</a>
+			<nav class="navbar navbar-expand-lg header py-lg-4 py-2">
+				<div class="container-fluid position-relative px-1">
+					<img class="navbar-toggler p-0" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+						 aria-controls="offcanvasNavbar" src="images/menu-btn.png" alt="">
+					<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+						aria-labelledby="offcanvasNavbarLabel">
+						<div class="offcanvas-body justify-content-between align-items-center p-0">
+							<div class="flex-column">
+								<div class="header-info d-lg-block d-none px-2">
+									2022/07/29 17:44 ( 北京标准时间 ) ｜ 线上人数 ：3636
+								</div>
+								<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+									<li class="nav-item d-sm-none d-blck">
+										<a class="nav-link px-2 pb-0" href="./account.html">中心钱包</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link px-2 pb-0" href="./market.html">市场列表</a>
+									</li>
+									<li class="nav-item d-sm-none d-blck">
+										<a class="nav-link px-2 pb-0" href="./trade.html">存提纪录</a>
+									</li>
+									<li class="nav-item d-sm-block d-none">
+										<a class="nav-link px-2 pb-0" href="./investment.html">投资纪录</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link px-2 pb-0" href="./match.html">赛事结果</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link px-2 pb-0" href="./immediate.html">即时比分</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link px-2 pb-0" href="./promotion.html">优惠活动</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link px-2 pb-0" href="./announcement.html">最新消息</a>
+									</li>
+									<li class="nav-item dropdown d-sm-none d-blck">
+										<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+											role="button" aria-haspopup="true"
+											aria-expanded="false">线上客服</a>
+										<div class="dropdown-menu">
+											<a class="nav-link px-2 pb-0 text-black"
+												href="" target="_blank">线路1</a>
+											<a class="nav-link px-2 pb-0 text-black"
+												href="">线路2</a>
+										</div>
+									</li>
+									<li class="nav-item d-sm-none d-blck">
+										<a class="nav-link px-2 pb-0" href="https://max688888.com/mobile/app">APP下载</a>
+									</li>
+									<li class="nav-item d-sm-none d-blck">
+										<a class="nav-link px-2 pb-0"
+											href="https://max688888.com/mobile/help/rule">规则条款</a>
+									</li>
+									<li class="nav-item d-sm-none d-blck">
+										<a class="nav-link px-2 pb-0" href="https://max688888.com/mobile/help">帮助中心</a>
+									</li>
+									<li class="nav-item d-sm-none d-blck">
+										<a class="nav-link px-2 pb-0" href="https://max688888.com/logout">登出</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="text-end">
+						<div class="d-sm-block d-none p-2">Hi, 叶梅
+							<br class="d-sm-none d-blck">
+							欢迎
+						</div>
+						<a class="nav-link header-login text-end py-0 d-blck pe-2" href="https://max688888.com/logout">
+							登出
+						</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<!--news 新闻轮播快-->
+		<div class="row container-fluid mx-auto flex-sm-row flex-column-reverse p-2 py-3 ps-0 pb-sm-5 pb-0">
+			<div id="newsControls"
+				class="carousel slide col-sm-3 col-12 d-flex flex-column px-0 justify-content-end news pointer-event"
+				data-bs-ride="carousel">
+
+				<div class="p-1 d-flex justify-content-between align-items-center position-relative news-title">
+					<h1 class="mb-0">NEWS</h1>
+					<div class="news-carousel-btns d-flex">
+						<i class="fas fa-angle-left me-2" data-bs-target="#newsControls" data-bs-slide="prev"></i>
+						<i class="fas fa-angle-right me-0" data-bs-target="#newsControls" data-bs-slide="next"></i>
+					</div>
+				</div>
+				<div class="carousel-inner">
+					<div class="carousel-item" data-bs-toggle="modal" data-bs-target="#announcementModal_0">
+						<p class="news-text p-1 mb-0">平台公告
+							亲爱的用户您好，平台APP已升级更新完成，请您多加使用造成您的不便深感抱歉。
+						</p>
+					</div>
+					<div class="carousel-item active" data-bs-toggle="modal" data-bs-target="#announcementModal_0">
+						<p class="news-text p-1 mb-0">赛事
+							07-28 / 22:00 [ 阿后备 ] 查卡里塔青年后备队 v 维拉多尔米尼后备队 因待定时间过长无法判定赛事结果，为维护会员权益，所有注单无效。
+						</p>
+					</div>
+				</div>
+			</div>
+		
+			<div class="col-sm-9 col-12 px-0  mb-3">
+				<div id="carousel" class="carousel slide d-flex pointer-event" data-bs-ride="carousel">
+					<div class="carousel-indicators m-0 flex-column justify-content-start">
+						<button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="mb-1"
+							aria-label="Slide 1"></button>
+						<button type="button" data-bs-target="#carousel" data-bs-slide-to="1" class="mb-1"
+							aria-label="Slide 2"></button>
+						<button type="button" data-bs-target="#carousel" data-bs-slide-to="2" class="mb-1"
+							aria-label="Slide 3"></button>
+						<button type="button" data-bs-target="#carousel" data-bs-slide-to="3" class="mb-1 active"
+							aria-label="Slide 4" aria-current="true"></button>
+					</div>
+					<div class="carousel-inner">
+						<div class="carousel-item" data-bs-toggle="modal" data-bs-target="#promotionsModal_0">
+							<img src="images/promotion2.jpg" class="d-block w-100" alt="...">
+						</div>
+						<div class="carousel-item" data-bs-toggle="modal" data-bs-target="#promotionsModal_0">
+							<img src="images/promotion1.jpg" class="d-block w-100" alt="...">
+						</div>
+						<div class="carousel-item" data-bs-toggle="modal" data-bs-target="#promotionsModal_0">
+							<img src="images/promotion3.jpg" class="d-block w-100" alt="...">
+						</div>
+						<div class="carousel-item active" data-bs-toggle="modal" data-bs-target="#promotionsModal_0">
+							<img src="images/promotion4.jpg" class="d-block w-100" alt="...">
+						</div>
+					</div>
+					<div class="carousel-btns d-flex">
+						<i class="fas fa-angle-left" data-bs-target="#carousel" data-bs-slide="prev"></i>
+						<i class="fas fa-angle-right" data-bs-target="#carousel" data-bs-slide="next"></i>
+					</div>
+				</div>
+			</div>
+
+			<!--登入后显示 用户信息-->
+			<div class="w-100 account-level d-flex p-sm-3 p-2 justify-content-between align-items-center mb-3">
+				<div class="account-level__info d-flex align-items-center">
+					<img class="account-level__icon mx-md-3 mx-0" src="./MAX_files/user.png" alt="">
+					<div class="account-level__user">
+						<div>Hi, AAP222</div>
+						<div>微商等级：1</div>
+					</div>
+				</div>
+				<ul class="account-level__balance mb-0 list-unstyled">
+					<li class="" data-title="余额：">$0.00</li>
+				</ul>
+			</div>
+		</div>
+		<!--登入后显示的钱包-->
+		<div class="d-sm-none d-block m-2 wallet d-flex p-2 mb-4">
+			<div class="wallet-balance">
+				<a href="./account.html">
+					<div>中心钱包</div>
+					<div>$55.50</div>
+				</a>
+			</div>
+			<div class="wallet-withdrawal text-center">
+				<a href="./mobile/recharge.html">
+					<img src="./images/icon_withdrawal.png" alt="">
+					<div>存提款</div>
+				</a>
+			</div>
+		</div>
+
+		<!--新闻弹窗   （id ）对应 （data-bs-target）-->
+		<div class="modal fade" id="announcementModal_0" tabindex="-1" aria-labelledby="announcementModal_0" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content p-4 pb-4 text-center">
+					<div class="p-2 d-flex justify-content-between align-items-center announcement-title">
+						<h4 class="mb-0">平台公告</h4>
+						<div class="announcement-date">2022/08/02</div>
+					</div>
+					<div class="text-start promotions-text p-2 pt-3">
+						尊敬的会员你好MAX平台于8/2日 11:00~12:00进行例行性维护,感谢你对平台的支持.
+					</div>
+					<div class="d-flex justify-content-center mt-4">
+						<div class="modal-btn mx-2" data-bs-toggle="modal" data-bs-target="#announcementModal_2">关闭</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--轮播图弹窗 -->
+		<div class="modal fade" id="promotionsModal_0" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<img src="images/promotion4.jpg" class="w-100" alt="" />
+			</div>
+		</div>
+
+		<div class="games py-4 text-center">
+			<h1 class="games-title my-sm-5 my-3">热门赛事</h1>
+			
+			<div class="autoplay pb-5 px-0 pt-0 container games-cards">
+				<div class="games-card p-3 py-4 " data-id="round-1658974753">
+					<div class="games-card__time text-end">07/30 01:00</div>
+					<div class="games-card__name my-3">
+						<p class="mb-0 name">奥丙</p>
+						<p class="mb-0 type"> / 真人足球 /</p>
+					</div>
+					<div class="games-card__team my-4">
+						<div class="name">杜斯兰堡</div>
+						<div class="my-2"> V.S </div>
+						<div class="name">克拉根福</div>
+					</div>
+				</div>
+				
+				<div class="games-card p-3 py-4 " data-id="round-1658974753">
+					<div class="games-card__time text-end">07/30 01:00</div>
+					<div class="games-card__name my-3">
+						<p class="mb-0 name">奥丙</p>
+						<p class="mb-0 type"> / 真人足球 /</p>
+					</div>
+					<div class="games-card__team my-4">
+						<div class="name">杜斯兰堡</div>
+						<div class="my-2"> V.S </div>
+						<div class="name">克拉根福</div>
+					</div>
+				</div>
+				<div class="games-card p-3 py-4 " data-id="round-1658974753">
+					<div class="games-card__time text-end">07/30 01:00</div>
+					<div class="games-card__name my-3">
+						<p class="mb-0 name">奥丙</p>
+						<p class="mb-0 type"> / 真人足球 /</p>
+					</div>
+					<div class="games-card__team my-4">
+						<div class="name">杜斯兰堡</div>
+						<div class="my-2"> V.S </div>
+						<div class="name">克拉根福</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="side-menu-wrap">
+			<div class="side-menu d-sm-block d-none">
+				<div class="side-menu__btns text-center">
+					<a href="./announcement.html" class="side-menu__btn">
+						<img src="./images/icon_side-ann.png" alt="">
+						<div>网站公告</div>
+					</a>
+					<a href="https://direct.lc.chat/14165448/" target="_blank" class="side-menu__btn">
+						<img src="./images/icon_side-contact.png" alt="">
+						<div>线上客服</div>
+					</a>
+					<a href="https://max688888.com/mobile/app" class="side-menu__btn">
+						<img src="./images/icon_side-download.png" alt="">
+						<div>APP下载</div>
+					</a>
+					<a data-bs-toggle="modal" data-bs-target="#loginModal" href="./account.html" class="side-menu__btn">
+						<img src="./images/icon_side-balance.png" alt="">
+						<div>中心钱包</div>
+					</a>
+					<a data-bs-toggle="modal" data-bs-target="#loginModal" href="./recharge.html" class="side-menu__btn withdrawal">
+						<img src="./images/icon_side-withdrawal.png" alt="">
+						<div>充值提现</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer-wrap">
+			<footer class="footer text-center py-2 d-sm-block d-none">
+				<a href="https://max688888.com/help" class="footer-link mx-2">帮助中心</a>
+				<a href="https://max688888.com" class="footer-link mx-2">页面卡顿？</a>
+				<div class="float-sm-end pe-4">版权所有 © 2022 MAX</div>
+			</footer>
+		</div>
+
+		<div class="bottom-menu-wrap">
+			<div class="bottom-menu d-sm-none d-block">
+				<div class="bottom-menu__btns" style="font-size:0.75rem;">
+					<a href="./index.html" class="bottom-menu__btn active">
+						<img src="../images/icon_side-home.png" alt="">
+						<div>首页</div>
+					</a>
+					<a href="./market.html" class="bottom-menu__btn ">
+						<img src="../images/icon_side-list.png" alt="">
+						<div>市场列表</div>
+					</a>
+					<a href="./notopen.html"  class="bottom-menu__btn ">
+						<img src="../images/icon_trade-history.png" alt="">
+						<div>交易明细</div>
+					</a>
+					<a href="./investment2.html" class="bottom-menu__btn " data-bs-toggle="modal" data-bs-target="#loginModal">
+						<img src="../images/icon_side-history.png" alt="">
+						<div>历史帐务</div>
+					</a>
+
+				</div>
+			</div>
+		</div>
+
+
+		<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content p-4 pb-5 text-center">
+					<form id="login-form" action="https://max688888.com/login" autocomplete="off">
+						<div class="modal-close" data-bs-dismiss="modal">X</div>
+						<h1 class="modal-content__title p-3">会员登入</h1>
+						<div class="row m-0 form-group my-2 align-items-center justify-content-end">
+							<label class="col-2 p-0 my-2 text-start">帐号</label>
+							<div class="col-10 p-0 my-2">
+								<input type="text" name="account" value="" required="" class="w-100" autocomplete="off">
+							</div>
+							<label class="col-2 p-0 my-2 text-start">密码</label>
+							<div class="col-10 p-0 my-2">
+								<input type="password" name="password" value="" required="" class="w-100" autocomplete="off">
+							</div>
+							<div class="col-10 p-0 my-2 d-flex justify-content-between">
+								<div class="password d-flex align-items-center">
+									<input type="checkbox" name="remember_me" class="me-1" autocomplete="off">记住密码
+								</div>
+								<div class="modal-btn mx-2" data-bs-toggle="modal" data-bs-target="#forgetPasswordModal">
+									忘记密码
+								</div>
+							</div>
+						</div>
+						<div class="d-flex justify-content-center mt-4">
+							<button type="submit" class="modal-btn mx-2">登入</button>
+							<div class="modal-btn mx-2" data-bs-toggle="modal" data-bs-target="#signUpModal">注册
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModal" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content p-4 pb-5 text-center">
+					<div class="modal-close" data-bs-dismiss="modal">X</div>
+					<h1 class="modal-content__title p-3">注册</h1>
+					<form id="register-form" action="https://max688888.com/register">
+						<div class="row m-0 form-group my-2 align-items-center justify-content-end">
+							<label class="col-3 p-0 my-2 pe-1 text-end">帐号</label>
+							<div class="col-9 p-0 ps-1 my-2 dropdown">
+								<select name="account" class="btn w-100">
+									<option value="ADW129">ADW129</option>
+									<option value="ADR726">ADR726</option>
+									<option value="AIT543">AIT543</option>
+									<option value="AOZ758">AOZ758</option>
+									<option value="AOS819">AOS819</option>
+									<option value="ANP528">ANP528</option>
+									<option value="AOS532">AOS532</option>
+									<option value="AEN419">AEN419</option>
+									<option value="ALH867">ALH867</option>
+									<option value="AHI516">AHI516</option>
+								</select>
+							</div>
+							<label class="col-3 p-0 my-2 pe-1 text-end">登入密码</label>
+							<div class="col-9 p-0 ps-1 my-2">
+								<input type="password" name="password" placeholder="请输入您的密码(需包含英文与数字)" required class="w-100">
+							</div>
+							<label class="col-3 p-0 my-2 pe-1 text-end">提领密码</label>
+							<div class="col-9 p-0 ps-1 my-2">
+								<input type="password" name="withdrawal_password" placeholder="请勿跟登入密码相同" required class="w-100">
+							</div>
+							<label class="col-3 p-0 my-2 pe-1 text-end">姓名</label>
+							<div class="col-9 p-0 ps-1 my-2 dropdown">
+								<div class="col-9 p-0 ps-1 my-2">
+									<input type="text" name="name" placeholder="请填写真实姓名" required class="w-100">
+								</div>
+							</div>
+							<label class="col-3 p-0 my-2 pe-1 text-end">昵称</label>
+							<div class="col-9 p-0 ps-1 my-2 dropdown">
+								<div class="col-9 p-0 ps-1 my-2">
+									<input type="text" name="nickname" placeholder="请填写昵称" required class="w-100">
+								</div>
+							</div>
+							<label class="col-3 p-0 my-2 pe-1 text-end">国家</label>
+							<div class="dropdown col-9 p-0 ps-1 my-2">
+								<select name="country" class="btn w-100">
+									<option value="中國">中国</option>
+									<option value="美國">美国</option>
+									<option value="日本">日本</option>
+									<option value="越南">越南</option>
+									<option value="泰國">泰国</option>
+									<option value="印度">印度</option>
+									<option value="澳門">澳门</option>
+									<option value="新加坡">新加坡</option>
+									<option value="馬來西亞">马来西亚</option>
+									<option value="菲律賓">菲律宾</option>
+									<option value="澳大利亞">澳大利亚</option>
+									<option value="加拿大">加拿大</option>
+									<option value="英國">英国</option>
+									<option value="阿根廷">阿根廷</option>
+									<option value="奧地利">奥地利</option>
+									<option value="俄羅斯">俄罗斯</option>
+									<option value="巴西">巴西</option>
+									<option value="緬甸">缅甸</option>
+									<option value="德國">德国</option>
+								</select>
+							</div>
+							<label class="col-3 p-0 my-2 pe-1 text-end">手机号码</label>
+							<div class="col-9 p-0 ps-1 my-2">
+								<input type="tel" placeholder="绑定之后无法更改" name="phone" required class="w-100">
+							</div>
+							<label class="col-3 p-0 my-2 pe-1 text-end">短信码</label>
+							<div class="col-6 p-0 ps-1 my-2">
+								<input type="text" name="code" required class="w-100" placeholder="请输入6位数字">
+							</div>
+							<div class="col-3 p-0 ps-1 my-2">
+								<button class="send-sms modal-btn mx-2">发送</button>
+							</div>
+							<label class="col-3 p-0 pe-1 my-2 text-end">推荐人</label>
+							<div class="col-9 p-0 ps-1 my-2">
+								<input type="text" class="w-100" name="parent" value="" required placeholder="请输入6位英文带数字的上级帐号">
+							</div>
+						</div>
+						<div class="d-flex justify-content-center mt-4">
+							<button type="submit" class="modal-btn mx-2">注册</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="forgetPasswordModal" tabindex="-1" aria-labelledby="forgetPasswordModal" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content p-4 pb-5 text-center">
+					<form id="forget-password-form" action="https://max688888.com/forget-password">
+						<div class="modal-close" data-bs-dismiss="modal">X</div>
+						<h1 class="modal-content__title p-3">忘记密码</h1>
+						<div class="row m-0 form-group my-2 align-items-center justify-content-end">
+							<label class="col-3 p-0 my-2 pe-1 text-end">帐号</label>
+							<div class="col-9 p-0 my-2">
+								<input type="text" name="account" required class="w-100">
+							</div>
+							<label class="col-3 p-0 my-2 pe-1 text-end">国家</label>
+							<div class="dropdown col-9 p-0 ps-1 my-2">
+								<select name="country" class="btn w-100">
+									<option value="中國">中国</option>
+									<option value="美國">美国</option>
+									<option value="日本">日本</option>
+									<option value="越南">越南</option>
+									<option value="泰國">泰国</option>
+									<option value="印度">印度</option>
+									<option value="澳門">澳门</option>
+									<option value="新加坡">新加坡</option>
+									<option value="馬來西亞">马来西亚</option>
+									<option value="菲律賓">菲律宾</option>
+									<option value="澳大利亞">澳大利亚</option>
+									<option value="加拿大">加拿大</option>
+									<option value="英國">英国</option>
+									<option value="阿根廷">阿根廷</option>
+									<option value="奧地利">奥地利</option>
+									<option value="俄羅斯">俄罗斯</option>
+									<option value="巴西">巴西</option>
+									<option value="緬甸">缅甸</option>
+									<option value="德國">德国</option>
+								</select>
+							</div>
+							<label class="col-3 p-0 my-2 pe-1 text-end">手机号码</label>
+							<div class="col-9 p-0 ps-1 my-2">
+								<input type="tel" placeholder="" name="phone" required class="w-100">
+							</div>
+							<label class="col-3 p-0 my-2 pe-1 text-end">短信码</label>
+							<div class="col-6 p-0 ps-1 my-2">
+								<input type="text" name="code" required class="w-100">
+							</div>
+							<div class="col-3 p-0 ps-1 my-2">
+								<button class="send-sms-forget-password modal-btn mx-2">发送</button>
+							</div>
+							<hr>
+							<label class="col-3 p-0 my-2 pe-1 text-end">新密码</label>
+							<div class="col-9 p-0 my-2">
+								<input type="password" name="password" required class="w-100">
+							</div>
+						</div>
+						<div class="d-flex justify-content-center mt-4">
+							<button type="submit" class="modal-btn mx-2">送出</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+<!--		<div class="modal-backdrop fade show"></div>-->
+
+
+		<script src="./js/bootstrap.bundle.min.js"></script>
+		<script src="./js/jquery-2.2.0.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="./js/slick.min.js"></script>
+		<script src="./js/sweetalert2.min.js"></script>
+		 <script src="./js/moment-with-locales.min.js"></script>
+		 <script src="./js/main.js"></script>
+		 <script src="./js/clipboard.min.js"></script>
+		 <script src="./js/imask.js"></script>
+		 <script src="./js/CLDRPluralRuleParser.js"></script>
+		
+		<script>
+			
+			$(function() {
+				$('.loading').hide();
+			});
+			
+			$('.send-sms').on('click', function(e) {
+				e.preventDefault();
+				var phone = $(this).closest('form').find('input[name="phone"]');
+				if (phone.val() == '') {
+					swal("错误", "手机号码不可空白", 'error');
+				} else {
+					var form = $(this).closest('form');
+					$('button').attr("disabled", true);
+					$.ajax({
+						type: 'POST',
+						data: form.serialize(),
+						url: 'https://max688888.com/send-sms',
+						success: function(response) {
+							if (response.code == 0) {
+								swal("短信码已发送", '', "success");
+							} else {
+								swal(response.message, '', "error");
+							}
+							$('button').attr("disabled", false);
+						}
+					});
+				}
+			});
+			$('.send-sms-forget-password').on('click', function(e) {
+				e.preventDefault();
+				var phone = $(this).closest('form').find('input[name="phone"]');
+				var account = $(this).closest('form').find('input[name="account"]');
+				if (phone.val() == '') {
+					swal("错误", "手机号码不可空白", 'error');
+				} else if (account.val() == '') {
+					swal("错误", "帐号不可空白", 'error');
+				} else {
+					var form = $(this).closest('form');
+					$('button').attr("disabled", true);
+					$.ajax({
+						type: 'POST',
+						data: form.serialize(),
+						url: 'https://max688888.com/forget-password-check',
+						success: function(response) {
+							if (response.code == 0) {
+								swal("短信码已发送", '', "success");
+							} else {
+								swal(response.message, '', "error");
+							}
+							$('button').attr("disabled", false);
+						}
+					});
+				}
+			});
+			$('#register-form').on('submit', function(e) {
+				e.preventDefault();
+				var form = $(this);
+				$('button').attr("disabled", true);
+				$.ajax({
+					type: 'POST',
+					data: form.serialize(),
+					url: 'https://max688888.com/register',
+					success: function(response) {
+						if (response.code == 0) {
+							swal("注册完成", "返回登入", "success").then(function() {
+								$('#register-form').trigger('reset');
+								$('#signUpModal').modal('hide');
+								$('#loginModal').modal('show');
+							});
+						} else {
+							swal(response.message, '', "error");
+						}
+						$('button').attr("disabled", false);
+					}
+				});
+			});
+			$('#login-form').on('submit', function(e) {
+				e.preventDefault();
+				var form = $(this);
+				$('button').attr("disabled", true);
+				$.ajax({
+					type: 'POST',
+					data: form.serialize(),
+					url: 'https://max688888.com/login',
+					success: function(response) {
+						if (response.code == 0) {
+							location.reload();
+						} else {
+							swal(response.message, '', "error");
+						}
+						$('button').attr("disabled", false);
+					}
+				});
+			});
+			$('#forget-password-form').on('submit', function(e) {
+				e.preventDefault();
+				var form = $(this);
+				$('button').attr("disabled", true);
+				$.ajax({
+					type: 'POST',
+					data: form.serialize(),
+					url: 'https://max688888.com/forget-password',
+					success: function(response) {
+						if (response.code == 0) {
+							swal(response.message, '请重新登入', "success").then(function() {
+								$('#forget-password-form').trigger('reset');
+								$('#forgetPasswordModal').modal('hide');
+								$('#loginModal').modal('show');
+							});
+						} else {
+							swal(response.message, '', "error");
+						}
+						$('button').attr("disabled", false);
+					}
+				});
+			});
+
+			$(function() {
+				$('form,input,select,textarea').attr("autocomplete", "off");
+			});
+		</script>
+		
+		<script type="text/javascript">
+			 $(document).ready(function(){
+				 $('.autoplay').slick({
+				 	slidesToShow: 3,
+				 	slidesToScroll: 1,
+				 	autoplay: true,
+				 	autoplaySpeed: 2000,
+				 	focusOnSelect: true,
+				 	responsive: [{
+				 		breakpoint: 768,
+				 		settings: {
+				 			arrows: false,
+				 			centerMode: true,
+				 			slidesToShow: 1
+				 		}
+				 	}, {
+				 		breakpoint: 992,
+				 		settings: {
+				 			arrows: false,
+				 			centerMode: true,
+				 			slidesToShow: 2
+				 		}
+				 	}]
+				 });
+			 })
+			
+			$('.games-card').on('click', function() {
+				var round_id = $(this).data('id');
+				location.href = "https://max688888.com/market/mobile?id=" + round_id;
+			});
+		</script>
+		<script>
+			var elements = document.getElementsByClassName('currency-mask')
+		
+			for (var i = 0; i < elements.length; i++) {
+				//elements[i].addEventListener('click', myFunction);
+				var currencyMask = IMask(
+					elements[i], {
+						mask: Number,
+						scale: 2,
+						signed: false, // disallow negative
+						radix: '.', // fractional delimiter
+					});
+			}
+		</script>
+
+
+	</body>
+</html>
