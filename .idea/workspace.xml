@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9719a456-191b-4e38-86d5-33ef124b23c5" name="变更" comment="h5max">
+      <change afterPath="$PROJECT_DIR$/images/MAX_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/app-image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/phone.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/account.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/announcement.html" beforeDir="false" afterPath="$PROJECT_DIR$/announcement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/all.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/all.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/moment-with-locales.min.js.下载" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/immediate.html" beforeDir="false" afterPath="$PROJECT_DIR$/immediate.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market.html" beforeDir="false" afterPath="$PROJECT_DIR$/market.html" afterDir="false" />
@@ -52,7 +58,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/WebStorm/H5_max",
+    "last_opened_file_path": "E:/WebStorm/H5_max/images",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -65,12 +71,15 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\WebStorm\H5_max" />
       <recent name="E:\WebStorm\H5_max\images" />
+      <recent name="E:\WebStorm\H5_max\mobile" />
+      <recent name="E:\WebStorm\H5_max" />
       <recent name="E:\WebStorm\H5_max\js" />
       <recent name="E:\WebStorm\H5_max\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\WebStorm\H5_max" />
+      <recent name="E:\WebStorm\H5_max\mobile" />
       <recent name="E:\WebStorm\H5_max\images" />
     </key>
   </component>
@@ -84,7 +93,7 @@
       <updated>1659578881108</updated>
       <workItem from="1659578882355" duration="450000" />
       <workItem from="1659579351831" duration="8050000" />
-      <workItem from="1659597240903" duration="7492000" />
+      <workItem from="1659597240903" duration="10463000" />
     </task>
     <task id="LOCAL-00001" summary="h5max">
       <created>1659579223422</created>
@@ -240,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659604535480</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="h5max">
+      <created>1659604827059</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1659604827059</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
