@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9719a456-191b-4e38-86d5-33ef124b23c5" name="变更" comment="h5max" />
+    <list default="true" id="9719a456-191b-4e38-86d5-33ef124b23c5" name="变更" comment="h5max">
+      <change afterPath="$PROJECT_DIR$/mobile/help/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mobile/help/faq.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mobile/help/guide.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mobile/recharge.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/announcement.html" beforeDir="false" afterPath="$PROJECT_DIR$/announcement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/immediate.html" beforeDir="false" afterPath="$PROJECT_DIR$/immediate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market.html" beforeDir="false" afterPath="$PROJECT_DIR$/market.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/match.html" beforeDir="false" afterPath="$PROJECT_DIR$/match.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/help/bet.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/help/bet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/help/rule.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/help/rule.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/help/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/help/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/help/withdrawal.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/help/withdrawal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/promotion.html" beforeDir="false" afterPath="$PROJECT_DIR$/promotion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trade.html" beforeDir="false" afterPath="$PROJECT_DIR$/trade.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,7 +59,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/WebStorm/H5_max/images",
+    "last_opened_file_path": "E:/WebStorm/H5_max/mobile",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -54,9 +72,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\WebStorm\H5_max\images" />
-      <recent name="E:\WebStorm\H5_max\mobile\help" />
       <recent name="E:\WebStorm\H5_max\mobile" />
+      <recent name="E:\WebStorm\H5_max\mobile\help" />
+      <recent name="E:\WebStorm\H5_max\images" />
       <recent name="E:\WebStorm\H5_max" />
       <recent name="E:\WebStorm\H5_max\js" />
     </key>
@@ -78,6 +96,7 @@
       <workItem from="1659578882355" duration="450000" />
       <workItem from="1659579351831" duration="8050000" />
       <workItem from="1659597240903" duration="11469000" />
+      <workItem from="1659662360081" duration="2100000" />
     </task>
     <task id="LOCAL-00001" summary="h5max">
       <created>1659579223422</created>
@@ -254,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659609412267</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="h5max">
+      <created>1659662370616</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1659662370616</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
