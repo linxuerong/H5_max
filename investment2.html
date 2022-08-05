@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAX</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/all.css">
+
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    <link href="css/sweetalert2.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="loading">
+        <img src="images/MAX_logo.png" alt="">
+    </div>
+    <!--头部-->
+    <header class="header-wrap">
+        <a class="navbar-brand header-logo" href="https://max688888.com/">
+            <img src="images/MAX_logo.png" alt="">
+        </a>
+        <nav class="navbar navbar-expand-lg header py-lg-4 py-2">
+            <div class="container-fluid position-relative px-1">
+                <img class="navbar-toggler p-0" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                     aria-controls="offcanvasNavbar" src="images/menu-btn.png" alt="">
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                     aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-body justify-content-between align-items-center p-0">
+                        <div class="flex-column">
+                            <div class="header-info d-lg-block d-none px-2">
+                                2022/07/29 17:44 ( 北京标准时间 ) ｜ 线上人数 ：3636
+                            </div>
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item d-sm-none d-blck">
+                                    <a class="nav-link px-2 pb-0" href="account.html">中心钱包</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link px-2 pb-0" href="market.html">市场列表</a>
+                                </li>
+                                <li class="nav-item d-sm-none d-blck">
+                                    <a class="nav-link px-2 pb-0" href="./trade.html">存提纪录</a>
+                                </li>
+                                <li class="nav-item d-sm-block d-none">
+                                    <a class="nav-link px-2 pb-0" href="./investment.html">投资纪录</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link px-2 pb-0" href="match.html">赛事结果</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link px-2 pb-0" href="immediate.html">即时比分</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link px-2 pb-0" href="promotion.html">优惠活动</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link px-2 pb-0" href="announcement.html">最新消息</a>
+                                </li>
+                                <li class="nav-item dropdown d-sm-none d-blck">
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                                       role="button" aria-haspopup="true"
+                                       aria-expanded="false">线上客服</a>
+                                    <div class="dropdown-menu">
+                                        <a class="nav-link px-2 pb-0 text-black"
+                                           href="" target="_blank">线路1</a>
+                                        <a class="nav-link px-2 pb-0 text-black"
+                                           href="">线路2</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item d-sm-none d-blck">
+                                    <a class="nav-link px-2 pb-0" href="mobile/app.html">APP下载</a>
+                                </li>
+                                <li class="nav-item d-sm-none d-blck">
+                                    <a class="nav-link px-2 pb-0"
+                                       href="mobile/help/rule.html">规则条款</a>
+                                </li>
+                                <li class="nav-item d-sm-none d-blck">
+                                    <a class="nav-link px-2 pb-0" href="mobile/help.html">帮助中心</a>
+                                </li>
+                                <li class="nav-item d-sm-none d-blck">
+                                    <a class="nav-link px-2 pb-0" href="https://max688888.com/logout">登出</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-end">
+                    <div class="d-sm-block d-none p-2">Hi, 叶梅
+                        <br class="d-sm-none d-blck">
+                        欢迎
+                    </div>
+                    <a class="nav-link header-login text-end py-0 d-blck pe-2" href="https://max688888.com/logout">
+                        登出
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid page p-2 py-3 position-relative member">
+        <nav aria-label="breadcrumb" class="d-sm-block d-none">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="https://max688888.com/investment2">历史帐务</a></li>
+            </ol>
+        </nav>
+        <ul class="nav nav-pills member-pills w-100" id="pills-tab">
+            <li class="m-1 px-0">
+                <div class="nav-link member-pill active" style="min-width:80px !important;" data-bs-toggle="pill" data-bs-target="#pills-0" role="tab">
+                    本周</div>
+            </li>
+            <li class="m-1 px-0">
+                <div class="nav-link member-pill" style="min-width:80px !important;" data-bs-toggle="pill" data-bs-target="#pills-1" role="tab">
+                    上周
+                </div>
+            </li>
+            <li class="m-1 px-0">
+                <div class="nav-link member-pill" style="min-width:80px !important;" data-bs-toggle="pill" data-bs-target="#pills-2" role="tab">
+                    前两周
+                </div>
+            </li>
+            <li class="m-1 px-0">
+                <div class="nav-link member-pill" style="min-width:80px !important;" data-bs-toggle="pill" data-bs-target="#pills-3" role="tab">
+                    半年</div>
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade px-2 py-md-3 p-3 member-table show active" id="pills-0" role="tabpanel">
+                <div class="row d-md-flex d-none m-0 text-center justify-content-between table-th">
+                    <div class="col-md-1 col-4 px-0 p-3">日期</div>
+                    <div class="col-md-1 col-4 px-0 p-3">USDT美元</div>
+                    <div class="col-md-1 col-4 px-0 p-3">RMB人民币</div>
+                </div>
+                <div class="row m-0 text-center justify-content-between table-td mb-2">
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="日期">
+                        2022/08/07</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="USDT(美元)">
+                        0</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="RMB(人民币)">
+                        0</div>
+                </div>
+                <div class="row m-0 text-center justify-content-between table-td mb-2">
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        2022/08/06</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        0</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        0</div>
+                </div>
+                <a href="https://max688888.com/mobile/investment2/info?start_date=2022%2F08%2F05&amp;end_date=2022%2F08%2F05">
+                    <div class="row m-0 text-center justify-content-between table-td mb-2">
+                        <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                            2022/08/05</div>
+                        <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                            0.39</div>
+                        <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                            2.73</div>
+                    </div>
+                </a>
+                <a href="https://max688888.com/mobile/investment2/info?start_date=2022%2F08%2F04&amp;end_date=2022%2F08%2F04">
+                    <div class="row m-0 text-center justify-content-between table-td mb-2">
+                        <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                            2022/08/04</div>
+                        <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                            1.13</div>
+                        <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                            7.91</div>
+                    </div>
+                </a>
+                <a href="https://max688888.com/mobile/investment2/info?start_date=2022%2F08%2F03&amp;end_date=2022%2F08%2F03">
+                    <div class="row m-0 text-center justify-content-between table-td mb-2">
+                        <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                            2022/08/03</div>
+                        <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                            0.77</div>
+                        <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                            5.39</div>
+                    </div>
+                </a>
+                <a href="https://max688888.com/mobile/investment2/info?start_date=2022%2F08%2F02&amp;end_date=2022%2F08%2F02">
+                    <div class="row m-0 text-center justify-content-between table-td mb-2">
+                        <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                            2022/08/02</div>
+                        <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                            0.71</div>
+                        <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                            4.97</div>
+                    </div>
+                </a>
+                <a href="https://max688888.com/mobile/investment2/info?start_date=2022%2F08%2F01&amp;end_date=2022%2F08%2F01">
+                    <div class="row m-0 text-center justify-content-between table-td mb-2">
+                        <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                            2022/08/01</div>
+                        <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                            1.03</div>
+                        <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                            7.21</div>
+                    </div>
+                </a>
+                <div class="row m-0 text-center justify-content-between table-td mb-2">
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-5" data-title="">
+                        总计</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-5" data-title="">
+                        4.03</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-5" data-title="">
+                        28.21</div>
+                </div>
+            </div>
+            <div class="tab-pane fade px-2 py-md-3 p-3 member-table " id="pills-1" role="tabpanel">
+                <div class="row d-md-flex d-none m-0 text-center justify-content-between table-th">
+                    <div class="col-md-1 col-4 px-0 p-3">日期</div>
+                    <div class="col-md-1 col-4 px-0 p-3">USDT美元</div>
+                    <div class="col-md-1 col-4 px-0 p-3">RMB人民币</div>
+                </div>
+                <div class="row m-0 text-center justify-content-between table-td mb-2">
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="日期">
+                        2022/07/31</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="USDT(美元)">
+                        1.36</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="RMB(人民币)">
+                        9.52</div>
+                </div>
+
+                <div class="row m-0 text-center justify-content-between table-td mb-2">
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        2022/07/30</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        1.52</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        10.64</div>
+                </div>
+
+                <div class="row m-0 text-center justify-content-between table-td mb-2">
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        2022/07/29</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        4.98</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        34.86</div>
+                </div>
+
+                <div class="row m-0 text-center justify-content-between table-td mb-2">
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        2022/07/28</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        2.82</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        19.74</div>
+                </div>
+
+                <div class="row m-0 text-center justify-content-between table-td mb-2">
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        2022/07/27</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        3.78</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        26.46</div>
+                </div>
+
+                <div class="row m-0 text-center justify-content-between table-td mb-2">
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        2022/07/26</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        3.78</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        26.46</div>
+                </div>
+
+                <div class="row m-0 text-center justify-content-between table-td mb-2">
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        2022/07/25</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        1.58</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        11.06</div>
+                </div>
+
+                <div class="row m-0 text-center justify-content-between table-td mb-2">
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-5" data-title="">
+                        总计</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-5" data-title="">
+                        19.82</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-5" data-title="">
+                        138.74</div>
+                </div>
+            </div>
+            <div class="tab-pane fade px-2 py-md-3 p-3 member-table " id="pills-2" role="tabpanel">
+                <div class="row d-md-flex d-none m-0 text-center justify-content-between table-th">
+                    <div class="col-md-1 col-4 px-0 p-3">日期</div>
+                    <div class="col-md-1 col-4 px-0 p-3">USDT美元</div>
+                    <div class="col-md-1 col-4 px-0 p-3">RMB人民币</div>
+                </div>
+                <div class="row m-0 text-center justify-content-between table-td mb-2">
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="日期">
+                        2022/07/24</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="USDT(美元)">
+                        2.99</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="RMB(人民币)">
+                        20.93</div>
+                </div>
+
+                <div class="row m-0 text-center justify-content-between table-td mb-2">
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        2022/07/23</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        3.55</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        24.85</div>
+                </div>
+
+                <div class="row m-0 text-center justify-content-between table-td mb-2">
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        2022/07/22</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        0.74</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        5.18</div>
+                </div>
+
+                <div class="row m-0 text-center justify-content-between table-td mb-2">
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        2022/07/21</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        0</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        0</div>
+                </div>
+                <div class="row m-0 text-center justify-content-between table-td mb-2">
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        2022/07/20</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        0</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        0</div>
+                </div>
+                <div class="row m-0 text-center justify-content-between table-td mb-2">
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        2022/07/19</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        0</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        0</div>
+                </div>
+                <div class="row m-0 text-center justify-content-between table-td mb-2">
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        2022/07/18</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        0</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        0</div>
+                </div>
+                <div class="row m-0 text-center justify-content-between table-td mb-2">
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-5" data-title="">
+                        总计</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-5" data-title="">
+                        7.28</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-5" data-title="">
+                        50.96</div>
+                </div>
+            </div>
+            <div class="tab-pane fade px-2 py-md-3 p-3 member-table " id="pills-3" role="tabpanel">
+                <div class="row d-md-flex d-none m-0 text-center justify-content-between table-th">
+                    <div class="col-md-1 col-4 px-0 p-3">日期</div>
+                    <div class="col-md-1 col-4 px-0 p-3">USDT美元</div>
+                    <div class="col-md-1 col-4 px-0 p-3">RMB人民币</div>
+                </div>
+                <div class="row m-0 text-center justify-content-between table-td mb-2">
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="日期">
+                        2022/12</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="USDT(美元)">
+                        0</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="RMB(人民币)">
+                        0</div>
+                </div>
+                <div class="row m-0 text-center justify-content-between table-td mb-2">
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        2022/11</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        0</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        0</div>
+                </div>
+                <div class="row m-0 text-center justify-content-between table-td mb-2">
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        2022/10</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        0</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        0</div>
+                </div>
+                <div class="row m-0 text-center justify-content-between table-td mb-2">
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        2022/09</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        0</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        0</div>
+                </div>
+                <div class="row m-0 text-center justify-content-between table-td mb-2">
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        2022/08</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        4.03</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        28.21</div>
+                </div>
+
+                <div class="row m-0 text-center justify-content-between table-td mb-2">
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        2022/07</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        27.1</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="">
+                        189.7</div>
+                </div>
+
+                <div class="row m-0 text-center justify-content-between table-td mb-2">
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-5" data-title="">
+                        总计</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-5" data-title="">
+                        31.13</div>
+                    <div class="col-md-1 col-4 px-0 p-3 table-list fs-5" data-title="">
+                        217.91</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-5"></div>
+    <!--    底部三件套-->
+    <div class="side-menu-wrap">
+        <div class="side-menu d-sm-block d-none">
+            <div class="side-menu__btns text-center">
+                <a href="announcement.html" class="side-menu__btn">
+                    <img src="images/icon_side-ann.png" alt="">
+                    <div>网站公告</div>
+                </a>
+                <a href="https://direct.lc.chat/14165448/" target="_blank" class="side-menu__btn">
+                    <img src="images/icon_side-contact.png" alt="">
+                    <div>线上客服</div>
+                </a>
+                <a href="mobile/app.html" class="side-menu__btn">
+                    <img src="images/icon_side-download.png" alt="">
+                    <div>APP下载</div>
+                </a>
+                <a href="account.html" class="side-menu__btn">
+                    <img src="images/icon_side-balance.png" alt="">
+                    <div>中心钱包</div>
+                </a>
+                <a href="mobile/recharge.html" class="side-menu__btn withdrawal">
+                    <img src="images/icon_side-withdrawal.png" alt="">
+                    <div>充值提现</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrap">
+        <footer class="footer text-center py-2 d-sm-block d-none">
+            <a href="./help.html" class="footer-link mx-2">帮助中心</a>
+            <a href="javascript:location.reload();" class="footer-link mx-2">页面卡顿？</a>
+            <div class="float-sm-end pe-4">版权所有 © 2022 MAX</div>
+        </footer>
+    </div>
+    <div class="bottom-menu-wrap">
+        <div class="bottom-menu d-sm-none d-block">
+            <div class="bottom-menu__btns" style="font-size:0.75rem;">
+                <a href="index.html" class="bottom-menu__btn">
+                    <img src="images/icon_side-home.png" alt="">
+                    <div>首页</div>
+                </a>
+                <a href="market.html" class="bottom-menu__btn ">
+                    <img src="images/icon_side-list.png" alt="">
+                    <div>市场列表</div>
+                </a>
+                <a href="investment/notopen.html" class="bottom-menu__btn ">
+                    <img src="images/icon_trade-history.png" alt="">
+                    <div>交易明细</div>
+                </a>
+                <a href="./investment2.html" class="bottom-menu__btn " data-bs-toggle="modal" data-bs-target="#loginModal">
+                    <img src="images/icon_side-history.png" alt="">
+                    <div>历史帐务</div>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/moment-with-locales.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/clipboard.min.js"></script>
+    <script src="js/imask.js"></script>
+    <script src="js/CLDRPluralRuleParser.js"></script>
+
+    <script>
+        $(function() {
+            $('.loading').hide();
+        });
+    </script>
+
+</body>
+</html>
