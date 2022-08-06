@@ -160,6 +160,7 @@
                 <div class="tomorrowOrder market-lists__mobile mt-2">
                   </div>
 
+
             </div>
         </div>
 
@@ -255,7 +256,8 @@
 
                 $.each( data, function (i , item){
                     var box =
-                        '<div class="market-list" >\n' +
+                        '<div class="market-list" > <a href="./market/mobile.html">\n' +
+                        ''+
                         '    <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">'+ item.maxGameName+'</div>\n' +
                         '    <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">\n' +
                             item.maxStartTime+
@@ -271,7 +273,7 @@
                         '            <div class="market-list__team">'+item.maxCustomerTeam+'</div>\n' +
                         '        </div>\n' +
                         '    </div>\n' +
-                        '</div>'
+                        '</a></div>'
 
                     allNum++
                     $(".allNum").text(allNum)
