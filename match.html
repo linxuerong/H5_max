@@ -121,17 +121,7 @@
                 <div class="col-sm-1 col-4 p-1">总进球</div>
             </div>
             <div id="table-lists">
-                <div class="row table-lists table-td m-0 mt-sm-0 mt-3 p-0 py-3 text-center">
-                    <div class="row m-0 col-sm-5 col-12 p-0 flex-sm-row flex-column-reverse">
-                        <div class="col-sm-8 col-12 p-sm-0 table-list time">2022-08-02 22:00:00</div>
-                        <div class="col-sm-4 col-12 p-sm-0 table-list match">乌兹超</div>
-                    </div>
-                    <div class="col-sm-2 col-6 p-0 ps-2 mt-sm-0 mt-3 table-list team" data-title="主队">库鲁维奇科坎</div>
-                    <div class="col-sm-2 col-6 p-0 pe-2 mt-sm-0 mt-3 table-list team" data-title="客队">费尔干纳夫兹</div>
-                    <div class="col-sm-1 col-4 p-0 ps-2 mt-sm-0 mt-2 table-list ball" data-title="全场波胆">3-3</div>
-                    <div class="col-sm-1 col-4 p-0 mt-sm-0 mt-2 table-list ball" data-title="上半场波胆">0-1</div>
-                    <div class="col-sm-1 col-4 p-0 pe-2 mt-sm-0 mt-2 table-list ball" data-title="总进球">4</div>
-                </div>
+
 
             </div>
         </div>
@@ -221,6 +211,21 @@
             })
 
             function sorting(data){
+                $.each( data, function (i , item){
+                    var box =
+                        '<div class="row table-lists table-td m-0 mt-sm-0 mt-3 p-0 py-3 text-center">\n' +
+                        '    <div class="row m-0 col-sm-5 col-12 p-0 flex-sm-row flex-column-reverse">\n' +
+                        '        <div class="col-sm-8 col-12 p-sm-0 table-list time">'+item.maxGameTime+'</div>\n' +
+                        '        <div class="col-sm-4 col-12 p-sm-0 table-list match">'+item.maxGameName+'</div>\n' +
+                        '    </div>\n' +
+                        '    <div class="col-sm-2 col-6 p-0 ps-2 mt-sm-0 mt-3 table-list team" data-title="主队">'+item.maxGameHomeTeam+'</div>\n' +
+                        '    <div class="col-sm-2 col-6 p-0 pe-2 mt-sm-0 mt-3 table-list team" data-title="客队">'+ item.maxGameCustomerTeam+'</div>\n' +
+                        '    <div class="col-sm-1 col-4 p-0 ps-2 mt-sm-0 mt-2 table-list ball" data-title="全场波胆">'+item.maxGameAllFight+'</div>\n' +
+                        '    <div class="col-sm-1 col-4 p-0 mt-sm-0 mt-2 table-list ball" data-title="上半场波胆">'+ item.maxGameHalfFight+'</div>\n' +
+                        '    <div class="col-sm-1 col-4 p-0 pe-2 mt-sm-0 mt-2 table-list ball" data-title="总进球">'+ item.maxGameAllGoal +'</div>\n' +
+                        '</div>';
+                    $('#table-lists').append(box)
+                })
 
             }
 

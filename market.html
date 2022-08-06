@@ -262,19 +262,19 @@
 
                     var box =
                         '<div class="market-list" >\n' +
-                        '    <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">中乙</div>\n' +
+                        '    <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">'+ item.maxGameName+'</div>\n' +
                         '    <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">\n' +
-                        '        08/04 15:30\n' +
+                            item.maxStartTime+
                         '    </div>\n' +
                         '    <hr class="my-2">\n' +
                         '    <div class="row text-center m-0">\n' +
                         '        <div class="col-6 px-0">\n' +
                         '            <div class="market-list__label">主队</div>\n' +
-                        '            <div class="market-list__team">湖北青年星</div>\n' +
+                        '            <div class="market-list__team">'+item.maxHomeTeam+'</div>\n' +
                         '        </div>\n' +
                         '        <div class="col-6 px-0">\n' +
                         '            <div class="market-list__label">客队</div>\n' +
-                        '            <div class="market-list__team">泉州亚新</div>\n' +
+                        '            <div class="market-list__team">'+item.maxCustomerTeam+'</div>\n' +
                         '        </div>\n' +
                         '    </div>\n' +
                         '</div>'
@@ -283,8 +283,8 @@
                     $(".allNum").text(allNum)
                     $('.allOrder').append(box)
 
-
-                    if(new Date('2022/'+item.maxStartTime) == new Date()){
+                    var time= '2022-'+item.maxStartTime
+                    if(new Date(time).toDateString() == new Date().toDateString()){
                         //今日
                         todayNum++
                         $(".todayNum").text(todayNum)
