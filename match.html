@@ -106,7 +106,6 @@
                 <option value="last0">2022-08-03 ~ 2022-08-04</option>
                 <option value="last1">2022-08-02 ~ 2022-08-03</option>
                 <option value="last2">2022-08-01 ~ 2022-08-02</option>
-
             </select>
         </div>
         <div class="my-4">
@@ -132,30 +131,6 @@
                     <div class="col-sm-1 col-4 p-0 ps-2 mt-sm-0 mt-2 table-list ball" data-title="全场波胆">3-3</div>
                     <div class="col-sm-1 col-4 p-0 mt-sm-0 mt-2 table-list ball" data-title="上半场波胆">0-1</div>
                     <div class="col-sm-1 col-4 p-0 pe-2 mt-sm-0 mt-2 table-list ball" data-title="总进球">4</div>
-                </div>
-
-                <div class="row table-lists table-td m-0 mt-sm-0 mt-3 p-0 py-3 text-center">
-                    <div class="row m-0 col-sm-5 col-12 p-0 flex-sm-row flex-column-reverse">
-                        <div class="col-sm-8 col-12 p-sm-0 table-list time">2022-08-02 22:35:00</div>
-                        <div class="col-sm-4 col-12 p-sm-0 table-list match">卡塔尔联</div>
-                    </div>
-                    <div class="col-sm-2 col-6 p-0 ps-2 mt-sm-0 mt-3 table-list team" data-title="主队">阿拉比SC</div>
-                    <div class="col-sm-2 col-6 p-0 pe-2 mt-sm-0 mt-3 table-list team" data-title="客队">卡塔尔SC</div>
-                    <div class="col-sm-1 col-4 p-0 ps-2 mt-sm-0 mt-2 table-list ball" data-title="全场波胆">2-0</div>
-                    <div class="col-sm-1 col-4 p-0 mt-sm-0 mt-2 table-list ball" data-title="上半场波胆">0-0</div>
-                    <div class="col-sm-1 col-4 p-0 pe-2 mt-sm-0 mt-2 table-list ball" data-title="总进球">2</div>
-                </div>
-
-                <div class="row table-lists table-td m-0 mt-sm-0 mt-3 p-0 py-3 text-center">
-                    <div class="row m-0 col-sm-5 col-12 p-0 flex-sm-row flex-column-reverse">
-                        <div class="col-sm-8 col-12 p-sm-0 table-list time">2022-08-02 23:00:00</div>
-                        <div class="col-sm-4 col-12 p-sm-0 table-list match">乌兹超</div>
-                    </div>
-                    <div class="col-sm-2 col-6 p-0 ps-2 mt-sm-0 mt-3 table-list team" data-title="主队">纳萨夫</div>
-                    <div class="col-sm-2 col-6 p-0 pe-2 mt-sm-0 mt-3 table-list team" data-title="客队">曼干纳弗巴霍</div>
-                    <div class="col-sm-1 col-4 p-0 ps-2 mt-sm-0 mt-2 table-list ball" data-title="全场波胆">0-1</div>
-                    <div class="col-sm-1 col-4 p-0 mt-sm-0 mt-2 table-list ball" data-title="上半场波胆">0-1</div>
-                    <div class="col-sm-1 col-4 p-0 pe-2 mt-sm-0 mt-2 table-list ball" data-title="总进球">1</div>
                 </div>
 
             </div>
@@ -235,6 +210,20 @@
     <script>
         $(function() {
             $('.loading').hide();
+
+            $.ajax({
+                type: 'GET',
+                url: 'http://192.168.123.211:8092/max/goldResult/getList',
+                success: function(res) {
+                    console.log(res)
+                    sorting(res.data)
+                },
+            })
+
+            function sorting(data){
+
+            }
+
         });
     </script>
 

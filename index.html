@@ -92,9 +92,8 @@
 							<br class="d-sm-none d-blck">
 							欢迎
 						</div>
-						<a class="nav-link header-login text-end py-0 d-blck pe-2" href="https://max688888.com/logout">
-							登出
-						</a>
+						<a class="loginShow nav-link header-login text-end py-0 d-blck pe-2" href="https://max688888.com/logout">登出</a>
+<!--						<a class="loginShow nav-link header-login py-0" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">登入</a>-->
 					</div>
 				</div>
 			</nav>
@@ -161,25 +160,27 @@
 			</div>
 
 			<!--登入后显示 用户信息-->
-			<div class="w-100 account-level d-flex p-sm-3 p-2 justify-content-between align-items-center mb-3">
+			<div class="loginShow w-100 account-level d-flex p-sm-3 p-2 justify-content-between align-items-center mb-3">
 				<div class="account-level__info d-flex align-items-center">
 					<img class="account-level__icon mx-md-3 mx-0" src="images/user.png" alt="">
 					<div class="account-level__user">
-						<div>Hi, AAP222</div>
-						<div>微商等级：1</div>
+						<div>Hi, <span class="uAccount">AAP222</span></div>
+						<div>微商等级：<span class="uLevel">1</span></div>
 					</div>
 				</div>
 				<ul class="account-level__balance mb-0 list-unstyled">
-					<li class="" data-title="余额：">$0.00</li>
+					<li class="" data-title="余额：">$ <span class="uBalance">0.00</span></li>
 				</ul>
 			</div>
+
 		</div>
+
 		<!--登入后显示的钱包-->
-		<div class="d-sm-none d-block m-2 wallet d-flex p-2 mb-4">
+		<div class="loginShow d-sm-none d-block m-2 wallet d-flex p-2 mb-4">
 			<div class="wallet-balance">
 				<a href="./account.html">
 					<div>中心钱包</div>
-					<div>$55.50</div>
+					<div>$ <span class="uBalance">55.50</span></div>
 				</a>
 			</div>
 			<div class="wallet-withdrawal text-center">
@@ -501,13 +502,23 @@
 			
 			$(function() {
 				$('.loading').hide();
-
+				console.log("获取信息")
 				//获取用户信息
 				$.ajax({
 					type: 'GET',
 					url: 'http://192.168.123.211:8092/max/member/getInfo',
 					success: function(res) {
-						console.log(res)
+						if(res.code == 0){
+							// 成功
+							console.log(res.data)
+							$('.uAccount').html(res.data.maxAccount)
+							$('.uLevel').html(res.data.maxLevel)
+
+							$('.uBalance').html(res.data.balance.toFixed(2))
+
+						}else {
+							$('.loginShow').remove();
+						}
 
 					},
 				})
