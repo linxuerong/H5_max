@@ -216,48 +216,24 @@
 			</div>
 		</div>
 
+		<!--热门赛事-->
 		<div class="games py-4 text-center">
 			<h1 class="games-title my-sm-5 my-3">热门赛事</h1>
 			
 			<div class="autoplay pb-5 px-0 pt-0 container games-cards">
-				<div class="games-card p-3 py-4 " data-id="round-1658974753">
-					<div class="games-card__time text-end">07/30 01:00</div>
-					<div class="games-card__name my-3">
-						<p class="mb-0 name">奥丙</p>
-						<p class="mb-0 type"> / 真人足球 /</p>
-					</div>
-					<div class="games-card__team my-4">
-						<div class="name">杜斯兰堡</div>
-						<div class="my-2"> V.S </div>
-						<div class="name">克拉根福</div>
-					</div>
-				</div>
-				
-				<div class="games-card p-3 py-4 " data-id="round-1658974753">
-					<div class="games-card__time text-end">07/30 01:00</div>
-					<div class="games-card__name my-3">
-						<p class="mb-0 name">奥丙</p>
-						<p class="mb-0 type"> / 真人足球 /</p>
-					</div>
-					<div class="games-card__team my-4">
-						<div class="name">杜斯兰堡</div>
-						<div class="my-2"> V.S </div>
-						<div class="name">克拉根福</div>
-					</div>
-				</div>
-				<div class="games-card p-3 py-4 " data-id="round-1658974753">
-					<div class="games-card__time text-end">07/30 01:00</div>
-					<div class="games-card__name my-3">
-						<p class="mb-0 name">奥丙</p>
-						<p class="mb-0 type"> / 真人足球 /</p>
-					</div>
-					<div class="games-card__team my-4">
-						<div class="name">杜斯兰堡</div>
-						<div class="my-2"> V.S </div>
-						<div class="name">克拉根福</div>
-					</div>
-				</div>
-				
+<div class="games-card p-3 py-4 " data-id="round-1658974753">
+	<div class="games-card__time text-end">07/30 01:00</div>
+	<div class="games-card__name my-3">
+		<p class="mb-0 name">奥丙</p>
+		<p class="mb-0 type"> / 真人足球 /</p>
+	</div>
+	<div class="games-card__team my-4">
+		<div class="name">杜斯兰堡</div>
+		<div class="my-2"> V.S </div>
+		<div class="name">克拉根福</div>
+	</div>
+</div>
+
 			</div>
 		</div>
 
@@ -499,7 +475,7 @@
 		 <script src="./js/CLDRPluralRuleParser.js"></script>
 		
 		<script>
-			
+
 			$(function() {
 				$('.loading').hide();
 				console.log("获取信息")
@@ -671,29 +647,64 @@
 		
 		<script type="text/javascript">
 			 $(document).ready(function(){
-				 $('.autoplay').slick({
-				 	slidesToShow: 3,
-				 	slidesToScroll: 1,
-				 	autoplay: true,
-				 	autoplaySpeed: 2000,
-				 	focusOnSelect: true,
-				 	responsive: [{
-				 		breakpoint: 768,
-				 		settings: {
-				 			arrows: false,
-				 			centerMode: true,
-				 			slidesToShow: 1
-				 		}
-				 	}, {
-				 		breakpoint: 992,
-				 		settings: {
-				 			arrows: false,
-				 			centerMode: true,
-				 			slidesToShow: 2
-				 		}
-				 	}]
-				 });
-			 })
+				 $.ajax({
+					 type: 'GET',
+					 url: 'http://192.168.123.211:8092/max/mask/getMaskList/1',
+					 success: function(res) {
+						 console.log(res)
+						 sorting(res.data)
+					 },
+				 })
+				 console.log("分拣数据")
+				 function sorting(data){
+					 $.each( data, function (i , item){
+						 var box =
+								 '<div class="games-card p-3 py-4 " data-id="round-1658974753">' +
+								 '  <div class="games-card__time text-end">'+ item.maxGameName+'</div>' +
+								 '  <div class="games-card__name my-3"> ' +
+								 '    <p class="mb-0 name">'+item.maxGameName+'</p> ' +
+								 '    <p class="mb-0 type"> / 真人足球 /</p> ' +
+								 '  </div> ' +
+								 '  <div class="games-card__team my-4">' +
+								 '    <div class="name">'+item.maxHomeTeam+'</div>' +
+								 '    <div class="my-2"> V.S </div>' +
+								 '    <div class="name">'+item.maxCustomerTeam+'</div>' +
+								 '  </div> ' +
+								 '</div>'
+						 $('.autoplay').append(box);
+						 if(data.length-1 == i){
+							 SwiTop()
+						 }
+
+					 })
+				 }
+				 function SwiTop(){
+					 $('.autoplay').slick({
+						 slidesToShow: 3,
+						 slidesToScroll: 1,
+						 autoplay: true,
+						 autoplaySpeed: 2000,
+						 focusOnSelect: true,
+						 responsive: [{
+							 breakpoint: 768,
+							 settings: {
+								 arrows: false,
+								 centerMode: true,
+								 slidesToShow: 1
+							 }
+						 }, {
+							 breakpoint: 992,
+							 settings: {
+								 arrows: false,
+								 centerMode: true,
+								 slidesToShow: 2
+							 }
+						 }]
+					 });
+				 }
+
+
+			})
 			
 			$('.games-card').on('click', function() {
 				var round_id = $(this).data('id');
