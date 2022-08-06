@@ -264,7 +264,7 @@
 		<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content p-4 pb-5 text-center">
-					<form id="login-form" action="https://max688888.com/login" autocomplete="off">
+					<form id="login-form" action="http://192.168.123.211:8092/max/member/login" autocomplete="off">
 						<div class="modal-close" data-bs-dismiss="modal">X</div>
 						<h1 class="modal-content__title p-3">会员登入</h1>
 						<div class="row m-0 form-group my-2 align-items-center justify-content-end">
@@ -278,7 +278,7 @@
 							</div>
 							<div class="col-10 p-0 my-2 d-flex justify-content-between">
 								<div class="password d-flex align-items-center">
-									<input type="checkbox" name="remember_me" class="me-1" autocomplete="off">记住密码
+									<input type="checkbox" value="true" name="rememberMe" class="me-1" autocomplete="off">记住密码
 								</div>
 								<div class="modal-btn mx-2" data-bs-toggle="modal" data-bs-target="#forgetPasswordModal">
 									忘记密码
@@ -303,78 +303,62 @@
 					<form id="register-form" action="https://max688888.com/register">
 						<div class="row m-0 form-group my-2 align-items-center justify-content-end">
 							<label class="col-3 p-0 my-2 pe-1 text-end">帐号</label>
-							<div class="col-9 p-0 ps-1 my-2 dropdown">
-								<select name="account" class="btn w-100">
-									<option value="ADW129">ADW129</option>
-									<option value="ADR726">ADR726</option>
-									<option value="AIT543">AIT543</option>
-									<option value="AOZ758">AOZ758</option>
-									<option value="AOS819">AOS819</option>
-									<option value="ANP528">ANP528</option>
-									<option value="AOS532">AOS532</option>
-									<option value="AEN419">AEN419</option>
-									<option value="ALH867">ALH867</option>
-									<option value="AHI516">AHI516</option>
-								</select>
+							<div class="col-9 p-0 ps-1 my-2">
+								<input type="text" name="maxAccount" placeholder="暂时用输入" required class="w-100">
 							</div>
+<!--							<div class="col-9 p-0 ps-1 my-2 dropdown">-->
+<!--								<select name="account" class="btn w-100">-->
+<!--									<option value="ADW129">ADW129</option>-->
+<!--									<option value="ADR726">ADR726</option>-->
+<!--									<option value="AIT543">AIT543</option>-->
+<!--								</select>-->
+<!--							</div>-->
 							<label class="col-3 p-0 my-2 pe-1 text-end">登入密码</label>
 							<div class="col-9 p-0 ps-1 my-2">
-								<input type="password" name="password" placeholder="请输入您的密码(需包含英文与数字)" required class="w-100">
+								<input type="password" name="maxLoginPassword" placeholder="请输入您的密码(需包含英文与数字)" required class="w-100">
 							</div>
-							<label class="col-3 p-0 my-2 pe-1 text-end">提领密码</label>
+							<label class="col-3 p-0 my-2 pe-1 text-end">支付密码</label>
 							<div class="col-9 p-0 ps-1 my-2">
-								<input type="password" name="withdrawal_password" placeholder="请勿跟登入密码相同" required class="w-100">
+								<input type="password" name="maxPayPassword" placeholder="请勿跟登入密码相同" required class="w-100">
 							</div>
 							<label class="col-3 p-0 my-2 pe-1 text-end">姓名</label>
 							<div class="col-9 p-0 ps-1 my-2 dropdown">
 								<div class="col-9 p-0 ps-1 my-2">
-									<input type="text" name="name" placeholder="请填写真实姓名" required class="w-100">
+									<input type="text" name="maxName" placeholder="请填写真实姓名" required class="w-100">
 								</div>
 							</div>
 							<label class="col-3 p-0 my-2 pe-1 text-end">昵称</label>
 							<div class="col-9 p-0 ps-1 my-2 dropdown">
 								<div class="col-9 p-0 ps-1 my-2">
-									<input type="text" name="nickname" placeholder="请填写昵称" required class="w-100">
+									<input type="text" name="maxNickName" placeholder="请填写昵称" required class="w-100">
 								</div>
 							</div>
 							<label class="col-3 p-0 my-2 pe-1 text-end">国家</label>
 							<div class="dropdown col-9 p-0 ps-1 my-2">
-								<select name="country" class="btn w-100">
+								<select name="maxCountry" class="btn w-100">
 									<option value="中國">中国</option>
 									<option value="美國">美国</option>
 									<option value="日本">日本</option>
 									<option value="越南">越南</option>
 									<option value="泰國">泰国</option>
 									<option value="印度">印度</option>
-									<option value="澳門">澳门</option>
-									<option value="新加坡">新加坡</option>
-									<option value="馬來西亞">马来西亚</option>
-									<option value="菲律賓">菲律宾</option>
-									<option value="澳大利亞">澳大利亚</option>
-									<option value="加拿大">加拿大</option>
-									<option value="英國">英国</option>
-									<option value="阿根廷">阿根廷</option>
-									<option value="奧地利">奥地利</option>
-									<option value="俄羅斯">俄罗斯</option>
-									<option value="巴西">巴西</option>
-									<option value="緬甸">缅甸</option>
-									<option value="德國">德国</option>
+
 								</select>
 							</div>
 							<label class="col-3 p-0 my-2 pe-1 text-end">手机号码</label>
 							<div class="col-9 p-0 ps-1 my-2">
-								<input type="tel" placeholder="绑定之后无法更改" name="phone" required class="w-100">
+								<input type="tel" placeholder="绑定之后无法更改" name="maxMobile" required class="phone w-100">
 							</div>
 							<label class="col-3 p-0 my-2 pe-1 text-end">短信码</label>
 							<div class="col-6 p-0 ps-1 my-2">
-								<input type="text" name="code" required class="w-100" placeholder="请输入6位数字">
+								<input type="text" name="dxCode" required class="w-100" placeholder="请输入6位数字">
 							</div>
 							<div class="col-3 p-0 ps-1 my-2">
 								<button class="send-sms modal-btn mx-2">发送</button>
 							</div>
 							<label class="col-3 p-0 pe-1 my-2 text-end">推荐人</label>
 							<div class="col-9 p-0 ps-1 my-2">
-								<input type="text" class="w-100" name="parent" value="" required placeholder="请输入6位英文带数字的上级帐号">
+								<input type="text" class="w-100" name="maxParentAccount" value="" required placeholder="请输入6位英文带数字的上级帐号">
 							</div>
 						</div>
 						<div class="d-flex justify-content-center mt-4">
@@ -517,31 +501,53 @@
 			
 			$(function() {
 				$('.loading').hide();
+
+				//获取用户信息
+				$.ajax({
+					type: 'GET',
+					url: 'http://192.168.123.211:8092/max/member/getInfo',
+					success: function(res) {
+						console.log(res)
+
+					},
+				})
 			});
-			
+			//验证码
 			$('.send-sms').on('click', function(e) {
 				e.preventDefault();
-				var phone = $(this).closest('form').find('input[name="phone"]');
+				var phone = $(this).closest('form').find('.phone');
 				if (phone.val() == '') {
 					swal("错误", "手机号码不可空白", 'error');
+				}else if(isPhoneNo(phone.val()) == false) {
+					swal("错误", "手机号码不正确", 'error');
 				} else {
 					var form = $(this).closest('form');
 					$('button').attr("disabled", true);
 					$.ajax({
 						type: 'POST',
-						data: form.serialize(),
-						url: 'https://max688888.com/send-sms',
+						url: 'http://192.168.123.211:8092/max/message/send/'+phone.val(),
 						success: function(response) {
-							if (response.code == 0) {
+							if (response.code == 200) {
 								swal("短信码已发送", '', "success");
 							} else {
 								swal(response.message, '', "error");
 							}
 							$('button').attr("disabled", false);
+						},
+						complete:function (){
+							$('button').attr("disabled", false);
 						}
 					});
 				}
 			});
+			// 验证手机号
+			function isPhoneNo(phone) {
+				var pattern = /^1[34578]\d{9}$/;
+				return pattern.test(phone);
+			}
+
+
+
 			$('.send-sms-forget-password').on('click', function(e) {
 				e.preventDefault();
 				var phone = $(this).closest('form').find('input[name="phone"]');
@@ -568,16 +574,21 @@
 					});
 				}
 			});
+
+			// 注册
 			$('#register-form').on('submit', function(e) {
 				e.preventDefault();
 				var form = $(this);
 				$('button').attr("disabled", true);
+
+				console.log(form.serialize())
 				$.ajax({
 					type: 'POST',
 					data: form.serialize(),
-					url: 'https://max688888.com/register',
+					url: 'http://192.168.123.211:8092/max/member/regiest',
 					success: function(response) {
-						if (response.code == 0) {
+						console.log(response)
+						if (response.code == 200) {
 							swal("注册完成", "返回登入", "success").then(function() {
 								$('#register-form').trigger('reset');
 								$('#signUpModal').modal('hide');
@@ -587,9 +598,15 @@
 							swal(response.message, '', "error");
 						}
 						$('button').attr("disabled", false);
+					},
+					complete:function (){
+						$('button').attr("disabled", false);
 					}
-				});
+				})
+
 			});
+
+			// 登入
 			$('#login-form').on('submit', function(e) {
 				e.preventDefault();
 				var form = $(this);
@@ -597,17 +614,22 @@
 				$.ajax({
 					type: 'POST',
 					data: form.serialize(),
-					url: 'https://max688888.com/login',
-					success: function(response) {
-						if (response.code == 0) {
+					url: 'http://192.168.123.211:8092/max/member/login',
+					success: function(res) {
+						console.log(res)
+						if (res.code == 0) {
 							location.reload();
 						} else {
-							swal(response.message, '', "error");
+							swal(res.message, '', "error");
 						}
+						$('button').attr("disabled", false);
+					},
+					complete:function (){
 						$('button').attr("disabled", false);
 					}
 				});
 			});
+
 			$('#forget-password-form').on('submit', function(e) {
 				e.preventDefault();
 				var form = $(this);
