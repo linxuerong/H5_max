@@ -108,15 +108,14 @@
         <div class="d-flex flex-md-row flex-column justify-content-end">
             <div class="dropdown filter ms-md-2 ms-auto my-1">
                 <select id="type" class="btn dropdown-toggle d-flex justify-content-between align-items-center sm-dropdown w-100" style="background: #374874;color: #d8e1f2;" autocomplete="off">
-                    <option value="充值">充值</option>
-                    <option value="提領">提领</option>
+                    <option value="1">充值</option>
+                    <option value="2">体现</option>
                 </select>
             </div>
             <div class="dropdown filter ms-md-2 ms-auto my-1">
-                <select id="range" class="btn dropdown-toggle d-flex justify-content-between align-items-center w-100" style="background: #374874;color: #d8e1f2;" autocomplete="off">
-                    <option value="last7">2022-07-28 ~ 2022-08-04</option>
-                    <option value="last14">2022-07-21 ~ 2022-07-28
-                    </option>
+                <select id="range" class="btn dropdown-toggle d-flex justify-content-between align-items-center w-100"
+                        style="background: #374874;color: #d8e1f2;" autocomplete="off">
+<!--                    <option value="">2022-07-28 ~ 2022-08-04</option>-->
                 </select>
             </div>
         </div>
@@ -132,21 +131,21 @@
             </div>
             <div id="table-lists">
                 <div class="row table-lists table-td m-0 mt-sm-0 mt-3 p-0 py-3 text-center">
-                    <div class="col-md-2 col-12 p-1 table-list" data-title="时间">2022-07-29 17:51:02</div>
-                    <div class="col-md-3 col-12 p-1 table-list" data-title="订单号">PI-1659088260-j7HYF</div>
+                    <div class="col-md-2 col-12 p-1 table-list" data-title="时间" id="Time1"></div>
+                    <div class="col-md-3 col-12 p-1 table-list" data-title="订单号" id="Code1"></div>
                     <div class="col-md-1 col-6 p-1 table-list" data-title="类别">充值</div>
-                    <div class="col-md-1 col-6 p-1 table-list" data-title="金额">100.00</div>
+                    <div class="col-md-1 col-6 p-1 table-list" data-title="金额" id="Amount1"></div>
                     <div class="col-md-2 col-6 p-1 table-list" data-title="渠道">TRC20-USDT</div>
-                    <div class="col-md-2 col-6 p-1 table-list" data-title="状态">失败</div>
+                    <div class="col-md-2 col-6 p-1 table-list" data-title="状态" id="Status1"></div>
                 </div>
 
                 <div class="row table-lists table-td m-0 mt-sm-0 mt-3 p-0 py-3 text-center">
-                    <div class="col-md-2 col-12 p-1 table-list" data-title="时间">2022-07-28 18:28:59</div>
-                    <div class="col-md-3 col-12 p-1 table-list" data-title="订单号">PI-1659004130-yH6Mz</div>
+                    <div class="col-md-2 col-12 p-1 table-list" data-title="时间" id="Time2"></div>
+                    <div class="col-md-3 col-12 p-1 table-list" data-title="订单号" id="Code2"></div>
                     <div class="col-md-1 col-6 p-1 table-list" data-title="类别">充值</div>
-                    <div class="col-md-1 col-6 p-1 table-list" data-title="金额">1000.00</div>
+                    <div class="col-md-1 col-6 p-1 table-list" data-title="金额" id="Amount2"></div>
                     <div class="col-md-2 col-6 p-1 table-list" data-title="渠道">人民币充值</div>
-                    <div class="col-md-2 col-6 p-1 table-list" data-title="状态">失败</div>
+                    <div class="col-md-2 col-6 p-1 table-list" data-title="状态" id="Status2"></div>
                 </div>
             </div>
             <div class="back-btn text-center d-md-block d-none mt-sm-3 mt-2 position-absolute end-0 me-2" onclick="javascript:history.back();">返回</div>
@@ -221,8 +220,96 @@
     <script src="js/CLDRPluralRuleParser.js"></script>
 
     <script>
+        function getDay(day){
+            var today = new Date();
+            var targetday_milliseconds=today.getTime() + 1000*60*60*24*day;
+            today.setTime(targetday_milliseconds); //注意，这行是关键代码
+            var tYear = today.getFullYear();
+            var tMonth = today.getMonth();
+            var tDate = today.getDate();
+            tMonth = doHandleMonth(tMonth + 1);
+            tDate = doHandleMonth(tDate);
+            return tYear+"-"+tMonth+"-"+tDate;
+        }
+        function doHandleMonth(month){
+            var m = month;
+            if(month.toString().length == 1){
+                m = "0" + month;
+            }
+            return m;
+        }
+
+        $('#range').append('<option value="1">'+getDay(-7)+' ~ '+ getDay(0) +'</option>')
+        $('#range').append('<option value="2">'+getDay(-14)+' ~ '+ getDay(-7) +'</option>')
+
+
+        var time = 1;
+        $('#range').change( function (){
+            time= $(this).val();
+            query();
+        })
+
+        var type = 0
+        $('#type').change( function (){
+            type = $(this).val()
+
+            query();
+        })
+
+        query()
+
+        function query(){
+            var start , end
+            if(time == 1){
+                start = getDay(-7) + '00:00:00';
+                end = getDay(0) + '23:59:59';
+            }else if(time == 2){
+                start = getDay(-14) + ' 00:00:00';
+                end = getDay(-7) + ' 23:59:59';
+            }
+
+            var Surl= 'http://192.168.123.210:8092/max/order/getList' //充值
+            if(type == 2){
+                Surl= 'http://192.168.123.210:8092/max/withdraw/getList' //体现
+            }
+            $.ajax({
+                type: 'GET',
+                data:{'StartTime': start, 'EndTime':end},
+                url: Surl,
+                success:function (res){
+                    console.log(res)
+                    datdText(res.data)
+                }
+            })
+        }
+
+        function datdText(data){
+            $('#Time1').text(data[0].createTime)
+            $('#Code1').text(data[0].orderCode)
+            $('#Amount1').text(data[0].orderAmount)
+            $('#Status1').text(data[0].status)
+            let status1 = '成功'
+            if(data[0].status == 1){
+                status1 = '失败'
+            }
+            $('#Status1').text(status1)
+
+
+            $('#Time2').text(data[1].createTime)
+            $('#Code2').text(data[1].orderCode)
+            $('#Amount2').text(data[1].orderAmount)
+            let status2 = '成功'
+            if(data[1].status == 1){
+                status2 = '失败'
+            }
+            $('#Status2').text(status2)
+        }
+    </script>
+
+    <script>
         $(function() {
             $('.loading').hide();
+
         });
     </script>
 
