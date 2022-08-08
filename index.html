@@ -633,13 +633,11 @@
 					 type: 'GET',
 					 url: 'http://192.168.123.210:8092/max/notice/getList',
 					 success: function(res) {
-						 console.log(res)
 						 newsAdd(res)
 					 },
 				 })
 				 function newsAdd(data){
 					 $.each( data, function (i , item){
-						 console.log("EEE")
 						 var box ='<div class="carousel-item" data-bs-toggle="modal" data-bs-target="#announcementModal_'+i+'">' +
 								 ' <p class="news-text p-1 mb-0">'+item.noticeContent+'</p>'+
 								 ' </div>'
