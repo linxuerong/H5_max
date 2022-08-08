@@ -110,17 +110,13 @@
 						<i class="fas fa-angle-right me-0" data-bs-target="#newsControls" data-bs-slide="next"></i>
 					</div>
 				</div>
-				<div class="carousel-inner">
-					<div class="carousel-item" data-bs-toggle="modal" data-bs-target="#announcementModal_0">
-						<p class="news-text p-1 mb-0">平台公告
-							亲爱的用户您好，平台APP已升级更新完成，请您多加使用造成您的不便深感抱歉。
-						</p>
-					</div>
-					<div class="carousel-item active" data-bs-toggle="modal" data-bs-target="#announcementModal_0">
-						<p class="news-text p-1 mb-0">赛事
-							07-28 / 22:00 [ 阿后备 ] 查卡里塔青年后备队 v 维拉多尔米尼后备队 因待定时间过长无法判定赛事结果，为维护会员权益，所有注单无效。
-						</p>
-					</div>
+				<div class="carousel-inner" id="news" >
+
+<!--					<div class="carousel-item active" data-bs-toggle="modal" data-bs-target="#announcementModal_0">-->
+<!--						<p class="news-text p-1 mb-0">赛事-->
+<!--							07-28 / 22:00 [ 阿后备 ] 查卡里塔青年后备队 v 维拉多尔米尼后备队 因待定时间过长无法判定赛事结果，为维护会员权益，所有注单无效。-->
+<!--						</p>-->
+<!--					</div>-->
 				</div>
 			</div>
 		
@@ -190,22 +186,22 @@
 		</div>
 
 		<!--新闻弹窗   （id ）对应 （data-bs-target）-->
-		<div class="modal fade" id="announcementModal_0" tabindex="-1" aria-labelledby="announcementModal_0" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered">
-				<div class="modal-content p-4 pb-4 text-center">
-					<div class="p-2 d-flex justify-content-between align-items-center announcement-title">
-						<h4 class="mb-0">平台公告</h4>
-						<div class="announcement-date">2022/08/02</div>
-					</div>
-					<div class="text-start promotions-text p-2 pt-3">
-						尊敬的会员你好MAX平台于8/2日 11:00~12:00进行例行性维护,感谢你对平台的支持.
-					</div>
-					<div class="d-flex justify-content-center mt-4">
-						<div class="modal-btn mx-2" data-bs-toggle="modal" data-bs-target="#announcementModal_2">关闭</div>
-					</div>
-				</div>
-			</div>
-		</div>
+<!--		<div class="modal fade" id="announcementModal_0" >-->
+<!--			<div class="modal-dialog modal-dialog-centered">-->
+<!--				<div class="modal-content p-4 pb-4 text-center">-->
+<!--					<div class="p-2 d-flex justify-content-between align-items-center announcement-title">-->
+<!--						<h4 class="mb-0">平台公告</h4>-->
+<!--						<div class="announcement-date">2022/08/02</div>-->
+<!--					</div>-->
+<!--					<div class="text-start promotions-text p-2 pt-3">-->
+<!--						尊敬的会员你好MAX平台于8/2日 11:00~12:00进行例行性维护,感谢你对平台的支持.-->
+<!--					</div>-->
+<!--					<div class="d-flex justify-content-center mt-4">-->
+<!--						<div class="modal-btn mx-2" data-bs-toggle="modal" data-bs-target="#announcementModal_0">关闭</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
 
 		<!--轮播图弹窗 -->
 		<div class="modal fade" id="promotionsModal_0" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
@@ -464,6 +460,7 @@
 				$('.loading').hide();
 				console.log("获取信息")
 				//获取用户信息
+
 				$.ajax({
 					type: 'GET',
 					url: 'http://192.168.123.211:8092/max/member/getInfo',
@@ -631,6 +628,45 @@
 		
 		<script type="text/javascript">
 			 $(document).ready(function(){
+				 //news
+				 $.ajax({
+					 type: 'GET',
+					 url: 'http://192.168.123.210:8092/max/notice/getList',
+					 success: function(res) {
+						 console.log(res)
+						 newsAdd(res)
+					 },
+				 })
+				 function newsAdd(data){
+					 $.each( data, function (i , item){
+						 console.log("EEE")
+						 var box ='<div class="carousel-item" data-bs-toggle="modal" data-bs-target="#announcementModal_'+i+'">' +
+								 ' <p class="news-text p-1 mb-0">'+item.noticeContent+'</p>'+
+								 ' </div>'
+						 $('#news').append(box);
+
+						 <!--新闻弹窗   （id ）对应 （data-bs-target）-->
+						 var open =
+								 '<div class="modal fade" id="announcementModal_'+i+'" >' +
+								 ' <div class="modal-dialog modal-dialog-centered">' +
+								 '  <div class="modal-content p-4 pb-4 text-center">' +
+								 '   <div class="p-2 d-flex justify-content-between align-items-center announcement-title">' +
+								 '    <h4 class="mb-0">平台公告</h4>' +
+								 '    <div class="announcement-date">'+item.createTime+'</div>' +
+								 '   </div>' +
+								 '   <div class="text-start promotions-text p-2 pt-3">'+item.noticeContent+'</div>' +
+								 '   <div class="d-flex justify-content-center mt-4">' +
+								 '    <div class="modal-btn mx-2" data-bs-toggle="modal" data-bs-target="#announcementModal_'+i+'">关闭</div>' +
+								 '</div></div></div></div>'
+
+						 $('body').append(open);
+						 
+					 })
+					 $("#news").find('.carousel-item').eq(1).addClass('active')
+				 }
+
+
+				 //slick 轮播快
 				 $.ajax({
 					 type: 'GET',
 					 url: 'http://192.168.123.211:8092/max/mask/getMaskList/1',
