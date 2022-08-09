@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9719a456-191b-4e38-86d5-33ef124b23c5" name="变更" comment="h5max">
+      <change afterPath="$PROJECT_DIR$/mobile/investment/info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pay.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market.html" beforeDir="false" afterPath="$PROJECT_DIR$/market.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market/mobile.html" beforeDir="false" afterPath="$PROJECT_DIR$/market/mobile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/match.html" beforeDir="false" afterPath="$PROJECT_DIR$/match.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/investment/notopen.html" beforeDir="false" afterPath="$PROJECT_DIR$/investment/notopen.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/investment/app.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/help.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/help.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/recharge.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/recharge.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,11 +69,11 @@
       <recent name="E:\WebStorm\H5_max\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\WebStorm\H5_max\mobile\investment" />
       <recent name="E:\WebStorm\H5_max" />
       <recent name="E:\WebStorm\H5_max\investment" />
       <recent name="E:\WebStorm\H5_max\mobile" />
       <recent name="E:\WebStorm\H5_max\mobile\help" />
-      <recent name="E:\WebStorm\H5_max\images" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
@@ -93,7 +95,8 @@
       <workItem from="1659923279944" duration="111000" />
       <workItem from="1659940770114" duration="776000" />
       <workItem from="1659941880937" duration="11455000" />
-      <workItem from="1660010292730" duration="9777000" />
+      <workItem from="1660010292730" duration="18211000" />
+      <workItem from="1660046445658" duration="412000" />
     </task>
     <task id="LOCAL-00001" summary="h5max">
       <created>1659579223422</created>
@@ -396,7 +399,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660030117427</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="h5max">
+      <created>1660036445836</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1660036445836</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -82,16 +82,108 @@
     </header>
 
 
-    <div class="container-fluid page p-2 py-sm-5 py-3 investment">
-        <div class="row m-0">
-            <div class="col-sm-4 col-12 p-1 d-flex flex-column justify-content-between">
-                <div class="investment-account__trade p-2 d-flex justify-content-center">
-                    <img src="/assets/web/images/icons-hand.png" class="pe-2" alt="">
-                    <div>交易笔数 : <span class="total-count">0</span></div>
+    <div class="container-fluid recharge my-md-5 my-3 mb-5 p-0">
+        <ul class="row mx-auto mt-2 nav nav-pills recharge-pills" id="pills-tab">
+            <li class="col-6 p-0">
+                <div class="nav-link recharge-pill active" data-bs-toggle="pill" data-bs-target="#pills-this-week" role="tab">
+                    充值</div>
+            </li>
+            <li class="col-6 p-0">
+                <div class="nav-link recharge-pill" data-bs-toggle="pill" data-bs-target="#pills-last-week" role="tab">
+                    提领
+                </div>
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+
+            <div class="tab-pane fade show active py-md-5 p-3" id="pills-this-week" role="tabpanel">
+                <div class="board-wrap p-3">
+                    <div class="p-2 d-flex justify-content-between align-items-center recharge-title">
+                        <h4 class="mb-0">充值注意事项</h4>
+                    </div>
+                    <div class="text-start board-text mt-2 p-sm-2 p-0">
+                        <ol>
+                            <li>每次存款前请重新生成订单，请勿转到旧的收款码：如转账至已过期收款码恕不负责，谢谢！</li>
+                            <li>生成订单后，请按充值金额支付正确金额，过程中请注意交易所是否扣取提币手续费,如任意修改支付金额或是重复支付，导致无法到账请联系线上客服处理！</li>
+                            <li>最低充值金额为16U，小数点可至后两位数，存款将于15分钟内到您账上。</li>
+                            <li>如利用本平台进行任何洗钱诈骗行为，本公司将保留权力终止会员服务及冻结其帐户。</li>
+                        </ol>
+                    </div>
+                    <div class="promotions-back-btn d-sm-block d-none my-2" onclick="javascript:history.back();">返回</div>
+                </div>
+                <div class="promotions-join mx-auto my-4">
+                    <form id="deposit-form" autocomplete="off" >
+                        <div class="row m-0 py-2 align-items-center">
+                            <div class="col-sm-4 col-12 text-sm-start text-center p-1">充值方式</div>
+                            <div class="col-sm-8 col-12 p-0 recharge-input">
+                                <select class="btn dropdown-toggle w-100 d-flex justify-content-between align-items-center" style="background: #374874;
+                            color: #d8e1f2 !important;" name="channel" required="" autocomplete="off">
+                                    <option value="C2P">TRC20-USDT</option>
+                                    <option value="RMB1">人民币充值A(最低700USDT)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row m-0 py-2 align-items-center">
+                            <div class="col-sm-4 col-12 text-sm-start text-center p-1">充值金额</div>
+                            <div class="col-sm-8 col-12 p-0 recharge-input">
+                                <input type="text" class="w-100 text-center currency-mask" name="amount" value="" placeholder="USDT" required="" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="deposit my-3 recharge-next" style="display: inline-block; padding: 5px 10px">送出</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="tab-pane fade py-md-5 p-3" id="pills-last-week" role="tabpanel">
+                <div class="board-wrap p-3">
+                    <div class="p-2 d-flex justify-content-between align-items-center recharge-title">
+                        <h4 class="mb-0">提领注意事项</h4>
+                    </div>
+                    <div class="text-start board-text mt-2 p-sm-2 p-0">
+                        <ol>
+                            <li>平台最低提领金额为16U最高为2万U。</li>
+                            <li>为确保您填写的地址是否正确，第一次提领建议您提领16U，若提供错误地址，本平台恕不负责。</li>
+                            <li>每月4次提领免手续费，超过免提领次数将收取5%行政手续费。</li>
+                            <li>平台流水规则:首次充值为10倍流水，第二次充值需5倍流水,各项优惠活动流水额外计算,完成各项流水单数即可提款。</li>
+                            <li>如利用本平台进行任何洗钱诈骗行为，本公司将保留权力终止会员服务及冻结其帐户。</li>
+                            <li>如利用本平台进行任何洗钱诈骗行为，本公司将保留权力终止会员服务及冻结其帐户。</li>
+                        </ol>
+                    </div>
+                    <div class="promotions-back-btn d-sm-block d-none my-2" onclick="javascript:history.back();">返回</div>
+                </div>
+                <div class="text-center mt-3" style="color: #5894ea">( 提领手续费 5%，本月 4 次免手续费，剩余 4 次)</div>
+                <div class="promotions-join mx-auto my-2">
+                    <form id="withdrawal-form" action="" method="POST" autocomplete="off">
+                        <div class="row m-0 py-2 align-items-center">
+                            <div class="col-sm-4 col-12 text-sm-start text-center p-1">钱包地址</div>
+                            <div class="col-sm-8 col-12 p-0 recharge-input">
+                                <input class="w-100 text-center" type="text" value="TCEM4q9gaVeVEbffxCcNCrZgWkYk1AfoY6" readonly="&quot;&quot;" name="wallet_address" required="" placeholder="TRC20 钱包地址" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="row m-0 py-2 align-items-center">
+                            <div class="col-sm-4 col-12 text-sm-start text-center p-1">提领金额</div>
+                            <div class="col-sm-8 col-12 p-0 recharge-input">
+                                <input type="text" class="w-100 text-center currency-mask" name="amount" value="" placeholder="USDT" required="" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="row m-0 py-2 align-items-center">
+                            <div class="col-sm-4 col-12 text-sm-start text-center p-1">支付密码</div>
+                            <div class="col-sm-8 col-12 p-0 recharge-input">
+                                <input class="w-100" type="password" name="password" required="" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="text-center py-1 recharge-note" style="color: #5894ea">单笔提领限额: $20,000U，未达流水: 0
+                        </div>
+                        <div class="text-center">
+                            <div class="my-3 recharge-next" style="display: inline-block; padding: 5px 10px">送出</div>
+<!--                            <button class="my-3 recharge-next">送出</button>-->
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-        <div class="investment-lists mt-sm-4 mt-0" id="much">无资料</div>
     </div>
 
 
@@ -165,6 +257,26 @@
         $(function() {
             $('.loading').hide();
         });
+    </script>
+    <script>
+        <!--充值-->
+
+        $(".deposit").on('click' ,function (e){
+            e.preventDefault();
+
+            var form = $(this).closest('form');
+            var amount = form.serializeArray()[1].value
+            if( amount < 16 || amount =='' ){
+                swal('最低充值金额为16U');
+                return
+            }
+            window.location.replace("../pay.html?"+form.serialize());
+        })
+
+
+        $('#withdrawal-form').on('submit', function(e){
+
+        })
     </script>
 
 </body>
