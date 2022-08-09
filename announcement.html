@@ -99,70 +99,12 @@
     </header>
 
     <div class="container-fluid page p-2 py-sm-5 py-3">
-        <div class="row m-0 cards">
-            <div class="col-md-4 col-sm-6 col-12 p-2 mb-4">
-                <div class="card p-3">
-                    <div class="card-title d-flex justify-content-between align-items-center">
-                        <h4>平台公告</h4>
-                        <button data-bs-toggle="modal" data-bs-target="#announcementModal_0" class="card-more">more</button>
-                    </div>
-                    <div class="card-text px-2">
-                        <div class="card-text__date mb-1">2022-07-31 11:09:44</div>
-                        <div class="card-text__main">
-                            尊敬的会员您好,平台维护升级已完毕,,感谢你对平台的支持。
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-12 p-2 mb-4">
-                <div class="card p-3">
-                    <div class="card-title d-flex justify-content-between align-items-center">
-                        <h4>平台公告</h4>
-                        <button data-bs-toggle="modal" data-bs-target="#announcementModal_1" class="card-more">more</button>
-                    </div>
-                    <div class="card-text px-2">
-                        <div class="card-text__date mb-1">2022-08-03 13:47:38</div>
-                        <div class="card-text__main">
-                            『平台声明』经系统风控审查，会员号：AG***0、AP***0、AQ***8、AK***1，严重违反平台规章，恶意破坏投注公平性与违规套利，本公司予以停权处分，特此告知。
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-12 p-2 mb-4">
-                <div class="card p-3">
-                    <div class="card-title d-flex justify-content-between align-items-center">
-                        <h4>平台公告</h4>
-                        <button data-bs-toggle="modal" data-bs-target="#announcementModal_2" class="card-more">more</button>
-                    </div>
-                    <div class="card-text px-2">
-                        <div class="card-text__date mb-1">2022-08-02 10:44:56</div>
-                        <div class="card-text__main">
-                            尊敬的会员你好MAX平台于8/2日 11:00~12:00进行例行性维护,感谢你对平台的支持.
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="row m-0 cards" id="newsList">
 
         </div>
     </div>
 
     <!--    弹窗 （id = 》 data-bs-target）-->
-    <div class="modal fade" id="announcementModal_0" tabindex="-1" aria-labelledby="loginModal" style="display: none;" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content p-4 pb-4 text-center">
-                <div class="p-2 d-flex justify-content-between align-items-center announcement-title">
-                    <h4 class="mb-0">平台公告</h4>
-                    <div class="announcement-date">2022/07/31</div>
-                </div>
-                <div class="text-start promotions-text p-2 pt-3">
-                    尊敬的会员您好,平台维护升级已完毕,,感谢你对平台的支持。
-                </div>
-                <div class="d-flex justify-content-center mt-4">
-                    <div class="modal-btn mx-2" data-bs-toggle="modal" data-bs-target="#announcementModal_0">关闭</div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
     <div class="mb-5"></div>
@@ -235,6 +177,53 @@
         $(function() {
             $('.loading').hide();
         });
+    </script>
+    <script>
+        $(function (){
+            $.ajax({
+                type: 'GET',
+                url: 'http://192.168.123.210:8092/max/notice/getList',
+                success: function(res) {
+                    console.log(res)
+                    newsAdd(res)
+                },
+            })
+
+            function newsAdd(data){
+                $.each( data, function (i , item){
+
+                    var box =
+                        '<div class="col-md-4 col-sm-6 col-12 p-2 mb-4">' +
+                        '    <div class="card p-3">' +
+                        '        <div class="card-title d-flex justify-content-between align-items-center">' +
+                        '            <h4>平台公告</h4>' +
+                        '            <button data-bs-toggle="modal" data-bs-target="#announcementModal_'+i+'" class="card-more">more</button>' +
+                        '        </div>' +
+                        '        <div class="card-text px-2">' +
+                        '            <div class="card-text__date mb-1">'+item.createTime+'</div>' +
+                        '            <div class="card-text__main">' +item.noticeContent+'</div>' +
+                        '</div></div></div>'
+                    $('#newsList').append(box);
+                    
+                    var open=
+                        '<div class="modal fade" id="announcementModal_'+i+'" tabindex="-1" aria-hidden="true">' +
+                        '    <div class="modal-dialog modal-dialog-centered">' +
+                        '        <div class="modal-content p-4 pb-4 text-center">' +
+                        '            <div class="p-2 d-flex justify-content-between align-items-center announcement-title">' +
+                        '                <h4 class="mb-0">平台公告</h4>' +
+                        '                <div class="announcement-date">' +item.createTime +'</div>' +
+                        '            </div>' +
+                        '            <div class="text-start promotions-text p-2 pt-3">' +item.noticeContent +'</div>' +
+                        '            <div class="d-flex justify-content-center mt-4">' +
+                        '                <div class="modal-btn mx-2" data-bs-toggle="modal" data-bs-target="#announcementModal_'+i+'">关闭</div>' +
+                        '            </div>' +
+                        '        </div>' +
+                        '    </div>' +
+                        '</div>'
+                    $('body').append(open);
+                })
+            }
+        })
     </script>
 
 </body>
