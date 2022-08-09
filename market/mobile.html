@@ -115,6 +115,132 @@
     </div>
   </div>
 
+
+  <div class="modal fade" id="betModal" tabindex="-1" aria-labelledby="betModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-4 pb-5 text-center">
+        <h1 class="modal-content__title p-3">交易讯息</h1>
+        <div>
+          <span class="market-main__time"></span>
+          <span class="market-main__title"></span><br>
+          <span class="market-main__team"></span>
+        </div>
+        <div class="my-3 modal-bet__info">
+          正在<span>反对</span>赛事结果<span>波胆</span><span class="modal-bet-way">0 - 1</span><br>
+          手续费 10%
+        </div>
+        <div class="row m-0 d-flex align-items-center table-th">
+          <div class="col-4">金额</div>
+          <div class="col-4">获利%</div>
+          <div class="col-4">预估获利<br>
+            (已扣除手续费)</div>
+        </div>
+        <div class="row m-0 d-flex align-items-center table-td modal-bet__table">
+          <div class="col-4 p-0"><input type="number" min="10" class="modal-bet-amount w-100 my-2" placeholder="请输入金额" autocomplete="off"></div>
+          <div class="col-4 p-0 modal-bet-ratio">2.42%</div>
+          <div class="col-4 p-0 modal-bet-profit">0</div>
+        </div>
+        <div class="row m-0 mt-3 modal-bet__btns">
+          <div class="col-4 p-2">
+            <button class="modal-bet__btn" data-amount="100">$ 100</button>
+          </div>
+          <div class="col-4 p-2">
+            <button class="modal-bet__btn" data-amount="1000">$ 1,000</button>
+          </div>
+          <div class="col-4 p-2">
+            <button class="modal-bet__btn" data-amount="0.00">全部</button>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+          <div class="modal-btn mx-2" data-bs-dismiss="modal">取消</div>
+          <div class="modal-btn mx-2 modal-next">下一步</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="betCheckModal" tabindex="-1" aria-labelledby="betCheckModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-4 pb-5 text-center">
+        <form id="bet-form" action="https://max688888.com/bet" autocomplete="off">
+
+          <h1 class="modal-content__title p-3">交易确认</h1>
+          <div>
+            <span class="market-main__time"></span>
+            <span class="market-main__title"></span><br>
+            <span class="market-main__team"></span>
+          </div>
+          <div class="my-3 modal-bet__info">
+            正在<span>反对</span>赛事结果<span>波胆 <span class="modal-bet-way"></span></span><br>
+            手续费 10%
+          </div>
+          <div class="row m-0 d-flex align-items-center table-th">
+            <div class="col-4">金额</div>
+            <div class="col-4">获利%</div>
+            <div class="col-4">预估获利<br>
+              (已扣除手续费)</div>
+          </div>
+          <div class="row m-0 d-flex align-items-center table-td modal-bet__table">
+            <div class="col-4 p-0"><span class="w-100 my-2" id="bet-amount"></span></div>
+            <div class="col-4 p-0 modal-bet-ratio"></div>
+            <div class="col-4 p-0 modal-bet-profit"></div>
+          </div>
+          <div class="color-lbp mt-3">*请确认投资内容是否正确*</div>
+          <div class="d-flex justify-content-center mt-3">
+            <input type="hidden" name="amount" class="bet-amount" value="" autocomplete="off">
+            <input type="hidden" name="trasactionId" class="bet-id" value="" autocomplete="off">
+            <div class="modal-btn mx-2" data-bs-dismiss="modal">取消</div>
+            <button class="modal-btn mx-2">确认</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="betShowModal" tabindex="-1" aria-labelledby="betShowModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-4 pb-5 text-center">
+        <h1 class="modal-content__title p-3"><i class="fa fa-check"></i></h1>
+
+        <div class="row m-0 d-flex align-items-center table-td">
+          <div class="col-4 py-1"><span class="badge rounded-pill bg-primary w-100">开赛时间</span></div>
+          <div class="col-8 py-1">08/09 17:00</div>
+        </div>
+        <div class="row m-0 d-flex align-items-center table-td">
+          <div class="col-4 py-1"><span class="badge rounded-pill bg-primary w-100">联盟</span></div>
+          <div class="col-8 py-1">国际友谊</div>
+        </div>
+        <div class="row m-0 d-flex align-items-center table-td">
+          <div class="col-4 py-1"><span class="badge rounded-pill bg-primary w-100">队伍</span></div>
+          <div class="col-8 py-1">马来西亚U19 V.S缅甸U19</div>
+        </div>
+        <div class="row m-0 d-flex align-items-center table-td">
+          <div class="col-4 py-1"><span class="badge rounded-pill bg-primary w-100">项目</span></div>
+          <div class="col-8 py-1 modal-bet-way">0 - 1</div>
+        </div>
+        <div class="row m-0 d-flex align-items-center table-td">
+          <div class="col-4 py-1"><span class="badge rounded-pill bg-primary w-100">金额</span></div>
+          <div class="col-8 py-1 show-bet-amount fw-bolder"></div>
+        </div>
+        <div class="row m-0 d-flex align-items-center table-td">
+          <div class="col-4 py-1"><span class="badge rounded-pill bg-primary w-100">获利率</span></div>
+          <div class="col-8 py-1 show-bet-ratio fw-bolder text-danger"></div>
+        </div>
+        <div class="row m-0 d-flex align-items-center table-td">
+          <div class="col-4 py-1"><span class="badge rounded-pill bg-primary w-100">预估获利 ($)</span></div>
+          <div class="col-8 py-1 show-bet-profit fw-bolder text-success fs-3"></div>
+        </div>
+        <div class="row m-0 d-flex align-items-center table-td">
+          <div class="col-4 py-1"><span class="badge rounded-pill bg-primary w-100">预估获利 (¥)</span></div>
+          <div class="col-8 py-1 show-bet-profit-rmb fw-bolder text-success fs-3"></div>
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+          <a class="modal-btn mx-2" href="https://max688888.com/market/mobile?id=round-1659992841">关闭</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="mb-5"></div>
   <!--    底部三件套-->
   <div class="side-menu-wrap">
@@ -185,9 +311,13 @@
     $(function() {
       $('.loading').hide();
 
+      var search = location.search;
+      var id = search.substring(search.indexOf("=") + 1);
+      console.log(id)
+
       $.ajax({
         type: 'GET',
-        url: 'http://192.168.123.211:8092/max/trasaction/getList/1',
+        url: 'http://192.168.123.210:8092/max/trasaction/getList/'+id,
         success: function(res) {
           console.log(res)
           let item = res.data;
@@ -197,6 +327,10 @@
           $('.market-refresh').html('成交量:'+item.trasactionSize)
 
           sorting(item.maxMaskTrasactionList)
+
+          $(".market-main__time").text(item.maxStartTime)
+          $(".market-main__title").text(item.maxGameName)
+          $(".market-main__team").html( item.maxHomeTeam+"VS"+item.maxCustomerTeam)
         },
       })
 
@@ -208,7 +342,9 @@
                   '  <div class="col-3 p-0">'+item.maxEarn+'%</div>' +
                   '  <div class="col-3 p-0">'+item.maxLimitTrasaction+'</div>' +
                   '  <div class="col-4 p-0">' +
-                  '    <button class="back-btn bet-table-button">下单</button>' +
+                  '   <button class="back-btn bet-table-button" data-bs-toggle="modal" ' +
+                  'data-bs-target="#betModal" data-ratio="'+item.maxEarn+'" data-way="'+item.maxScore+'" ' +
+                  'data-bet_id="'+item.id+'">下单</button>'
                   '  </div>' +
                   '</div>'
           $('#page').append(box)
@@ -219,5 +355,80 @@
     });
   </script>
 
+  <script>
+    var RATIO = 0;
+    $(document).on('click', '.bet-table-button', function(){
+
+      // data-ratio="0.01920" data-way="0 - 45646546" data-bet_id="odds-96fa4ff9-df50-462d-b435-90c3ab638f44"
+
+      RATIO = $(this).data('ratio') /100;
+      $('.bet-id').val($(this).data('bet_id'));
+      $('.modal-bet-ratio').text((RATIO * 100).toFixed(2) + '%');
+      $('.modal-bet-way').text($(this).data('way'));
+      $('.modal-bet-amount').val('');
+      $('.modal-bet-profit').text(0);
+    });
+
+
+    $('.modal-bet__btn').on('click', function(){
+      $('.modal-bet-amount').val($(this).data('amount'));
+      $('.modal-bet-amount').trigger('change');
+    });
+
+    $('.modal-bet-amount').on('change blur',function(){
+      var amount = $(this).val();
+      if(amount > 0) {
+        var profit = 0.9 * RATIO *  amount;
+        $('.modal-bet-profit').text("$" + profit.toFixed(2));
+        $('#bet-amount').text(amount);
+        $('.bet-amount').val(amount);
+      } else {
+        $(this).val('');
+      }
+    });
+    $('.modal-next').on('click', function(){
+      if($('.modal-bet-amount').val() > 0){
+        $('#betModal').modal('hide');
+        $('#betCheckModal').modal('show');
+      } else {
+        $('.modal-bet-amount').val('');
+        $('.modal-bet-amount').focus();
+      }
+    });
+
+    $('#bet-form').on('submit', function(e){
+      e.preventDefault();
+      $('button').attr("disabled", true);
+      var form = $(this);
+      console.log(form.serialize())
+
+      $.ajax({
+        type: 'POST',
+        data: form.serialize(),
+        url: 'http://192.168.123.210:8092/max/trasactionOrder/pickTrasaction',
+        success: function (res) {
+          if(res.code == 0){
+            console.log(res)
+
+            $('.balance').text(res.balance);
+            $('.bill-number').text(res.bill_number);
+            $('.show-bet-amount').text(res.amount);
+            $('.show-bet-ratio').text(res.ratio);
+            $('.show-bet-profit').text(res.profit);
+            $('.show-bet-profit-rmb').text((res.profit*7).toFixed(2));
+
+            $('#betCheckModal').modal('hide');
+            $('#betShowModal').modal('show');
+          }
+          else{
+            swal(res.message, '', "error");
+          }
+          $('button').attr("disabled", false);
+        }
+      });
+
+    });
+
+  </script>
 </body>
 </html>

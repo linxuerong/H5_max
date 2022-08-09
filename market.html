@@ -242,7 +242,7 @@
 
             $.ajax({
                 type: 'GET',
-                url: 'http://192.168.123.211:8092/max/member/getInfo',
+                url: 'http://192.168.123.210:8092/max/member/getInfo',
                 success: function(res) {
                     if(res.code == 0){
                         // 成功
@@ -260,7 +260,7 @@
             console.log("获取订单")
             $.ajax({
                 type: 'GET',
-                url: 'http://192.168.123.211:8092/max/mask/getMaskList/0',
+                url: 'http://192.168.123.210:8092/max/mask/getMaskList/0',
                 success: function(res) {
                     console.log(res)
                     sorting(res.data)
@@ -273,7 +273,7 @@
 
                 $.each( data, function (i , item){
                     var box =
-                        '<div class="market-list" > <a href="./market/mobile.html">\n' +
+                        '<div class="market-list" > <a href="./market/mobile.html?id='+item.id+'">\n' +
                         ''+
                         '    <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">'+ item.maxGameName+'</div>\n' +
                         '    <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">\n' +

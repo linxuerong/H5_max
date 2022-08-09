@@ -224,7 +224,7 @@
 		<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content p-4 pb-5 text-center">
-					<form id="login-form" action="http://192.168.123.211:8092/max/member/login" autocomplete="off">
+					<form id="login-form" action="http://192.168.123.210:8092/max/member/login" autocomplete="off">
 						<div class="modal-close" data-bs-dismiss="modal">X</div>
 						<h1 class="modal-content__title p-3">会员登入</h1>
 						<div class="row m-0 form-group my-2 align-items-center justify-content-end">
@@ -463,7 +463,7 @@
 
 				$.ajax({
 					type: 'GET',
-					url: 'http://192.168.123.211:8092/max/member/getInfo',
+					url: 'http://192.168.123.210:8092/max/member/getInfo',
 					success: function(res) {
 						if(res.code == 0){
 							// 成功
@@ -493,7 +493,7 @@
 					$('button').attr("disabled", true);
 					$.ajax({
 						type: 'POST',
-						url: 'http://192.168.123.211:8092/max/message/send/'+phone.val(),
+						url: 'http://192.168.123.210:8092/max/message/send/'+phone.val(),
 						success: function(response) {
 							if (response.code == 200) {
 								swal("短信码已发送", '', "success");
@@ -553,7 +553,7 @@
 				$.ajax({
 					type: 'POST',
 					data: form.serialize(),
-					url: 'http://192.168.123.211:8092/max/member/regiest',
+					url: 'http://192.168.123.210:8092/max/member/regiest',
 					success: function(response) {
 						console.log(response)
 						if (response.code == 200) {
@@ -582,7 +582,7 @@
 				$.ajax({
 					type: 'POST',
 					data: form.serialize(),
-					url: 'http://192.168.123.211:8092/max/member/login',
+					url: 'http://192.168.123.210:8092/max/member/login',
 					success: function(res) {
 						console.log(res)
 						if (res.code == 0) {
@@ -667,7 +667,7 @@
 				 //slick 轮播快
 				 $.ajax({
 					 type: 'GET',
-					 url: 'http://192.168.123.211:8092/max/mask/getMaskList/1',
+					 url: 'http://192.168.123.210:8092/max/mask/getMaskList/1',
 					 success: function(res) {
 						 console.log(res)
 						 sorting(res.data)
