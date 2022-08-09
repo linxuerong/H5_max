@@ -1,114 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>MAX</title>
+		<link href="./css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="./css/main.css">
+		<link rel="stylesheet" href="../css/main2.css">
+		<link rel="stylesheet" href="./css/all.css">
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAX</title>
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/all.css">
+		<link rel="stylesheet" type="text/css" href="./css/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/slick-theme.css"/>
+		<link href="./css/sweetalert2.css" rel="stylesheet" type="text/css">
 
-    <link rel="stylesheet" type="text/css" href="../css/slick.css" />
-    <link rel="stylesheet" type="text/css" href="../css/slick-theme.css" />
-    <link href="../css/sweetalert2.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-<div class="loading">
-    <img src="../images/MAX_logo.png" alt="">
-</div>
-    <!--头部-->
-    <header class="header-wrap">
-        <a class="navbar-brand header-logo" href="/">
-            <img src="../images/MAX%20logo.png" alt="">
-        </a>
-        <nav class="navbar navbar-expand-lg header py-lg-4 py-2">
-            <div class="container-fluid position-relative px-1">
-                <img class="navbar-toggler p-0" src="../images/back.png" alt=""
-                     onclick="javascript:history.back();">
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
-                     aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-body justify-content-between align-items-center p-0">
-                        <div class="flex-column">
-                            <div class="header-info d-lg-block d-none px-2">
-                                2022/08/04 18:21 ( 北京标准时间 ) ｜ 线上人数 ：3627
-                            </div>
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item d-sm-none d-blck">
-                                    <a data-bs-toggle="modal" data-bs-target="#loginModal"
-                                       class="nav-link px-2 pb-0" href="./account.html">中心钱包</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a data-bs-toggle="modal" data-bs-target="#loginModal"
-                                       class="nav-link px-2 pb-0" href="./market.html">市场列表</a>
-                                </li>
-                                <li class="nav-item d-sm-none d-blck">
-                                    <a data-bs-toggle="modal" data-bs-target="#loginModal"
-                                       class="nav-link px-2 pb-0" href="./trade.html">存提纪录</a>
-                                </li>
-                                <li class="nav-item d-sm-block d-none">
-                                    <a data-bs-toggle="modal" data-bs-target="#loginModal"
-                                       class="nav-link px-2 pb-0" href="./investment.html">投资纪录</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a data-bs-toggle="modal" data-bs-target="#loginModal"
-                                       class="nav-link px-2 pb-0" href="./match.html">赛事结果</a>
-                                </li>
+		<style>
+			.mian {	background-image: url('../images/ticket-bg.svg')}
 
-                                <li class="nav-item">
-                                    <a class="nav-link px-2 pb-0" href="./immediate.html">即时比分</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-2 pb-0" href="./promotion.html">优惠活动</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-2 pb-0" href="./announcement.html">最新消息</a>
-                                </li>
-                                <li class="nav-item dropdown d-sm-none d-blck">
-                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
-                                       role="button" aria-haspopup="true" aria-expanded="false">线上客服</a>
-                                    <div class="dropdown-menu">
-                                        <a class="nav-link px-2 pb-0 text-black"
-                                           href="https://direct.lc.chat/14165448/" target="_blank">线路1</a>
-                                        <a class="nav-link px-2 pb-0 text-black"
-                                           href="./service.html">线路2</a>
-                                    </div>
-                                </li>
+		</style>
 
-                                <li class="nav-item d-sm-none d-blck">
-                                    <a class="nav-link px-2 pb-0"
-                                       href="./mobile/help/rule.html">规则条款</a>
-                                </li>
-                                <li class="nav-item d-sm-none d-blck">
-                                    <a class="nav-link px-2 pb-0" href="./mobile/help.html">帮助中心</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <a class="nav-link header-login py-0" href="#" data-bs-toggle="modal"
-                   data-bs-target="#loginModal">登入</a>
-            </div>
-        </nav>
-    </header>
+	</head>
+	<body>
+		<div class="loading">
+			<img src="../images/MAX_logo.png" alt="">
+		</div>
+		<!--头部-->
+		<header class="header-wrap">
+			<a class="navbar-brand header-logo" href="/">
+				<img src="../images/MAX%20logo.png" alt="">
+			</a>
+			<nav class="navbar navbar-expand-lg header py-lg-4 py-2">
+				<div class="container-fluid position-relative px-1">
+					<img class="navbar-toggler p-0" src="../images/back.png" alt=""
+						onclick="javascript:history.back();">
+					<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+						aria-labelledby="offcanvasNavbarLabel">
+						<div class="offcanvas-body justify-content-between align-items-center p-0">
+							<div class="flex-column">
+								<div class="header-info d-lg-block d-none px-2">
+									2022/08/04 18:21 ( 北京标准时间 ) ｜ 线上人数 ：3627
+								</div>
+								<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+									<li class="nav-item d-sm-none d-blck">
+										<a data-bs-toggle="modal" data-bs-target="#loginModal"
+											class="nav-link px-2 pb-0" href="./account.html">中心钱包</a>
+									</li>
+									<li class="nav-item">
+										<a data-bs-toggle="modal" data-bs-target="#loginModal"
+											class="nav-link px-2 pb-0" href="./market.html">市场列表</a>
+									</li>
+									<li class="nav-item d-sm-none d-blck">
+										<a data-bs-toggle="modal" data-bs-target="#loginModal"
+											class="nav-link px-2 pb-0" href="./trade.html">存提纪录</a>
+									</li>
+									<li class="nav-item d-sm-block d-none">
+										<a data-bs-toggle="modal" data-bs-target="#loginModal"
+											class="nav-link px-2 pb-0" href="./investment.html">投资纪录</a>
+									</li>
+									<li class="nav-item">
+										<a data-bs-toggle="modal" data-bs-target="#loginModal"
+											class="nav-link px-2 pb-0" href="./match.html">赛事结果</a>
+									</li>
+
+									<li class="nav-item">
+										<a class="nav-link px-2 pb-0" href="./immediate.html">即时比分</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link px-2 pb-0" href="./promotion.html">优惠活动</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link px-2 pb-0" href="./announcement.html">最新消息</a>
+									</li>
+									<li class="nav-item dropdown d-sm-none d-blck">
+										<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+											role="button" aria-haspopup="true" aria-expanded="false">线上客服</a>
+										<div class="dropdown-menu">
+											<a class="nav-link px-2 pb-0 text-black"
+												href="https://direct.lc.chat/14165448/" target="_blank">线路1</a>
+											<a class="nav-link px-2 pb-0 text-black" href="./service.html">线路2</a>
+										</div>
+									</li>
+
+									<li class="nav-item d-sm-none d-blck">
+										<a class="nav-link px-2 pb-0" href="./mobile/help/rule.html">规则条款</a>
+									</li>
+									<li class="nav-item d-sm-none d-blck">
+										<a class="nav-link px-2 pb-0" href="./mobile/help.html">帮助中心</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<a class="nav-link header-login py-0" href="#" data-bs-toggle="modal"
+						data-bs-target="#loginModal">登入</a>
+				</div>
+			</nav>
+		</header>
+
+		<div class="mian-wrap">
+			<main class="mian">
+				<div class="mian-top">
+					<h3>待付金额</h3>
+					<h2 class="orderAmount">0 USDT</h2>
+					<h4>已付款 0 USDT</h4>
+					<div class="mian-qrcode">
+						<div id="qrcode"></div>
+					</div>
+					<div class="mian-refresh"><i class="fas fa-refresh"></i> 请于 <span id="times">30:00</span> 内付款完成
+					</div>
+				</div>
+				<div class="mian-info">
+					<div class="mian-info__wrap">
+						<div class="mian-info__label" >订单编号</div>
+						<div class="mian-info__data" id="orderCode"></div>
+					</div>
+					<div class="mian-info__wrap">
+						<div class="mian-info__label">订单金额</div>
+						<div class="mian-info__data">
+							<div class="orderAmount">0 USDT</div>
+							<!---->
+						</div>
+					</div>
+					<div class="mian-info__wrap">
+						<div class="mian-info__label">收款地址</div>
+						<div class="mian-info__data">
+							<span id="channelAddress"></span>
+							<input id="Address" type="hidden">
+							<i id="copy" class="far fa-copy fa-check-circle"></i>
+						</div>
+					</div>
+				</div>
+			</main> <button type="button" class="submit">付款完成</button>
+			<!---->
+		</div>
 
 
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-2.2.0.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="js/slick.min.js"></script>
-    <script src="js/sweetalert2.min.js"></script>
-    <script src="js/moment-with-locales.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/clipboard.min.js"></script>
-    <script src="js/imask.js"></script>
-    <script src="js/CLDRPluralRuleParser.js"></script>
 
-    <script>
-    $(function() {
-        $('.loading').hide();
-    });
-</script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/jquery-2.2.0.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="js/slick.min.js"></script>
+		<script src="js/sweetalert2.min.js"></script>
+		<script src="js/moment-with-locales.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/clipboard.min.js"></script>
+		<script src="js/imask.js"></script>
+		<script src="js/CLDRPluralRuleParser.js"></script>
+		<script src="js/jquery.qrcode.min.js"></script>
 
-</body>
+
+		<script>
+
+			$(function() {
+				var time= 30*60
+				setInterval( () =>{
+					time--;
+					var m = parseInt(time / 60);
+					var s = parseInt(time % 60);
+					$("#times").text(m+":"+s)
+
+					if(time < 0){
+						window.location.replace("index.html");
+					}
+
+				},1000)
+
+
+				$("#copy").click(function(){
+					$("#hide").val($("#Address").val());//这里可以获取动态数据赋值给$("#hide").val()
+					$("#hide").select();
+					try {var state = document.execCommand("copy");}
+					catch(err){var state = false;}
+					if(state){
+						alert("复制成功")
+					}else{
+						alert("复制失败")
+					}
+				})
+			});
+		</script>
+		<script>
+			function getQueryVariable(variable) {
+				var query = window.location.search.substring(1);
+				var vars = query.split("&");
+				for (var i = 0; i < vars.length; i++) {
+					var pair = vars[i].split("=");
+					if (pair[0] == variable) {
+						return pair[1];
+					}
+				}
+				return (false);
+			}
+			console.log(getQueryVariable('amount'))
+			// /max/order/pay
+			$.ajax({
+				type: 'POST',
+				data: {amount: getQueryVariable('amount')},
+				url: 'http://192.168.123.210:8092/max/order/pay',
+				success: function(res) {
+					$('.loading').hide();
+					console.log(res)
+					var item = res.data;
+
+					$('.orderAmount').text(item.orderAmount +"USDT")
+					$("#orderCode").text(item.orderCode)
+					$("#channelAddress").text(item.channelAddress)
+					$("#Address").val(item.channelAddress)
+
+					$('#qrcode').qrcode({
+						render: "canvas", //也可以替换为table
+						width: 150,
+						height: 150,
+						text: item.channelAddress
+					});
+				}
+			})
+
+		</script>
+
+
+	</body>
 </html>

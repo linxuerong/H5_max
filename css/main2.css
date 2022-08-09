@@ -1,0 +1,287 @@
+
+.mian {
+    width: 380px;
+    min-height: 600px;
+    margin: auto;
+    /*background-image: url(../images/ticket-bg.svg);*/
+    /*background-image: url(../images/bg.png);*/
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+.mian-wrap {
+    margin-top: 40px;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.mian-top {
+    text-align: center;
+    padding-top: 30px;
+    position: relative;
+}
+
+.mian-top::after {
+    content: '';
+    display: block;
+    width: 280px;
+    position: relative;
+    border-bottom: dashed 2px #ddd;
+    top: 25px;
+    margin: auto;
+}
+
+.mian-top h2 {
+    margin: 0px;
+    color: #A4B200;
+}
+
+.mian-top h3 {
+    margin: 0px;
+    color: #6E6967;
+}
+
+.mian-top h4 {
+    margin: 0px;
+}
+
+.mian-qrcode {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    box-sizing: content-box;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    margin: 20px auto;
+    width: 155px;
+    height: 155px;
+    border: solid 1px #A4B200;
+}
+
+.mian-refresh {
+    text-align: center;
+}
+
+.mian-refresh .fas {
+    margin-right: 10px;
+    -webkit-animation: refreshIcon 5s infinite linear;
+    animation: refreshIcon 5s infinite linear;
+}
+
+.mian-refresh #showTime {
+    display: inline-block;
+    width: 60px;
+}
+
+.mian-info {
+    max-width: 300px;
+    margin: auto;
+    margin-top: 55px;
+}
+
+.mian-info__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.mian-info__label {
+    min-width: 100px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.mian-info__data {
+    text-align: right;
+    max-width: 200px;
+    word-break: break-all;
+    line-height: 22px;
+    font-size: 16px;
+}
+
+.mian-info__data > .far {
+    color: #A4B200;
+    margin-left: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.mian-info__data > span {
+    font-size: 13px;
+}
+
+.submit {
+    background: #A4B200;
+    border: none;
+    color: white;
+    padding: 9px;
+    font-size: 18px;
+    width: 340px;
+    border-radius: 30px;
+    margin: 20px auto;
+    letter-spacing: 4px;
+    cursor: pointer;
+}
+
+.fa-check-circle {
+    width: 20px;
+}
+
+.modal {
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+    -webkit-animation: bg-anim .2s ease;
+    animation: bg-anim .2s ease;
+}
+
+.modal-wrap {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: #000000c5;
+    z-index: 999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-animation: bg-anim .5s ease;
+    animation: bg-anim .5s ease;
+    display: none;
+}
+
+.modal-header {
+    background: #A4B200;
+    height: 25px;
+}
+
+.modal-body {
+    border-radius: 10px;
+    background: white;
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    padding: 15px;
+    text-align: center;
+}
+
+.modal-body h3 {
+    margin: 0px;
+}
+
+.modal-footer {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0px 15px;
+}
+
+.modal-footer button {
+    border: none;
+    width: 100%;
+    background: #A4B200;
+    border-radius: 50px;
+    font-size: 18px;
+    padding: 5px;
+    color: white;
+}
+
+.modal-iocn {
+    width: 100px;
+    margin: 10px;
+}
+
+.icon-animation {
+    -webkit-animation: icon-anim .8s ease;
+    animation: icon-anim .8s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@-webkit-keyframes refreshIcon {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes refreshIcon {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes bg-anim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bg-anim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes icon-anim {
+    from {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    to {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+}
+
+@keyframes icon-anim {
+    from {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    to {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+}
+/*# sourceMappingURL=main.css.map */

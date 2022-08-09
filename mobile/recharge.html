@@ -130,7 +130,7 @@
                             </div>
                         </div>
                         <div class="text-center">
-                            <div class="deposit my-3 recharge-next" style="display: inline-block; padding: 5px 10px">送出</div>
+                            <button class="my-3 recharge-next">送出</button>
                         </div>
                     </form>
                 </div>
@@ -259,24 +259,48 @@
         });
     </script>
     <script>
+
+    </script>
+    <script>
         <!--充值-->
-
-        $(".deposit").on('click' ,function (e){
+        $('#deposit-form').on('submit', function(e){
+            $('.loading').show();
             e.preventDefault();
-
-            var form = $(this).closest('form');
+            $('button').attr("disabled", true);
+            var form = $(this);
             var amount = form.serializeArray()[1].value
             if( amount < 16 || amount =='' ){
-                swal('最低充值金额为16U');
+                swal("最低充值金额为16U", '', 'error');
                 return
             }
             window.location.replace("../pay.html?"+form.serialize());
-        })
+        });
+
 
 
         $('#withdrawal-form').on('submit', function(e){
+            $('.loading').show();
+            e.preventDefault();
+            $('button').attr("disabled", true);
+            var form = $(this);
+            $.ajax({
+                type: 'POST',
+                data: form.serialize(),
+                url: 'https://max688888.com/recharge/withdrawal',
+                success: function (response) {
+                    if(response.code == 0) {
+                        $('#withdrawal-form [name="wallet_address"]').prop('readonly', true);
+                        $('#withdrawal-form [name="wallet_address"]').addClass('form-control-plaintext');
+                        swal(response.message, '', 'success');
+                    } else {
+                        swal(response.message, '', 'error');
+                    }
+                    $('.loading').hide();
+                    $('button').attr("disabled", false);
+                }
+            });
+        });
 
-        })
     </script>
 
 </body>
