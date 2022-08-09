@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9719a456-191b-4e38-86d5-33ef124b23c5" name="变更" comment="h5max">
-      <change afterPath="$PROJECT_DIR$/css/main2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/ticket-bg.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/jquery.qrcode.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/investment/investment2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/all.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/all.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/investment/notopen.html" beforeDir="false" afterPath="$PROJECT_DIR$/investment/notopen.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile/recharge.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/recharge.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pay.html" beforeDir="false" afterPath="$PROJECT_DIR$/pay.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trade.html" beforeDir="false" afterPath="$PROJECT_DIR$/trade.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +48,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/WebStorm/H5_max/images",
+    "last_opened_file_path": "E:/WebStorm/H5_max/investment",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -63,9 +61,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\WebStorm\H5_max\investment" />
       <recent name="E:\WebStorm\H5_max\images" />
       <recent name="E:\WebStorm\H5_max" />
-      <recent name="E:\WebStorm\H5_max\investment" />
       <recent name="E:\WebStorm\H5_max\mobile" />
       <recent name="E:\WebStorm\H5_max\mobile\help" />
     </key>
@@ -102,7 +100,7 @@
       <workItem from="1660047837417" duration="242000" />
       <workItem from="1660048097382" duration="65000" />
       <workItem from="1660048179417" duration="669000" />
-      <workItem from="1660048893492" duration="4611000" />
+      <workItem from="1660048893492" duration="7459000" />
     </task>
     <task id="LOCAL-00001" summary="h5max">
       <created>1659579223422</created>
@@ -419,7 +417,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660047060076</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="h5max">
+      <created>1660053592042</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1660053592042</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

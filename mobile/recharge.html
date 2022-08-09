@@ -153,32 +153,32 @@
                     </div>
                     <div class="promotions-back-btn d-sm-block d-none my-2" onclick="javascript:history.back();">返回</div>
                 </div>
-                <div class="text-center mt-3" style="color: #5894ea">( 提领手续费 5%，本月 4 次免手续费，剩余 4 次)</div>
+                <div class="text-center mt-3" style="color: #5894ea">( 提领手续费 5%，本月 5 次免手续费，剩余 <span id="Limit"></span> 次)</div>
                 <div class="promotions-join mx-auto my-2">
                     <form id="withdrawal-form" action="" method="POST" autocomplete="off">
                         <div class="row m-0 py-2 align-items-center">
                             <div class="col-sm-4 col-12 text-sm-start text-center p-1">钱包地址</div>
                             <div class="col-sm-8 col-12 p-0 recharge-input">
-                                <input class="w-100 text-center" type="text" value="TCEM4q9gaVeVEbffxCcNCrZgWkYk1AfoY6" readonly="&quot;&quot;" name="wallet_address" required="" placeholder="TRC20 钱包地址" autocomplete="off">
+                                <input class="w-100 text-center" type="text" id="Address" readonly value="" name="address"  placeholder="TRC20 钱包地址" autocomplete="off">
                             </div>
                         </div>
                         <div class="row m-0 py-2 align-items-center">
                             <div class="col-sm-4 col-12 text-sm-start text-center p-1">提领金额</div>
                             <div class="col-sm-8 col-12 p-0 recharge-input">
-                                <input type="text" class="w-100 text-center currency-mask" name="amount" value="" placeholder="USDT" required="" autocomplete="off">
+                                <input type="text" class="w-100 text-center currency-mask" name="withdrawAmount" value="" placeholder="USDT" required="" autocomplete="off">
                             </div>
                         </div>
                         <div class="row m-0 py-2 align-items-center">
                             <div class="col-sm-4 col-12 text-sm-start text-center p-1">支付密码</div>
                             <div class="col-sm-8 col-12 p-0 recharge-input">
-                                <input class="w-100" type="password" name="password" required="" autocomplete="off">
+                                <input class="w-100" type="password" name="payPassword" required="" autocomplete="off">
                             </div>
                         </div>
-                        <div class="text-center py-1 recharge-note" style="color: #5894ea">单笔提领限额: $20,000U，未达流水: 0
+                        <div class="text-center py-1 recharge-note" style="color: #5894ea">单笔提领限额: $20,000U，未达流水: <span id="trasacionBillLimit"></span>
                         </div>
                         <div class="text-center">
-                            <div class="my-3 recharge-next" style="display: inline-block; padding: 5px 10px">送出</div>
-<!--                            <button class="my-3 recharge-next">送出</button>-->
+<!--                            <div class="my-3 recharge-next" style="display: inline-block; padding: 5px 10px">送出</div>-->
+                            <button class="my-3 recharge-next">送出</button>
                         </div>
                     </form>
                 </div>
@@ -262,7 +262,44 @@
 
     </script>
     <script>
-        <!--充值-->
+        var balance = 0
+        $(function() {
+            $.ajax({
+                type: 'GET',
+                url: 'http://192.168.123.210:8092/max/member/getInfo',
+                success: function (res) {
+                    if (res.code == 0) {
+                        console.log(res)
+                        balance = res.data.balance
+                    }
+                }
+            })
+            $.ajax({
+                type: 'GET',
+                url: 'http://192.168.123.210:8092/max/withdraw/getMyWithdrawInfo',
+                success: function (res) {
+                    console.log(res)
+                    if(res.code == 0) {
+                        console.log(res.data.withdrawAddress)
+                        $("#Address").val(res.data.withdrawAddress);
+                        if(res.data.withdrawAddress){
+                            $("#Address").attr("readonly","readonly");
+                        }else {
+                            $("#Address").removeAttr("readonly");
+                        }
+
+                        $("#Limit").text(res.data.trasacionBillLimit);
+                        $("#trasacionBillLimit").text(res.data.trasacionBillLimit)
+                    }
+                }
+            })
+
+
+
+        })
+
+
+        // 充值
         $('#deposit-form').on('submit', function(e){
             $('.loading').show();
             e.preventDefault();
@@ -277,28 +314,39 @@
         });
 
 
-
+        // 体现
         $('#withdrawal-form').on('submit', function(e){
-            $('.loading').show();
+            // $('.loading').show();
             e.preventDefault();
             $('button').attr("disabled", true);
             var form = $(this);
+
+            var amount = form.serializeArray()[1].value
+            if( amount < 16 || amount =='' ){
+                swal("最低充值金额为16U", '', 'error');
+                return
+            }else if(balance < amount){
+                swal("账户余额不足", '', 'error');
+                return
+            }
+            console.log(form.serialize())
+
             $.ajax({
                 type: 'POST',
                 data: form.serialize(),
-                url: 'https://max688888.com/recharge/withdrawal',
-                success: function (response) {
-                    if(response.code == 0) {
-                        $('#withdrawal-form [name="wallet_address"]').prop('readonly', true);
-                        $('#withdrawal-form [name="wallet_address"]').addClass('form-control-plaintext');
-                        swal(response.message, '', 'success');
+                url: 'http://192.168.123.210:8092/max/withdraw/withdraw',
+                success: function (res) {
+                    console.log(res)
+                    if(res.code == 0) {
+                        swal(res.msg, '', 'success');
                     } else {
-                        swal(response.message, '', 'error');
+                        swal(res.msg, '', 'error');
                     }
                     $('.loading').hide();
                     $('button').attr("disabled", false);
                 }
             });
+
         });
 
     </script>

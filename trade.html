@@ -258,6 +258,9 @@
             if(type == 2){
                 Surl= 'http://192.168.123.210:8092/max/withdraw/getList' //体现
             }
+
+            $("#table-lists").empty();
+
             $.ajax({
                 type: 'GET',
                 data:{'StartTime': start, 'EndTime':end},
@@ -271,17 +274,28 @@
 
         function datdText(data){
             $.each( data, function (i , item){
-                let status1 = '成功'
+                let status = '成功'
                 if(item.status == 1){
-                    status1 = '失败'
+                    status= '失败'
                 }
+
+                var type = "充值"
+                var Amount = item.orderAmount;
+                var Code = item.orderCode;
+
+                if(item.withdrawAmount){
+                    Amount = item.withdrawAmount
+                    type="提现"
+                    Code = item.withdrawCode
+                }
+
                 var box=' <div class="row table-lists table-td m-0 mt-sm-0 mt-3 p-0 py-3 text-center">\n' +
                 '    <div class="col-md-2 col-12 p-1 table-list" data-title="时间" >'+item.createTime+'</div>\n' +
-                '    <div class="col-md-3 col-12 p-1 table-list" data-title="订单号" >'+item.orderCode+'</div>\n' +
-                '    <div class="col-md-1 col-6 p-1 table-list" data-title="类别">充值</div>\n' +
-                '    <div class="col-md-1 col-6 p-1 table-list" data-title="金额" >'+item.orderAmount+'</div>\n' +
+                '    <div class="col-md-3 col-12 p-1 table-list" data-title="订单号" >'+Code+'</div>\n' +
+                '    <div class="col-md-1 col-6 p-1 table-list" data-title="类别">'+type+'</div>\n' +
+                '    <div class="col-md-1 col-6 p-1 table-list" data-title="金额" >'+Amount+'</div>\n' +
                 '    <div class="col-md-2 col-6 p-1 table-list" data-title="渠道">TRC20-USDT</div>\n' +
-                '    <div class="col-md-2 col-6 p-1 table-list" data-title="状态">'+status1+'</div>\n' +
+                '    <div class="col-md-2 col-6 p-1 table-list" data-title="状态">'+status+'</div>\n' +
                 '</div>';
 
                 $('#table-lists').append(box);
