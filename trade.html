@@ -130,23 +130,9 @@
                 <div class="col-md-2 col-4 p-1">状态</div>
             </div>
             <div id="table-lists">
-                <div class="row table-lists table-td m-0 mt-sm-0 mt-3 p-0 py-3 text-center">
-                    <div class="col-md-2 col-12 p-1 table-list" data-title="时间" id="Time1"></div>
-                    <div class="col-md-3 col-12 p-1 table-list" data-title="订单号" id="Code1"></div>
-                    <div class="col-md-1 col-6 p-1 table-list" data-title="类别">充值</div>
-                    <div class="col-md-1 col-6 p-1 table-list" data-title="金额" id="Amount1"></div>
-                    <div class="col-md-2 col-6 p-1 table-list" data-title="渠道">TRC20-USDT</div>
-                    <div class="col-md-2 col-6 p-1 table-list" data-title="状态" id="Status1"></div>
-                </div>
 
-                <div class="row table-lists table-td m-0 mt-sm-0 mt-3 p-0 py-3 text-center">
-                    <div class="col-md-2 col-12 p-1 table-list" data-title="时间" id="Time2"></div>
-                    <div class="col-md-3 col-12 p-1 table-list" data-title="订单号" id="Code2"></div>
-                    <div class="col-md-1 col-6 p-1 table-list" data-title="类别">充值</div>
-                    <div class="col-md-1 col-6 p-1 table-list" data-title="金额" id="Amount2"></div>
-                    <div class="col-md-2 col-6 p-1 table-list" data-title="渠道">人民币充值</div>
-                    <div class="col-md-2 col-6 p-1 table-list" data-title="状态" id="Status2"></div>
-                </div>
+
+
             </div>
             <div class="back-btn text-center d-md-block d-none mt-sm-3 mt-2 position-absolute end-0 me-2" onclick="javascript:history.back();">返回</div>
         </div>
@@ -284,25 +270,23 @@
         }
 
         function datdText(data){
-            $('#Time1').text(data[0].createTime)
-            $('#Code1').text(data[0].orderCode)
-            $('#Amount1').text(data[0].orderAmount)
-            $('#Status1').text(data[0].status)
-            let status1 = '成功'
-            if(data[0].status == 1){
-                status1 = '失败'
-            }
-            $('#Status1').text(status1)
+            $.each( data, function (i , item){
+                let status1 = '成功'
+                if(item.status == 1){
+                    status1 = '失败'
+                }
+                var box=' <div class="row table-lists table-td m-0 mt-sm-0 mt-3 p-0 py-3 text-center">\n' +
+                '    <div class="col-md-2 col-12 p-1 table-list" data-title="时间" >'+item.createTime+'</div>\n' +
+                '    <div class="col-md-3 col-12 p-1 table-list" data-title="订单号" >'+item.orderCode+'</div>\n' +
+                '    <div class="col-md-1 col-6 p-1 table-list" data-title="类别">充值</div>\n' +
+                '    <div class="col-md-1 col-6 p-1 table-list" data-title="金额" >'+item.orderAmount+'</div>\n' +
+                '    <div class="col-md-2 col-6 p-1 table-list" data-title="渠道">TRC20-USDT</div>\n' +
+                '    <div class="col-md-2 col-6 p-1 table-list" data-title="状态">'+status1+'</div>\n' +
+                '</div>';
 
+                $('#table-lists').append(box);
+            })
 
-            $('#Time2').text(data[1].createTime)
-            $('#Code2').text(data[1].orderCode)
-            $('#Amount2').text(data[1].orderAmount)
-            let status2 = '成功'
-            if(data[1].status == 1){
-                status2 = '失败'
-            }
-            $('#Status2').text(status2)
         }
     </script>
 
