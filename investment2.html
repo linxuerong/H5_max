@@ -494,9 +494,24 @@
 
     <script>
         $(function() {
-            $('.loading').hide();
+            $.ajax({
+                type: 'GET',
+                url: 'http://192.168.123.210:8092/max/member/getInfo',
+                success: function(res) {
+                    $('.loading').hide();
+                    if(res.code == 0){
+                        // 成功
+                        $('.uname').html(res.data.maxNickName)
+                        $(".loginHide").remove();
+                    }else {
+                        //没有登录
+                        $('.loginShow').remove();
+                    }
+                },
+            })
         });
     </script>
+
 
 </body>
 </html>
