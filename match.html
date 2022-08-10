@@ -197,6 +197,9 @@
             $.ajax({
                 type: 'GET',
                 url: 'http://192.168.123.210:8092/max/member/getInfo',
+                xhrFields: {
+                    withCredentials: true
+                },
                 success: function(res) {
                     $('.loading').hide();
                     if(res.code == 0){
@@ -219,6 +222,9 @@
             $.ajax({
                 type: 'GET',
                 url: 'http://192.168.123.210:8092/max/goldResult/getList',
+                xhrFields: {
+                    withCredentials: true
+                },
                 success: function(res) {
                     console.log(res)
                     sorting(res.data)

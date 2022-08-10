@@ -246,6 +246,9 @@
             $.ajax({
                 type: 'GET',
                 url: 'http://192.168.123.210:8092/max/member/getInfo',
+                xhrFields: {
+                    withCredentials: true
+                },
                 success: function(res) {
                     $('.loading').hide();
                     if(res.code == 0){
@@ -269,6 +272,9 @@
                 $.ajax({
                     type: 'GET',
                     url: 'http://192.168.123.210:8092//max/statistics/getStatistics/'+i,
+                    xhrFields: {
+                        withCredentials: true
+                    },
                     success:function (res){
                         if(res != ''){
                             sorting(res)

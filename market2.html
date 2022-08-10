@@ -434,6 +434,9 @@
             $.ajax({
                 type: 'GET',
                 url: 'http://192.168.123.210:8092/max/member/getInfo',
+                xhrFields: {
+                    withCredentials: true
+                },
                 success: function(res) {
                     $('.loading').hide();
                     if(res.code == 0){
@@ -558,6 +561,9 @@
                 type: 'POST',
                 data: form.serialize(),
                 url: 'https://max688888.com/bet',
+                xhrFields: {
+                    withCredentials: true
+                },
                 success: function (response) {
                     if(response.code == 0){
                         $('.balance').text(response.balance);

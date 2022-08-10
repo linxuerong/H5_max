@@ -36,19 +36,19 @@
 								</div>
 								<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 									<li class="nav-item d-sm-none d-blck">
-										<a class="nav-link px-2 pb-0" href="./account.html">中心钱包</a>
+										<a class="loginNone nav-link px-2 pb-0" href="./account.html">中心钱包</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link px-2 pb-0" href="./market.html">市场列表</a>
+										<a class="loginNone nav-link px-2 pb-0" href="./market.html">市场列表</a>
 									</li>
 									<li class="nav-item d-sm-none d-blck">
-										<a class="nav-link px-2 pb-0" href="trade.html">存提纪录</a>
+										<a class="loginNone nav-link px-2 pb-0" href="trade.html">存提纪录</a>
 									</li>
 									<li class="nav-item d-sm-block d-none">
-										<a class="nav-link px-2 pb-0" href="./investment.html">投资纪录</a>
+										<a class="loginNone nav-link px-2 pb-0" href="./investment.html">投资纪录</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link px-2 pb-0" href="./match.html">赛事结果</a>
+										<a class="loginNone nav-link px-2 pb-0" href="./match.html">赛事结果</a>
 									</li>
 									<li class="nav-item">
 										<a class="nav-link px-2 pb-0" href="./immediate.html">即时比分</a>
@@ -421,7 +421,7 @@
 						<img src="./images/icon_trade-history.png" alt="">
 						<div>交易明细</div>
 					</a>
-					<a href="./investment2.html" class="bottom-menu__btn " data-bs-toggle="modal" data-bs-target="#loginModal">
+					<a href="./investment2.html" class="bottom-menu__btn " >
 						<img src="./images/icon_side-history.png" alt="">
 						<div>历史帐务</div>
 					</a>
@@ -450,6 +450,9 @@
 				$.ajax({
 					type: 'GET',
 					url: 'http://192.168.123.210:8092/max/member/getInfo',
+					xhrFields: {
+						withCredentials: true
+					},
 					success: function(res) {
 						$('.loading').hide();
 						if(res.code == 0){
@@ -465,6 +468,13 @@
 						}else {
 							//没有登录
 							$('.loginShow').remove();
+							// data-bs-toggle="modal" data-bs-target="#loginModal"
+							$(".bottom-menu__btns").find('a').attr('data-bs-toggle','modal')
+							$(".bottom-menu__btns").find('a').attr('data-bs-target','#loginModal')
+
+							$(".loginNone").attr('data-bs-toggle','modal')
+							$(".loginNone").attr('data-bs-target','#loginModal')
+
 						}
 					},
 				})
@@ -483,6 +493,9 @@
 					$.ajax({
 						type: 'POST',
 						url: 'http://192.168.123.210:8092/max/message/send/'+phone.val(),
+						xhrFields: {
+							withCredentials: true
+						},
 						success: function(response) {
 							if (response.code == 200) {
 								swal("短信码已发送", '', "success");
@@ -520,6 +533,9 @@
 						type: 'POST',
 						data: form.serialize(),
 						url: 'https://max688888.com/forget-password-check',
+						xhrFields: {
+							withCredentials: true
+						},
 						success: function(response) {
 							if (response.code == 0) {
 								swal("短信码已发送", '', "success");
@@ -543,6 +559,9 @@
 					type: 'POST',
 					data: form.serialize(),
 					url: 'http://192.168.123.210:8092/max/member/regiest',
+					xhrFields: {
+						withCredentials: true
+					},
 					success: function(response) {
 						console.log(response)
 						if (response.code == 200) {
@@ -572,6 +591,9 @@
 					type: 'POST',
 					data: form.serialize(),
 					url: 'http://192.168.123.210:8092/max/member/login',
+					xhrFields: {
+						withCredentials: true
+					},
 					success: function(res) {
 						console.log(res)
 						if (res.code == 0) {
@@ -595,6 +617,9 @@
 					type: 'POST',
 					data: form.serialize(),
 					url: 'https://max688888.com/forget-password',
+					xhrFields: {
+						withCredentials: true
+					},
 					success: function(response) {
 						if (response.code == 0) {
 							swal(response.message, '请重新登入', "success").then(function() {
@@ -621,6 +646,9 @@
 				 $.ajax({
 					 type: 'GET',
 					 url: 'http://192.168.123.210:8092/max/notice/getList',
+					 xhrFields: {
+						 withCredentials: true
+					 },
 					 success: function(res) {
 						 newsAdd(res)
 					 },
@@ -657,6 +685,9 @@
 				 $.ajax({
 					 type: 'GET',
 					 url: 'http://192.168.123.210:8092/max/mask/getMaskList/1',
+					 xhrFields: {
+						 withCredentials: true
+					 },
 					 success: function(res) {
 						 console.log(res)
 						 sorting(res.data)

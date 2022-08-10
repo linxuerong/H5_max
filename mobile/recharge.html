@@ -267,6 +267,9 @@
             $.ajax({
                 type: 'GET',
                 url: 'http://192.168.123.210:8092/max/member/getInfo',
+                xhrFields: {
+                    withCredentials: true
+                },
                 success: function (res) {
                     if (res.code == 0) {
                         console.log(res)
@@ -277,6 +280,9 @@
             $.ajax({
                 type: 'GET',
                 url: 'http://192.168.123.210:8092/max/withdraw/getMyWithdrawInfo',
+                xhrFields: {
+                    withCredentials: true
+                },
                 success: function (res) {
                     console.log(res)
                     if(res.code == 0) {
@@ -335,6 +341,9 @@
                 type: 'POST',
                 data: form.serialize(),
                 url: 'http://192.168.123.210:8092/max/withdraw/withdraw',
+                xhrFields: {
+                    withCredentials: true
+                },
                 success: function (res) {
                     console.log(res)
                     if(res.code == 0) {

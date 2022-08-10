@@ -318,6 +318,9 @@
       $.ajax({
         type: 'GET',
         url: 'http://192.168.123.210:8092/max/trasaction/getList/'+id,
+        xhrFields: {
+          withCredentials: true
+        },
         success: function(res) {
           console.log(res)
           let item = res.data;
@@ -406,6 +409,9 @@
         type: 'POST',
         data: form.serialize(),
         url: 'http://192.168.123.210:8092/max/trasactionOrder/pickTrasaction',
+        xhrFields: {
+          withCredentials: true
+        },
         success: function (res) {
           if(res.code == 0){
             console.log(res)
