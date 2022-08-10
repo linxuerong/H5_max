@@ -109,7 +109,7 @@
             <div class="dropdown filter ms-md-2 ms-auto my-1">
                 <select id="type" class="btn dropdown-toggle d-flex justify-content-between align-items-center sm-dropdown w-100" style="background: #374874;color: #d8e1f2;" autocomplete="off">
                     <option value="1">充值</option>
-                    <option value="2">体现</option>
+                    <option value="2">提取</option>
                 </select>
             </div>
             <div class="dropdown filter ms-md-2 ms-auto my-1">
@@ -256,7 +256,7 @@
 
             var Surl= 'http://192.168.123.210:8092/max/order/getList' //充值
             if(type == 2){
-                Surl= 'http://192.168.123.210:8092/max/withdraw/getList' //体现
+                Surl= 'http://192.168.123.210:8092/max/withdraw/getList' //提取
             }
 
             $("#table-lists").empty();
