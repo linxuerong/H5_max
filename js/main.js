@@ -32,7 +32,6 @@ function getNow(s) {
 
 $(function (){
 	setInterval( ()=>{
-		console.log("EEE")
 		var myDate = new Date();
 		var year=myDate.getFullYear();        //获取当前年
 		var month=myDate.getMonth()+1;   //获取当前月
@@ -42,7 +41,15 @@ $(function (){
 		var s=myDate.getSeconds();
 		var now=year+'-'+getNow(month)+"-"+getNow(date)+" "+getNow(h)+':'+getNow(m)+":"+getNow(s);
 		$(".header-time").text(now)
+
+		var x = 4000;
+		var y = 3000;
+		var rand = parseInt(Math.random() * (x - y + 1) + y);
+		$(".rand").text(rand)
+
 	},1000)
+
+
 })
 
 
