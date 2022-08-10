@@ -247,11 +247,11 @@
         function query(){
             var start , end
             if(time == 1){
-                start = new Date(getDay(-7) +' 00:00:00') ;
-                end = new Date(getDay(0) + ' 23:59:59') ;
+                start =  getDay(-7) + ' 00:00:00';
+                end = getDay(0) + ' 23:59:59';
             }else if(time == 2){
-                start = new Date(getDay(-14) + ' 00:00:00');
-                end = new Date(getDay(-7) + ' 23:59:59');
+                start = getDay(-14) + ' 00:00:00';
+                end = getDay(-7) + ' 23:59:59';
             }
 
             var Surl= 'http://192.168.123.210:8092/max/order/getList' //充值
