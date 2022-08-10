@@ -32,8 +32,8 @@
                      aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-body justify-content-between align-items-center p-0">
                         <div class="flex-column">
-                            <div class="header-info d-lg-block d-none px-2">
-                                2022/07/29 17:44 ( 北京标准时间 ) ｜ 线上人数 ：3636
+                            <div class="header-info d-lg-block d-none px-2 ">
+                                <span class="header-time">2022/07/29 17:44</span> ( 北京标准时间 ) ｜ 线上人数 ：3636
                             </div>
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item d-sm-none d-blck">
@@ -87,89 +87,90 @@
                     </div>
                 </div>
                 <div class="text-end">
-                    <div class="d-sm-block d-none p-2">Hi, 叶梅
+                    <div class="loginShow d-sm-block d-none p-2">
+                        Hi, <span class="uname"></span>
                         <br class="d-sm-none d-blck">
                         欢迎
                     </div>
-                    <a class="nav-link header-login text-end py-0 d-blck pe-2" href="https://max688888.com/logout">
-                        登出
-                    </a>
+                    <a class="loginShow nav-link header-login text-end py-0 d-blck pe-2" href="https://max688888.com/logout">登出</a>
+                    <a class="loginHide nav-link header-login py-0" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">登入</a>
                 </div>
             </div>
         </nav>
     </header>
 
-    <div class="container-fluid page p-2 py-sm-5 py-3 account mb-3">
-        <div class="w-100 account-level d-flex p-sm-3 p-2 justify-content-between align-items-center">
-            <div class="account-level__info d-flex align-items-center">
-                <img class="account-level__icon mx-md-3 mx-0" src="./images/user.png" alt="">
-                <div class="account-level__user">
-                    <div>Hi, AAP222</div>
-                    <div>微商等级：1</div>
-                </div>
-            </div>
-            <ul class="account-level__balance mb-0 list-unstyled">
-                <li class="" data-title="余额：">$55.50</li>
-            </ul>
-        </div>
-        <div class="row m-0 position-relative flex-md-row flex-column-reverse align-items-stretch">
-            <div class="col-md-4 p-0 text-center p-3 ps-0">
-                <a href="https://max688888.com/mobile/member" class="account-manage d-flex flex-column justify-content-center align-items-center">
-                    <img class="p-3" src="./images/users.png" alt="">
-                    <div>会员管理</div>
-                </a>
-            </div>
-            <div class="col-md-8 p-0 position-relative">
-                <div class="row m-0 account-privacy p-2 py-4 mt-3">
 
-                    <div class="col-md-4 col-4 p-0">
-                        <a href="" class="d-block account-passwod" data-bs-toggle="modal" data-bs-target="#editPasswordModal">
-                            <img src="./images/padlock.png" alt="">
-                            <div>登入密码</div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-4 p-0">
-                        <a href="" class="d-block account-passwod" data-bs-toggle="modal" data-bs-target="#editWithdrawalPasswordModal">
-                            <img src="./images/padlock.png" alt="">
-                            <div>提领密码</div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-4 p-0">
-                        <a href="https://max688888.com/mobile/recharge" class="d-block account-transfer">
-                            <img src="./images/withdrawal.png" alt="">
-                            <div>存提</div>
-                        </a>
+    <div class="container-fluid page p-2 py-sm-5 py-3 account mb-3">
+            <div class="w-100 account-level d-flex p-sm-3 p-2 justify-content-between align-items-center">
+                <div class="account-level__info d-flex align-items-center">
+                    <img class="account-level__icon mx-md-3 mx-0" src="./images/user.png" alt="">
+                    <div class="account-level__user">
+                        <div>Hi, AAP222</div>
+                        <div>微商等级：1</div>
                     </div>
                 </div>
-                <div class="row m-0 position-relative text-center account-historys">
-                    <div class="col-md-3 p-0 d-md-block d-none p-2 py-3">
-                        <a href="https://max688888.com/trade" class="d-block account-transfer-history py-3">
-                            <img src="./images/icon-transfer.png" alt="">
-                            <div>存提纪录</div>
-                        </a>
+                <ul class="account-level__balance mb-0 list-unstyled">
+                    <li class="" data-title="余额：">$55.50</li>
+                </ul>
+            </div>
+            <div class="row m-0 position-relative flex-md-row flex-column-reverse align-items-stretch">
+                <div class="col-md-4 p-0 text-center p-3 ps-0">
+                    <a href="https://max688888.com/mobile/member" class="account-manage d-flex flex-column justify-content-center align-items-center">
+                        <img class="p-3" src="./images/users.png" alt="">
+                        <div>会员管理</div>
+                    </a>
+                </div>
+                <div class="col-md-8 p-0 position-relative">
+                    <div class="row m-0 account-privacy p-2 py-4 mt-3">
+
+                        <div class="col-md-4 col-4 p-0">
+                            <a href="" class="d-block account-passwod" data-bs-toggle="modal" data-bs-target="#editPasswordModal">
+                                <img src="./images/padlock.png" alt="">
+                                <div>登入密码</div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-4 p-0">
+                            <a href="" class="d-block account-passwod" data-bs-toggle="modal" data-bs-target="#editWithdrawalPasswordModal">
+                                <img src="./images/padlock.png" alt="">
+                                <div>提领密码</div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-4 p-0">
+                            <a href="https://max688888.com/mobile/recharge" class="d-block account-transfer">
+                                <img src="./images/withdrawal.png" alt="">
+                                <div>存提</div>
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-md-3 p-0 d-md-block d-none p-2 py-3 ps-0">
-                        <a href="https://max688888.com/investment" class="d-block account-trade-history py-3">
-                            <img src="./images/icon-history.png" alt="">
-                            <div>投资纪录</div>
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-12 p-0 p-2 py-3 pe-md-2 pe-0">
-                        <a href="https://max688888.com/mobile/recommend" class="d-block account-recommend-history py-3">
-                            <img src="./images/icon-good.png" alt="">
-                            <div>微商分润</div>
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-12 p-0 p-2 py-md-3 py-0 pe-0">
-                        <a class="d-block account-recommend py-3" data-bs-toggle="modal" data-bs-target="#qrCodeModal">
-                            <img src="./images/icon-qrcode.png" alt="">
-                            <div>推荐码</div>
-                        </a>
+                    <div class="row m-0 position-relative text-center account-historys">
+                        <div class="col-md-3 p-0 d-md-block d-none p-2 py-3">
+                            <a href="https://max688888.com/trade" class="d-block account-transfer-history py-3">
+                                <img src="./images/icon-transfer.png" alt="">
+                                <div>存提纪录</div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 p-0 d-md-block d-none p-2 py-3 ps-0">
+                            <a href="https://max688888.com/investment" class="d-block account-trade-history py-3">
+                                <img src="./images/icon-history.png" alt="">
+                                <div>投资纪录</div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-12 p-0 p-2 py-3 pe-md-2 pe-0">
+                            <a href="https://max688888.com/mobile/recommend" class="d-block account-recommend-history py-3">
+                                <img src="./images/icon-good.png" alt="">
+                                <div>微商分润</div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-12 p-0 p-2 py-md-3 py-0 pe-0">
+                            <a class="d-block account-recommend py-3" data-bs-toggle="modal" data-bs-target="#qrCodeModal">
+                                <img src="./images/icon-qrcode.png" alt="">
+                                <div>推荐码</div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
 <!--    推广链结-->
     <div class="modal fade" id="qrCodeModal" tabindex="-1" aria-hidden="true">
@@ -327,7 +328,28 @@
 
     <script>
         $(function() {
-            $('.loading').hide();
+            $.ajax({
+                type: 'GET',
+                url: 'http://192.168.123.210:8092/max/member/getInfo',
+                success: function(res) {
+                    $('.loading').hide();
+                    if(res.code == 0){
+                        // 成功
+                        console.log(res.data)
+                        $('.uname').html(res.data.maxNickName)
+                        $('.uAccount').html(res.data.maxAccount)
+                        $('.uLevel').html(res.data.maxLevel)
+
+                        $('.uBalance').html(res.data.balance.toFixed(2))
+
+                        $(".loginHide").remove();
+                    }else {
+                        //没有登录
+                        $('.loginShow').remove();
+                    }
+                },
+            })
+
         });
     </script>
 

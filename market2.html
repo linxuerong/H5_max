@@ -31,8 +31,8 @@
                      aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-body justify-content-between align-items-center p-0">
                         <div class="flex-column">
-                            <div class="header-info d-lg-block d-none px-2">
-                                2022/07/29 17:44 ( 北京标准时间 ) ｜ 线上人数 ：3636
+                            <div class="header-info d-lg-block d-none px-2 ">
+                                <span class="header-time">2022/07/29 17:44</span> ( 北京标准时间 ) ｜ 线上人数 ：3636
                             </div>
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item d-sm-none d-blck">
@@ -86,13 +86,13 @@
                     </div>
                 </div>
                 <div class="text-end">
-                    <div class="d-sm-block d-none p-2">Hi, 叶梅
+                    <div class="loginShow d-sm-block d-none p-2">
+                        Hi, <span class="uname"></span>
                         <br class="d-sm-none d-blck">
                         欢迎
                     </div>
-                    <a class="nav-link header-login text-end py-0 d-blck pe-2" href="https://max688888.com/logout">
-                        登出
-                    </a>
+                    <a class="loginShow nav-link header-login text-end py-0 d-blck pe-2" href="https://max688888.com/logout">登出</a>
+                    <a class="loginHide nav-link header-login py-0" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">登入</a>
                 </div>
             </div>
         </nav>

@@ -31,8 +31,8 @@
 						aria-labelledby="offcanvasNavbarLabel">
 						<div class="offcanvas-body justify-content-between align-items-center p-0">
 							<div class="flex-column">
-								<div class="header-info d-lg-block d-none px-2">
-									2022/07/29 17:44 ( 北京标准时间 ) ｜ 线上人数 ：3636
+								<div class="header-info d-lg-block d-none px-2 ">
+									<span class="header-time">2022/07/29 17:44</span> ( 北京标准时间 ) ｜ 线上人数 ：3636
 								</div>
 								<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 									<li class="nav-item d-sm-none d-blck">
@@ -86,12 +86,13 @@
 						</div>
 					</div>
 					<div class="text-end">
-						<div class="d-sm-block d-none p-2">Hi, 叶梅
+						<div class="loginShow d-sm-block d-none p-2">
+							Hi, <span class="uname"></span>
 							<br class="d-sm-none d-blck">
 							欢迎
 						</div>
 						<a class="loginShow nav-link header-login text-end py-0 d-blck pe-2" href="https://max688888.com/logout">登出</a>
-<!--						<a class="loginShow nav-link header-login py-0" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">登入</a>-->
+						<a class="loginHide nav-link header-login py-0" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">登入</a>
 					</div>
 				</div>
 			</nav>
@@ -186,22 +187,7 @@
 		</div>
 
 		<!--新闻弹窗   （id ）对应 （data-bs-target）-->
-<!--		<div class="modal fade" id="announcementModal_0" >-->
-<!--			<div class="modal-dialog modal-dialog-centered">-->
-<!--				<div class="modal-content p-4 pb-4 text-center">-->
-<!--					<div class="p-2 d-flex justify-content-between align-items-center announcement-title">-->
-<!--						<h4 class="mb-0">平台公告</h4>-->
-<!--						<div class="announcement-date">2022/08/02</div>-->
-<!--					</div>-->
-<!--					<div class="text-start promotions-text p-2 pt-3">-->
-<!--						尊敬的会员你好MAX平台于8/2日 11:00~12:00进行例行性维护,感谢你对平台的支持.-->
-<!--					</div>-->
-<!--					<div class="d-flex justify-content-center mt-4">-->
-<!--						<div class="modal-btn mx-2" data-bs-toggle="modal" data-bs-target="#announcementModal_0">关闭</div>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--			</div>-->
-<!--		</div>-->
+
 
 		<!--轮播图弹窗 -->
 		<div class="modal fade" id="promotionsModal_0" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
@@ -457,7 +443,7 @@
 		<script>
 
 			$(function() {
-				$('.loading').hide();
+
 				console.log("获取信息")
 				//获取用户信息
 
@@ -465,18 +451,21 @@
 					type: 'GET',
 					url: 'http://192.168.123.210:8092/max/member/getInfo',
 					success: function(res) {
+						$('.loading').hide();
 						if(res.code == 0){
 							// 成功
 							console.log(res.data)
+							$('.uname').html(res.data.maxNickName)
 							$('.uAccount').html(res.data.maxAccount)
 							$('.uLevel').html(res.data.maxLevel)
 
 							$('.uBalance').html(res.data.balance.toFixed(2))
 
+							$(".loginHide").remove();
 						}else {
+							//没有登录
 							$('.loginShow').remove();
 						}
-
 					},
 				})
 			});
