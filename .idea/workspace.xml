@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9719a456-191b-4e38-86d5-33ef124b23c5" name="变更" comment="h5max">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/announcement.html" beforeDir="false" afterPath="$PROJECT_DIR$/announcement.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/immediate.html" beforeDir="false" afterPath="$PROJECT_DIR$/immediate.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/investment2.html" beforeDir="false" afterPath="$PROJECT_DIR$/investment2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market.html" beforeDir="false" afterPath="$PROJECT_DIR$/market.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market2.html" beforeDir="false" afterPath="$PROJECT_DIR$/market2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/match.html" beforeDir="false" afterPath="$PROJECT_DIR$/match.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/promotion.html" beforeDir="false" afterPath="$PROJECT_DIR$/promotion.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trade.html" beforeDir="false" afterPath="$PROJECT_DIR$/trade.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +98,8 @@
       <workItem from="1660048097382" duration="65000" />
       <workItem from="1660048179417" duration="669000" />
       <workItem from="1660048893492" duration="8718000" />
-      <workItem from="1660097060713" duration="4115000" />
+      <workItem from="1660097060713" duration="5696000" />
+      <workItem from="1660119628232" duration="2360000" />
     </task>
     <task id="LOCAL-00001" summary="h5max">
       <created>1659579223422</created>
@@ -443,7 +437,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660111881953</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="h5max">
+      <created>1660112279180</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1660112279180</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -463,5 +464,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="h5max" />
     <option name="LAST_COMMIT_MESSAGE" value="h5max" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/market2.html</url>
+          <line>452</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
