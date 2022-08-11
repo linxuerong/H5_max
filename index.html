@@ -493,8 +493,8 @@
 			//验证码
 			$('.send-sms').on('click', function(e) {
 				e.preventDefault();
+				$("#select_account").attr("disabled","disabled");
 				var phone = $("#maxMobile");
-				$("#select_account").css({'pointer-events': 'none'})
 
 				if (phone.val() == '') {
 					swal("错误", "手机号码不可空白", 'error');
@@ -685,7 +685,6 @@
 					$("#select_account").append(opt)
 
 				}
-
 			})
 		</script>
 
