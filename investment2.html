@@ -13,6 +13,9 @@
     <link rel="stylesheet" type="text/css" href="css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
     <link href="css/sweetalert2.css" rel="stylesheet" type="text/css">
+    <style>
+        .tab-pane row{position: relative;}
+    </style>
 </head>
 <body>
     <div class="loading">
@@ -222,7 +225,7 @@
                     <img src="images/icon_trade-history.png" alt="">
                     <div>交易明细</div>
                 </a>
-                <a href="./investment2.html" class="bottom-menu__btn " data-bs-toggle="modal" data-bs-target="#loginModal">
+                <a href="./investment2.html" class="bottom-menu__btn active" >
                     <img src="images/icon_side-history.png" alt="">
                     <div>历史帐务</div>
                 </a>
@@ -243,6 +246,7 @@
 
     <script>
         $(function() {
+            $('.loading').hide();
             $.ajax({
                 type: 'GET',
                 url: 'http://192.168.2.136:8092/max/member/getInfo',
@@ -271,10 +275,10 @@
             function Starter (i){
                 $.ajax({
                     type: 'GET',
-                    url: 'http://192.168.2.136:8092//max/statistics/getStatistics/'+i,
-                    xhrFields: {
-                        withCredentials: true
-                    },
+                    url: 'http://192.168.2.136:8092/max/statistics/getStatistics/'+i,
+                    // xhrFields: {
+                    //     withCredentials: true
+                    // },
                     success:function (res){
                         if(res != ''){
                             sorting(res)
@@ -305,9 +309,9 @@
 
 
                     var box = 
-                        '<div class="row m-0 text-center justify-content-between table-td mb-2">' +
+                        '<div class="row m-0 text-center justify-content-between table-td mb-2" data-time='+time+' >' +
                         '    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="'+t1+'">'+time+'</div>' +
-                        '    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="'+t2+'">'+amount +'</div>' +
+                        '    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6 amount" data-title="'+t2+'">'+amount +'</div>' +
                         '    <div class="col-md-1 col-4 px-0 p-3 table-list fs-6" data-title="'+t3+'">'+rmb+'</div>' +
                         '</div>'
 
@@ -334,6 +338,20 @@
                     
                 })
             }
+
+
+
+            $("#pills_tab0").on('click','.row',function(){
+                var time = $(this).data('time')
+                var amount =  $(this).find('.amount').text()
+
+                if(amount > 0){
+                    window.location.href = "mobile/investment2/info.html?time="+time;
+                }
+                console.log(time,amount)
+            });
+
+
 
         })
 
