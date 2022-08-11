@@ -689,7 +689,7 @@
 				 //slick 轮播快
 				 $.ajax({
 					 type: 'GET',
-					 url: 'http://192.168.2.136:8092/max/mask/getMaskList/1',
+					 url: 'http://192.168.2.136:8092/max/mask/getMaskList/0',
 					 xhrFields: {
 						 withCredentials: true
 					 },
@@ -701,6 +701,11 @@
 				 console.log("分拣数据")
 				 function sorting(data){
 					 $.each( data, function (i , item){
+						 if(i > 20){
+							 SwiTop()
+							 return false;
+						 }
+
 						 var box =
 								 '<div class="games-card p-3 py-4 " data-id="round-1658974753">' +
 								 '  <div class="games-card__time text-end">'+ item.maxGameName+'</div>' +
@@ -715,9 +720,6 @@
 								 '  </div> ' +
 								 '</div>'
 						 $('.autoplay').append(box);
-						 if(data.length-1 == i){
-							 SwiTop()
-						 }
 
 					 })
 				 }
