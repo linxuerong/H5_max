@@ -245,9 +245,8 @@
 <!--								<input type="text" name="maxAccount" placeholder="暂时用输入" required class="w-100">-->
 <!--							</div>-->
 							<div class="col-9 p-0 ps-1 my-2 dropdown">
-								<select name="account" id="select_account" class="btn w-100">
+								<select name="account" id="select_account" autocomplete="off" class="btn w-100">
 									<!--<option value="ADW129">ADW129</option>-->
-
 								</select>
 							</div>
 							<label class="col-3 p-0 my-2 pe-1 text-end">登入密码</label>
@@ -530,7 +529,7 @@
 			function sendSms(){
 				$(".send-sms ").css({'pointer-events': 'none','background':'#999'})
 
-				var t = 30;
+				var t = 300;
 				var timer = setInterval( ()=>{
 					t--;
 					$(".send-sms ").text(t);
