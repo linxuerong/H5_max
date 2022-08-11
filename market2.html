@@ -20,7 +20,7 @@
     </div>
     <!--头部-->
     <header class="header-wrap">
-        <a class="navbar-brand header-logo" href="https://max688888.com/">
+        <a class="navbar-brand header-logo" href="./">
             <img src="images/MAX_logo.png" alt="">
         </a>
         <nav class="navbar navbar-expand-lg header py-lg-4 py-2">
@@ -79,7 +79,7 @@
                                     <a class="nav-link px-2 pb-0" href="./mobile/help.html">帮助中心</a>
                                 </li>
                                 <li class="nav-item d-sm-none d-blck">
-                                    <a class="nav-link px-2 pb-0" href="https://max688888.com/logout">登出</a>
+                                    <a class="nav-link px-2 pb-0" href="./logout">登出</a>
                                 </li>
                             </ul>
                         </div>
@@ -91,7 +91,7 @@
                         <br class="d-sm-none d-blck">
                         欢迎
                     </div>
-                    <a class="loginShow nav-link header-login text-end py-0 d-blck pe-2" href="https://max688888.com/logout">登出</a>
+                    <a class="loginShow nav-link header-login text-end py-0 d-blck pe-2" href="./logout">登出</a>
                     <a class="loginHide nav-link header-login py-0" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">登入</a>
                 </div>
             </div>
@@ -484,7 +484,7 @@
 
         //跨域了...
         function updateOddsList(round_id) {
-            $.post('https://max688888.com/market/json',{round_id: round_id}, function(response){
+            $.post('./market/json',{round_id: round_id}, function(response){
                 console.log(response)
                 if(response.code == 0){
                     $('.bet-table .td').remove();
@@ -560,7 +560,7 @@
             $.ajax({
                 type: 'POST',
                 data: form.serialize(),
-                url: 'https://max688888.com/bet',
+                url: './bet',
                 xhrFields: {
                     withCredentials: true
                 },

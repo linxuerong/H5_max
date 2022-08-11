@@ -5,14 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9719a456-191b-4e38-86d5-33ef124b23c5" name="变更" comment="接口更换">
-      <change afterPath="$PROJECT_DIR$/images/icons-document.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/icons-hand.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/icons-wallet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/investment2/info.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/announcement.html" beforeDir="false" afterPath="$PROJECT_DIR$/announcement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/immediate.html" beforeDir="false" afterPath="$PROJECT_DIR$/immediate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/investment/investment2.html" beforeDir="false" afterPath="$PROJECT_DIR$/investment/investment2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/investment/notopen.html" beforeDir="false" afterPath="$PROJECT_DIR$/investment/notopen.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/investment2.html" beforeDir="false" afterPath="$PROJECT_DIR$/investment2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market.html" beforeDir="false" afterPath="$PROJECT_DIR$/market.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market/mobile.html" beforeDir="false" afterPath="$PROJECT_DIR$/market/mobile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market2.html" beforeDir="false" afterPath="$PROJECT_DIR$/market2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/match.html" beforeDir="false" afterPath="$PROJECT_DIR$/match.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/help/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/help/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/help/bet.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/help/bet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/help/deposit.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/help/deposit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/help/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/help/faq.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/help/guide.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/help/guide.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/help/rule.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/help/rule.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/help/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/help/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/help/withdrawal.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/help/withdrawal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/investment/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/investment/app.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile/investment/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/investment/info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/investment2/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/investment2/info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/recharge.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/recharge.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/promotion.html" beforeDir="false" afterPath="$PROJECT_DIR$/promotion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trade.html" beforeDir="false" afterPath="$PROJECT_DIR$/trade.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,14 +127,7 @@
       <workItem from="1660119628232" duration="6610000" />
       <workItem from="1660182169635" duration="1183000" />
       <workItem from="1660185791518" duration="10000" />
-      <workItem from="1660204533566" duration="9493000" />
-    </task>
-    <task id="LOCAL-00009" summary="h5max">
-      <created>1659579782833</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1659579782833</updated>
+      <workItem from="1660204533566" duration="12789000" />
     </task>
     <task id="LOCAL-00010" summary="h5max">
       <created>1659579822220</created>
@@ -453,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660208320580</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="接口更换">
+      <created>1660215360946</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1660215360946</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

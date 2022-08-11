@@ -20,7 +20,7 @@
 		</div>
 		<!--头部-->
 		<header class="header-wrap">
-			<a class="navbar-brand header-logo" href="https://max688888.com/">
+			<a class="navbar-brand header-logo" href="./">
 				<img src="images/MAX_logo.png" alt="">
 			</a>
 			<nav class="navbar navbar-expand-lg header py-lg-4 py-2">
@@ -59,16 +59,8 @@
 									<li class="nav-item">
 										<a class="nav-link px-2 pb-0" href="./announcement.html">最新消息</a>
 									</li>
-									<li class="nav-item dropdown d-sm-none d-blck">
-										<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
-											role="button" aria-haspopup="true"
-											aria-expanded="false">线上客服</a>
-										<div class="dropdown-menu">
-											<a class="nav-link px-2 pb-0 text-black"
-												href="" target="_blank">线路1</a>
-											<a class="nav-link px-2 pb-0 text-black"
-												href="">线路2</a>
-										</div>
+									<li class="nav-item  d-sm-none d-blck">
+										<a class="nav-link dropdown-toggle onKefu" >线上客服</a>
 									</li>
 
 									<li class="nav-item d-sm-none d-blck">
@@ -79,7 +71,7 @@
 										<a class="nav-link px-2 pb-0" href="./mobile/help.html">帮助中心</a>
 									</li>
 									<li class="nav-item d-sm-none d-blck">
-										<a class="nav-link px-2 pb-0" href="https://max688888.com/logout">登出</a>
+										<a class="nav-link px-2 pb-0" href="./logout">登出</a>
 									</li>
 								</ul>
 							</div>
@@ -91,7 +83,7 @@
 							<br class="d-sm-none d-blck">
 							欢迎
 						</div>
-						<a class="loginShow nav-link header-login text-end py-0 d-blck pe-2" href="https://max688888.com/logout">登出</a>
+						<a class="loginShow nav-link header-login text-end py-0 d-blck pe-2" href="./logout">登出</a>
 						<a class="loginHide nav-link header-login py-0" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">登入</a>
 					</div>
 				</div>
@@ -246,7 +238,7 @@
 				<div class="modal-content p-4 pb-5 text-center">
 					<div class="modal-close" data-bs-dismiss="modal">X</div>
 					<h1 class="modal-content__title p-3">注册</h1>
-					<form id="register-form" action="https://max688888.com/register">
+					<form id="register-form" action="./register">
 						<div class="row m-0 form-group my-2 align-items-center justify-content-end">
 							<label class="col-3 p-0 my-2 pe-1 text-end">帐号</label>
 							<div class="col-9 p-0 ps-1 my-2">
@@ -318,7 +310,7 @@
 		<div class="modal fade" id="forgetPasswordModal" tabindex="-1" aria-labelledby="forgetPasswordModal" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content p-4 pb-5 text-center">
-					<form id="forget-password-form" action="https://max688888.com/forget-password">
+					<form id="forget-password-form" action="./forget-password">
 						<div class="modal-close" data-bs-dismiss="modal">X</div>
 						<h1 class="modal-content__title p-3">忘记密码</h1>
 						<div class="row m-0 form-group my-2 align-items-center justify-content-end">
@@ -439,14 +431,14 @@
 		 <script src="./js/clipboard.min.js"></script>
 		 <script src="./js/imask.js"></script>
 		 <script src="./js/CLDRPluralRuleParser.js"></script>
+
+
 		
 		<script>
-
 			$(function() {
-
+				$('.loading').hide();
 				console.log("获取信息")
 				//获取用户信息
-
 				$.ajax({
 					type: 'GET',
 					url: 'http://192.168.2.136:8092/max/member/getInfo',
@@ -532,7 +524,7 @@
 					$.ajax({
 						type: 'POST',
 						data: form.serialize(),
-						url: 'https://max688888.com/forget-password-check',
+						url: './forget-password-check',
 						xhrFields: {
 							withCredentials: true
 						},
@@ -616,7 +608,7 @@
 				$.ajax({
 					type: 'POST',
 					data: form.serialize(),
-					url: 'https://max688888.com/forget-password',
+					url: './forget-password',
 					xhrFields: {
 						withCredentials: true
 					},
@@ -746,7 +738,7 @@
 			
 			$('.games-card').on('click', function() {
 				var round_id = $(this).data('id');
-				location.href = "https://max688888.com/market/mobile?id=" + round_id;
+				location.href = "./market/mobile?id=" + round_id;
 			});
 		</script>
 		<script>

@@ -20,7 +20,7 @@
 </div>
 <!--头部-->
 <header class="header-wrap">
-    <a class="navbar-brand header-logo" href="https://max688888.com/">
+    <a class="navbar-brand header-logo" href="./">
         <img src="../images/MAX_logo.png" alt="">
     </a>
     <nav class="navbar navbar-expand-lg header py-lg-4 py-2">
@@ -79,7 +79,7 @@
                                 <a class="nav-link px-2 pb-0" href="../mobile/help.html">帮助中心</a>
                             </li>
                             <li class="nav-item d-sm-none d-blck">
-                                <a class="nav-link px-2 pb-0" href="https://max688888.com/logout">登出</a>
+                                <a class="nav-link px-2 pb-0" href="./logout">登出</a>
                             </li>
                         </ul>
                     </div>
@@ -90,7 +90,7 @@
                     <br class="d-sm-none d-blck">
                     欢迎
                 </div>
-                <a class="nav-link header-login text-end py-0 d-blck pe-2" href="https://max688888.com/logout">
+                <a class="nav-link header-login text-end py-0 d-blck pe-2" href="./logout">
                     登出
                 </a>
             </div>
@@ -192,9 +192,9 @@
         type: 'GET',
         data:{'StartTime': start},
         url: 'http://192.168.2.136:8092/max/trasactionOrder/getList',
-        xhrFields: {
-            withCredentials: true
-        },
+        // xhrFields: {
+        //     withCredentials: true
+        // },
         success:function (res){
             console.log(res.data)
             sorting(res.data)
@@ -220,7 +220,7 @@
                 '        <div class="investment-list__match d-sm-block d-none">开赛时间 2022-08-08 17:30:00</div>' +
                 '' +
                 '        <!-- 手機版顯示連結 -->' +
-                '        <a href="../mobile/investment/info.html" class="d-sm-none d-block fas fa-caret-right investment-downicon"></a>' +
+                '        <a href="../mobile/investment/info.html?id='+item.id+'" class="d-sm-none d-block fas fa-caret-right investment-downicon"></a>' +
                 '        <!-- 電腦開合開關 -->' +
                 '        <i class="fas fa-caret-up investment-downicon d-sm-block d-none" data-bs-toggle="collapse" data-bs-target="#collapse_'+i+'"></i>' +
                 '    </div>' +

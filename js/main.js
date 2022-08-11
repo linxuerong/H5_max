@@ -52,4 +52,29 @@ $(function (){
 
 })
 
+_s = document.createElement('script');
+_s.src="https://service.max68888.com/customerServer.js"
+_s.onload = function(){
+	var option = {
+		"authInit":true,
+		openUrl: 'https://service.max68888.com',
+		token: '1cdefdbc31a297d7cd0705bc71352b50',
+		kefuid:'',//默认为空自动对接客服，可填写指定客服ID
+		isShowTip: false, // 初始化成功后，界面右下角会自动创建 “联系客服按钮”， 如无需默认展示，则填写false即可,默认为true
+		mobileIcon: '', //  手机端悬浮客服图片
+		pcIcon: '', // pc端悬浮客服图片
+		windowStyle:'center',//默认空 右下角小弹窗， center 普通中间弹窗样式
+	};
+	window.canCustomerServer = new initCustomerServer(option);
+	// canCustomerServer.init();
+}
+document.head.appendChild(_s)
+
+$(".onKefu").on('click' , function (){
+	window.canCustomerServer.init();
+})
+
+
+
+
 

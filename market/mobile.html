@@ -37,33 +37,33 @@
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item d-sm-none d-blck">
                   <a data-bs-toggle="modal" data-bs-target="#loginModal"
-                     class="nav-link px-2 pb-0" href="https://max688888.com/account">中心钱包</a>
+                     class="nav-link px-2 pb-0" href="./account">中心钱包</a>
                 </li>
                 <li class="nav-item">
                   <a data-bs-toggle="modal" data-bs-target="#loginModal"
-                     class="nav-link px-2 pb-0" href="https://max688888.com/market">市场列表</a>
+                     class="nav-link px-2 pb-0" href="./market">市场列表</a>
                 </li>
                 <li class="nav-item d-sm-none d-blck">
                   <a data-bs-toggle="modal" data-bs-target="#loginModal"
-                     class="nav-link px-2 pb-0" href="https://max688888.com/trade">存提纪录</a>
+                     class="nav-link px-2 pb-0" href="./trade">存提纪录</a>
                 </li>
                 <li class="nav-item d-sm-block d-none">
                   <a data-bs-toggle="modal" data-bs-target="#loginModal"
-                     class="nav-link px-2 pb-0" href="https://max688888.com/investment">投资纪录</a>
+                     class="nav-link px-2 pb-0" href="./investment">投资纪录</a>
                 </li>
                 <li class="nav-item">
                   <a data-bs-toggle="modal" data-bs-target="#loginModal"
-                     class="nav-link px-2 pb-0" href="https://max688888.com/match">赛事结果</a>
+                     class="nav-link px-2 pb-0" href="./match">赛事结果</a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link px-2 pb-0" href="https://max688888.com/immediate">即时比分</a>
+                  <a class="nav-link px-2 pb-0" href="./immediate">即时比分</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link px-2 pb-0" href="https://max688888.com/promotion">优惠活动</a>
+                  <a class="nav-link px-2 pb-0" href="./promotion">优惠活动</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link px-2 pb-0" href="https://max688888.com/announcement">最新消息</a>
+                  <a class="nav-link px-2 pb-0" href="./announcement">最新消息</a>
                 </li>
                 <li class="nav-item dropdown d-sm-none d-blck">
                   <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
@@ -72,16 +72,16 @@
                     <a class="nav-link px-2 pb-0 text-black"
                        href="https://direct.lc.chat/14165448/" target="_blank">线路1</a>
                     <a class="nav-link px-2 pb-0 text-black"
-                       href="https://max688888.com/service">线路2</a>
+                       href="./service">线路2</a>
                   </div>
                 </li>
 
                 <li class="nav-item d-sm-none d-blck">
                   <a class="nav-link px-2 pb-0"
-                     href="https://max688888.com/mobile/help/rule">规则条款</a>
+                     href="./mobile/help/rule">规则条款</a>
                 </li>
                 <li class="nav-item d-sm-none d-blck">
-                  <a class="nav-link px-2 pb-0" href="https://max688888.com/mobile/help">帮助中心</a>
+                  <a class="nav-link px-2 pb-0" href="./mobile/help">帮助中心</a>
                 </li>
               </ul>
             </div>
@@ -162,7 +162,7 @@
   <div class="modal fade" id="betCheckModal" tabindex="-1" aria-labelledby="betCheckModal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content p-4 pb-5 text-center">
-        <form id="bet-form" action="https://max688888.com/bet" autocomplete="off">
+        <form id="bet-form" action="./bet" autocomplete="off">
 
           <h1 class="modal-content__title p-3">交易确认</h1>
           <div>
@@ -235,7 +235,7 @@
           <div class="col-8 py-1 show-bet-profit-rmb fw-bolder text-success fs-3"></div>
         </div>
         <div class="d-flex justify-content-center mt-3">
-          <a class="modal-btn mx-2" href="https://max688888.com/market/mobile?id=round-1659992841">关闭</a>
+          <a class="modal-btn mx-2" href="javascript:location.reload();">关闭</a>
         </div>
       </div>
     </div>
@@ -284,15 +284,14 @@
           <img src="../images/icon_side-list.png" alt="">
           <div>市场列表</div>
         </a>
-        <a href="notopen.html" class="bottom-menu__btn ">
+        <a href="../investment/notopen.html " class="bottom-menu__btn ">
           <img src="../images/icon_trade-history.png" alt="">
           <div>交易明细</div>
         </a>
-        <a href="./investment2.html" class="bottom-menu__btn ">
+        <a href="../investment2.html" class="bottom-menu__btn ">
           <img src="../images/icon_side-history.png" alt="">
           <div>历史帐务</div>
         </a>
-
       </div>
     </div>
   </div>
@@ -318,9 +317,9 @@
       $.ajax({
         type: 'GET',
         url: 'http://192.168.2.136:8092/max/trasaction/getList/'+id,
-        xhrFields: {
-          withCredentials: true
-        },
+        // xhrFields: {
+        //   withCredentials: true
+        // },
         success: function(res) {
           console.log(res)
           let item = res.data;
@@ -409,9 +408,9 @@
         type: 'POST',
         data: form.serialize(),
         url: 'http://192.168.2.136:8092/max/trasactionOrder/pickTrasaction',
-        xhrFields: {
-          withCredentials: true
-        },
+        // xhrFields: {
+        //   withCredentials: true
+        // },
         success: function (res) {
           if(res.code == 0){
             console.log(res)
