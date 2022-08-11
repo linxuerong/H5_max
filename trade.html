@@ -277,8 +277,10 @@
 
         function datdText(data){
             $.each( data, function (i , item){
-                let status = '成功'
+                let status = '待支付'
                 if(item.status == 1){
+                    status= '成功'
+                }else if(item.status == 2){
                     status= '失败'
                 }
 
