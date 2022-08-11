@@ -445,6 +445,7 @@
 		<script>
 			$(function() {
 
+
 				$('.loading').hide();
 				var search = location.search;
 				var id = search.substring(search.indexOf("=") + 1);
@@ -492,8 +493,9 @@
 			//验证码
 			$('.send-sms').on('click', function(e) {
 				e.preventDefault();
-
 				var phone = $("#maxMobile");
+				$("#select_account").css({'pointer-events': 'none'})
+
 				if (phone.val() == '') {
 					swal("错误", "手机号码不可空白", 'error');
 					return
