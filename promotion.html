@@ -144,15 +144,35 @@
                     <button class="card-btn text-center mx-auto d-block" data-bs-toggle="modal" data-bs-target="#promotionsModal_3">查看详情</button>
                 </div>
             </div>
+
         </div>
     </div>
 <!--    弹窗 （id = 》 data-bs-target）-->
     <div class="modal fade" id="promotionsModal_0" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
+            <img src="=./images/promotion2-bg.jpg" class="w-100" alt="">
+        </div>
+    </div>
+    <div class="modal fade" id="promotionsModal_1" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <img src="./images/promotion1-bg.jpg" class="w-100" alt="">
+        </div>
+    </div>
+    <div class="modal fade" id="promotionsModal_2" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
             <img src="./images/promotion3-bg.jpg" class="w-100" alt="">
         </div>
     </div>
-
+    <div class="modal fade" id="promotionsModal_3" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <img src="./images/promotion4-bg.jpg" class="w-100" alt="">
+        </div>
+    </div>
+    <div class="modal fade" id="promotionsModal_4" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <img src="./images/promotion5-bg.jpg" class="w-100" alt="">
+        </div>
+    </div>
 
     <div class="mb-5"></div>
     <!--    底部三件套-->
@@ -222,6 +242,7 @@
 
     <script>
         $(function() {
+            $('.loading').hide();
             $.ajax({
                 type: 'GET',
                 url: 'https://www.max68888.com/max/member/getInfo',
