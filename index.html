@@ -296,7 +296,7 @@
 							</div>
 							<label class="col-3 p-0 my-2 pe-1 text-end">手机号码</label>
 							<div class="col-9 p-0 ps-1 my-2">
-								<input type="tel" placeholder="绑定之后无法更改" name="maxMobile" required class="phone w-100">
+								<input type="tel" placeholder="绑定之后无法更改" name="maxMobile" required id="maxMobile" class="phone w-100">
 							</div>
 							<label class="col-3 p-0 my-2 pe-1 text-end">短信码</label>
 							<div class="col-6 p-0 ps-1 my-2">
@@ -493,40 +493,55 @@
 			//验证码
 			$('.send-sms').on('click', function(e) {
 				e.preventDefault();
-				var phone = $(this).closest('form').find('.phone');
+
+				var phone = $("#maxMobile");
 				if (phone.val() == '') {
 					swal("错误", "手机号码不可空白", 'error');
+					return
 				}else if(isPhoneNo(phone.val()) == false) {
 					swal("错误", "手机号码不正确", 'error');
-				} else {
-					var form = $(this).closest('form');
-					$('button').attr("disabled", true);
-					$.ajax({
-						type: 'POST',
-						url: 'https://www.max68888.com/max/message/send/'+phone.val(),
-						xhrFields: {
-							withCredentials: true
-						},
-						success: function(response) {
-							$('button').attr("disabled", false);
-							if (response.code == 0) {
-								swal("短信码已发送", '', "success");
-							} else {
-								swal(response.msg, '', "error");
-							}
-
-						},
-						complete:function (){
-							$('button').attr("disabled", false);
-						}
-					});
+					return
 				}
+
+				$.ajax({
+					type: 'POST',
+					url: 'https://www.max68888.com/max/message/send/'+phone.val(),
+					xhrFields: {
+						withCredentials: true
+					},
+					success: function(response) {
+						if (response.code == 0) {
+							swal("短信码已发送", '', "success");
+							sendSms();
+						} else {
+							swal(response.msg, '', "error");
+						}
+					},
+
+				});
+
 			});
 			// 验证手机号
 			function isPhoneNo(phone) {
 				var pattern = /^1[34578]\d{9}$/;
 				return pattern.test(phone);
 			}
+			//验证码倒计时
+			function sendSms(){
+				$(".send-sms ").css({'pointer-events': 'none','background':'#999'})
+
+				var t = 30;
+				var timer = setInterval( ()=>{
+					t--;
+					$(".send-sms ").text(t);
+
+					if(t<0){
+						clearInterval(timer);
+						$(".send-sms ").text('发送')
+						$(".send-sms ").css({'pointer-events': 'initial','background':'#5894ea'})
+					}
+				},1000)
+			};
 
 
 
@@ -669,9 +684,6 @@
 					$("#select_account").append(opt)
 
 				}
-
-
-
 
 			})
 		</script>
