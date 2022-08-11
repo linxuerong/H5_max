@@ -238,25 +238,85 @@
 
     <script>
         $(function() {
+            $('.loading').hide();
+            // $.ajax({
+            //     type: 'GET',
+            //     url: 'http://192.168.2.136:8092/max/member/getInfo',
+            //     xhrFields: {
+            //         withCredentials: true
+            //     },
+            //     success: function(res) {
+            //         $('.loading').hide();
+            //         if(res.code == 0){
+            //             // 成功
+            //             $('.uname').html(res.data.maxNickName)
+            //             $(".loginHide").remove();
+            //         }else {
+            //             //没有登录
+            //             $('.loginShow').remove();
+            //         }
+            //     },
+            // })
+        });
+    </script>
+    <script>
+        $(function (){
+            console.log("获取订单")
             $.ajax({
                 type: 'GET',
-                url: 'http://192.168.123.210:8092/max/member/getInfo',
-                xhrFields: {
-                    withCredentials: true
-                },
+                url: 'http://192.168.2.136:8092/max/mask/getMaskList/0',
                 success: function(res) {
-                    $('.loading').hide();
-                    if(res.code == 0){
-                        // 成功
-                        $('.uname').html(res.data.maxNickName)
-                        $(".loginHide").remove();
-                    }else {
-                        //没有登录
-                        $('.loginShow').remove();
-                    }
+                    console.log(res)
+                    sorting(res.data)
                 },
             })
-        });
+            console.log("分拣数据")
+            function sorting(data){
+                var allNum = 0, todayNum = 0 ,tomorrowNum = 0
+
+                $.each( data, function (i , item){
+                    var box =
+                        '<div class="market-list" > <a href="./market/mobile.html?id='+item.id+'">\n' +
+                        ''+
+                        '    <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">'+ item.maxGameName+'</div>\n' +
+                        '    <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">\n' +
+                        item.maxStartTime+
+                        '    </div>\n' +
+                        '    <hr class="my-2">\n' +
+                        '    <div class="row text-center m-0">\n' +
+                        '        <div class="col-6 px-0">\n' +
+                        '            <div class="market-list__label">主队</div>\n' +
+                        '            <div class="market-list__team">'+item.maxHomeTeam+'</div>\n' +
+                        '        </div>\n' +
+                        '        <div class="col-6 px-0">\n' +
+                        '            <div class="market-list__label">客队</div>\n' +
+                        '            <div class="market-list__team">'+item.maxCustomerTeam+'</div>\n' +
+                        '        </div>\n' +
+                        '    </div>\n' +
+                        '</a></div>'
+
+                    allNum++
+                    $(".allNum").text(allNum)
+                    $('.allOrder').append(box)
+
+                    var time= '2022-'+item.maxStartTime
+                    if(new Date(time).toDateString() == new Date().toDateString()){
+                        //今日
+                        todayNum++
+                        $(".todayNum").text(todayNum)
+                        $('.todayOrder').append(box)
+                    }else {
+                        tomorrowNum++
+                        $(".tomorrowNum").text(tomorrowNum)
+                        $(".tomorrowOrder").append(box)
+                    }
+
+                })
+            }
+
+
+        })
+
     </script>
 
 
