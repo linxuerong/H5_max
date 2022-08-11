@@ -444,11 +444,17 @@
 		 <script src="./js/imask.js"></script>
 		 <script src="./js/CLDRPluralRuleParser.js"></script>
 
-
-		
 		<script>
 			$(function() {
-				$('.loading').hide();
+				var search = location.search;
+				var id = search.substring(search.indexOf("=") + 1);
+				if(id != ''){
+					setTimeout( () =>{
+						$('#signUpModal').modal('show');
+						$('input[name=maxParentAccount]').val(id)
+					},1000)
+				}
+
 				console.log("获取信息")
 				//获取用户信息
 				$.ajax({
