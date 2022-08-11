@@ -273,7 +273,7 @@
 							</div>
 							<label class="col-3 p-0 my-2 pe-1 text-end">国家</label>
 							<div class="dropdown col-9 p-0 ps-1 my-2">
-								<select name="country" class="btn w-100" autocomplete="off">
+								<select name="maxCountry" class="btn w-100" autocomplete="off">
 									<option value="中國">中国</option>
 									<option value="美國">美国</option>
 									<option value="日本">日本</option>
@@ -567,7 +567,6 @@
 						withCredentials: true
 					},
 					success: function(response) {
-						$('button').attr("disabled", false);
 						console.log(response)
 						if (response.code == 200) {
 							swal("注册完成", "返回登入", "success").then(function() {
@@ -576,7 +575,7 @@
 								$('#loginModal').modal('show');
 							});
 						} else {
-							swal(response.message, '', "error");
+							swal(response.msg,'', "error");
 						}
 
 					},
