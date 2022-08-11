@@ -254,9 +254,9 @@
                 end = getDay(-7) + ' 23:59:59';
             }
 
-            var Surl= 'http://192.168.2.136:8092/max/order/getList' //充值
+            var Surl= 'https://www.max68888.com/max/order/getList' //充值
             if(type == 2){
-                Surl= 'http://192.168.2.136:8092/max/withdraw/getList' //提取
+                Surl= 'https://www.max68888.com/max/withdraw/getList' //提取
             }
 
             $("#table-lists").empty();
@@ -311,7 +311,7 @@
         $(function() {
             $.ajax({
                 type: 'GET',
-                url: 'http://192.168.2.136:8092/max/member/getInfo',
+                url: 'https://www.max68888.com/max/member/getInfo',
                 xhrFields: {
                     withCredentials: true
                 },

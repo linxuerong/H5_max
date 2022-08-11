@@ -177,14 +177,14 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content light-purple-bg p-4 text-center">
                 <div id="qrcode">
-                    <img width="200px" height="200px"  src="" alt="">
+
                 </div>
                 <div style="text-align:left;">
-                    推广链结：./?P=AAP222
+                    推广链结：https://www.max68888.com/?P=<span class="uAccount"></span>
                     <button type="button" class="copy btn btn-primary btn-sm" data-clipboard-text="./?P=AAP222">复制</button>
                 </div>
                 <div style="text-align:left;">
-                    推荐码：AAP222
+                    推荐码：<span class="uAccount"></span>
                     <button type="button" class="copy btn btn-primary btn-sm" data-clipboard-text="AAP222">复制</button>
                 </div>
                 <div class="d-flex justify-content-center mt-4">
@@ -325,14 +325,16 @@
     <script src="./js/clipboard.min.js"></script>
     <script src="./js/imask.js"></script>
     <script src="./js/CLDRPluralRuleParser.js"></script>
-
+    <script src="js/jquery.qrcode.min.js"></script>
     <script>
         $(function() {
 
 
+
+            $('.loading').hide();
             $.ajax({
                 type: 'GET',
-                url: 'http://192.168.2.136:8092/max/member/getInfo',
+                url: 'https://www.max68888.com/max/member/getInfo',
                 xhrFields: {
                     withCredentials: true
                 },
@@ -348,6 +350,14 @@
                         $('.uBalance').html(res.data.balance.toFixed(2))
 
                         $(".loginHide").remove();
+
+                        $('#qrcode').qrcode({
+                            render: "canvas", //也可以替换为table
+                            width: 150,
+                            height: 150,
+                            text: 'https://www.max68888.com/?P='+res.data.maxAccount
+                        });
+
                     }else {
                         //没有登录
                         $('.loginShow').remove();

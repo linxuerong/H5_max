@@ -241,7 +241,7 @@
             $('.loading').hide();
             $.ajax({
                 type: 'GET',
-                url: 'http://192.168.2.136:8092/max/member/getInfo',
+                url: 'https://www.max68888.com/max/member/getInfo',
                 xhrFields: {
                     withCredentials: true
                 },
@@ -264,7 +264,7 @@
             console.log("获取订单")
             $.ajax({
                 type: 'GET',
-                url: 'http://192.168.2.136:8092/max/mask/getMaskList/0',
+                url: 'https://www.max68888.com/max/mask/getMaskList/0',
                 success: function(res) {
                     console.log(res)
                     sorting(res.data)
