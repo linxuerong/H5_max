@@ -501,12 +501,13 @@
 							withCredentials: true
 						},
 						success: function(response) {
+							$('button').attr("disabled", false);
 							if (response.code == 0) {
 								swal("短信码已发送", '', "success");
 							} else {
-								swal(response.message, '', "error");
+								swal(response.msg, '', "error");
 							}
-							$('button').attr("disabled", false);
+
 						},
 						complete:function (){
 							$('button').attr("disabled", false);
