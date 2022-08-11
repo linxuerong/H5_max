@@ -245,7 +245,7 @@
 <!--								<input type="text" name="maxAccount" placeholder="暂时用输入" required class="w-100">-->
 <!--							</div>-->
 							<div class="col-9 p-0 ps-1 my-2 dropdown">
-								<select name="maxAccount" id="select_account" autocomplete="off" class="btn w-100">
+								<select name="maxAccount" id="select_account"  autocomplete="off" class="btn w-100">
 									<!--<option value="ADW129">ADW129</option>-->
 								</select>
 							</div>
@@ -579,6 +579,7 @@
 			// 注册
 			$('#register-form').on('submit', function(e) {
 				e.preventDefault();
+				$("#select_account").removeAttr("disabled");
 				var form = $(this);
 				$('button').attr("disabled", true);
 
@@ -601,7 +602,6 @@
 							});
 						} else {
 							swal(response.msg,'', "error").then( ()=>{
-								$("#select_account").removeAttr("disabled");
 								maxAccount();
 							});
 						}
