@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9719a456-191b-4e38-86d5-33ef124b23c5" name="变更" comment="h5max">
+    <list default="true" id="9719a456-191b-4e38-86d5-33ef124b23c5" name="变更" comment="时间">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/account.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/announcement.html" beforeDir="false" afterPath="$PROJECT_DIR$/announcement.html" afterDir="false" />
@@ -112,42 +112,10 @@
       <workItem from="1660048179417" duration="669000" />
       <workItem from="1660048893492" duration="8718000" />
       <workItem from="1660097060713" duration="5696000" />
-      <workItem from="1660119628232" duration="3413000" />
-    </task>
-    <task id="LOCAL-00002" summary="h5max">
-      <created>1659579442354</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1659579442354</updated>
-    </task>
-    <task id="LOCAL-00003" summary="h5max">
-      <created>1659579521954</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1659579521954</updated>
-    </task>
-    <task id="LOCAL-00004" summary="h5max">
-      <created>1659579546660</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1659579546660</updated>
-    </task>
-    <task id="LOCAL-00005" summary="h5max">
-      <created>1659579575108</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1659579575108</updated>
-    </task>
-    <task id="LOCAL-00006" summary="h5max">
-      <created>1659579626464</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1659579626464</updated>
+      <workItem from="1660119628232" duration="6610000" />
+      <workItem from="1660182169635" duration="1183000" />
+      <workItem from="1660185791518" duration="10000" />
+      <workItem from="1660204533566" duration="2305000" />
     </task>
     <task id="LOCAL-00007" summary="h5max">
       <created>1659579645894</created>
@@ -457,7 +425,42 @@
       <option name="project" value="LOCAL" />
       <updated>1660122065552</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="添加">
+      <created>1660123104098</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1660123104098</updated>
+    </task>
+    <task id="LOCAL-00052" summary="添加">
+      <created>1660123635042</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1660123635042</updated>
+    </task>
+    <task id="LOCAL-00053" summary="时间">
+      <created>1660125430220</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1660125430220</updated>
+    </task>
+    <task id="LOCAL-00054" summary="时间">
+      <created>1660126011523</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1660126011523</updated>
+    </task>
+    <task id="LOCAL-00055" summary="时间">
+      <created>1660126437377</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1660126437378</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -476,7 +479,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="h5max" />
-    <option name="LAST_COMMIT_MESSAGE" value="h5max" />
+    <MESSAGE value="添加" />
+    <MESSAGE value="时间" />
+    <option name="LAST_COMMIT_MESSAGE" value="时间" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -484,7 +489,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/market2.html</url>
           <line>455</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
