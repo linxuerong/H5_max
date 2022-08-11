@@ -241,16 +241,15 @@
 					<form id="register-form" action="./register">
 						<div class="row m-0 form-group my-2 align-items-center justify-content-end">
 							<label class="col-3 p-0 my-2 pe-1 text-end">帐号</label>
-							<div class="col-9 p-0 ps-1 my-2">
-								<input type="text" name="maxAccount" placeholder="暂时用输入" required class="w-100">
-							</div>
-<!--							<div class="col-9 p-0 ps-1 my-2 dropdown">-->
-<!--								<select name="account" class="btn w-100">-->
-<!--									<option value="ADW129">ADW129</option>-->
-<!--									<option value="ADR726">ADR726</option>-->
-<!--									<option value="AIT543">AIT543</option>-->
-<!--								</select>-->
+<!--							<div class="col-9 p-0 ps-1 my-2">-->
+<!--								<input type="text" name="maxAccount" placeholder="暂时用输入" required class="w-100">-->
 <!--							</div>-->
+							<div class="col-9 p-0 ps-1 my-2 dropdown">
+								<select name="account" id="select_account" class="btn w-100">
+									<!--<option value="ADW129">ADW129</option>-->
+
+								</select>
+							</div>
 							<label class="col-3 p-0 my-2 pe-1 text-end">登入密码</label>
 							<div class="col-9 p-0 ps-1 my-2">
 								<input type="password" name="maxLoginPassword" placeholder="请输入您的密码(需包含英文与数字)" required class="w-100">
@@ -446,6 +445,8 @@
 
 		<script>
 			$(function() {
+
+				$('.loading').hide();
 				var search = location.search;
 				var id = search.substring(search.indexOf("=") + 1);
 				if(id != ''){
@@ -651,6 +652,30 @@
 				$('form,input,select,textarea').attr("autocomplete", "off");
 			});
 		</script>
+		<script>
+			$(function (){
+				var str = 'QWERTYUIOPASDFGHJKLZXCVBNM';//字符串
+				var len = str.length;//查询字符串长度
+
+				for (let i = 0; i < 10; i++) {
+
+					var user = 'A'+
+							str[Math.ceil(Math.random()*len - 1)]+
+							str[Math.ceil(Math.random()*len - 1)]+
+							Math.floor(Math.random()*10)+
+							Math.floor(Math.random()*10)+
+							Math.floor(Math.random()*10)
+					var opt = '<option value='+user+'>'+user+'</option>'
+					$("#select_account").append(opt)
+
+				}
+
+
+
+
+			})
+		</script>
+
 		
 		<script type="text/javascript">
 			 $(document).ready(function(){
