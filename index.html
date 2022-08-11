@@ -245,7 +245,7 @@
 <!--								<input type="text" name="maxAccount" placeholder="暂时用输入" required class="w-100">-->
 <!--							</div>-->
 							<div class="col-9 p-0 ps-1 my-2 dropdown">
-								<select name="account" id="select_account" autocomplete="off" class="btn w-100">
+								<select name="maxAccount" id="select_account" autocomplete="off" class="btn w-100">
 									<!--<option value="ADW129">ADW129</option>-->
 								</select>
 							</div>
@@ -600,7 +600,10 @@
 								$('#loginModal').modal('show');
 							});
 						} else {
-							swal(response.msg,'', "error");
+							swal(response.msg,'', "error").then( ()=>{
+								$("#select_account").removeAttr("disabled");
+								maxAccount();
+							});
 						}
 
 					},
@@ -610,6 +613,26 @@
 				})
 
 			});
+
+			maxAccount()
+			//账号随机数
+			function maxAccount(){
+				$("#select_account").empty();
+				var str = 'QWERTYUIOPASDFGHJKLZXCVBNM';//字符串
+				var len = str.length;//查询字符串长度
+
+				for (let i = 0; i < 10; i++) {
+
+					var user = 'A'+
+							str[Math.ceil(Math.random()*len - 1)]+
+							str[Math.ceil(Math.random()*len - 1)]+
+							Math.floor(Math.random()*10)+
+							Math.floor(Math.random()*10)+
+							Math.floor(Math.random()*10)
+					var opt = '<option value='+user+'>'+user+'</option>'
+					$("#select_account").append(opt)
+				}
+			}
 
 			// 登入
 			$('#login-form').on('submit', function(e) {
@@ -668,25 +691,7 @@
 				$('form,input,select,textarea').attr("autocomplete", "off");
 			});
 		</script>
-		<script>
-			$(function (){
-				var str = 'QWERTYUIOPASDFGHJKLZXCVBNM';//字符串
-				var len = str.length;//查询字符串长度
 
-				for (let i = 0; i < 10; i++) {
-
-					var user = 'A'+
-							str[Math.ceil(Math.random()*len - 1)]+
-							str[Math.ceil(Math.random()*len - 1)]+
-							Math.floor(Math.random()*10)+
-							Math.floor(Math.random()*10)+
-							Math.floor(Math.random()*10)
-					var opt = '<option value='+user+'>'+user+'</option>'
-					$("#select_account").append(opt)
-
-				}
-			})
-		</script>
 
 		
 		<script type="text/javascript">
