@@ -567,6 +567,7 @@
 						withCredentials: true
 					},
 					success: function(response) {
+						$('button').attr("disabled", false);
 						console.log(response)
 						if (response.code == 200) {
 							swal("注册完成", "返回登入", "success").then(function() {
