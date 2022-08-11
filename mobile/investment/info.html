@@ -214,9 +214,9 @@
       $.ajax({
         type: 'GET',
         url: 'http://192.168.2.136:8092//max/trasactionOrder/getTrasaction/'+id,
-        // xhrFields: {
-        //   withCredentials: true
-        // },
+        xhrFields: {
+          withCredentials: true
+        },
         success:function (res){
           console.log(res.data)
           var item = res.data;
@@ -262,9 +262,9 @@
         $.ajax({
           type: 'POST',
           url: 'http://192.168.2.136:8092/max/trasactionOrder/cancelTrasaction?trasactionId='+id,
-          // xhrFields: {
-          //   withCredentials: true
-          // },
+          xhrFields: {
+            withCredentials: true
+          },
           success:function (res){
             console.log(res)
             if(res.code = 0){

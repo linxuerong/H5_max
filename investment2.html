@@ -276,9 +276,9 @@
                 $.ajax({
                     type: 'GET',
                     url: 'http://192.168.2.136:8092/max/statistics/getStatistics/'+i,
-                    // xhrFields: {
-                    //     withCredentials: true
-                    // },
+                    xhrFields: {
+                        withCredentials: true
+                    },
                     success:function (res){
                         if(res != ''){
                             sorting(res)
