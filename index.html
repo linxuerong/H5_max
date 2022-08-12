@@ -105,11 +105,6 @@
 		</div>
 		<div class="carousel-inner" id="news" >
 
-			<!--					<div class="carousel-item active" data-bs-toggle="modal" data-bs-target="#announcementModal_0">-->
-			<!--						<p class="news-text p-1 mb-0">赛事-->
-			<!--							07-28 / 22:00 [ 阿后备 ] 查卡里塔青年后备队 v 维拉多尔米尼后备队 因待定时间过长无法判定赛事结果，为维护会员权益，所有注单无效。-->
-			<!--						</p>-->
-			<!--					</div>-->
 		</div>
 	</div>
 
@@ -127,18 +122,23 @@
 			</div>
 			<div class="carousel-inner">
 				<div class="carousel-item" data-bs-toggle="modal" data-bs-target="#promotionsModal_0">
-					<img src="images/promotion2.jpg" class="d-block w-100" alt="...">
+					<img src="./images/promotion2.jpg?t=v1" class="d-block w-100" alt="...">
 				</div>
-				<div class="carousel-item" data-bs-toggle="modal" data-bs-target="#promotionsModal_0">
-					<img src="images/promotion1.jpg" class="d-block w-100" alt="...">
+				<div class="carousel-item" data-bs-toggle="modal" data-bs-target="#promotionsModal_1">
+					<img src="./images/promotion1.jpg?t=v1" class="d-block w-100" alt="...">
 				</div>
-				<div class="carousel-item" data-bs-toggle="modal" data-bs-target="#promotionsModal_0">
-					<img src="images/promotion3.jpg" class="d-block w-100" alt="...">
+				<div class="carousel-item" data-bs-toggle="modal" data-bs-target="#promotionsModal_2">
+					<img src="./images/promotion3.jpg?t=v1" class="d-block w-100" alt="...">
 				</div>
-				<div class="carousel-item active" data-bs-toggle="modal" data-bs-target="#promotionsModal_0">
-					<img src="images/promotion4.jpg" class="d-block w-100" alt="...">
+				<div class="carousel-item" data-bs-toggle="modal" data-bs-target="#promotionsModal_3">
+					<img src="./images/promotion4.jpg?t=v1" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item active" data-bs-toggle="modal" data-bs-target="#promotionsModal_4">
+					<img src="./images/promotion5.jpg?t=v1" class="d-block w-100" alt="...">
 				</div>
 			</div>
+			
+		
 			<div class="carousel-btns d-flex">
 				<i class="fas fa-angle-left" data-bs-target="#carousel" data-bs-slide="prev"></i>
 				<i class="fas fa-angle-right" data-bs-target="#carousel" data-bs-slide="next"></i>
@@ -182,9 +182,30 @@
 
 
 <!--轮播图弹窗 -->
-<div class="modal fade" id="promotionsModal_0" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+
+<div class="modal fade" id="promotionsModal_0" tabindex="-1" aria-labelledby="loginModal" style="display: none;" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered">
-		<img src="images/promotion4.jpg" class="w-100" alt="" />
+		<img src="./images/promotion2-bg.jpg?t=v1" class="w-100" alt="">
+	</div>
+</div>
+<div class="modal fade" id="promotionsModal_1" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<img src="./images/promotion1-bg.jpg?t=v1" class="w-100" alt="">
+	</div>
+</div>
+<div class="modal fade" id="promotionsModal_2" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<img src="./images/promotion3-bg.jpg?t=v1" class="w-100" alt="">
+	</div>
+</div>
+<div class="modal fade" id="promotionsModal_3" tabindex="-1" aria-labelledby="loginModal" style="display: none;" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<img src="./images/promotion4-bg.jpg?t=v1" class="w-100" alt="">
+	</div>
+</div>
+<div class="modal fade" id="promotionsModal_4" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<img src="./images/promotion5-bg.jpg?t=v1" class="w-100" alt="">
 	</div>
 </div>
 
