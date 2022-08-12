@@ -204,35 +204,35 @@
 
         <div class="row m-0 d-flex align-items-center table-td">
           <div class="col-4 py-1"><span class="badge rounded-pill bg-primary w-100">开赛时间</span></div>
-          <div class="col-8 py-1">08/09 17:00</div>
+          <div class="col-8 py-1" id="gameStartTime"></div>
         </div>
         <div class="row m-0 d-flex align-items-center table-td">
           <div class="col-4 py-1"><span class="badge rounded-pill bg-primary w-100">联盟</span></div>
-          <div class="col-8 py-1">国际友谊</div>
+          <div class="col-8 py-1" id="maxCustomerTeam"></div>
         </div>
         <div class="row m-0 d-flex align-items-center table-td">
           <div class="col-4 py-1"><span class="badge rounded-pill bg-primary w-100">队伍</span></div>
-          <div class="col-8 py-1">马来西亚U19 V.S缅甸U19</div>
+          <div class="col-8 py-1" id="maxGame"></div>
         </div>
         <div class="row m-0 d-flex align-items-center table-td">
           <div class="col-4 py-1"><span class="badge rounded-pill bg-primary w-100">项目</span></div>
-          <div class="col-8 py-1 modal-bet-way">0 - 1</div>
+          <div class="col-8 py-1 modal-bet-way" id="maxScore">0 - 0</div>
         </div>
         <div class="row m-0 d-flex align-items-center table-td">
           <div class="col-4 py-1"><span class="badge rounded-pill bg-primary w-100">金额</span></div>
-          <div class="col-8 py-1 show-bet-amount fw-bolder"></div>
+          <div class="col-8 py-1 show-bet-amount fw-bolder" id="amount"></div>
         </div>
         <div class="row m-0 d-flex align-items-center table-td">
           <div class="col-4 py-1"><span class="badge rounded-pill bg-primary w-100">获利率</span></div>
-          <div class="col-8 py-1 show-bet-ratio fw-bolder text-danger"></div>
+          <div class="col-8 py-1 show-bet-ratio fw-bolder text-danger" id="maxEarn"></div>
         </div>
         <div class="row m-0 d-flex align-items-center table-td">
           <div class="col-4 py-1"><span class="badge rounded-pill bg-primary w-100">预估获利 ($)</span></div>
-          <div class="col-8 py-1 show-bet-profit fw-bolder text-success fs-3"></div>
+          <div class="col-8 py-1 show-bet-profit fw-bolder text-success fs-3" id="resultEarn"></div>
         </div>
         <div class="row m-0 d-flex align-items-center table-td">
           <div class="col-4 py-1"><span class="badge rounded-pill bg-primary w-100">预估获利 (¥)</span></div>
-          <div class="col-8 py-1 show-bet-profit-rmb fw-bolder text-success fs-3"></div>
+          <div class="col-8 py-1 show-bet-profit-rmb fw-bolder text-success fs-3" id="resultRem"></div>
         </div>
         <div class="d-flex justify-content-center mt-3">
           <a class="modal-btn mx-2" href="javascript:location.reload();">关闭</a>
@@ -413,20 +413,33 @@
         },
         success: function (res) {
           if(res.code == 0){
-            console.log(res)
+            var item =res.data
+            console.log(res.data)
 
-            $('.balance').text(res.balance);
-            $('.bill-number').text(res.bill_number);
-            $('.show-bet-amount').text(res.amount);
-            $('.show-bet-ratio').text(res.ratio);
-            $('.show-bet-profit').text(res.profit);
-            $('.show-bet-profit-rmb').text((res.profit*7).toFixed(2));
+            $('.balance').text(item.balance);
+            $('.bill-number').text(item.bill_number);
+            $('.show-bet-amount').text(item.amount);
+            $('.show-bet-ratio').text(item.ratio);
+            $('.show-bet-profit').text(item.profit);
+            $('.show-bet-profit-rmb').text((item.profit*7).toFixed(2));
+
+            $("#gameStartTime").text(item.gameStartTime)
+            $("#maxCustomerTeam").text(item.maxCustomerTeam)
+            $("#maxGame").text(item.maxHomeTeam +'VS'+ item.maxGameName)
+            $("#maxScore").text(item.maxScore)
+            $("#amount").text(item.amount)
+            $("#maxEarn").text(item.maxEarn+'%')
+            $("#resultEarn").text(item.resultEarn)
+            $("#resultRem").text(item.resultEarn * 7)
+
+
+
 
             $('#betCheckModal').modal('hide');
             $('#betShowModal').modal('show');
           }
           else{
-            swal(res.message, '', "error");
+            swal(res.msg, '', "error");
           }
           $('button').attr("disabled", false);
         }
