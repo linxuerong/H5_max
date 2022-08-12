@@ -17,6 +17,19 @@ function investmentListHide() {
 		}
 	});
 }
+
+function DatdHuan(time) {
+	var datd = time.replace(/\-/g, '/');
+	datd = 	datd.substr(0, 10);
+	return datd;
+}
+function DatdHuan2(time) {
+	var datd = time.replace(/\-/g, '/');
+	datd = 	datd.substr(5, 5);
+	return datd;
+}
+
+
 window.addEventListener('load', function() {
 	window.innerWidth < 576 && investmentListShow()
 	window.innerWidth > 576 && investmentListHide()
@@ -39,10 +52,10 @@ $(function (){
 		var h=myDate.getHours();              //获取当前小时数(0-23)
 		var m=myDate.getMinutes();          //获取当前分钟数(0-59)
 		var s=myDate.getSeconds();
-		var now=year+'-'+getNow(month)+"-"+getNow(date)+" "+getNow(h)+':'+getNow(m)+":"+getNow(s);
+		var now=year+'/'+getNow(month)+"/"+getNow(date)+" "+getNow(h)+':'+getNow(m)+":"+getNow(s);
 		$(".header-time").text(now)
 
-		var x = 4000;
+		var x = 5000;
 		var y = 3000;
 		var rand = parseInt(Math.random() * (x - y + 1) + y);
 		$(".rand").text(rand)
