@@ -108,7 +108,7 @@
         <a class="p-2 mb-2 d-sm-none d-block text-center market-main__refresh w-100 rounded-3" href="./market.html">
             <i class="fas fa-check-circle me-1"></i>刷新倒数: <span class="timer">00:00</span>
             ｜
-            线上人数: 3821
+            线上人数: <span class="rand"></span>
         </a>
 
         <div class="d-sm-none d-block wallet d-flex p-2">
@@ -254,6 +254,9 @@
                 success: function(res) {
                     $('.loading').hide();
                     if(res.code == 0){
+                        $('.uAccount').html(res.data.maxAccount)
+                        $('.uLevel').html(res.data.maxLevel)
+                        $('.uBalance').html(res.data.balance.toFixed(2))
                         // 成功
                         $('.uname').html(res.data.maxNickName)
                         $(".loginHide").remove();
