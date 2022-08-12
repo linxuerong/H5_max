@@ -108,14 +108,14 @@
         <div class="history-info p-2" style="max-width: 80%">
           <img class="history-info__icon" src="../images/user.png" alt="">
           <div>直推分润</div>
-          <div>19.00</div>
+          <div class="ztfr">0.00</div>
         </div>
       </div>
       <div class="col-md-6 p-1 pt-5">
         <div class="history-info p-2" style="max-width: 80%">
           <img class="history-info__icon" src="../images/total-user.png" alt="">
           <div>团队分润</div>
-          <div>0.00</div>
+          <div class="ydfr">0.00</div>
         </div>
       </div>
     </div>
@@ -187,6 +187,64 @@
 <script src="../js/clipboard.min.js"></script>
 <script src="../js/imask.js"></script>
 <script src="../js/CLDRPluralRuleParser.js"></script>
+
+<script>
+  $.ajax({
+    type: 'GET',
+    url: 'https://www.max68888.com/max/member/getInfo',
+    xhrFields: {
+      withCredentials: true
+    },
+    success: function(res) {
+      if(res.code == 0){
+        console.log(res.data)
+        $(".ztfr").text(res.data.straghtReward)
+        $(".ydfr").text(res.data.teamReward)
+      }
+    }
+  })
+
+</script>
+<script>
+  $(function() {
+    $('.loading').hide();
+    $.ajax({
+      type: 'GET',
+      url: 'https://www.max68888.com/max/member/getInfo',
+      xhrFields: {
+        withCredentials: true
+      },
+      success: function(res) {
+        $('.loading').hide();
+        if(res.code == 0){
+          // 成功
+          console.log(res.data)
+          $('.uname').html(res.data.maxNickName)
+          $('.uAccount').html(res.data.maxAccount)
+          $('.uLevel').html(res.data.maxLevel)
+
+          $('.uBalance').html(res.data.balance.toFixed(2))
+
+          $(".loginHide").remove();
+
+          $('#qrcode').qrcode({
+            render: "canvas", //也可以替换为table
+            width: 150,
+            height: 150,
+            text: 'https://www.max68888.com/?P='+res.data.maxAccount
+          });
+
+        }else {
+          //没有登录
+          $('.loginShow').remove();
+        }
+      },
+    })
+
+  });
+
+</script>
+
 
 </body>
 </html>
