@@ -176,6 +176,7 @@
 
     <script>
         $(function() {
+            $('.loading').hide();
             $.ajax({
                 type: 'GET',
                 url: 'https://www.max68888.com/max/member/getInfo',
@@ -218,7 +219,7 @@
                         '<div class="col-md-4 col-sm-6 col-12 p-2 mb-4">' +
                         '    <div class="card p-3">' +
                         '        <div class="card-title d-flex justify-content-between align-items-center">' +
-                        '            <h4>平台公告</h4>' +
+                        '            <h4>'+item.noticeTitle+'</h4>' +
                         '            <button data-bs-toggle="modal" data-bs-target="#announcementModal_'+i+'" class="card-more">more</button>' +
                         '        </div>' +
                         '        <div class="card-text px-2">' +

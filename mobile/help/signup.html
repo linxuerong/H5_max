@@ -177,7 +177,6 @@
     <script src="../../js/imask.js"></script>
     <script src="../../js/CLDRPluralRuleParser.js"></script>
 
-
     <script>
         $(function() {
             $('.loading').hide();
@@ -203,11 +202,13 @@
                         $('.loginShow').remove();
                     }
                 },
+                error:function () {
+                    $('.loginShow').remove();
+                }
             })
 
         });
     </script>
-
 
 </body>
 </html>
