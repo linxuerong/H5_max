@@ -151,8 +151,8 @@
 		<div class="account-level__info d-flex align-items-center">
 			<img class="account-level__icon mx-md-3 mx-0" src="images/user.png" alt="">
 			<div class="account-level__user">
-				<div>Hi, <span class="uAccount">AAP222</span></div>
-				<div>微商等级：<span class="uLevel">1</span></div>
+				<div>Hi, <span class="uAccount"></span></div>
+				<div>微商等级：<span class="uLevel"></span></div>
 			</div>
 		</div>
 		<ul class="account-level__balance mb-0 list-unstyled">
@@ -167,7 +167,7 @@
 	<div class="wallet-balance">
 		<a href="account.html">
 			<div>中心钱包</div>
-			<div>$ <span class="uBalance">55.50</span></div>
+			<div>$ <span class="uBalance">0.00</span></div>
 		</a>
 	</div>
 	<div class="wallet-withdrawal text-center">
@@ -484,9 +484,17 @@
 
 					$(".loginNone").attr('data-bs-toggle','modal')
 					$(".loginNone").attr('data-bs-target','#loginModal')
-
 				}
 			},
+			error:function () {
+				$('.loginShow').remove();
+				// data-bs-toggle="modal" data-bs-target="#loginModal"
+				$(".bottom-menu__btns").find('a').attr('data-bs-toggle','modal')
+				$(".bottom-menu__btns").find('a').attr('data-bs-target','#loginModal')
+
+				$(".loginNone").attr('data-bs-toggle','modal')
+				$(".loginNone").attr('data-bs-target','#loginModal')
+			}
 		})
 
 	});
