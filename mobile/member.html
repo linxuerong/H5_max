@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAX</title>
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/all.css">
+
+  <link rel="stylesheet" type="text/css" href="../css/slick.css" />
+  <link rel="stylesheet" type="text/css" href="../css/slick-theme.css" />
+  <link href="../css/sweetalert2.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="loading">
+  <img src="../images/MAX_logo.png" alt="">
+</div>
+<!--头部-->
+<header class="header-wrap">
+  <a class="navbar-brand header-logo" href="/">
+    <img src="../images/MAX%20logo.png" alt="">
+  </a>
+  <nav class="navbar navbar-expand-lg header py-lg-4 py-2">
+    <div class="container-fluid position-relative px-1">
+      <img class="navbar-toggler p-0" src="../images/back.png" alt=""
+           onclick="javascript:history.back();">
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+           aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-body justify-content-between align-items-center p-0">
+          <div class="flex-column">
+            <div class="header-info d-lg-block d-none px-2">
+              <span class="header-time"></span> ( 北京标准时间 ) ｜ 线上人数 ：<span class="rand"></span>
+            </div>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item d-sm-none d-blck">
+                <a data-bs-toggle="modal" data-bs-target="#loginModal"
+                   class="nav-link px-2 pb-0" href="../account.html">中心钱包</a>
+              </li>
+              <li class="nav-item">
+                <a data-bs-toggle="modal" data-bs-target="#loginModal"
+                   class="nav-link px-2 pb-0" href="../market.html">市场列表</a>
+              </li>
+              <li class="nav-item d-sm-none d-blck">
+                <a data-bs-toggle="modal" data-bs-target="#loginModal"
+                   class="nav-link px-2 pb-0" href="../trade.html">存提纪录</a>
+              </li>
+              <li class="nav-item d-sm-block d-none">
+                <a data-bs-toggle="modal" data-bs-target="#loginModal"
+                   class="nav-link px-2 pb-0" href="../investment.html">投资纪录</a>
+              </li>
+              <li class="nav-item">
+                <a data-bs-toggle="modal" data-bs-target="#loginModal"
+                   class="nav-link px-2 pb-0" href="../match.html">赛事结果</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link px-2 pb-0" href="../immediate.html">即时比分</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-2 pb-0" href="../promotion.html">优惠活动</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-2 pb-0" href="../announcement.html">最新消息</a>
+              </li>
+              <li class="nav-item dropdown d-sm-none d-blck">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+                   role="button" aria-haspopup="true" aria-expanded="false">线上客服</a>
+                <div class="dropdown-menu">
+                  <a class="nav-link px-2 pb-0 text-black"
+                     href="https://direct.lc.chat/14165448/" target="_blank">线路1</a>
+                  <a class="nav-link px-2 pb-0 text-black"
+                     href="../service.html">线路2</a>
+                </div>
+              </li>
+
+              <li class="nav-item d-sm-none d-blck">
+                <a class="nav-link px-2 pb-0"
+                   href="../mobile/help/rule.html">规则条款</a>
+              </li>
+              <li class="nav-item d-sm-none d-blck">
+                <a class="nav-link px-2 pb-0" href="../mobile/help.html">帮助中心</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a class="nav-link header-login py-0" href="#" data-bs-toggle="modal"
+         data-bs-target="#loginModal">登入</a>
+    </div>
+  </nav>
+</header>
+
+<div class="container-fluid page p-2 py-3 position-relative member">
+  <nav aria-label="breadcrumb" class="d-sm-block d-none">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="https://max688888.com/account">会员中心</a></li>
+      <li class="breadcrumb-item active" aria-current="page">会员管理</li>
+    </ol>
+  </nav>
+  <ul class="nav nav-pills member-pills w-100" id="pills-tab">
+    <li class="m-1 px-0">
+      <div class="nav-link member-pill active" data-bs-toggle="pill" data-bs-target="#pills-report" role="tab" aria-selected="true">
+        运营月报</div>
+    </li>
+    <li class="m-1 px-0">
+      <div class="nav-link member-pill" data-bs-toggle="pill" data-bs-target="#pills-team-withdraw" role="tab" aria-selected="false">
+        团队存提款
+      </div>
+    </li>
+    <li class="m-1 px-0">
+      <div class="nav-link member-pill" data-bs-toggle="pill" data-bs-target="#pills-rule" role="tab" aria-selected="false">
+        微商规则
+      </div>
+    </li>
+    <li class="m-1 px-0">
+      <div class="nav-link member-pill" data-bs-toggle="pill" data-bs-target="#pills-member" role="tab">
+        会员注册时间</div>
+    </li>
+  </ul>
+  <div class="tab-content" id="pills-tabContent">
+
+    <div class="tab-pane fade px-2 py-md-3 p-3 member-table active show" id="pills-report" role="tabpanel">
+      <div class="row m-0 mb-3">
+        <div class="col-md-3 col-12 dropdown member-filter p-1">
+          <select class="btn dropdown-toggle text-start w-100" style="color:#d8e1f2 !important;background: #374874;" autocomplete="off">
+            <option value="last7">本月</option>
+          </select>
+        </div>
+      </div>
+      <div class="row d-md-flex d-none m-0 text-center justify-content-between table-th">
+        <div class="col-md-1 col-4 px-0 p-3">阶层</div>
+        <div class="col-md-1 col-4 px-0 p-3">会员数</div>
+        <div class="col-md-1 col-4 px-0 p-3">分润</div>
+      </div>
+      <a href="https://max688888.com/mobile/member/profits/1">
+        <div class="row m-0 text-center justify-content-between table-td mb-2">
+          <div class="col-md-1 col-4 px-0 p-3 table-list" data-title="阶层">
+            阶层1</div>
+          <div class="col-md-1 col-4 px-0 p-3 table-list" data-title="会员数">
+            1</div>
+          <div class="col-md-1 col-4 px-0 p-3 table-list" data-title="分润">
+            4.68</div>
+        </div>
+      </a>
+      <a href="https://max688888.com/mobile/member/profits/2">
+        <div class="row m-0 text-center justify-content-between table-td mb-2">
+          <div class="col-md-1 col-4 px-0 p-3 table-list" data-title="阶层">
+            阶层2</div>
+          <div class="col-md-1 col-4 px-0 p-3 table-list" data-title="会员数">
+            0</div>
+          <div class="col-md-1 col-4 px-0 p-3 table-list" data-title="分润">
+            0</div>
+        </div>
+      </a>
+      <a href="https://max688888.com/mobile/member/profits/3">
+        <div class="row m-0 text-center justify-content-between table-td mb-2">
+          <div class="col-md-1 col-4 px-0 p-3 table-list" data-title="阶层">
+            阶层3</div>
+          <div class="col-md-1 col-4 px-0 p-3 table-list" data-title="会员数">
+            0</div>
+          <div class="col-md-1 col-4 px-0 p-3 table-list" data-title="分润">
+            0</div>
+        </div>
+      </a>
+      <a href="https://max688888.com/mobile/member/profits/4">
+        <div class="row m-0 text-center justify-content-between table-td mb-2">
+          <div class="col-md-1 col-4 px-0 p-3 table-list" data-title="阶层">
+            阶层4</div>
+          <div class="col-md-1 col-4 px-0 p-3 table-list" data-title="会员数">
+            0</div>
+          <div class="col-md-1 col-4 px-0 p-3 table-list" data-title="分润">
+            0</div>
+        </div>
+      </a>
+      <a href="https://max688888.com/mobile/member/profits/5">
+        <div class="row m-0 text-center justify-content-between table-td mb-2">
+          <div class="col-md-1 col-4 px-0 p-3 table-list" data-title="阶层">
+            阶层5</div>
+          <div class="col-md-1 col-4 px-0 p-3 table-list" data-title="会员数">
+            0</div>
+          <div class="col-md-1 col-4 px-0 p-3 table-list" data-title="分润">
+            0</div>
+        </div>
+      </a>
+      <a href="https://max688888.com/mobile/member/profits/6">
+        <div class="row m-0 text-center justify-content-between table-td mb-2">
+          <div class="col-md-1 col-4 px-0 p-3 table-list" data-title="阶层">
+            阶层6</div>
+          <div class="col-md-1 col-4 px-0 p-3 table-list" data-title="会员数">
+            0</div>
+          <div class="col-md-1 col-4 px-0 p-3 table-list" data-title="分润">
+            0</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="tab-pane fade px-2 py-md-3 p-3 member-table" id="pills-member" role="tabpanel">
+      <div class="row d-md-flex d-none m-0 text-center justify-content-between table-th">
+        <div class="col-md-1 col-6 px-0 p-3">会员帐号</div>
+        <div class="col-md-1 col-6 px-0 p-3">注册时间</div>
+      </div>
+      <div class="row m-0 text-center justify-content-between table-td mb-2">
+        <div class="col-md-1 col-6 px-0 p-3 table-list" data-title="会员帐号">
+          AKQ777</div>
+        <div class="col-md-1 col-6 px-0 p-3 table-list" data-title="注册时间">
+          2022-07-22 08:57:03</div>
+      </div>
+      <div class="row m-0 text-center justify-content-between table-td mb-2">
+        <div class="col-md-1 col-6 px-0 p-3 table-list" data-title="会员帐号">
+          AXS761</div>
+        <div class="col-md-1 col-6 px-0 p-3 table-list" data-title="注册时间">
+          2022-08-05 21:31:55</div>
+      </div>
+    </div>
+
+    <div class="tab-pane fade px-2 py-md-3 p-3 member-table" id="pills-team-withdraw" role="tabpanel">
+      <div class="row m-0 flex-md-row flex-column-reverse align-items-end">
+        <div class="col-md-5 col-12 p-0 row m-0 history-infos">
+          <div class="col-4 p-1">
+            <div class="history-info p-2">
+              <img class="history-info__icon" src="../images/total-user.png" alt="">
+              <div>团队总人数</div>
+              <div>2</div>
+            </div>
+          </div>
+          <div class="col-4 p-1">
+            <div class="history-info p-2">
+              <img class="history-info__icon" src="../images/total-save.png" alt="">
+              <div>总存款</div>
+              <div>0.00</div>
+            </div>
+          </div>
+          <div class="col-4 p-1">
+            <div class="history-info p-2">
+              <img class="history-info__icon" src="../images/total-withdraw.png" alt="">
+              <div>总提领</div>
+              <div>1,600.00</div>
+            </div>
+          </div>
+          <div class="col-6 p-1">
+            <div class="history-info p-2">
+              <img class="history-info__icon" src="../images/total-user.png" alt="">
+              <div>有效会员人数</div>
+              <div>1</div>
+            </div>
+          </div>
+          <div class="col-6 p-1">
+            <div class="history-info p-2">
+              <img class="history-info__icon" src="../images/total-save.png" alt="">
+              <div>本月实获量</div>
+              <div>147.30</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="tab-pane fade px-2 py-md-3 p-3 member-table" id="pills-rule" role="tabpanel">
+<pre>1.(微商规则)
+    3% 一阶 注册并且完成充值
+    2% 二阶 实获量1200+有效会员达3人
+    2% 三阶 实获量6000+有效会员达4人
+    1% 四阶 实获量24000+有效会员达8人
+    1% 五阶 实获量60000+有效会员达12人
+    1% 六阶 实获量300000+有效会员达30人
+2.充值满16u为有效会员。
+3.实获量为一至六阶输赢总和次月不累计。
+4.每日凌晨3:00进行升阶。
+5.每日凌晨4:00发放一阶拥金。
+6.每月第一天凌晨4:00发放上个月二至六阶拥金 。
+7.分润计算至小数点后二位。
+8.多账号操作 、伪造身份等，平台将关闭您的微商权限。
+
+范例：
+
+假设A0下面有六阶段会员
+A1   =&gt;  贏 1000
+A2   =&gt;  赢  10
+A3   =&gt;  赢  20
+A4   =&gt;  赢  30
+A5   =&gt;  赢  40
+A6   =&gt;  輸  50
+A0总体实获量为 1150
+
+假设  A0帐号
+1月1日是1阶
+1月11日达成2阶
+1月21日达成3阶
+1月11日 ~ 1月 31日   二阶分润 可以在2月1日获得
+1月21日 ~ 1月 31日   三阶分润 可以在2月1日获得
+1月11日 ~ 1月 20日   三阶分润 是无法获得
+            </pre>
+    </div>
+
+  </div>
+</div>
+
+<div class="mb-5"></div>
+<!--    底部三件套-->
+<div class="side-menu-wrap">
+  <div class="side-menu d-sm-block d-none">
+    <div class="side-menu__btns text-center">
+      <a href="../announcement.html" class="side-menu__btn">
+        <img src="../images/icon_side-ann.png" alt="">
+        <div>网站公告</div>
+      </a>
+      <a href="https://direct.lc.chat/14165448/" target="_blank" class="side-menu__btn">
+        <img src="../images/icon_side-contact.png" alt="">
+        <div>线上客服</div>
+      </a>
+
+      <a href="../account.html" class="side-menu__btn">
+        <img src="../images/icon_side-balance.png" alt="">
+        <div>中心钱包</div>
+      </a>
+      <a href="../mobile/recharge.html" class="side-menu__btn withdrawal">
+        <img src="../images/icon_side-withdrawal.png" alt="">
+        <div>充值提现</div>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="footer-wrap">
+  <footer class="footer text-center py-2 d-sm-block d-none">
+    <a href="./help.html" class="footer-link mx-2">帮助中心</a>
+    <a href="javascript:location.reload();" class="footer-link mx-2">页面卡顿？</a>
+    <div class="float-sm-end pe-4">版权所有 © 2022 MAX</div>
+  </footer>
+</div>
+<div class="bottom-menu-wrap">
+  <div class="bottom-menu d-sm-none d-block">
+    <div class="bottom-menu__btns" style="font-size:0.75rem;">
+      <a href="../index.html" class="bottom-menu__btn">
+        <img src="../images/icon_side-home.png" alt="">
+        <div>首页</div>
+      </a>
+      <a href="../market.html" class="bottom-menu__btn ">
+        <img src="../images/icon_side-list.png" alt="">
+        <div>市场列表</div>
+      </a>
+      <a href="../investment/notopen.html"  class="bottom-menu__btn ">
+        <img src="../images/icon_trade-history.png" alt="">
+        <div>交易明细</div>
+      </a>
+      <a href="../investment2.html" class="bottom-menu__btn">
+        <img src="../images/icon_side-history.png" alt="">
+        <div>历史帐务</div>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="../js/slick.min.js"></script>
+<script src="../js/sweetalert2.min.js"></script>
+<script src="../js/moment-with-locales.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/clipboard.min.js"></script>
+<script src="../js/imask.js"></script>
+<script src="../js/CLDRPluralRuleParser.js"></script>
+
+
+</body>
+</html>
