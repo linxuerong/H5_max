@@ -21,12 +21,12 @@
 		<!--头部-->
 		<header class="header-wrap">
 			<a class="navbar-brand header-logo" href="/">
-				<img src="../images/MAX%20logo.png" alt="">
+				<img src="../images/MAX_logo.png" alt="">
 			</a>
 			<nav class="navbar navbar-expand-lg header py-lg-4 py-2">
 				<div class="container-fluid position-relative px-1">
 					<img class="navbar-toggler p-0" src="../images/back.png" alt=""
-						onclick="javascript:history.back();">
+						 onclick="javascript:history.back();">
 					<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
 						aria-labelledby="offcanvasNavbarLabel">
 						<div class="offcanvas-body justify-content-between align-items-center p-0">
@@ -78,7 +78,7 @@
 
 									<li class="nav-item d-sm-none d-blck">
 										<a class="nav-link px-2 pb-0"
-											href="../mobile/help/rule.html">规则条款</a>
+											href="help/rule.html">规则条款</a>
 									</li>
 									<li class="nav-item d-sm-none d-blck">
 										<a class="nav-link px-2 pb-0" href="../mobile/help.html">帮助中心</a>
@@ -87,8 +87,15 @@
 							</div>
 						</div>
 					</div>
-					<a class="nav-link header-login py-0" href="#" data-bs-toggle="modal"
-						data-bs-target="#loginModal">登入</a>
+					<div class="text-end">
+						<div class="loginShow d-sm-block d-none p-2">
+							Hi, <span class="uname"></span>
+							<br class="d-sm-none d-blck">
+							欢迎
+						</div>
+						<a class="loginShow nav-link header-login text-end py-0 d-blck pe-2" href="/max/logout">登出</a>
+						<a class="loginHide nav-link header-login py-0" href="/index.html">登入</a>
+					</div>
 				</div>
 			</nav>
 		</header>
@@ -97,34 +104,34 @@
 		<div class="container-fluid page p-2 py-3 position-relative account">
 			<ul class="nav nav-pills account-pills w-100" id="pills-tab">
 				<li class="m-1 p-0">
-					<a href="./help/signup.html" class="nav-link account-pill">
+					<a href="help/signup.html" class="nav-link account-pill">
 						注册流程</a>
 				</li>
 				<li class="m-1 px-0">
-					<a href="./help/deposit.html" class="nav-link account-pill">存款流程
+					<a href="help/deposit.html" class="nav-link account-pill">存款流程
 					</a>
 				</li>
 				<li class="m-1 px-0">
-					<a href="./help/withdrawal.html" class="nav-link account-pill">提款流程
+					<a href="help/withdrawal.html" class="nav-link account-pill">提款流程
 					</a>
 				</li>
 				<li class="m-1 px-0">
-					<a href="./help/bet.html" class="nav-link account-pill">手动下单
+					<a href="help/bet.html" class="nav-link account-pill">手动下单
 					</a>
 				</li>
 				<li class="m-1 px-0">
-					<a href="./help/rule.html" class="nav-link account-pill">规则条款</a>
+					<a href="help/rule.html" class="nav-link account-pill">规则条款</a>
 				</li>
 				<li class="m-1 px-0">
-					<a href="./help/faq.html" class="nav-link account-pill">常见问题
+					<a href="help/faq.html" class="nav-link account-pill">常见问题
 					</a>
 				</li>
 				<li class="m-1 px-0">
-					<a href="./help/about.html" class="nav-link account-pill">关于MAX
+					<a href="help/about.html" class="nav-link account-pill">关于MAX
 					</a>
 				</li>
 				<li class="m-1 px-0">
-					<a href="./help/guide.html" class="nav-link account-pill">玩法说明
+					<a href="help/guide.html" class="nav-link account-pill">玩法说明
 					</a>
 				</li>
 			</ul>
@@ -148,7 +155,7 @@
 						<img src="../images/icon_side-balance.png" alt="">
 						<div>中心钱包</div>
 					</a>
-					<a href="../mobile/recharge.html" class="side-menu__btn withdrawal">
+					<a href="recharge.html" class="side-menu__btn withdrawal">
 						<img src="../images/icon_side-withdrawal.png" alt="">
 						<div>充值提现</div>
 					</a>
@@ -173,7 +180,7 @@
 						<img src="../images/icon_side-list.png" alt="">
 						<div>市场列表</div>
 					</a>
-					<a href="../investment/notopen.html"  class="bottom-menu__btn ">
+					<a href="../investment/notopen.html" class="bottom-menu__btn ">
 						<img src="../images/icon_trade-history.png" alt="">
 						<div>交易明细</div>
 					</a>
@@ -195,7 +202,46 @@
 		<script src="../js/clipboard.min.js"></script>
 		<script src="../js/imask.js"></script>
 		<script src="../js/CLDRPluralRuleParser.js"></script>
+		<script>
 
+			$(function() {
+				$('.loading').hide();
+				$.ajax({
+					type: 'GET',
+					url: 'https://www.max68888.com/max/member/getInfo',
+					xhrFields: {
+						withCredentials: true
+					},
+					success: function(res) {
+						$('.loading').hide();
+						if(res.code == 0){
+							// 成功
+							console.log(res.data)
+							$('.uname').html(res.data.maxNickName)
+							$('.uAccount').html(res.data.maxAccount)
+							$('.uLevel').html(res.data.maxLevel)
+
+							$('.uBalance').html(res.data.balance.toFixed(2))
+
+							$(".loginHide").remove();
+
+							$('#qrcode').qrcode({
+								render: "canvas", //也可以替换为table
+								width: 150,
+								height: 150,
+								text: 'https://www.max68888.com/?P='+res.data.maxAccount
+							});
+
+						}else {
+							//没有登录
+							$('.loginShow').remove();
+						}
+					},
+				})
+
+			});
+
+		</script>
 
 	</body>
 </html>

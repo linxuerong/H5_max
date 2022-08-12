@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+.loginShow + .loginHide{display: none}
+
 .fa-ellipsis-h.more {
 	color: #374874
 }

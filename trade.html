@@ -36,7 +36,7 @@
                             </div>
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item d-sm-none d-blck">
-                                    <a class="nav-link px-2 pb-0" href="./account.html">中心钱包</a>
+                                    <a class="nav-link px-2 pb-0" href="account.html">中心钱包</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link px-2 pb-0" href="./market.html">市场列表</a>
@@ -76,10 +76,10 @@
                                        href="./mobile/help/rule.html">规则条款</a>
                                 </li>
                                 <li class="nav-item d-sm-none d-blck">
-                                    <a class="nav-link px-2 pb-0" href="./mobile/help.html">帮助中心</a>
+                                    <a class="nav-link px-2 pb-0" href="mobile/help.html">帮助中心</a>
                                 </li>
                                 <li class="nav-item d-sm-none d-blck">
-                                    <a class="nav-link px-2 pb-0" href="./logout">登出</a>
+                                    <a class="nav-link px-2 pb-0" href="/max/logout">登出</a>
                                 </li>
                             </ul>
                         </div>
@@ -91,8 +91,8 @@
                         <br class="d-sm-none d-blck">
                         欢迎
                     </div>
-                    <a class="loginShow nav-link header-login text-end py-0 d-blck pe-2" href="./logout">登出</a>
-                    <a class="loginHide nav-link header-login py-0" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">登入</a>
+                    <a class="loginShow nav-link header-login text-end py-0 d-blck pe-2" href="/max/logout">登出</a>
+                    <a class="loginHide nav-link header-login py-0" href="/index.html">登入</a>
                 </div>
             </div>
         </nav>
@@ -206,6 +206,45 @@
     <script src="js/CLDRPluralRuleParser.js"></script>
 
     <script>
+        $(function() {
+            $('.loading').hide();
+            $.ajax({
+                type: 'GET',
+                url: 'https://www.max68888.com/max/member/getInfo',
+                xhrFields: {
+                    withCredentials: true
+                },
+                success: function(res) {
+                    $('.loading').hide();
+                    if(res.code == 0){
+                        // 成功
+                        console.log(res.data)
+                        $('.uname').html(res.data.maxNickName)
+                        $('.uAccount').html(res.data.maxAccount)
+                        $('.uLevel').html(res.data.maxLevel)
+
+                        $('.uBalance').html(res.data.balance.toFixed(2))
+
+                        $(".loginHide").remove();
+
+                        $('#qrcode').qrcode({
+                            render: "canvas", //也可以替换为table
+                            width: 150,
+                            height: 150,
+                            text: 'https://www.max68888.com/?P='+res.data.maxAccount
+                        });
+
+                    }else {
+                        //没有登录
+                        $('.loginShow').remove();
+                    }
+                },
+            })
+        });
+    </script>
+
+
+    <script>
         function getDay(day){
             var today = new Date();
             var targetday_milliseconds=today.getTime() + 1000*60*60*24*day;
@@ -309,28 +348,6 @@
         }
     </script>
 
-    <script>
-        $(function() {
-            $.ajax({
-                type: 'GET',
-                url: 'https://www.max68888.com/max/member/getInfo',
-                xhrFields: {
-                    withCredentials: true
-                },
-                success: function(res) {
-                    $('.loading').hide();
-                    if(res.code == 0){
-                        // 成功
-                        $('.uname').html(res.data.maxNickName)
-                        $(".loginHide").remove();
-                    }else {
-                        //没有登录
-                        $('.loginShow').remove();
-                    }
-                },
-            })
-        });
-    </script>
 
 </body>
 </html>
