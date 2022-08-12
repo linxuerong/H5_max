@@ -333,8 +333,8 @@
                             $("#Address").removeAttr("readonly");
                         }
 
-                        $("#Limit").text(res.data.trasacionBillLimit);
-                        $("#trasacionBillLimit").text(res.data.trasacionBillLimit)
+                        $("#Limit").text(res.data.withdrawFreeLimit); //剩余次数
+                        $("#trasacionBillLimit").text(res.data.trasacionBillLimit)//未达流水
                     }
                 }
             })
