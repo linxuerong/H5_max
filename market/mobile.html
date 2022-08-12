@@ -104,7 +104,8 @@
         <div class="col-4"></div>
       </div>
 
-      <div id="page"></div>
+      <div id="page">
+      </div>
 
       <div class="row m-0 d-flex table-td py-2">
         <div class="col-6 p-0">客队赢进4球(含)以上</div>
@@ -148,7 +149,7 @@
             <button class="modal-bet__btn" data-amount="1000">$ 1,000</button>
           </div>
           <div class="col-4 p-2">
-            <button class="modal-bet__btn" data-amount="0.00">全部</button>
+            <button class="modal-bet__btn modal-all" data-amount="100.00">全部</button>
           </div>
         </div>
         <div class="d-flex justify-content-center mt-3">
@@ -307,8 +308,42 @@
   <script src="../js/CLDRPluralRuleParser.js"></script>
 
   <script>
+
     $(function() {
       $('.loading').hide();
+
+      $.ajax({
+        type: 'GET',
+        url: 'https://www.max68888.com/max/member/getInfo',
+        xhrFields: {
+          withCredentials: true
+        },
+        success: function(res) {
+          $('.loading').hide();
+          if(res.code == 0){
+            // 成功
+            console.log(res.data)
+            $('.uname').html(res.data.maxNickName)
+            $('.uAccount').html(res.data.maxAccount)
+            $('.uLevel').html(res.data.maxLevel)
+
+            $('.uBalance').html(res.data.balance.toFixed(2))
+            $(".modal-all").attr('data-amount',res.data.balance )
+            $(".loginHide").remove();
+
+          }else {
+            //没有登录
+            $('.loginShow').remove();
+          }
+        },
+      })
+
+    });
+
+  </script>
+
+  <script>
+    $(function() {
 
       var search = location.search;
       var id = search.substring(search.indexOf("=") + 1);
@@ -360,9 +395,7 @@
   <script>
     var RATIO = 0;
     $(document).on('click', '.bet-table-button', function(){
-
       // data-ratio="0.01920" data-way="0 - 45646546" data-bet_id="odds-96fa4ff9-df50-462d-b435-90c3ab638f44"
-
       RATIO = $(this).data('ratio') /100;
       $('.bet-id').val($(this).data('bet_id'));
       $('.modal-bet-ratio').text((RATIO * 100).toFixed(2) + '%');
