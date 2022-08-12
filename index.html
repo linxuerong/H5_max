@@ -241,9 +241,7 @@
 					<form id="register-form" action="./register">
 						<div class="row m-0 form-group my-2 align-items-center justify-content-end">
 							<label class="col-3 p-0 my-2 pe-1 text-end">帐号</label>
-<!--							<div class="col-9 p-0 ps-1 my-2">-->
-<!--								<input type="text" name="maxAccount" placeholder="暂时用输入" required class="w-100">-->
-<!--							</div>-->
+								<input type="checkbox" name="logo" style="position: absolute; z-index: -99;opacity: 0" >
 							<div class="col-9 p-0 ps-1 my-2 dropdown">
 								<select name="maxAccount" id="select_account"  autocomplete="off" class="btn w-100">
 									<!--<option value="ADW129">ADW129</option>-->
@@ -325,6 +323,7 @@
 						<h1 class="modal-content__title p-3">忘记密码</h1>
 						<div class="row m-0 form-group my-2 align-items-center justify-content-end">
 							<label class="col-3 p-0 my-2 pe-1 text-end">帐号</label>
+							<input type="checkbox" name="logo" style="position: absolute; z-index: -99;opacity: 0" >
 							<div class="col-9 p-0 my-2">
 								<input type="text" name="account" required class="w-100">
 							</div>
@@ -493,14 +492,12 @@
 			//验证码
 			$('.send-sms').on('click', function(e) {
 				e.preventDefault();
-				$("#select_account").attr("disabled","disabled");
 				var phone = $("#maxMobile");
 
-				if (phone.val() == '') {
-					swal("错误", "手机号码不可空白", 'error');
-					return
-				}else if(isPhoneNo(phone.val()) == false) {
-					swal("错误", "手机号码不正确", 'error');
+				 if(isPhoneNo(phone.val()) == false || phone.val() == '') {
+					swal("错误", "手机号码不正确", 'error').then( ()=>{
+						$("#maxMobile").focus();
+					}) ;
 					return
 				}
 
@@ -512,10 +509,10 @@
 					},
 					success: function(response) {
 						if (response.code == 0) {
-							swal("短信码已发送", '', "success");
+							swal("短信码已发送", '', "success")
 							sendSms();
 						} else {
-							swal(response.msg, '', "error");
+							swal(response.msg, '', "error")
 						}
 					},
 
@@ -579,7 +576,7 @@
 			// 注册
 			$('#register-form').on('submit', function(e) {
 				e.preventDefault();
-				$("#select_account").removeAttr("disabled");
+
 				var form = $(this);
 				$('button').attr("disabled", true);
 
@@ -632,6 +629,7 @@
 					var opt = '<option value='+user+'>'+user+'</option>'
 					$("#select_account").append(opt)
 				}
+
 			}
 
 			// 登入
