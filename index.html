@@ -460,9 +460,9 @@
 		$.ajax({
 			type: 'GET',
 			url: 'https://www.max68888.com/max/member/getInfo',
-			xhrFields: {
-				withCredentials: true
-			},
+			// xhrFields: {
+			// 	withCredentials: true
+			// },
 			success: function(res) {
 				$('.loading').hide();
 				if(res.code == 0){
@@ -764,7 +764,7 @@
 
 				var box =
 						'<div class="games-card p-3 py-4 " data-id="round-1658974753">' +
-						'  <div class="games-card__time text-end">'+ item.maxGameName+'</div>' +
+						'  <div class="games-card__time text-end">'+ item.maxStartTime+'</div>' +
 						'  <div class="games-card__name my-3"> ' +
 						'    <p class="mb-0 name">'+item.maxGameName+'</p> ' +
 						'    <p class="mb-0 type"> / 真人足球 /</p> ' +
