@@ -117,28 +117,28 @@
             <div class="investment-account">
                 <img src="/assets/web/images/icons-wallet.png" alt="">
                 <div>流水</div>
-                <div class="total-amount">1487.74</div>
+                <div class="total-amount">0.00</div>
             </div>
         </div>
         <div class="col-sm-2 col-6 p-1">
             <div class="investment-account">
                 <img src="/assets/web/images/icons-check.png" alt="">
                 <div>盈利</div>
-                <div class="win">9.82</div>
+                <div class="win">0.00</div>
             </div>
         </div>
         <div class="col-sm-2 col-6 p-1">
             <div class="investment-account">
                 <img src="/assets/web/images/icons-heart.png" alt="">
                 <div>获利</div>
-                <div class="ratio">17.57%</div>
+                <div class="ratio">0.00%</div>
             </div>
         </div>
         <div class="col-sm-2 col-6 p-1">
             <div class="investment-account">
                 <img src="/assets/web/images/icons-document.png" alt="">
                 <div>结果</div>
-                <div class="total-balance">9.82</div>
+                <div class="total-balance">0.00</div>
             </div>
         </div>
     </div>
@@ -258,26 +258,64 @@
 
 <script>
     $(function (){
-
-        // 总汇信息
-        $.ajax({
-            type: 'GET',
-            data:{'StartTime': start},
-            url: 'https://www.max68888.com/max/trasactionOrder/orderResultRecord',
-            xhrFields: {
-                withCredentials: true
-            },
-            success:function (res){
-
-                $('.total-count').text(res.data.orderSize)
-                $('.total-amount').text(res.data.orderBill)//流水
-                $('.win').text(res.data.realEarn) //盈利
-                $('.ratio').text(res.data.earnPercent) //获利
-                $('.total-balance').text(res.data.winResult) //结果
-
-                sorting(res.data.maxTrasactionOrderList)
+        function getDay(day){
+            var today = new Date();
+            var targetday_milliseconds=today.getTime() + 1000*60*60*24*day;
+            today.setTime(targetday_milliseconds); //注意，这行是关键代码
+            var tYear = today.getFullYear();
+            var tMonth = today.getMonth();
+            var tDate = today.getDate();
+            tMonth = doHandleMonth(tMonth + 1);
+            tDate = doHandleMonth(tDate);
+            return tYear+"-"+tMonth+"-"+tDate;
+        }
+        function doHandleMonth(month){
+            var m = month;
+            if(month.toString().length == 1){
+                m = "0" + month;
             }
+            return m;
+        }
+
+        $('#range').append('<option value="1">'+getDay(-7)+' ~ '+ getDay(0) +'</option>')
+        $('#range').append('<option value="2">'+getDay(-14)+' ~ '+ getDay(-7) +'</option>')
+
+        var time = 1;
+        $('#range').change( function (){
+            time= $(this).val();
+            query();
         })
+
+        function query(){
+            if(time == 1){
+                start =  getDay(-7) + ' 00:00:00';
+                end = getDay(0) + ' 23:59:59';
+            }else if(time == 2){
+                start = getDay(-14) + ' 00:00:00';
+                end = getDay(-7) + ' 23:59:59';
+            }
+
+            // 总汇信息
+            $.ajax({
+                type: 'GET',
+                data:{'StartTime': start, 'EndTime':end},
+                url: 'https://www.max68888.com/max/trasactionOrder/orderResultRecord',
+                xhrFields: {
+                    withCredentials: true
+                },
+                success:function (res){
+
+                    $('.total-count').text(res.data.orderSize)
+                    $('.total-amount').text(res.data.orderBill)//流水
+                    $('.win').text(res.data.realEarn) //盈利
+                    $('.ratio').text(res.data.earnPercent) //获利
+                    $('.total-balance').text(res.data.winResult) //结果
+
+                    sorting(res.data.maxTrasactionOrderList)
+                }
+            })
+        }
+
 
         console.log("分拣数据")
         function sorting(data){
