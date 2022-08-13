@@ -155,14 +155,11 @@
         <div class="col-md-1 col-6 px-0 p-3">会员帐号</div>
         <div class="col-md-1 col-6 px-0 p-3">注册时间</div>
       </div>
-      <div class="row m-0 text-center justify-content-between table-td mb-2">
-        <div class="col-md-1 col-6 px-0 p-3 table-list" data-title="会员帐号">AKQ777</div>
-        <div class="col-md-1 col-6 px-0 p-3 table-list" data-title="注册时间">2022-07-22 08:57:03</div>
+      <div id="page2">
+
       </div>
-      <div class="row m-0 text-center justify-content-between table-td mb-2">
-        <div class="col-md-1 col-6 px-0 p-3 table-list" data-title="会员帐号"> AXS761</div>
-        <div class="col-md-1 col-6 px-0 p-3 table-list" data-title="注册时间"> 2022-08-05 21:31:55</div>
-      </div>
+
+
     </div>
 
     <!--团队存提款-->
@@ -355,6 +352,7 @@ A0总体实获量为 1150
 </script>
 <script>
   $(function () {
+    //运营月报
     $.ajax({
       type: 'GET',
       url: 'https://www.max68888.com/max/wallet/getMyChildLevelReward',
@@ -368,11 +366,12 @@ A0总体实获量为 1150
         }
       }
     })
+
     function page1Data(data) {
 
       $.each( data, function (i , item){
         var box =
-                '<a href="https://max688888.com/mobile/member/profits/'+item.level+'">'+
+                '<a href="https://max688888.com/mobile/member/profits/id='+item.level+'">'+
                 ' <div class="row m-0 text-center justify-content-between table-td mb-2">' +
                 '   <div class="col-md-1 col-4 px-0 p-3 table-list" data-title="阶层">阶层'+item.level+'</div>' +
                 '   <div class="col-md-1 col-4 px-0 p-3 table-list" data-title="会员数">'+item.memberSize+'</div>' +
@@ -384,6 +383,7 @@ A0总体实获量为 1150
       })
     }
 
+    //团队存提款
     $.ajax({
       type: 'GET',
       url: 'https://www.max68888.com/max/wallet/getMyTeamInfo',
@@ -401,6 +401,37 @@ A0总体实获量为 1150
         }
       }
     })
+
+    //会员注册
+    $.ajax({
+      type: 'GET',
+      url: 'https://www.max68888.com/max/wallet/getMyTeamMember',
+      xhrFields: {
+        withCredentials: true
+      },
+      success: function(res) {
+        console.log(res)
+        if(res.code == 0){
+
+          page2Data(res.data)
+        }
+      }
+    })
+
+    function page2Data() {
+      $.each(data , function (i, item){
+        var box='<div class="row m-0 text-center justify-content-between table-td mb-2">\n' +
+                '   <div class="col-md-1 col-6 px-0 p-3 table-list" data-title="会员帐号">'+item.maxAccount+'</div>\n' +
+                '   <div class="col-md-1 col-6 px-0 p-3 table-list" data-title="注册时间">'+item.createTime+'</div>\n' +
+                '</div>'
+
+        $('#page2').append(box)
+
+      })
+
+    }
+
+
   })
 </script>
 

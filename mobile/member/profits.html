@@ -100,6 +100,24 @@
         </nav>
     </header>
 
+    <div class="container-fluid page p-2 py-3 position-relative member">
+        <div class="row m-0 mb-3">
+            <div class="col-md-3 col-12 dropdown member-filter p-1">
+                会员分润明细
+            </div>
+        </div>
+        <div class="row d-md-flex d-none m-0 text-center justify-content-between table-th">
+            <div class="col-md-1 col-4 px-0 p-3">会员帐号</div>
+            <div class="col-md-1 col-4 px-0 p-3">预估获利</div>
+            <div class="col-md-1 col-4 px-0 p-3">产生分润</div>
+        </div>
+        <div id="pahe">
+
+        </div>
+
+    </div>
+
+
     <div class="mb-5"></div>
     <!--    底部三件套-->
     <div class="side-menu-wrap">
@@ -168,126 +186,63 @@
     <script>
         $(function() {
             $('.loading').hide();
-
-            var search = location.search;
-            var time = search.substring(search.indexOf("=") + 1);
-
-            function getDay(day){
-                var today = new Date(time);
-                var targetday_milliseconds=today.getTime() + 1000*60*60*24*day;
-                today.setTime(targetday_milliseconds); //注意，这行是关键代码
-                var tYear = today.getFullYear();
-                var tMonth = today.getMonth();
-                var tDate = today.getDate();
-                tMonth = doHandleMonth(tMonth + 1);
-                tDate = doHandleMonth(tDate);
-                return tYear+"-"+tMonth+"-"+tDate;
-            }
-            function doHandleMonth(month){
-                var m = month;
-                if(month.toString().length == 1){
-                    m = "0" + month;
-                }
-                return m;
-            }
-            console.log(getDay(1))
-
-
-
             $.ajax({
                 type: 'GET',
-                data:{'StartTime': time, EndTime:getDay(1)},
-                url: 'https://www.max68888.com/max/trasactionOrder/getList',
+                url: 'https://www.max68888.com/max/member/getInfo',
                 xhrFields: {
                     withCredentials: true
                 },
-                success:function (res){
-                    console.log(res.data)
-                    sorting(res.data)
-                }
+                success: function(res) {
+                    $('.loading').hide();
+                    if(res.code == 0){
+                        // 成功
+                        console.log(res.data)
+                        $('.uname').html(res.data.maxNickName)
+                        $('.uAccount').html(res.data.maxAccount)
+                        $('.uLevel').html(res.data.maxLevel)
+
+                        $('.uBalance').html(res.data.balance.toFixed(2))
+
+                        $(".loginHide").remove();
+
+
+                    }else {
+                        //没有登录
+                        $('.loginShow').remove();
+                    }
+                },
             })
 
-            function sorting(data){
 
-
-                $.each( data, function (i , item){
-                    $(".total-count").text(i+1)
-
-                    var sunyi = item.resultEarn
-                    var pick = '赢'
-                    if(item.pickResult = 2){
-                        var pick = '输'
-                        sunyi = '-'+item.resultEarn
+            var search = location.search;
+            var id = search.substring(search.indexOf("=") + 1);
+            $.ajax({
+                type: 'GET',
+                url: 'https://www.max68888.com/max/member/getInfo',
+                xhrFields: {
+                    withCredentials: true
+                },
+                success: function(res) {
+                    if(res.code == 0){
+                        sorting(res.data)
                     }
-                    console.log(JSON.stringify(item))
+                }
+            });
+
+            console.log("分拣数据")
+            function sorting(data){
+                $.each( data, function (i , item){
                     var box =
-                        '<div class="investment-list">' +
-                        '  <div class="d-flex align-items-center justify-content-between investment-list__header p-3 pe-5">' +
-                        '    <div class="">' +
-                        '      <div class="investment-list__number">日期:'+item.createTime+'</div>' +
-                        '      <div class="investment-list__time">订单号:'+item.trasactionOrder+'</div>' +
-                        '      <div class="investment-list__time d-block d-sm-none">开赛时间:'+item.gameStartTime+'</div>' +
-                        '    </div>' +
-                        '    <div class="investment-list__match d-sm-block d-none">开赛时间 '+item.gameStartTime+'</div>' +
-                        '    <!-- 手機版顯示連結 -->' +
-                        '    <a href="../investment/info.html?id='+item.id+'" class="d-sm-none d-block fas fa-caret-right investment-downicon"></a>' +
-                        '    <!-- 電腦開合開關 -->' +
-                        '    <i class="fas fa-caret-up investment-downicon d-sm-block d-none" data-bs-toggle="collapse" data-bs-target="#collapse_'+i+'"></i>' +
-                        '' +
-                        '  </div>' +
-                        '  <div id="collapse_'+i+'" class="accordion-collapse collapse show" data-bs-parent="#much">' +
-                        '    <div class="investment-list__body p-3">' +
-                        '      <div class="row m-0 investment-list__table">' +
-                        '        <div class="col-md-2 col-6 px-1 table-tr">' +
-                        '          <div class="table-th">'+item.maxGameName+'</div>' +
-                        '          <div class="table-td">'+item.maxHomeTeam+' V.S '+item.maxCustomerTeam+'</div>' +
-                        '        </div>' +
-                        '        <div class="col-md-2 col-6 d-sm-block d-none px-1 table-tr">' +
-                        '          <div class="table-th">项目</div>' +
-                        '          <div class="table-td">反波胆'+item.maxScore+'</div>' +
-                        '        </div>' +
-                        '        <div class="col-md-2 col-6 px-1 table-tr">' +
-                        '          <div class="table-th">交易金额</div>' +
-                        '          <div class="table-td">'+item.amount+'</div>' +
-                        '        </div>' +
-                        '        <div class="col-md-2 col-6 d-sm-block d-none px-1 table-tr">' +
-                        '          <div class="table-th">实际损益金额</div>' +
-                        '          <div class="table-td">$'+sunyi+'</div>' +
-                        '        </div>' +
-                        '        <div class="col-md-2 col-6 d-sm-block d-none px-1 table-tr">' +
-                        '          <div class="table-th">投资结果</div>' +
-                        '          <div class="table-td">'+pick+'</div>' +
-                        '        </div>' +
-                        '        <div class="col-md-2 col-6 d-sm-block d-none px-1 table-tr">' +
-                        '          <div class="table-th">获利%</div>' +
-                        '          <div class="table-td">'+item.maxEarn+'%</div>' +
-                        '        </div>' +
-                        '        <div class="col-md-2 col-6 px-1 table-tr">' +
-                        '          <div class="table-th">预估获利</div>' +
-                        '          <div class="table-td">$'+item.resultEarn+'</div>' +
-                        '        </div>' +
-                        '        <div class="col-md-2 col-6 px-1 table-tr">' +
-                        '          <div class="table-th">投资状态</div>' +
-                        '          <div class="table-td">已结算</div>' +
-                        '        </div>' +
-                        '        <div class="col-md-2 col-6 d-sm-block d-none px-1 table-tr">' +
-                        '          <div class="table-th">注单类型</div>' +
-                        '          <div class="table-td">普通注单</div>' +
-                        '        </div>' +
-                        '        <div class="col-md-2 col-6 d-sm-block d-none px-1 table-tr">' +
-                        '          <div class="table-th">赛事结果</div>' +
-                        '          <div class="table-td">'+item.goalResult+'</div>' +
-                        '        </div>' +
-                        '      </div>' +
-                        '    </div>' +
-                        '  </div>' +
+                        '<div class="row m-0 text-center justify-content-between table-td mb-2">\n' +
+                        '  <div class="col-md-1 col-4 px-0 p-3 table-list" data-title="会员帐号">\n' +
+                        '      <a href="/mobile/member/bets?account=AKQ777">'+item.item+'</a>' +
+                        '   </div>' +
+                        '   <div class="col-md-1 col-4 px-0 p-3 table-list" data-title="预估获利">169.07</div>\n' +
+                        ' <div class="col-md-1 col-4 px-0 p-3 table-list" data-title="产生分润"></div>\n' +
                         '</div>'
-
-                    $("#much").append(box)
-
-                })
+                    $("#pahe").append(box)
+                });
             }
-
         });
     </script>
 
