@@ -307,7 +307,8 @@
                     $(".allNum").text(allNum)
                     $('.allOrder').append(box)
 
-                    var time= '2022-'+item.maxStartTime
+                    var time= DatdIos( '2022-'+item.maxStartTime)
+
                     if(new Date(time).toDateString() == new Date().toDateString()){
                         //今日
                         todayNum++
