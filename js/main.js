@@ -55,12 +55,16 @@ $(function (){
 		var now=year+'/'+getNow(month)+"/"+getNow(date)+" "+getNow(h)+':'+getNow(m)+":"+getNow(s);
 		$(".header-time").text(now)
 
-		var x = 5000;
-		var y = 3000;
-		var rand = parseInt(Math.random() * (x - y + 1) + y);
-		$(".rand").text(rand)
-
 	},1000)
+
+	var Tx = 5000;
+	var Ty = 3000;
+	var rand = parseInt(Math.random() * (Tx - Ty + 1) + Ty);
+	$(".rand").text(rand)
+	setInterval(() =>{
+		var rand = parseInt(Math.random() * (Tx - Ty + 1) + Ty);
+		$(".rand").text(rand)
+	},60*1000)
 
 
 })
