@@ -200,11 +200,8 @@
                         $('.uname').html(res.data.maxNickName)
                         $('.uAccount').html(res.data.maxAccount)
                         $('.uLevel').html(res.data.maxLevel)
-
                         $('.uBalance').html(res.data.balance.toFixed(2))
-
                         $(".loginHide").remove();
-
 
                     }else {
                         //没有登录
@@ -213,37 +210,43 @@
                 },
             })
 
-
+        });
+    </script>
+    <script>
+        $(function () {
             var search = location.search;
             var id = search.substring(search.indexOf("=") + 1);
+
             $.ajax({
                 type: 'GET',
-                url: 'https://www.max68888.com/max/member/getInfo',
+                url: 'https://www.max68888.com/max/wallet/getMyChildLevelReward/'+id,
                 xhrFields: {
                     withCredentials: true
                 },
                 success: function(res) {
                     if(res.code == 0){
-                        sorting(res.data)
+                        Reward(res.data)
                     }
                 }
-            });
+            })
+        })
 
-            console.log("分拣数据")
-            function sorting(data){
-                $.each( data, function (i , item){
-                    var box =
-                        '<div class="row m-0 text-center justify-content-between table-td mb-2">\n' +
-                        '  <div class="col-md-1 col-4 px-0 p-3 table-list" data-title="会员帐号">\n' +
-                        '      <a href="/mobile/member/bets?account=AKQ777">'+item.item+'</a>' +
-                        '   </div>' +
-                        '   <div class="col-md-1 col-4 px-0 p-3 table-list" data-title="预估获利">169.07</div>\n' +
-                        ' <div class="col-md-1 col-4 px-0 p-3 table-list" data-title="产生分润"></div>\n' +
-                        '</div>'
-                    $("#pahe").append(box)
-                });
-            }
-        });
+        function Reward(data){
+            $.each(data , function (i, item) {
+                var box =
+                    '<div class="row m-0 text-center justify-content-between table-td mb-2">\n' +
+                    '<div class="col-md-1 col-4 px-0 p-3 table-list" data-title="会员帐号">' +
+                    '<a href="./bets?account='+item.account+'">'+item.account+'</a></div>' +
+                    '<div class="col-md-1 col-4 px-0 p-3 table-list" data-title="预估获利">+item.realEarn+</div>' +
+                    '<div class="col-md-1 col-4 px-0 p-3 table-list" data-title="产生分润">'+item.reward+'</div>' +
+                    '</div>'
+
+                $('#pahe').append(box)
+
+            })
+
+        }
+
     </script>
 
 </body>
