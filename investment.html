@@ -104,13 +104,12 @@
         <div class="col-sm-4 col-12 p-1 d-flex flex-column justify-content-between">
             <div class="investment-account__trade p-2 d-flex justify-content-center">
                 <img src="/assets/web/images/icons-hand.png" class="pe-2" alt="">
-                <div>交易笔数 : <span class="total-count">28</span></div>
+                <div>交易笔数 : <span class="total-count">0</span></div>
             </div>
             <div class="dropdown investment-dropdown mt-0 mt-2">
                 <select id="range" class="btn dropdown-toggle d-flex justify-content-between align-items-center w-100" style="background: #374874;color: #d8e1f2;" autocomplete="off">
                     <option value="last7">2022-08-05 ~ 2022-08-12</option>
-                    <option value="last14">2022-07-29 ~ 2022-08-05
-                    </option>
+                    <option value="last14">2022-07-29 ~ 2022-08-05</option>
                 </select>
             </div>
         </div>
@@ -383,16 +382,22 @@
 <script>
     $(function (){
 
+        // 总汇信息
         $.ajax({
             type: 'GET',
             data:{'StartTime': start},
-            url: 'https://www.max68888.com/max/trasactionOrder/getList',
+            url: 'https://www.max68888.com/max/trasactionOrder/orderResultRecord',
             xhrFields: {
                 withCredentials: true
             },
             success:function (res){
-                console.log(res.data)
-                sorting(res.data)
+
+                $('.total-count').text(res.data.orderSize)
+                $('.total-amount').text(res.data.orderBill)//流水
+                $('.win').text(res.data.realEarn) //盈利
+                $('.ratio').text(res.data.earnPercent) //获利
+                $('.total-balance').text(res.data.winResult) //结果
+
             }
         })
 
