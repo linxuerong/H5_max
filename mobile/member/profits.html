@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAX</title>
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/all.css">
+
+    <link rel="stylesheet" type="text/css" href="../../css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/slick-theme.css"/>
+    <link href="../../css/sweetalert2.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="loading">
+        <img src="../../images/MAX_logo.png" alt="">
+    </div>
+    <!--头部-->
+    <header class="header-wrap">
+        <a class="navbar-brand header-logo" href="/">
+            <img src="../../images/MAX_logo.png" alt="">
+        </a>
+        <nav class="navbar navbar-expand-lg header py-lg-4 py-2">
+            <div class="container-fluid position-relative px-1">
+                <img class="navbar-toggler p-0" src="../../images/back.png" alt=""
+                     onclick="javascript:history.back();">
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                     aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-body justify-content-between align-items-center p-0">
+                        <div class="flex-column">
+                            <div class="header-info d-lg-block d-none px-2">
+                                <span class="header-time"></span> ( 北京标准时间 ) ｜ 线上人数 ：<span class="rand"></span>
+                            </div>
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item d-sm-none d-blck">
+                                    <a data-bs-toggle="modal" data-bs-target="#loginModal"
+                                       class="nav-link px-2 pb-0" href="../../account.html">中心钱包</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a data-bs-toggle="modal" data-bs-target="#loginModal"
+                                       class="nav-link px-2 pb-0" href="../../market.html">市场列表</a>
+                                </li>
+                                <li class="nav-item d-sm-none d-blck">
+                                    <a data-bs-toggle="modal" data-bs-target="#loginModal"
+                                       class="nav-link px-2 pb-0" href="../../trade.html">存提纪录</a>
+                                </li>
+                                <li class="nav-item d-sm-block">
+                                    <a data-bs-toggle="modal" data-bs-target="#loginModal"
+                                       class="nav-link px-2 pb-0" href="../../investment.html">投资纪录</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a data-bs-toggle="modal" data-bs-target="#loginModal"
+                                       class="nav-link px-2 pb-0" href="../../match.html">赛事结果</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link px-2 pb-0" href="../../immediate.html">即时比分</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link px-2 pb-0" href="../../promotion.html">优惠活动</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link px-2 pb-0" href="../../announcement.html">最新消息</a>
+                                </li>
+                                <li class="nav-item dropdown d-sm-none d-blck">
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+                                       role="button" aria-haspopup="true" aria-expanded="false">线上客服</a>
+                                    <div class="dropdown-menu">
+                                        <a class="nav-link px-2 pb-0 text-black"
+                                           href="https://direct.lc.chat/14165448/" target="_blank">线路1</a>
+                                        <a class="nav-link px-2 pb-0 text-black"
+                                           href="../service.html">线路2</a>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item d-sm-none d-blck">
+                                    <a class="nav-link px-2 pb-0"
+                                       href="../help/rule.html">规则条款</a>
+                                </li>
+                                <li class="nav-item d-sm-none d-blck">
+                                    <a class="nav-link px-2 pb-0" href="../mobile/help.html">帮助中心</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-end">
+                    <div class="loginShow d-sm-block d-none p-2">
+                        Hi, <span class="uname"></span>
+                        <br class="d-sm-none d-blck">
+                        欢迎
+                    </div>
+                    <a class="loginShow nav-link header-login text-end py-0 d-blck pe-2" href="/max/logout">登出</a>
+                    <a class="loginHide nav-link header-login py-0" href="/index.html">登入</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="mb-5"></div>
+    <!--    底部三件套-->
+    <div class="side-menu-wrap">
+        <div class="side-menu d-sm-block d-none">
+            <div class="side-menu__btns text-center">
+                <a href="../../announcement.html" class="side-menu__btn">
+                    <img src="../../images/icon_side-ann.png" alt="">
+                    <div>网站公告</div>
+                </a>
+                <a href="https://direct.lc.chat/14165448/" target="_blank" class="side-menu__btn">
+                    <img src="../../images/icon_side-contact.png" alt="">
+                    <div>线上客服</div>
+                </a>
+
+                <a href="../../account.html" class="side-menu__btn">
+                    <img src="../../images/icon_side-balance.png" alt="">
+                    <div>中心钱包</div>
+                </a>
+                <a href="./mobile/recharge.html" class="side-menu__btn withdrawal">
+                    <img src="../../images/icon_side-withdrawal.png" alt="">
+                    <div>充值提现</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrap">
+        <footer class="footer text-center py-2 d-sm-block d-none">
+            <a href="../help.html" class="footer-link mx-2">帮助中心</a>
+            <a href="javascript:location.reload();" class="footer-link mx-2">页面卡顿？</a>
+            <div class="float-sm-end pe-4">版权所有 © 2022 MAX</div>
+        </footer>
+    </div>
+    <div class="bottom-menu-wrap">
+        <div class="bottom-menu d-sm-none d-block">
+            <div class="bottom-menu__btns" style="font-size:0.75rem;">
+                <a href="../../index.html" class="bottom-menu__btn">
+                    <img src="../../images/icon_side-home.png" alt="">
+                    <div>首页</div>
+                </a>
+                <a href="../../market.html" class="bottom-menu__btn ">
+                    <img src="../../images/icon_side-list.png" alt="">
+                    <div>市场列表</div>
+                </a>
+                <a href="../../investment/notopen.html" class="bottom-menu__btn ">
+                    <img src="../../images/icon_trade-history.png" alt="">
+                    <div>交易明细</div>
+                </a>
+                <a href="../../investment2.html" class="bottom-menu__btn">
+                    <img src="../../images/icon_side-history.png" alt="">
+                    <div>历史帐务</div>
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../js/slick.min.js"></script>
+    <script src="../../js/sweetalert2.min.js"></script>
+    <script src="../../js/moment-with-locales.min.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/clipboard.min.js"></script>
+    <script src="../../js/imask.js"></script>
+    <script src="../../js/CLDRPluralRuleParser.js"></script>
+
+    <script>
+        $(function() {
+            $('.loading').hide();
+
+            var search = location.search;
+            var time = search.substring(search.indexOf("=") + 1);
+
+            function getDay(day){
+                var today = new Date(time);
+                var targetday_milliseconds=today.getTime() + 1000*60*60*24*day;
+                today.setTime(targetday_milliseconds); //注意，这行是关键代码
+                var tYear = today.getFullYear();
+                var tMonth = today.getMonth();
+                var tDate = today.getDate();
+                tMonth = doHandleMonth(tMonth + 1);
+                tDate = doHandleMonth(tDate);
+                return tYear+"-"+tMonth+"-"+tDate;
+            }
+            function doHandleMonth(month){
+                var m = month;
+                if(month.toString().length == 1){
+                    m = "0" + month;
+                }
+                return m;
+            }
+            console.log(getDay(1))
+
+
+
+            $.ajax({
+                type: 'GET',
+                data:{'StartTime': time, EndTime:getDay(1)},
+                url: 'https://www.max68888.com/max/trasactionOrder/getList',
+                xhrFields: {
+                    withCredentials: true
+                },
+                success:function (res){
+                    console.log(res.data)
+                    sorting(res.data)
+                }
+            })
+
+            function sorting(data){
+
+
+                $.each( data, function (i , item){
+                    $(".total-count").text(i+1)
+
+                    var sunyi = item.resultEarn
+                    var pick = '赢'
+                    if(item.pickResult = 2){
+                        var pick = '输'
+                        sunyi = '-'+item.resultEarn
+                    }
+                    console.log(JSON.stringify(item))
+                    var box =
+                        '<div class="investment-list">' +
+                        '  <div class="d-flex align-items-center justify-content-between investment-list__header p-3 pe-5">' +
+                        '    <div class="">' +
+                        '      <div class="investment-list__number">日期:'+item.createTime+'</div>' +
+                        '      <div class="investment-list__time">订单号:'+item.trasactionOrder+'</div>' +
+                        '      <div class="investment-list__time d-block d-sm-none">开赛时间:'+item.gameStartTime+'</div>' +
+                        '    </div>' +
+                        '    <div class="investment-list__match d-sm-block d-none">开赛时间 '+item.gameStartTime+'</div>' +
+                        '    <!-- 手機版顯示連結 -->' +
+                        '    <a href="../investment/info.html?id='+item.id+'" class="d-sm-none d-block fas fa-caret-right investment-downicon"></a>' +
+                        '    <!-- 電腦開合開關 -->' +
+                        '    <i class="fas fa-caret-up investment-downicon d-sm-block d-none" data-bs-toggle="collapse" data-bs-target="#collapse_'+i+'"></i>' +
+                        '' +
+                        '  </div>' +
+                        '  <div id="collapse_'+i+'" class="accordion-collapse collapse show" data-bs-parent="#much">' +
+                        '    <div class="investment-list__body p-3">' +
+                        '      <div class="row m-0 investment-list__table">' +
+                        '        <div class="col-md-2 col-6 px-1 table-tr">' +
+                        '          <div class="table-th">'+item.maxGameName+'</div>' +
+                        '          <div class="table-td">'+item.maxHomeTeam+' V.S '+item.maxCustomerTeam+'</div>' +
+                        '        </div>' +
+                        '        <div class="col-md-2 col-6 d-sm-block d-none px-1 table-tr">' +
+                        '          <div class="table-th">项目</div>' +
+                        '          <div class="table-td">反波胆'+item.maxScore+'</div>' +
+                        '        </div>' +
+                        '        <div class="col-md-2 col-6 px-1 table-tr">' +
+                        '          <div class="table-th">交易金额</div>' +
+                        '          <div class="table-td">'+item.amount+'</div>' +
+                        '        </div>' +
+                        '        <div class="col-md-2 col-6 d-sm-block d-none px-1 table-tr">' +
+                        '          <div class="table-th">实际损益金额</div>' +
+                        '          <div class="table-td">$'+sunyi+'</div>' +
+                        '        </div>' +
+                        '        <div class="col-md-2 col-6 d-sm-block d-none px-1 table-tr">' +
+                        '          <div class="table-th">投资结果</div>' +
+                        '          <div class="table-td">'+pick+'</div>' +
+                        '        </div>' +
+                        '        <div class="col-md-2 col-6 d-sm-block d-none px-1 table-tr">' +
+                        '          <div class="table-th">获利%</div>' +
+                        '          <div class="table-td">'+item.maxEarn+'%</div>' +
+                        '        </div>' +
+                        '        <div class="col-md-2 col-6 px-1 table-tr">' +
+                        '          <div class="table-th">预估获利</div>' +
+                        '          <div class="table-td">$'+item.resultEarn+'</div>' +
+                        '        </div>' +
+                        '        <div class="col-md-2 col-6 px-1 table-tr">' +
+                        '          <div class="table-th">投资状态</div>' +
+                        '          <div class="table-td">已结算</div>' +
+                        '        </div>' +
+                        '        <div class="col-md-2 col-6 d-sm-block d-none px-1 table-tr">' +
+                        '          <div class="table-th">注单类型</div>' +
+                        '          <div class="table-td">普通注单</div>' +
+                        '        </div>' +
+                        '        <div class="col-md-2 col-6 d-sm-block d-none px-1 table-tr">' +
+                        '          <div class="table-th">赛事结果</div>' +
+                        '          <div class="table-td">'+item.goalResult+'</div>' +
+                        '        </div>' +
+                        '      </div>' +
+                        '    </div>' +
+                        '  </div>' +
+                        '</div>'
+
+                    $("#much").append(box)
+
+                })
+            }
+
+        });
+    </script>
+
+</body>
+</html>
