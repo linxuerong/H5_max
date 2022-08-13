@@ -152,7 +152,7 @@
       </div>
     </div>
     <div class="d-grid gap-2 mt-3">
-      <button type="button" class="btn btn-danger btn-lg cancel-bet" >撤单</button>
+      <button type="button" class="btn btn-danger btn-lg cancel-bet" style="display: none" >撤单</button>
     </div>
   </div>
 
@@ -272,6 +272,8 @@
             clearTimeout(Stime)
 
             $(".btn-lg").hide()
+          }else {
+            $(".btn-lg").show()
           }
 
         },1000)

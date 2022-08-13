@@ -94,7 +94,7 @@
   </header>
 
   <div class="mobile-market text-center px-2">
-    <div class="market-refresh my-3">成交量:474,788.64 </div>
+    <div class="market-refresh my-3">成交量: <span id="cjl"></span></div>
     <div class="market-info"> </div>
     <div class="page position-relative market mb-5 pb-5">
       <div class="row m-0 d-flex py-2 align-items-center table-th">
@@ -344,6 +344,12 @@
 
   <script>
     $(function() {
+      var Tx = 90000000;
+      var Ty = 60000000;
+      var rand = parseInt(Math.random() * (Tx - Ty + 1) + Ty);
+
+      $("#cjl").text(Number(rand / 100).toLocaleString())
+
 
       var search = location.search;
       var id = search.substring(search.indexOf("=") + 1);
@@ -358,7 +364,7 @@
         success: function(res) {
           console.log(res)
           let item = res.data;
-          var text = item.maxStartTime+"\n"+ item.maxGameName+"<br>" +
+          var text = DatdIos(item.maxStartTime)+"\n"+ item.maxGameName+"<br>" +
                   item.maxHomeTeam+"<br>VS<br>"+item.maxCustomerTeam
           $('.market-info').html(text)
           $('.market-refresh').html('成交量:'+item.trasactionSize)

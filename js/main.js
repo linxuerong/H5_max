@@ -17,6 +17,10 @@ function investmentListHide() {
 		}
 	});
 }
+function DatdIos(time) {
+	var datd = time.replace(/\-/g, '/');
+	return datd;
+}
 
 function DatdHuan(time) {
 	var datd = time.replace(/\-/g, '/');
