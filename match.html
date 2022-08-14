@@ -262,20 +262,22 @@
                     end = getDay(-2) + ' 23:59:59';
                 }
 
+                $.ajax({
+                    type: 'GET',
+                    data:{'StartTime': start, 'EndTime':end},
+                    url: 'https://www.max68888.com/max/goldResult/getList',
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    success: function(res) {
+                        console.log(res)
+                        sorting(res.data)
+                    },
+                })
+
             }
 
-            $.ajax({
-                type: 'GET',
-                data:{'StartTime': start, 'EndTime':end},
-                url: 'https://www.max68888.com/max/goldResult/getList',
-                xhrFields: {
-                    withCredentials: true
-                },
-                success: function(res) {
-                    console.log(res)
-                    sorting(res.data)
-                },
-            })
+
 
             function sorting(data){
                 $.each( data, function (i , item){
