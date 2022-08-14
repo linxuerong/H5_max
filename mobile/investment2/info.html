@@ -244,9 +244,11 @@
           $(".total-count").text(i+1)
 
           var sunyi = item.resultEarn
-          var pick = '赢'
-          if(item.pickResult = 2){
-            var pick = '输'
+          var pick = '-'
+          if(item.pickResult = 1){
+            pick = '赢'
+          }else if(item.pickResult = 2){
+            pick = '输'
             sunyi = '-'+item.resultEarn
           }
           console.log(JSON.stringify(item))

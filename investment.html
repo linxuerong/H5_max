@@ -321,7 +321,10 @@
             $.each( data, function (i , item){
 
                 var sunyi = item.resultEarn
-                var pick = '赢'
+                var pick = '-'
+                if(item.pickResult = 1){
+                    pick = '赢'
+                }
                 if(item.pickResult = 2){
                     var pick = '输'
                     sunyi = '-'+item.resultEarn
