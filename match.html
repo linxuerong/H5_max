@@ -101,9 +101,8 @@
     <div class="container-fluid page p-2 py-sm-5 py-3">
         <div class="dropdown filter ms-auto">
             <select id="range" class="btn dropdown-toggle d-flex justify-content-between align-items-center w-100" style="background: #374874;color: #d8e1f2;" autocomplete="off">
-                <option value="last0">2022-08-03 ~ 2022-08-04</option>
-                <option value="last1">2022-08-02 ~ 2022-08-03</option>
-                <option value="last2">2022-08-01 ~ 2022-08-02</option>
+<!--                <option value="last0">2022-08-03 ~ 2022-08-04</option>-->
+
             </select>
         </div>
         <div class="my-4">
@@ -194,6 +193,7 @@
 
     <script>
         $(function() {
+            $('.loading').hide();
             $.ajax({
                 type: 'GET',
                 url: 'https://www.max68888.com/max/member/getInfo',
@@ -218,9 +218,55 @@
 
     <script>
         $(function() {
+            function getDay(day){
+                var today = new Date(time);
+                var targetday_milliseconds=today.getTime() + 1000*60*60*24*day;
+                today.setTime(targetday_milliseconds); //注意，这行是关键代码
+                var tYear = today.getFullYear();
+                var tMonth = today.getMonth();
+                var tDate = today.getDate();
+                tMonth = doHandleMonth(tMonth + 1);
+                tDate = doHandleMonth(tDate);
+                return tYear+"-"+tMonth+"-"+tDate;
+            }
+            function doHandleMonth(month){
+                var m = month;
+                if(month.toString().length == 1){
+                    m = "0" + month;
+                }
+                return m;
+            }
+
+
+            $('#range').append('<option value="1">'+getDay(-1)+' ~ '+ getDay(0) +'</option>')
+            $('#range').append('<option value="2">'+getDay(-2)+' ~ '+ getDay(-1) +'</option>')
+            $('#range').append('<option value="3">'+getDay(-3)+' ~ '+ getDay(-2) +'</option>')
+
+
+
+            var time = 1;
+            $('#range').change( function (){
+                time= $(this).val();
+                query();
+            })
+
+            function query() {
+                if(time == 1){
+                    start =  getDay(-1) + ' 00:00:00';
+                    end = getDay(0) + ' 23:59:59';
+                }else if(time == 2){
+                    start = getDay(-2) + ' 00:00:00';
+                    end = getDay(-1) + ' 23:59:59';
+                }else if(time == 3){
+                    start = getDay(-3) + ' 00:00:00';
+                    end = getDay(-2) + ' 23:59:59';
+                }
+
+            }
 
             $.ajax({
                 type: 'GET',
+                data:{'StartTime': start, 'EndTime':end},
                 url: 'https://www.max68888.com/max/goldResult/getList',
                 xhrFields: {
                     withCredentials: true
