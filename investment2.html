@@ -319,7 +319,8 @@
                     $("#pills_tab"+page).append(box);
 
                     Samount = Samount +amount;
-                    Samount2 = (Samount2 + rmb).toFixed(2);
+                    Samount2 = Samount2 + rmb;
+                    AllSam = (Samount2).toFixed(2)
                     if(data.length-1 == i){
 
 
@@ -327,7 +328,7 @@
                             '<div class="row m-0 text-center justify-content-between table-td mb-2">' +
                             '   <div class="col-md-1 col-4 px-0 p-3 table-list fs-5" data-title="">总计</div>' +
                             '   <div class="col-md-1 col-4 px-0 p-3 table-list fs-5" data-title="">'+Samount+'</div>' +
-                            '   <div class="col-md-1 col-4 px-0 p-3 table-list fs-5" data-title="">'+Samount2+'</div>'+
+                            '   <div class="col-md-1 col-4 px-0 p-3 table-list fs-5" data-title="">'+AllSam+'</div>'+
                             '</div>'
                         $("#pills_tab"+page).append(bottom);
 
