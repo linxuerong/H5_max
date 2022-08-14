@@ -296,7 +296,7 @@
                 $.each(data, function (i, item) {
                     var time = item.date.substr(0, 10);
                     var amount = item.amount;
-                    var rmb = amount*7
+                    var rmb = (amount*7).toFixed(2)
 
 
                     var t1 = '日期'
