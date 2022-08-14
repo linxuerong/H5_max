@@ -251,10 +251,24 @@
             })
 
             function query() {
+                var start = '',end='';
+                if(time == 0){
+                    start =  getDay(-2) + ' 22:00:00';
+                    end = getDay(0) + ' 20:00:00';
+                }else if(time == 1){
+                    start = getDay(-3) + ' 22:00:00';
+                    end = getDay(-1) + ' 22:00:00';
+                }else if(time == 2){
+                    start = getDay(-4) + ' 22:00:00';
+                    end = getDay(-2) + ' 22:00:00';
+                }
+
 
                 $.ajax({
                     type: 'GET',
-                    url: 'https://www.max68888.com/max/goldResult/getList'+time,
+                    data:{'StartTime': start, 'EndTime':end},
+                    // url: 'https://www.max68888.com/max/mask/getMaskList/',
+                    url: 'https://www.max68888.com/max/goldResult/getList',
                     xhrFields: {
                         withCredentials: true
                     },
@@ -269,6 +283,7 @@
 
 
             function sorting(data){
+                $('#table-lists').empty();
                 $.each( data, function (i , item){
                     var box =
                         '<div class="row table-lists table-td m-0 mt-sm-0 mt-3 p-0 py-3 text-center">\n' +
