@@ -238,34 +238,23 @@
             }
 
 
-            $('#range').append('<option value="1">'+getDay(-1)+' ~ '+ getDay(0) +'</option>')
-            $('#range').append('<option value="2">'+getDay(-2)+' ~ '+ getDay(-1) +'</option>')
-            $('#range').append('<option value="3">'+getDay(-3)+' ~ '+ getDay(-2) +'</option>')
+            $('#range').append('<option value="0">'+getDay(-1)+' ~ '+ getDay(0) +'</option>')
+            $('#range').append('<option value="1">'+getDay(-2)+' ~ '+ getDay(-1) +'</option>')
+            $('#range').append('<option value="2">'+getDay(-3)+' ~ '+ getDay(-2) +'</option>')
 
 
 
-            var time = 1;
+            var time = 0;
             $('#range').change( function (){
                 time= $(this).val();
                 query();
             })
 
             function query() {
-                if(time == 1){
-                    start =  getDay(-1) + ' 00:00:00';
-                    end = getDay(0) + ' 23:59:59';
-                }else if(time == 2){
-                    start = getDay(-2) + ' 00:00:00';
-                    end = getDay(-1) + ' 23:59:59';
-                }else if(time == 3){
-                    start = getDay(-3) + ' 00:00:00';
-                    end = getDay(-2) + ' 23:59:59';
-                }
 
                 $.ajax({
                     type: 'GET',
-                    data:{'StartTime': start, 'EndTime':end},
-                    url: 'https://www.max68888.com/max/goldResult/getList',
+                    url: 'https://www.max68888.com/max/goldResult/getList'+time,
                     xhrFields: {
                         withCredentials: true
                     },
