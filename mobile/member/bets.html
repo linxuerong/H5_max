@@ -254,6 +254,7 @@
       },
       success: function(res) {
         if(res.code == 0){
+          console.log(res)
           $(".UnickName").text(res.data.nickName);
           $(".Uaccount").text( res.data.account)
           Reward(res.data.maxTrasactionOrderList)
@@ -333,7 +334,7 @@
                 '</div>'
 
 
-        $('#pahe').append(box)
+        $('#much').append(box)
 
       })
 
