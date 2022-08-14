@@ -271,7 +271,7 @@
     <script>
         $(function (){
 
-            console.log("获取订单")
+            console.log("获取全部订单")
             $.ajax({
                 type: 'GET',
                 url: 'https://www.max68888.com/max/mask/getMaskList/0',
@@ -280,9 +280,8 @@
                     sorting(res.data)
                 },
             })
-            console.log("分拣数据")
             function sorting(data){
-                var allNum = 0, todayNum = 0
+                var allNum = 0;
 
                 $.each( data, function (i , item){
                     var box =
@@ -307,17 +306,50 @@
                     $(".allNum").text(allNum)
                     $('.allOrder').append(box)
 
-                    var time= DatdIos( '2022-'+item.maxStartTime)
+                })
+            }
 
-                    if(new Date(time).toDateString() == new Date().toDateString()){
-                        //今日
-                        todayNum++
-                        $(".todayNum").text(todayNum)
-                        $('.todayOrder').append(box)
-                    }
+            console.log("获取今日订单")
+            $.ajax({
+                type: 'GET',
+                url: 'https://www.max68888.com/max/mask/getMaskList/1',
+                success: function(res) {
+                    console.log(res)
+                    sorting1(res.data)
+                },
+            })
+            function sorting1(data){
+                var todayNum = 0
+
+                $.each( data, function (i , item){
+                    var box =
+                        '<div class="market-list" > <a href="./market/mobile.html?id='+item.id+'">' +
+                        ''+
+                        '    <div class="market-list__date float-end font-weight-bold" style="font-size:1.5rem;">'+ item.maxGameName+'</div>' +
+                        '    <div class="market-list__game font-weight-bold" style="font-size:1.5rem;">'+DatdIos(item.maxStartTime)+'</div>' +
+                        '    <hr class="my-2">' +
+                        '    <div class="row text-center m-0">' +
+                        '        <div class="col-6 px-0">' +
+                        '            <div class="market-list__label">主队</div>' +
+                        '            <div class="market-list__team">'+item.maxHomeTeam+'</div>' +
+                        '        </div>' +
+                        '        <div class="col-6 px-0">' +
+                        '            <div class="market-list__label">客队</div>' +
+                        '            <div class="market-list__team">'+item.maxCustomerTeam+'</div>' +
+                        '        </div>' +
+                        '    </div>' +
+                        '</a></div>'
+
+
+                    //今日
+                    todayNum++
+                    $(".todayNum").text(todayNum)
+                    $('.todayOrder').append(box)
+
 
                 })
             }
+
 
             console.log("获取明日订单")
             $.ajax({
