@@ -291,7 +291,8 @@
             function sorting(data) {
                 console.log(data)
 
-                var Samount = 0,Samount2 = 0;
+                var Samount = 0,
+                    Samount2 = 0;
 
                 $.each(data, function (i, item) {
                     var time = item.date.substr(0, 10);
@@ -320,9 +321,9 @@
 
                     Samount = Samount +amount;
                     Samount2 = Samount2 + rmb;
-                    var AllSam = (Samount2).toFixed(2)
-                    if(data.length-1 == i){
 
+                    if(data.length-1 == i){
+                        var AllSam = (Samount*7).toFixed(2);
                         var bottom =
                             '<div class="row m-0 text-center justify-content-between table-td mb-2">' +
                             '   <div class="col-md-1 col-4 px-0 p-3 table-list fs-5" data-title="">总计</div>' +
