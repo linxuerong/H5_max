@@ -201,7 +201,7 @@
 
       var search = location.search;
       var time = search.substring(search.indexOf("=") + 1);
-
+      time = DatdIos(time)
       function getDay(day){
         var today = new Date(time);
         var targetday_milliseconds=today.getTime() + 1000*60*60*24*day;
