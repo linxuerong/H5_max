@@ -240,7 +240,7 @@
           console.log(res.data)
           var item = res.data;
 
-          var sunyi = item.resultEarn
+          var sunyi = '-'
           var pick = '-'
           var start = '-';
 
@@ -248,14 +248,16 @@
           if(item.start == 0){
             start='已下单'
           }else if(item.start == 1){
+            sunyi = item.resultEarn
             pick = '赢'
             start='赢'
           }else if(item.start == 2){
+            sunyi = '-'+item.resultEarn
             pick = '输'
             start='输'
-            sunyi = '-'+item.resultEarn
           }else if(item.start == 3){
             start='撤单'
+
           }
           $("#start").text(start)
 
