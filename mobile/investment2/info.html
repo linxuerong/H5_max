@@ -112,7 +112,7 @@
         <div class="investment-account">
           <img src="../../images/icons-wallet.png" alt="">
           <div>流水</div>
-          <div class="total-amount">0.00</div>
+          <div class="total-amount ">0.00</div>
         </div>
       </div>
       <div class="col-sm-2 col-6 p-1">
@@ -227,29 +227,42 @@
       $.ajax({
         type: 'GET',
         data:{'StartTime': time, EndTime:getDay(1)},
-        url: 'https://www.max68888.com/max/trasactionOrder/getList',
+        url: 'https://www.max68888.com/max/trasactionOrder/orderResultRecord',
         xhrFields: {
           withCredentials: true
         },
         success:function (res){
+
+          $(".total-count").text(res.data.orderSize)
+          $(".total-amount").text(res.data.orderBill)
+          $(".total-balance").text(res.data.resultEarn)
           console.log(res.data)
-          sorting(res.data)
+          sorting(res.data.maxTrasactionOrderList)
         }
       })
 
       function sorting(data){
 
-
         $.each( data, function (i , item){
-          $(".total-count").text(i+1)
 
-          var sunyi = item.resultEarn
+          var sunyi = '-'
           var pick = '-'
-          if(item.pickResult = 1){
+          var start = '-';
+
+          // 0 下单 1赢 2 输 3撤单
+          if(item.pickResult == 0){
+            start='已下单'
+          }else if(item.pickResult == 1){
+            sunyi = item.resultEarn
             pick = '赢'
-          }else if(item.pickResult = 2){
-            pick = '输'
+            start='已结算'
+          }else if(item.pickResult == 2){
             sunyi = '-'+item.resultEarn
+            pick = '输'
+            start='已结算'
+          }else if(item.pickResult == 3){
+            start='撤单'
+
           }
           console.log(JSON.stringify(item))
           var box =
@@ -300,7 +313,7 @@
                     '        </div>' +
                     '        <div class="col-md-2 col-6 px-1 table-tr">' +
                     '          <div class="table-th">投资状态</div>' +
-                    '          <div class="table-td">已结算</div>' +
+                    '          <div class="table-td">'+start+'</div>' +
                     '        </div>' +
                     '        <div class="col-md-2 col-6 d-sm-block d-none px-1 table-tr">' +
                     '          <div class="table-th">注单类型</div>' +
