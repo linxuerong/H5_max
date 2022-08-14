@@ -226,7 +226,7 @@
 
       $.ajax({
         type: 'GET',
-        data:{'StartTime': time, EndTime:getDay(1)},
+        data:{'StartTime': getDay(0), EndTime:getDay(1)},
         url: 'https://www.max68888.com/max/trasactionOrder/orderResultRecord',
         xhrFields: {
           withCredentials: true
@@ -235,7 +235,7 @@
 
           $(".total-count").text(res.data.orderSize)
           $(".total-amount").text(res.data.orderBill)
-          $(".total-balance").text(res.data.resultEarn)
+          $(".total-balance").text(res.data.realEarn)
           console.log(res.data)
           sorting(res.data.maxTrasactionOrderList)
         }
