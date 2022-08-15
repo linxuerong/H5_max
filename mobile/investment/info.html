@@ -341,8 +341,11 @@
                   swal("操作完成",'', "success").then(function(){
                     location.reload();
                   })
+                }else {
+                  swal(res.msg, '', "error"){
+                    location.reload();
+                  });
                 }
-                swal(res.msg, '', "error");
               }
             })
           }
