@@ -252,8 +252,8 @@
             pick = '输'
             start='输'
           }else if(item.pickResult == 3){
-            start='撤单'
-
+            start='已取消'
+            $(".cancel-bet").remove();
           }
           $("#start").text(start)
           $("#jyje").text(item.amount)
