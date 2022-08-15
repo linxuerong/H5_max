@@ -191,7 +191,7 @@
           <div class="color-lbp mt-3">*请确认投资内容是否正确*</div>
           <div class="d-flex justify-content-center mt-3">
             <input type="hidden" name="amount" class="bet-amount" value="" autocomplete="off">
-            <input type="hidden" name="trasactionId" class="bet-id" value="" autocomplete="off">
+            <input type="hidden" name="maxDataId" class="maxDataId" value="" autocomplete="off">
             <div class="modal-btn mx-2" data-bs-dismiss="modal">取消</div>
             <button class="modal-btn mx-2">确认</button>
           </div>
@@ -376,6 +376,9 @@
           $(".market-main__time").text(item.maxStartTime)
           $(".market-main__title").text(item.maxGameName)
           $(".market-main__team").html( item.maxHomeTeam+"VS"+item.maxCustomerTeam)
+
+          $(".maxDataId").val(item.maxDataId)
+
         },
       })
 
