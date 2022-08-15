@@ -147,7 +147,7 @@
       </div>
     </div>
     <div class="d-grid gap-2 mt-3">
-      <button type="button" class="btn btn-danger btn-lg cancel-bet" >撤单</button>
+      <button type="button" class="btn btn-danger btn-lg cancel-bet" style="display: none">撤单</button>
     </div>
   </div>
 
@@ -327,6 +327,7 @@
           },
           dangerMode: true,
         }).then(function(willDelete){
+
           if(willDelete){
             $.ajax({
               type: 'POST',
@@ -336,8 +337,10 @@
               },
               success:function (res){
                 console.log(res)
-                if(res.code = 0){
-                  window.location.reload()
+                if(res.code == 0){
+                  swal("操作完成",'', "success").then(function(){
+                    location.reload();
+                  })
                 }
                 swal(res.msg, '', "error");
               }
