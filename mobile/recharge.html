@@ -290,12 +290,12 @@
                          balance = res.data.balance.toFixed(2)
                         $(".loginHide").remove();
 
-                        $('#qrcode').qrcode({
-                            render: "canvas", //也可以替换为table
-                            width: 150,
-                            height: 150,
-                            text: 'https://www.max68888.com/?P='+res.data.maxAccount
-                        });
+                        // $('#qrcode').qrcode({
+                        //     render: "canvas", //也可以替换为table
+                        //     width: 150,
+                        //     height: 150,
+                        //     text: 'https://www.max68888.com/?P='+res.data.maxAccount
+                        // });
 
                     }else {
                         //没有登录
@@ -356,21 +356,11 @@
 
         // 提取
         $('#withdrawal-form').on('submit', function(e){
-            // $('.loading').show();
             e.preventDefault();
+            $('.loading').show();
             $('button').attr("disabled", true);
             var form = $(this);
-
-            var amount = form.serializeArray()[1].value
-            if( amount < 16 || amount =='' ){
-                swal("最低充值金额为16U", '', 'error');
-                return
-            }else if(balance < amount){
-                swal("账户余额不足", '', 'error');
-                return
-            }
             console.log(form.serialize())
-
             $.ajax({
                 type: 'POST',
                 data: form.serialize(),
