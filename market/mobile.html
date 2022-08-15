@@ -382,12 +382,16 @@
       function sorting(data){
         $.each( data, function (i , item){
 
+          var maxEarn = toflis(item.maxEarn)+'%'
+          if(item.maxEarn == 0){
+            maxEarn='----'
+          }
 
           var box = 
                   '<div class="row m-0 d-flex table-td py-2">' +
                   '  <div class="col-2 p-0">'+item.maxScore+'</div>' +
-                  '  <div class="col-3 p-0">'+ toflis(item.maxEarn)+'%</div>' +
-                  '  <div class="col-3 p-0">'+item.maxLimitTrasaction+'</div>' +
+                  '  <div class="col-3 p-0">'+ maxEarn +'</div>' +
+                  '  <div class="col-3 p-0">'+ toflis(item.maxLimitTrasaction)+'</div>' +
                   '  <div class="col-4 p-0">' +
                   '   <button class="back-btn bet-table-button" data-bs-toggle="modal" ' +
                   'data-bs-target="#betModal" data-ratio="'+item.maxEarn+'" data-way="'+item.maxScore+'" ' +
