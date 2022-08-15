@@ -279,11 +279,11 @@
                 '                </div>' +
                 '                <div class="col-md-2 col-6 d-sm-block d-none px-1 table-tr">' +
                 '                    <div class="table-th">获利%</div>' +
-                '                    <div class="table-td">0.68%</div>' +
+                '                    <div class="table-td">'+item.maxEarn+'%</div>' +
                 '                </div>' +
                 '                <div class="col-md-2 col-6 px-1 table-tr">' +
                 '                    <div class="table-th">预估获利</div>' +
-                '                    <div class="table-td">$ '+item.maxEarn+'</div>' +
+                '                    <div class="table-td">$ '+item.resultEarn+'</div>' +
                 '                </div>' +
                 '                <div class="col-md-2 col-6 px-1 table-tr">' +
                 '                    <div class="table-th">投资状态</div>' +
@@ -302,7 +302,10 @@
                 '    </div>' +
                 '</div>'
 
-            $('#investment').append(box)
+            if(item.pickResult == 0){
+                $('#investment').append(box)
+            }
+
             
         })
     }

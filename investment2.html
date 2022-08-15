@@ -352,6 +352,16 @@
                 }
                 console.log(time,amount)
             });
+            $("#pills_tab1").on('click','.row',function(){
+                var time = $(this).data('time')
+                var amount =  $(this).find('.amount').text()
+
+                if(amount > 0){
+                    window.location.href = "mobile/investment2/info.html?time="+time;
+                }
+                console.log(time,amount)
+            });
+
 
 
 
