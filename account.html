@@ -204,11 +204,11 @@
                     <div class="row m-0 form-group my-2 align-items-center justify-content-end">
                         <label class="col-3 p-0 my-2 pe-1 text-end">手机号码</label>
                         <div class="col-9 p-0 ps-1 my-2">
-                            <input type="tel" value="136XXXX4793" placeholder="" readonly="readonly" name="phone" required="" class="w-100" autocomplete="off">
+                            <input type="tel" value="" class="phone-val" placeholder="" readonly="readonly" name="phone" required="" class="w-100" autocomplete="off">
                         </div>
                         <label class="col-3 p-0 my-2 pe-1 text-end">短信码</label>
                         <div class="col-6 p-0 ps-1 my-2">
-                            <input type="text" name="code" required="" class="w-100" autocomplete="off">
+                            <input type="text" name="dxCode" required="" class="w-100" autocomplete="off">
                         </div>
                         <div class="col-3 p-0 ps-1 my-2">
                             <button class="send-sms2 modal-btn mx-2">发送</button>
@@ -237,11 +237,11 @@
                     <div class="row m-0 form-group my-2 align-items-center justify-content-end">
                         <label class="col-3 p-0 my-2 pe-1 text-end">手机号码</label>
                         <div class="col-9 p-0 ps-1 my-2">
-                            <input type="tel" value="136XXXX4793" placeholder="" readonly="readonly" name="phone" required="" class="w-100" autocomplete="off">
+                            <input type="tel" value="" class="phone-val" placeholder="" readonly="readonly" name="phone" required="" class="w-100" autocomplete="off">
                         </div>
                         <label class="col-3 p-0 my-2 pe-1 text-end">短信码</label>
                         <div class="col-6 p-0 ps-1 my-2">
-                            <input type="text" name="code" required="" class="w-100" autocomplete="off">
+                            <input type="text" name="dxCode" required="" class="w-100" autocomplete="off">
                         </div>
                         <div class="col-3 p-0 ps-1 my-2">
                             <button class="send-sms2 modal-btn mx-2">发送</button>
@@ -249,7 +249,7 @@
                         <hr>
                         <label class="col-3 p-0 my-2 pe-1 text-end">新密码</label>
                         <div class="col-9 p-0 my-2">
-                            <input type="password" name="password" required="" class="w-100" autocomplete="off">
+                            <input type="password" name="payPassword" required="" class="w-100" autocomplete="off">
                         </div>
                     </div>
                     <div class="d-flex justify-content-center mt-4">
@@ -346,9 +346,14 @@
                         $('.uAccount').html(res.data.maxAccount)
                         $('.uLevel').html(res.data.maxLevel)
 
-                        $('.uBalance').html(res.data.balance.toFixed(2))
+                        $('.uBalance').html(res.data.balance.toFixed(2));
+
+                        var p1 = res.data.maxMobile.substr(0, 3);
+                        var p2 = res.data.maxMobile.substr(7, 10);
+                        $(".phone-val").val(p1+'XXXX'+p2);
 
                         $(".loginHide").remove();
+
 
                         $('#qrcode').qrcode({
                             render: "canvas", //也可以替换为table
@@ -368,6 +373,78 @@
     </script>
 
     <script>
+        $(function () {
+            //发送短信
+            $('.send-sms2').on('click', function(e){
+                e.preventDefault();
+                $('button').attr("disabled", true);
+                $.ajax({
+                    type: 'POST',
+                    url: 'https://www.max68888.com/max/msg/sendMymsg',
+                    success: function (res) {
+                        if(res.code == 0){
+                            swal("短信码已发送",'', "success");
+                        }
+                        else{
+                            swal(res.msg, '', "error");
+                        }
+                        $('button').attr("disabled", false);
+                    }
+                });
+            });
+
+
+            // 修改登入密码
+            // login-password-form
+            // /max/member/updatePassword
+            $('#login-password-form').on('submit', function(e){
+                e.preventDefault();
+                $('button').attr("disabled", true);
+                var form = $(this);
+                $.ajax({
+                    type: 'POST',
+                    data: form.serialize(),
+                    url: 'https://www.max68888.com/max/member/updatePassword',
+                    success: function (res) {
+                        if(res.code == 0){
+                            swal(res.msg,"请重新登入", "success").then(function(){
+                                location.href="https://www.max68888.com/max/logout";
+                            });
+                        }
+                        else{
+                            swal(res.msg, '', "error");
+                        }
+                        $('button').attr("disabled", false);
+                    }
+                });
+            });
+
+            // 修改提领密码
+            // withdrawal-password-form
+            // /max/member/updatePayPassword
+            $('#withdrawal-password-form').on('submit', function(e){
+                e.preventDefault();
+                $('button').attr("disabled", true);
+                var form = $(this);
+                $.ajax({
+                    type: 'POST',
+                    data: form.serialize(),
+                    url: 'https://www.max68888.com/max/member/updatePayPassword',
+                    success: function (res) {
+                        if(res.code == 0){
+                            swal(res.msg,'', "success");
+                            $('#withdrawal-password-form').trigger('reset');
+                            $('#editWithdrawalPasswordModal').modal('hide');
+                        }
+                        else{
+                            swal(res.msg, '', "error");
+                        }
+                        $('button').attr("disabled", false);
+                    }
+                });
+            });
+
+        })
 
     </script>
 
