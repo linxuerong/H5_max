@@ -322,12 +322,19 @@
 
                 var sunyi = item.resultEarn
                 var pick = '-'
-                if(item.pickResult = 1){
+                var star = '-'
+                if(item.pickResult = 0){
                     pick = '赢'
-                }
-                if(item.pickResult = 2){
+                    star="已下单"
+                }else  if(item.pickResult = 1){
+                    pick = '赢'
+                    star="已结算"
+                }else  if(item.pickResult = 2){
                     var pick = '输'
+                    star="已结算"
                     sunyi = '-'+item.resultEarn
+                }else  if(item.pickResult = 3){
+                    star="已取消"
                 }
 
                 var box =
@@ -378,7 +385,7 @@
                     '        </div>' +
                     '        <div class="col-md-2 col-6 px-1 table-tr">' +
                     '          <div class="table-th">投资状态</div>' +
-                    '          <div class="table-td">已结算</div>' +
+                    '          <div class="table-td">'+star+'</div>' +
                     '        </div>' +
                     '        <div class="col-md-2 col-6 d-sm-block d-none px-1 table-tr">' +
                     '          <div class="table-th">注单类型</div>' +
