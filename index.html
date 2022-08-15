@@ -84,7 +84,7 @@
 					欢迎
 				</div>
 				<a class="loginShow nav-link header-login text-end py-0 d-blck pe-2" href="/max/logout">登出</a>
-				<a class="loginHide nav-link header-login py-0" href="#" >登入</a>
+				<a class="loginHide nav-link header-login py-0 loginNone" href="#" >登入</a>
 			</div>
 		</div>
 	</nav>
@@ -247,7 +247,7 @@
 					</div>
 				</div>
 				<div class="d-flex justify-content-center mt-4">
-					<button type="submit" class="modal-btn mx-2">登入</button>
+					<button type="submit" class="modal-btn mx-2 loginNone" >登入</button>
 					<div class="modal-btn mx-2" data-bs-toggle="modal" data-bs-target="#signUpModal">注册
 					</div>
 				</div>
@@ -408,7 +408,7 @@
 				<img src="./images/icon_side-ann.png" alt="">
 				<div>网站公告</div>
 			</a>
-			<a href="https://direct.lc.chat/14165448/" target="_blank" class="side-menu__btn">
+			<a id="kefu" class="side-menu__btn">
 				<img src="./images/icon_side-contact.png" alt="">
 				<div>线上客服</div>
 			</a>
@@ -849,6 +849,32 @@
 				});
 	}
 </script>
+<!--<script>-->
+<!--	(function() {-->
+<!--		_s = document.createElement('script');-->
+<!--		_s.src="https://service.max68888.com/customerServer.js"-->
+<!--		_s.onload = function(){-->
+<!--			var option = {-->
+<!--				"authInit":true,-->
+<!--				openUrl: 'https://service.max68888.com',-->
+<!--				token: '1cdefdbc31a297d7cd0705bc71352b50',-->
+<!--				kefuid:'',//默认为空自动对接客服，可填写指定客服ID-->
+<!--				isShowTip: false, // 初始化成功后，界面右下角会自动创建 “联系客服按钮”， 如无需默认展示，则填写false即可,默认为true-->
+<!--				mobileIcon: '', //  手机端悬浮客服图片-->
+<!--				pcIcon: '', // pc端悬浮客服图片-->
+<!--				windowStyle:'center',//默认空 右下角小弹窗， center 普通中间弹窗样式-->
+<!--			};-->
+<!--			window.canCustomerServer = new initCustomerServer(option);-->
+<!--			window.canCustomerServer.init();-->
+<!--		}-->
+<!--		document.head.appendChild(_s)-->
+<!--	})();-->
+<!--	-->
+<!--	$("#kefu").on('click' , function () {-->
+<!--		console.log("客服")-->
+<!--		window.canCustomerServer.getCustomeServer();-->
+<!--	})-->
+<!--</script>-->
 
 
 </body>
