@@ -377,8 +377,6 @@
           $(".market-main__title").text(item.maxGameName)
           $(".market-main__team").html( item.maxHomeTeam+"VS"+item.maxCustomerTeam)
 
-          $(".maxDataId").val(item.maxDataId)
-
         },
       })
 
@@ -398,7 +396,7 @@
                   '  <div class="col-4 p-0">' +
                   '   <button class="back-btn bet-table-button" data-bs-toggle="modal" ' +
                   'data-bs-target="#betModal" data-ratio="'+item.maxEarn+'" data-way="'+item.maxScore+'" ' +
-                  'data-bet_id="'+item.id+'">下单</button>'
+                  'data-bet_id="'+item.id+'" data-max='+item.maxDataId+'>下单</button>'
                   '  </div>' +
                   '</div>'
           $('#page').append(box)
@@ -436,6 +434,7 @@
       $('.modal-bet-way').text($(this).data('way'));
       $('.modal-bet-amount').val('');
       $('.modal-bet-profit').text(0);
+      $(".maxDataId").val($(this).data('max'))
     });
 
 
