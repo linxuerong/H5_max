@@ -107,8 +107,8 @@
         <div class="investment-list__body p-3">
           <div class="row m-0 investment-list__table">
             <div class="col-md-2 col-6 px-1 table-tr">
-              <div class="table-th league" id="Stype">中乙</div>
-              <div class="table-td team" id="saiVs">湖北青年星 V.S 青岛红狮</div>
+              <div class="table-th league" id="Stype"></div>
+              <div class="table-td team" id="saiVs">-- V.S --</div>
             </div>
             <div class="col-md-2 col-6 px-1 table-tr">
               <div class="table-th">内容</div>
@@ -116,23 +116,23 @@
             </div>
             <div class="col-md-2 col-6 px-1 table-tr">
               <div class="table-th">交易金额</div>
-              <div class="table-td amount" id="jyje">64.22</div>
+              <div class="table-td amount" id="jyje">0:00</div>
             </div>
             <div class="col-md-2 col-6 px-1 table-tr">
               <div class="table-th">赛事状态</div>
-              <div class="table-td status" id="start">已下单</div>
+              <div class="table-td status" id="start">已下單</div>
             </div>
             <div class="col-md-2 col-6 px-1 table-tr">
               <div class="table-th">获利%</div>
-              <div class="table-td ratio" id="hl">0.74%</div>
+              <div class="table-td ratio" id="hl">0.00%</div>
             </div>
             <div class="col-md-2 col-6 px-1 table-tr">
               <div class="table-th">赛事结果</div>
-              <div class="table-td score" id="jg">-</div>
+              <div class="table-td score">-</div>
             </div>
             <div class="col-md-2 col-6 px-1 table-tr">
               <div class="table-th">预估获利</div>
-              <div class="table-td will-win" id="yghl">0.43</div>
+              <div class="table-td will-win" id="yghl">0.00</div>
             </div>
             <div class="col-md-2 col-6 px-1 table-tr">
               <div class="table-th">实际损益</div>
@@ -247,10 +247,12 @@
             sunyi = item.resultEarn
             pick = '赢'
             start='赢'
+            $("#js").css({'color':"#F00"})
           }else if(item.pickResult == 2){
             sunyi = '-'+item.resultEarn
             pick = '输'
             start='输'
+            $("#js").css({'color':"#000"})
           }else if(item.pickResult == 3){
             start='已取消'
             $(".cancel-bet").remove();
