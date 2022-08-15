@@ -147,7 +147,7 @@
       </div>
     </div>
     <div class="d-grid gap-2 mt-3">
-      <button type="button" class="btn btn-danger btn-lg cancel-bet" style="display: none" >撤单</button>
+      <button type="button" class="btn btn-danger btn-lg cancel-bet" >撤单</button>
     </div>
   </div>
 
@@ -224,7 +224,7 @@
       var search = location.search;
       var id = search.substring(search.indexOf("=") + 1);
       console.log(id)
-
+      var Data = [];
       $.ajax({
         type: 'GET',
         url: 'https://www.max68888.com//max/trasactionOrder/getTrasaction/'+id,
@@ -234,6 +234,7 @@
         success:function (res){
           console.log(res.data)
           var item = res.data;
+          Data = res.data;
 
           var sunyi = '-'
           var pick = '-'
@@ -287,24 +288,63 @@
         },1000)
       }
 
-      $('.btn-lg').on('click' , function (){
-        $.ajax({
-          type: 'POST',
-          url: 'https://www.max68888.com/max/trasactionOrder/cancelTrasaction?trasactionId='+id,
-          xhrFields: {
-            withCredentials: true
-          },
-          success:function (res){
-            console.log(res)
-            if(res.code = 0){
-              window.location.reload()
+      // $('.btn-lg').on('click' , function (){
+      //   $.ajax({
+      //     type: 'POST',
+      //     url: 'https://www.max68888.com/max/trasactionOrder/cancelTrasaction?trasactionId='+id,
+      //     xhrFields: {
+      //       withCredentials: true
+      //     },
+      //     success:function (res){
+      //       console.log(res)
+      //       if(res.code = 0){
+      //         window.location.reload()
+      //       }
+      //
+      //       swal(res.msg, '', "error");
+      //     }
+      //   })
+      // })
+
+      $(document).on('click', '.cancel-bet', function(){
+        swal({
+          title: "请确认撤单内容",
+          text: '联盟：'+ Data.maxCustomerTeam+'\n'+
+                  '队伍：'+Data.maxHomeTeam+'VS'+Data.maxGameName+'\n'+
+                  '项目：反波胆 '+Data.maxScore +'\n'+
+                  '金额：'+ Data.amount,
+          icon: "warning",
+          buttons: {
+            cancel: {
+              text: "取消",
+              visible: true,
+              className: "",
+              closeModal: true,
+            },
+            confirm: {
+              text: "确认",
             }
-
-            swal(res.msg, '', "error");
+          },
+          dangerMode: true,
+        }).then(function(willDelete){
+          if(willDelete){
+            $.ajax({
+              type: 'POST',
+              url: 'https://www.max68888.com/max/trasactionOrder/cancelTrasaction?trasactionId='+id,
+              xhrFields: {
+                withCredentials: true
+              },
+              success:function (res){
+                console.log(res)
+                if(res.code = 0){
+                  window.location.reload()
+                }
+                swal(res.msg, '', "error");
+              }
+            })
           }
-        })
-      })
-
+        });
+      });
 
     });
   </script>
