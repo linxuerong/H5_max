@@ -326,7 +326,13 @@
                         }
 
                         $("#Limit").text(res.data.withdrawFreeLimit); //剩余次数
-                        $("#trasacionBillLimit").text(res.data.trasacionBillLimit)//未达流水
+
+                        if(res.data.trasacionBillLimit > 0){
+                            ("#trasacionBillLimit").text("------")
+                        }else {
+                            $("#trasacionBillLimit").text("0.00")
+                        }
+                        // $("#trasacionBillLimit").text(res.data.trasacionBillLimit)//未达流水
                     }
                 }
             })
