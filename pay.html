@@ -7,7 +7,7 @@
 		<title>MAX</title>
 		<link href="./css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="./css/main.css">
-		<link rel="stylesheet" href="../css/main2.css">
+		<link rel="stylesheet" href="./css/main2.css">
 		<link rel="stylesheet" href="./css/all.css">
 
 		<link rel="stylesheet" type="text/css" href="./css/slick.css"/>
@@ -15,47 +15,48 @@
 		<link href="./css/sweetalert2.css" rel="stylesheet" type="text/css">
 
 		<style>
-			.mian {	background-image: url('../images/ticket-bg.svg')}
+			.mian {	background-image: url('./images/ticket-bg.svg')}
 
 		</style>
 
 	</head>
 	<body>
 		<div class="loading">
-			<img src="../images/MAX_logo.png" alt="">
+			<img src="./images/MAX_logo.png" alt="">
 		</div>
 		<!--头部-->
 		<header class="header-wrap">
-			<a class="navbar-brand header-logo" href="./">
-				<img src="images/MAX_logo.png" alt="">
+			<a class="navbar-brand header-logo" href="/">
+				<img src="./images/MAX_logo.png" alt="">
 			</a>
 			<nav class="navbar navbar-expand-lg header py-lg-4 py-2">
 				<div class="container-fluid position-relative px-1">
-					<img class="navbar-toggler p-0" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-						 aria-controls="offcanvasNavbar" src="images/menu-btn.png" alt="">
+					<img class="navbar-toggler p-0" src="./images/back.png" alt=""
+						 onclick="javascript:history.back();">
 					<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
 						 aria-labelledby="offcanvasNavbarLabel">
 						<div class="offcanvas-body justify-content-between align-items-center p-0">
 							<div class="flex-column">
-								<div class="header-info d-lg-block d-none px-2 ">
+								<div class="header-info d-lg-block d-none px-2">
 									<span class="header-time"></span> ( 北京标准时间 ) ｜ 线上人数 ：<span class="rand"></span>
 								</div>
 								<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 									<li class="nav-item d-sm-none d-blck">
-										<a class="nav-link px-2 pb-0" href="account.html">中心钱包</a>
+										<a   class="nav-link px-2 pb-0" href="./account.html">中心钱包</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link px-2 pb-0" href="./market.html">市场列表</a>
+										<a   class="nav-link px-2 pb-0" href="./market.html">市场列表</a>
 									</li>
 									<li class="nav-item d-sm-none d-blck">
-										<a class="nav-link px-2 pb-0" href="trade.html">存提纪录</a>
+										<a   class="nav-link px-2 pb-0" href="./trade.html">存提纪录</a>
 									</li>
 									<li class="nav-item d-sm-block">
-										<a class="nav-link px-2 pb-0" href="./investment.html">投资纪录</a>
+										<a   class="nav-link px-2 pb-0" href="./investment.html">投资纪录</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link px-2 pb-0" href="./match.html">赛事结果</a>
+										<a   class="nav-link px-2 pb-0" href="./match.html">赛事结果</a>
 									</li>
+
 									<li class="nav-item">
 										<a class="nav-link px-2 pb-0" href="./immediate.html">即时比分</a>
 									</li>
@@ -78,10 +79,7 @@
 										   href="./mobile/help/rule.html">规则条款</a>
 									</li>
 									<li class="nav-item d-sm-none d-blck">
-										<a class="nav-link px-2 pb-0" href="mobile/help.html">帮助中心</a>
-									</li>
-									<li class="nav-item d-sm-none d-blck">
-										<a class="nav-link px-2 pb-0" href="/max/logout">登出</a>
+										<a class="nav-link px-2 pb-0" href="help.html">帮助中心</a>
 									</li>
 								</ul>
 							</div>
@@ -99,6 +97,7 @@
 				</div>
 			</nav>
 		</header>
+
 
 		<div class="mian-wrap">
 			<main class="mian">
@@ -193,7 +192,7 @@
 					$("#times").text(m+":"+s)
 
 					if(time < 0){
-						window.location.replace("index.html");
+
 					}
 
 				},1000)
@@ -213,6 +212,8 @@
 			});
 		</script>
 		<script>
+
+
 			function getQueryVariable(variable) {
 				var query = window.location.search.substring(1);
 				var vars = query.split("&");
@@ -225,7 +226,7 @@
 				return (false);
 			}
 			console.log(getQueryVariable('amount'))
-			// /max/order/pay
+
 			$.ajax({
 				type: 'POST',
 				data: {amount: getQueryVariable('amount')},
@@ -250,7 +251,9 @@
 							text: item.channelAddress
 						});
 					}else {
-						swal(res.msg, '', "error");
+						swal(res.msg, '', "error").then( () =>{
+							window.location.replace("https://www.max68888.com/mobile/recharge.html");
+						});
 					}
 					console.log(res)
 
