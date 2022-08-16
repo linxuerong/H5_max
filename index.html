@@ -59,10 +59,13 @@
 							<li class="nav-item">
 								<a class="nav-link px-2 pb-0" href="./announcement.html">最新消息</a>
 							</li>
-							<li class="nav-item  d-sm-none d-blck">
-								<a class="nav-link dropdown-toggle onKefu" >线上客服</a>
+							<li class="nav-item dropdown d-sm-none d-blck">
+								<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">线上客服</a>
+								<div class="dropdown-menu" >
+									<a class="nav-link px-2 pb-0 text-black onKefu" >线路1</a>
+									<a class="nav-link px-2 pb-0 text-black onKefu" >线路2</a>
+								</div>
 							</li>
-
 							<li class="nav-item d-sm-none d-blck">
 								<a class="nav-link px-2 pb-0"
 								   href="./mobile/help/rule.html">规则条款</a>
@@ -408,7 +411,7 @@
 				<img src="./images/icon_side-ann.png" alt="">
 				<div>网站公告</div>
 			</a>
-			<a id="kefu" class="side-menu__btn">
+			<a class="side-menu__btn onKefu">
 				<img src="./images/icon_side-contact.png" alt="">
 				<div>线上客服</div>
 			</a>
@@ -849,32 +852,14 @@
 				});
 	}
 </script>
-<!--<script>-->
-<!--	(function() {-->
-<!--		_s = document.createElement('script');-->
-<!--		_s.src="https://service.max68888.com/customerServer.js"-->
-<!--		_s.onload = function(){-->
-<!--			var option = {-->
-<!--				"authInit":true,-->
-<!--				openUrl: 'https://service.max68888.com',-->
-<!--				token: '1cdefdbc31a297d7cd0705bc71352b50',-->
-<!--				kefuid:'',//默认为空自动对接客服，可填写指定客服ID-->
-<!--				isShowTip: false, // 初始化成功后，界面右下角会自动创建 “联系客服按钮”， 如无需默认展示，则填写false即可,默认为true-->
-<!--				mobileIcon: '', //  手机端悬浮客服图片-->
-<!--				pcIcon: '', // pc端悬浮客服图片-->
-<!--				windowStyle:'center',//默认空 右下角小弹窗， center 普通中间弹窗样式-->
-<!--			};-->
-<!--			window.canCustomerServer = new initCustomerServer(option);-->
-<!--			window.canCustomerServer.init();-->
-<!--		}-->
-<!--		document.head.appendChild(_s)-->
-<!--	})();-->
-<!--	-->
-<!--	$("#kefu").on('click' , function () {-->
-<!--		console.log("客服")-->
-<!--		window.canCustomerServer.getCustomeServer();-->
-<!--	})-->
-<!--</script>-->
+<script>
+
+
+	$("#kefu").on('click' , function () {
+		console.log("客服")
+		window.canCustomerServer.getCustomeServer();
+	})
+</script>
 
 
 </body>
