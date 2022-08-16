@@ -171,12 +171,6 @@
 
 							$(".loginHide").remove();
 
-							$('#qrcode').qrcode({
-								render: "canvas", //也可以替换为table
-								width: 150,
-								height: 150,
-								text: 'https://www.max68888.com/?P='+res.data.maxAccount
-							});
 
 						}else {
 							//没有登录
@@ -241,20 +235,27 @@
 				},
 				success: function(res) {
 					$('.loading').hide();
-					console.log(res)
+
 					var item = res.data;
+					if(res.code == 0){
+						$('.orderAmount').text(item.orderAmount +"USDT")
+						$("#orderCode").text(item.orderCode)
+						$("#channelAddress").text(item.channelAddress)
+						$("#Address").val(item.channelAddress)
 
-					$('.orderAmount').text(item.orderAmount +"USDT")
-					$("#orderCode").text(item.orderCode)
-					$("#channelAddress").text(item.channelAddress)
-					$("#Address").val(item.channelAddress)
+						$('#qrcode').qrcode({
+							render: "canvas", //也可以替换为table
+							width: 150,
+							height: 150,
+							text: item.channelAddress
+						});
+					}else {
+						swal(res.msg, '', "error");
+					}
+					console.log(res)
 
-					$('#qrcode').qrcode({
-						render: "canvas", //也可以替换为table
-						width: 150,
-						height: 150,
-						text: item.channelAddress
-					});
+
+
 				}
 			})
 
