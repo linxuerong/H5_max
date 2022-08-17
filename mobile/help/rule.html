@@ -199,7 +199,10 @@
                     withCredentials: true
                 },
                 success: function(res) {
-                    $('.loading').hide();
+                    setTimeout( () =>{
+                        $('.loading').hide();
+                    },1000)
+
                     if(res.code == 0){
                         // 成功
                         console.log(res.data)
