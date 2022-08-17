@@ -199,9 +199,9 @@
                     withCredentials: true
                 },
                 success: function(res) {
-                    // setTimeout( () =>{
-                    //     $('.loading').hide();
-                    // },1000)
+                    setTimeout( () =>{
+                        $('.loading').hide();
+                    },3000)
 
                     if(res.code == 0){
                         // 成功
