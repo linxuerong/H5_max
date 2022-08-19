@@ -100,7 +100,7 @@
 
 
 		<div class="mian-wrap">
-			<main class="mian">
+			<main class="mian" id="pay">
 				<div class="mian-top">
 					<h3>待付金额</h3>
 					<h2 class="orderAmount">0 USDT</h2>
@@ -127,8 +127,7 @@
 						<div class="mian-info__label">收款地址</div>
 						<div class="mian-info__data">
 							<span id="channelAddress"></span>
-							<input id="Address" type="hidden">
-							<i id="copy" class="far fa-copy fa-check-circle"></i>
+							<i id="copy" class="copy far fa-copy fa-check-circle" data-clipboard-text="121231321321"></i>
 						</div>
 					</div>
 				</div>
@@ -198,17 +197,7 @@
 				},1000)
 
 
-				$("#copy").click(function(){
-					$("#hide").val($("#Address").val());//这里可以获取动态数据赋值给$("#hide").val()
-					$("#hide").select();
-					try {var state = document.execCommand("copy");}
-					catch(err){var state = false;}
-					if(state){
-						alert("复制成功")
-					}else{
-						alert("复制失败")
-					}
-				})
+
 			});
 		</script>
 		<script>
@@ -242,6 +231,9 @@
 						$('.orderAmount').text(item.orderAmount +"USDT")
 						$("#orderCode").text(item.orderCode)
 						$("#channelAddress").text(item.channelAddress)
+
+						$(".copy").attr('data-clipboard-text',item.channelAddress)
+
 						$("#Address").val(item.channelAddress)
 
 						$('#qrcode').qrcode({
@@ -257,10 +249,15 @@
 					}
 					console.log(res)
 
-
-
 				}
 			})
+
+			new ClipboardJS('.copy', {
+				container: document.getElementById('pay')
+			});
+			$('.copy').on('click', function(){
+				alert("复制完成");
+			});
 
 		</script>
 
