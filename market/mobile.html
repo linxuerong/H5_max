@@ -486,7 +486,7 @@
             $('.show-bet-profit').text(item.profit);
             $('.show-bet-profit-rmb').text((item.profit*7).toFixed(2));
 
-            $("#gameStartTime").text(item.gameStartTime)
+            $("#gameStartTime").text(iosDay(item.gameStartTime))
             $("#maxCustomerTeam").text(item. maxGameName)
             $("#maxGame").text(item.maxHomeTeam +'VS'+ item.maxCustomerTeam)
             $("#maxScore").text(item.maxScore)
@@ -509,6 +509,13 @@
       });
 
     });
+
+    // console.log(iosDay('2022-08-01 20:20:20'))
+    function iosDay(time) {
+      var datd = time.replace(/\-/g, '/');
+      datd = datd.substr(5, 15);
+      return datd;
+    }
 
   </script>
 </body>
