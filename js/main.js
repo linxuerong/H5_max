@@ -49,7 +49,7 @@ function getNow(s) {
 
 $(function (){
 	var hData = [32,42,23,45,35,34,37,32,35,36,37,42,36];
-	var mData = [75,72,61,46,13,45,15];
+	var mData = [75,72,61,46,13,45,15,64,87,89,78,21,64];
 
 	setInterval( ()=>{
 		var myDate = new Date();
