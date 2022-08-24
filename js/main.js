@@ -48,6 +48,9 @@ function getNow(s) {
 }
 
 $(function (){
+	var hData = [32,42,23,45,35,34,37,32,35,36,37,42,36];
+	var mData = [75,72,61,46,13,45,15];
+
 	setInterval( ()=>{
 		var myDate = new Date();
 		var year=myDate.getFullYear();        //获取当前年
@@ -59,16 +62,20 @@ $(function (){
 		var now=year+'/'+getNow(month)+"/"+getNow(date)+" "+getNow(h)+':'+getNow(m)+":"+getNow(s);
 		$(".header-time").text(now)
 
+		var rand = hData[h%12]+''+mData[m%10]
+		$(".rand").text(rand)
+
+
 	},1000)
 
-	var Tx = 5000;
-	var Ty = 3000;
-	var rand = parseInt(Math.random() * (Tx - Ty + 1) + Ty);
-	$(".rand").text(rand)
-	setInterval(() =>{
-		var rand = parseInt(Math.random() * (Tx - Ty + 1) + Ty);
-		$(".rand").text(rand)
-	},60*1000)
+	// var Tx = 5000;
+	// var Ty = 3000;
+	// var rand = parseInt(Math.random() * (Tx - Ty + 1) + Ty);
+	// $(".rand").text(rand)
+	// setInterval(() =>{
+	// 	var rand = parseInt(Math.random() * (Tx - Ty + 1) + Ty);
+	// 	$(".rand").text(rand)
+	// },60*1000)
 
 
 })
