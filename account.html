@@ -367,7 +367,7 @@
                             render: "canvas", //也可以替换为table
                             width: 150,
                             height: 150,
-                            text: 'https://www.max68888.com/?P='+res.data.maxAccount
+                            text: httpsUrl
                         });
 
                     }else {
@@ -422,7 +422,7 @@
                     success: function (res) {
                         if(res.code == 0){
                             swal(res.msg,"请重新登入", "success").then(function(){
-                                location.href="https://www.max68888.com/max/logout";
+                                location.href="/max/logout";
                             });
                         }
                         else{
