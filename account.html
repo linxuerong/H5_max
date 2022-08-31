@@ -176,7 +176,7 @@
 
                 </div>
                 <div style="text-align:left;">
-                    推广链结：https://www.max68888.com/?P=<span class="uAccount"></span>
+                    推广链结：<span class="HtmlAccount"></span>
                     <button type="button" class="copy btn btn-primary btn-sm httpsUrl"  data-clipboard-text="">复制</button>
                 </div>
                 <div style="text-align:left;">
@@ -325,6 +325,13 @@
 
     <script>
         $(function() {
+            // $('.loading').hide();
+
+            var curWwwPath = window.document.location.href;
+            var pathName = window.document.location.pathname;
+            var pos = curWwwPath.indexOf(pathName);
+            var localhostPath = curWwwPath.substring(0, pos);
+            // console.log(localhostPath);
 
             $.ajax({
                 type: 'GET',
@@ -343,8 +350,11 @@
 
                         $('.uBalance').html(res.data.balance.toFixed(2));
 
+                        var httpsUrl = localhostPath+"/P="+res.data.maxAccount
+
+                        $(".HtmlAccount").html(httpsUrl)
                         $(".zhAccount").attr("data-clipboard-text",res.data.maxAccount )
-                        $(".httpsUrl").attr("data-clipboard-text","推广链结：https://www.max68888.com/?P="+res.data.maxAccount )
+                        $(".httpsUrl").attr("data-clipboard-text",httpsUrl)
 
                         var p1 = res.data.maxMobile.substr(0, 3);
                         var p2 = res.data.maxMobile.substr(7, 10);
