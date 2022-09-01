@@ -380,11 +380,11 @@
 					</div>
 					<label class="col-3 p-0 my-2 pe-1 text-end">手机号码</label>
 					<div class="col-9 p-0 ps-1 my-2">
-						<input type="tel" placeholder="" name="phone" required class="w-100">
+						<input type="tel" placeholder="" name="maxMobile" required class="w-100">
 					</div>
 					<label class="col-3 p-0 my-2 pe-1 text-end">短信码</label>
 					<div class="col-6 p-0 ps-1 my-2">
-						<input type="text" name="code" required class="w-100">
+						<input type="text" name="dxCode" required class="w-100">
 					</div>
 					<div class="col-3 p-0 ps-1 my-2">
 						<button class="send-sms-forget-password modal-btn mx-2">发送</button>
@@ -536,6 +536,7 @@
 			return
 		}
 
+
 		$.ajax({
 			type: 'POST',
 			url: 'https://www.max68888.com/max/message/send/'+phone.val(),
@@ -545,7 +546,7 @@
 			success: function(response) {
 				if (response.code == 0) {
 					swal("短信码已发送", '', "success")
-					sendSms();
+					sendSms('send-sms');
 				} else {
 					swal(response.msg, '', "error")
 				}
@@ -560,53 +561,57 @@
 		return pattern.test(phone);
 	}
 	//验证码倒计时
-	function sendSms(){
-		$(".send-sms ").css({'pointer-events': 'none','background':'#999'})
+	function sendSms(btn){
+		$("."+btn).css({'pointer-events': 'none','background':'#999'})
 
 		var t = 300;
 		var timer = setInterval( ()=>{
 			t--;
-			$(".send-sms ").text(t);
+			$("."+btn).text(t);
 
 			if(t<0){
 				clearInterval(timer);
-				$(".send-sms ").text('发送')
-				$(".send-sms ").css({'pointer-events': 'initial','background':'#5894ea'})
+				$("."+btn).text('发送')
+				$("."+btn).css({'pointer-events': 'initial','background':'#5894ea'})
 			}
 		},1000)
 	};
 
 
-
+	//修改密码 发送短信
 	$('.send-sms-forget-password').on('click', function(e) {
 		e.preventDefault();
+
 		var phone = $(this).closest('form').find('input[name="phone"]');
 		var account = $(this).closest('form').find('input[name="account"]');
-		if (phone.val() == '') {
-			swal("错误", "手机号码不可空白", 'error');
+
+		if(isPhoneNo(phone.val()) == false || phone.val() == '') {
+			swal("错误", "手机号码不正确", 'error');
+			return
 		} else if (account.val() == '') {
 			swal("错误", "帐号不可空白", 'error');
 		} else {
-			var form = $(this).closest('form');
-			$('button').attr("disabled", true);
 			$.ajax({
 				type: 'POST',
-				data: form.serialize(),
-				url: './forget-password-check',
+				url: 'https://www.max68888.com/max/message/send/'+phone.val(),
 				xhrFields: {
 					withCredentials: true
 				},
 				success: function(response) {
 					if (response.code == 0) {
-						swal("短信码已发送", '', "success");
+						swal("短信码已发送", '', "success")
+						sendSms('send-sms-forget-password');
 					} else {
-						swal(response.msg, '', "error");
+						swal(response.msg, '', "error")
 					}
-					$('button').attr("disabled", false);
-				}
+				},
+
 			});
+
+
 		}
 	});
+
 
 	// 注册
 	$('#register-form').on('submit', function(e) {
@@ -694,6 +699,7 @@
 		});
 	});
 
+	//修改密码
 	$('#forget-password-form').on('submit', function(e) {
 		e.preventDefault();
 		var form = $(this);
@@ -701,7 +707,7 @@
 		$.ajax({
 			type: 'POST',
 			data: form.serialize(),
-			url: './forget-password',
+			url: 'https://www.max68888.com/max/member/forgetPassword',
 			xhrFields: {
 				withCredentials: true
 			},
