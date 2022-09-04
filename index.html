@@ -13,6 +13,18 @@
 	<link rel="stylesheet" type="text/css" href="./css/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="./css/slick-theme.css"/>
 	<link href="./css/sweetalert2.css" rel="stylesheet" type="text/css">
+	<style>
+		.carousel-item{
+			height: 4rem; overflow: hidden;
+		}
+		.carousel-item p{
+			color: #8193d2;
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+		}
+	</style>
 </head>
 <body>
 <div class="loading">
@@ -107,7 +119,7 @@
 			</div>
 		</div>
 		<div class="carousel-inner" id="news" >
-
+<div class="carousel-item active" data-bs-toggle="modal" data-bs-target="#announcementModal_3"> <p class="news-text p-1 mb-0"></p><p>08-30 / 18:00 [ 以越南杯] 清化v 巴利亚头顿足球俱乐部 因暴雨导致推迟比赛，为维护会员权益，所有注单无效。<br></p><p></p> </div>
 		</div>
 	</div>
 
@@ -476,6 +488,7 @@
 		var id = search.substring(search.indexOf("=") + 1);
 		if(id != ''){
 			setTimeout( () =>{
+				console.log(id)
 				$('#signUpModal').modal('show');
 				$('input[name=maxParentAccount]').val(id)
 			},1000)
