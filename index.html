@@ -14,10 +14,10 @@
 	<link rel="stylesheet" type="text/css" href="./css/slick-theme.css"/>
 	<link href="./css/sweetalert2.css" rel="stylesheet" type="text/css">
 	<style>
-		.carousel-item{
+		#news .carousel-item{
 			height: 4rem; overflow: hidden;
 		}
-		.carousel-item p{
+		#news .carousel-item p{
 			color: #8193d2;
 			overflow: hidden;
 			display: -webkit-box;
@@ -594,7 +594,7 @@
 	$('.send-sms-forget-password').on('click', function(e) {
 		e.preventDefault();
 
-		var phone = $(this).closest('form').find('input[name="phone"]');
+		var phone = $(this).closest('form').find('input[name="maxMobile"]');
 		var account = $(this).closest('form').find('input[name="account"]');
 
 		if(isPhoneNo(phone.val()) == false || phone.val() == '') {
@@ -724,6 +724,7 @@
 				withCredentials: true
 			},
 			success: function(response) {
+				$('button').attr("disabled", false);
 				if (response.code == 0) {
 					swal(response.message, '请重新登入', "success").then(function() {
 						$('#forget-password-form').trigger('reset');
@@ -733,6 +734,9 @@
 				} else {
 					swal(response.msg, '', "error");
 				}
+
+			},
+			complete:function (){
 				$('button').attr("disabled", false);
 			}
 		});
