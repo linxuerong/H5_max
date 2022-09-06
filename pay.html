@@ -201,6 +201,10 @@
 			});
 		</script>
 		<script>
+			var curWwwPath = window.document.location.href;
+			var pathName = window.document.location.pathname;
+			var pos = curWwwPath.indexOf(pathName);
+			var localhostPath = curWwwPath.substring(0, pos);
 
 
 			function getQueryVariable(variable) {
@@ -244,7 +248,7 @@
 						});
 					}else {
 						swal(res.msg, '', "error").then( () =>{
-							window.location.replace("https://www.max68888.com/mobile/recharge.html");
+							window.location.replace(localhostPath+"/mobile/recharge.html");
 						});
 					}
 					console.log(res)
@@ -258,10 +262,7 @@
 			$('.copy').on('click', function(){
 				alert("复制完成");
 			});
-			var curWwwPath = window.document.location.href;
-			var pathName = window.document.location.pathname;
-			var pos = curWwwPath.indexOf(pathName);
-			var localhostPath = curWwwPath.substring(0, pos);
+
 			$(".submit").on('click' , function (){
 				window.location.replace(localhostPath);
 			})
