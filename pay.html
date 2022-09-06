@@ -258,9 +258,12 @@
 			$('.copy').on('click', function(){
 				alert("复制完成");
 			});
-
+			var curWwwPath = window.document.location.href;
+			var pathName = window.document.location.pathname;
+			var pos = curWwwPath.indexOf(pathName);
+			var localhostPath = curWwwPath.substring(0, pos);
 			$(".submit").on('click' , function (){
-				window.location.replace("https://www.max68888.com");
+				window.location.replace(localhostPath);
 			})
 
 		</script>
