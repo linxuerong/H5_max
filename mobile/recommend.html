@@ -115,6 +115,13 @@
           <div class="ydfr">0.00</div>
         </div>
       </div>
+      <div class="col-md-6 p-1 pt-5">
+        <div class="history-info p-2" style="max-width: 80%">
+          <img class="history-info__icon" src="../images/scjl.png" alt="">
+          <div>每周首充奖励</div>
+          <div class="scjl">0.00</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -233,6 +240,7 @@
         if(res.code == 0){
           $(".ztfr").text(res.data.straghtReward)
           $(".ydfr").text(res.data.teamReward)
+          $(".scjl").text(res.data.firstPayReward)
 
         }
       },
