@@ -208,7 +208,7 @@
   <script type="text/javascript" src="../../js/slick.min.js"></script>
   <script src="../../js/sweetalert2.min.js"></script>
   <script src="../../js/moment-with-locales.min.js"></script>
-  <script src="../../js/main.js"></script>
+  <script src="../../js/main1.js"></script>
   <script src="../../js/clipboard.min.js"></script>
   <script src="../../js/imask.js"></script>
   <script src="../../js/CLDRPluralRuleParser.js"></script>
@@ -224,7 +224,7 @@
       var Data = [];
       $.ajax({
         type: 'GET',
-        url: 'https://www.max68888.com//max/trasactionOrder/getTrasaction/'+id,
+        url: '/max/trasactionOrder/getTrasaction/'+id,
         xhrFields: {
           withCredentials: true
         },
@@ -295,7 +295,7 @@
       // $('.btn-lg').on('click' , function (){
       //   $.ajax({
       //     type: 'POST',
-      //     url: 'https://www.max68888.com/max/trasactionOrder/cancelTrasaction?trasactionId='+id,
+      //     url: '/max/trasactionOrder/cancelTrasaction?trasactionId='+id,
       //     xhrFields: {
       //       withCredentials: true
       //     },
@@ -335,7 +335,7 @@
           if(willDelete){
             $.ajax({
               type: 'POST',
-              url: 'https://www.max68888.com/max/trasactionOrder/cancelTrasaction?trasactionId='+id,
+              url: '/max/trasactionOrder/cancelTrasaction?trasactionId='+id,
               xhrFields: {
                 withCredentials: true
               },

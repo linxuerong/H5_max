@@ -231,7 +231,7 @@
     <script type="text/javascript" src="./js/slick.min.js"></script>
     <script src="./js/sweetalert2.min.js"></script>
     <script src="./js/moment-with-locales.min.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="js/main1.js"></script>
     <script src="./js/clipboard.min.js"></script>
     <script src="./js/imask.js"></script>
     <script src="./js/CLDRPluralRuleParser.js"></script>
@@ -241,7 +241,7 @@
             $('.loading').hide();
             $.ajax({
                 type: 'GET',
-                url: 'https://www.max68888.com/max/member/getInfo',
+                url: '/max/member/getInfo',
                 xhrFields: {
                     withCredentials: true
                 },
@@ -268,7 +268,7 @@
             console.log("获取全部订单")
             $.ajax({
                 type: 'GET',
-                url: 'https://www.max68888.com/max/mask/getMaskList/0',
+                url: '/max/mask/getMaskList/0',
                 success: function(res) {
                     console.log(res)
                     sorting(res.data)
@@ -306,7 +306,7 @@
             console.log("获取今日订单")
             $.ajax({
                 type: 'GET',
-                url: 'https://www.max68888.com/max/mask/getMaskList/1',
+                url: '/max/mask/getMaskList/1',
                 success: function(res) {
                     console.log(res)
                     sorting1(res.data)
@@ -348,7 +348,7 @@
             console.log("获取明日订单")
             $.ajax({
                 type: 'GET',
-                url: 'https://www.max68888.com/max/mask/getMaskList/2',
+                url: '/max/mask/getMaskList/2',
                 success: function(res) {
                     console.log(res)
                     sorting2(res.data)

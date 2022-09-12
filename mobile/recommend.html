@@ -118,7 +118,7 @@
       <div class="col-md-6 p-1 pt-5">
         <div class="history-info p-2" style="max-width: 80%">
           <img class="history-info__icon" src="../images/scjl.png" alt="">
-          <div>每周首充奖励</div>
+          <div>每周直推奖励</div>
           <div class="scjl">0.00</div>
         </div>
       </div>
@@ -187,7 +187,7 @@
 <script type="text/javascript" src="../js/slick.min.js"></script>
 <script src="../js/sweetalert2.min.js"></script>
 <script src="../js/moment-with-locales.min.js"></script>
-<script src="../js/main.js"></script>
+<script src="../js/main1.js"></script>
 <script src="../js/clipboard.min.js"></script>
 <script src="../js/imask.js"></script>
 <script src="../js/CLDRPluralRuleParser.js"></script>
@@ -198,7 +198,7 @@
     $('.loading').hide();
     $.ajax({
       type: 'GET',
-      url: 'https://www.max68888.com/max/member/getInfo',
+      url: '/max/member/getInfo',
       xhrFields: {
         withCredentials: true
       },
@@ -231,7 +231,7 @@
     $('.loading').hide();
     $.ajax({
       type: 'GET',
-      url: 'https://www.max68888.com/max/wallet/getMyReward',
+      url: '/max/wallet/getMyReward',
       xhrFields: {
         withCredentials: true
       },

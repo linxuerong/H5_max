@@ -259,7 +259,7 @@
     <script type="text/javascript" src="../js/slick.min.js"></script>
     <script src="../js/sweetalert2.min.js"></script>
     <script src="../js/moment-with-locales.min.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/main1.js"></script>
     <script src="../js/clipboard.min.js"></script>
     <script src="../js/imask.js"></script>
     <script src="../js/CLDRPluralRuleParser.js"></script>
@@ -270,7 +270,7 @@
             $('.loading').hide();
             $.ajax({
                 type: 'GET',
-                url: 'https://www.max68888.com/max/member/getInfo',
+                url: '/max/member/getInfo',
                 xhrFields: {
                     withCredentials: true
                 },
@@ -310,7 +310,7 @@
 
             $.ajax({
                 type: 'GET',
-                url: 'https://www.max68888.com/max/withdraw/getMyWithdrawInfo',
+                url: '/max/withdraw/getMyWithdrawInfo',
                 xhrFields: {
                     withCredentials: true
                 },
@@ -367,7 +367,7 @@
             $.ajax({
                 type: 'POST',
                 data: form.serialize(),
-                url: 'https://www.max68888.com/max/withdraw/withdraw',
+                url: '/max/withdraw/withdraw',
                 xhrFields: {
                     withCredentials: true
                 },

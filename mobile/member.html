@@ -181,7 +181,7 @@
             <div class="history-info p-2">
               <img class="history-info__icon" src="../images/total-withdraw.png" alt="">
               <div>总提领</div>
-              <div id="withdrawAmount">0.00</div>
+              <div id="withdrawAccount">0.00</div>
             </div>
           </div>
           <div class="col-6 p-1">
@@ -304,7 +304,7 @@ A0总体实获量为 1150
 <script type="text/javascript" src="../js/slick.min.js"></script>
 <script src="../js/sweetalert2.min.js"></script>
 <script src="../js/moment-with-locales.min.js"></script>
-<script src="../js/main.js"></script>
+<script src="../js/main1.js"></script>
 <script src="../js/clipboard.min.js"></script>
 <script src="../js/imask.js"></script>
 <script src="../js/CLDRPluralRuleParser.js"></script>
@@ -313,7 +313,7 @@ A0总体实获量为 1150
     $('.loading').hide();
     $.ajax({
       type: 'GET',
-      url: 'https://www.max68888.com/max/member/getInfo',
+      url: '/max/member/getInfo',
       xhrFields: {
         withCredentials: true
       },
@@ -352,7 +352,7 @@ A0总体实获量为 1150
     //运营月报
     $.ajax({
       type: 'GET',
-      url: 'https://www.max68888.com/max/wallet/getMyChildLevelReward',
+      url: '/max/wallet/getMyChildLevelReward',
       xhrFields: {
         withCredentials: true
       },
@@ -383,7 +383,7 @@ A0总体实获量为 1150
     //团队存提款
     $.ajax({
       type: 'GET',
-      url: 'https://www.max68888.com/max/wallet/getMyTeamInfo',
+      url: '/max/wallet/getMyTeamInfo',
       xhrFields: {
         withCredentials: true
       },
@@ -393,6 +393,7 @@ A0总体实获量为 1150
 
           $("#teamSize").text(res.data.teamSize)
           $("#teamAccount").text(res.data.teamAccount)
+          $("#teamAliveSize").text(res.data.teamAliveSize)
           $("#withdrawAccount").text(res.data.withdrawAccount)
           $("#trasactionSize").text(res.data.trasactionSize)
         }
@@ -402,7 +403,7 @@ A0总体实获量为 1150
     //会员注册
     $.ajax({
       type: 'GET',
-      url: 'https://www.max68888.com/max/wallet/getMyTeamMember',
+      url: '/max/wallet/getMyTeamMember',
       xhrFields: {
         withCredentials: true
       },

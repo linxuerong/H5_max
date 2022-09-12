@@ -82,12 +82,12 @@ $(function (){
 
 $(function() {
 	var _s = document.createElement('script');
-	_s.src="https://service.max68888.com/customerServer.js"
+	_s.src="https://server.max68888.com/customerServer.js"
 	_s.onload = function(){
 		var option = {
 			"authInit":true,
-			openUrl: 'https://service.max68888.com',
-			token: '1cdefdbc31a297d7cd0705bc71352b50',
+			openUrl: 'https://server.max68888.com',
+			token: '6c5d7ab52c11f6f1dde0ffbf57f84135',
 			kefuid:'',//默认为空自动对接客服，可填写指定客服ID
 			isShowTip: false, // 初始化成功后，界面右下角会自动创建 “联系客服按钮”， 如无需默认展示，则填写false即可,默认为true
 			mobileIcon: '', //  手机端悬浮客服图片

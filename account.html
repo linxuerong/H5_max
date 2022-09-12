@@ -317,7 +317,7 @@
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script src="js/sweetalert2.min.js"></script>
     <script src="js/moment-with-locales.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main1.js"></script>
     <script src="js/clipboard.min.js"></script>
     <script src="js/imask.js"></script>
     <script src="js/CLDRPluralRuleParser.js"></script>
@@ -335,7 +335,7 @@
 
             $.ajax({
                 type: 'GET',
-                url: 'https://www.max68888.com/max/member/getInfo',
+                url: '/max/member/getInfo',
                 xhrFields: {
                     withCredentials: true
                 },
@@ -350,7 +350,7 @@
 
                         $('.uBalance').html(res.data.balance.toFixed(2));
 
-                        var httpsUrl = localhostPath+"?/P="+res.data.maxAccount
+                        var httpsUrl = localhostPath+"/?P="+res.data.maxAccount
 
                         $(".HtmlAccount").html(httpsUrl)
                         $(".zhAccount").attr("data-clipboard-text",res.data.maxAccount )
@@ -394,7 +394,7 @@
                 $('button').attr("disabled", true);
                 $.ajax({
                     type: 'POST',
-                    url: 'https://www.max68888.com/max/message/sendMyMessage',
+                    url: '/max/message/sendMyMessage',
                     success: function (res) {
                         if(res.code == 0){
                             swal("短信码已发送",'', "success");
@@ -418,7 +418,7 @@
                 $.ajax({
                     type: 'POST',
                     data: form.serialize(),
-                    url: 'https://www.max68888.com/max/member/updatePassword',
+                    url: '/max/member/updatePassword',
                     success: function (res) {
                         if(res.code == 0){
                             swal(res.msg,"请重新登入", "success").then(function(){
@@ -443,7 +443,7 @@
                 $.ajax({
                     type: 'POST',
                     data: form.serialize(),
-                    url: 'https://www.max68888.com/max/member/updatePayPassword',
+                    url: '/max/member/updatePayPassword',
                     success: function (res) {
                         if(res.code == 0){
                             swal(res.msg,'', "success");

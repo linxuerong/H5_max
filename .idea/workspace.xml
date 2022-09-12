@@ -4,9 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9719a456-191b-4e38-86d5-33ef124b23c5" name="变更" comment="返回上一页6.2">
+    <list default="true" id="9719a456-191b-4e38-86d5-33ef124b23c5" name="变更" comment="1.帮你改BUG">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/announcement.html" beforeDir="false" afterPath="$PROJECT_DIR$/announcement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/slick-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/slick-theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/MAX logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/MAXlogo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/immediate.html" beforeDir="false" afterPath="$PROJECT_DIR$/immediate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/investment.html" beforeDir="false" afterPath="$PROJECT_DIR$/investment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/investment/investment2.html" beforeDir="false" afterPath="$PROJECT_DIR$/investment/investment2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/investment/newsTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/investment/newsTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/investment/notopen.html" beforeDir="false" afterPath="$PROJECT_DIR$/investment/notopen.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/investment2.html" beforeDir="false" afterPath="$PROJECT_DIR$/investment2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market.html" beforeDir="false" afterPath="$PROJECT_DIR$/market.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market/mobile.html" beforeDir="false" afterPath="$PROJECT_DIR$/market/mobile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market2.html" beforeDir="false" afterPath="$PROJECT_DIR$/market2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/match.html" beforeDir="false" afterPath="$PROJECT_DIR$/match.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/help.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/help.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/help/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/help/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/help/bet.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/help/bet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/help/deposit.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/help/deposit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/help/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/help/faq.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/help/guide.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/help/guide.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/help/rule.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/help/rule.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/help/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/help/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/help/withdrawal.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/help/withdrawal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/investment/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/investment/app.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile/investment/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/investment/info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/investment2/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/investment2/info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/member.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/member.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/member/bets.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/member/bets.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/member/profits.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/member/profits.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/recharge.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/recharge.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/recommend.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/recommend.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pay.html" beforeDir="false" afterPath="$PROJECT_DIR$/pay.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/promotion.html" beforeDir="false" afterPath="$PROJECT_DIR$/promotion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trade.html" beforeDir="false" afterPath="$PROJECT_DIR$/trade.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +62,9 @@
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/css/all.css" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/css/slick-theme.css" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/market.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/css/slick-theme.css" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/css/all.css" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -39,30 +74,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/WebStorm/H5_max/mobile/member&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\job\IdeaProjects\H5_max\js" />
       <recent name="E:\WebStorm\H5_max\mobile\member" />
       <recent name="E:\WebStorm\H5_max" />
       <recent name="E:\WebStorm\H5_max\images" />
       <recent name="E:\WebStorm\H5_max\mobile\investment2" />
-      <recent name="E:\WebStorm\H5_max\investment" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\WebStorm\H5_max\investment" />
@@ -113,13 +137,14 @@
       <workItem from="1660639569683" duration="1913000" />
       <workItem from="1660719443317" duration="4624000" />
       <workItem from="1660732262691" duration="70000" />
-    </task>
-    <task id="LOCAL-00141" summary="赛事结果">
-      <created>1660489451145</created>
-      <option name="number" value="00141" />
-      <option name="presentableId" value="LOCAL-00141" />
-      <option name="project" value="LOCAL" />
-      <updated>1660489451146</updated>
+      <workItem from="1660912246208" duration="15165000" />
+      <workItem from="1661266553803" duration="6125000" />
+      <workItem from="1661424163044" duration="3647000" />
+      <workItem from="1661940616210" duration="6479000" />
+      <workItem from="1662277953916" duration="3165000" />
+      <workItem from="1662446926621" duration="801000" />
+      <workItem from="1662449739736" duration="1982000" />
+      <workItem from="1662622972279" duration="1553000" />
     </task>
     <task id="LOCAL-00142" summary="赛事结果">
       <created>1660492449574</created>
@@ -457,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660724808154</updated>
     </task>
-    <option name="localTasksCounter" value="190" />
+    <task id="LOCAL-00190" summary="1.帮你改BUG">
+      <created>1660811643903</created>
+      <option name="number" value="00190" />
+      <option name="presentableId" value="LOCAL-00190" />
+      <option name="project" value="LOCAL" />
+      <updated>1660811643903</updated>
+    </task>
+    <option name="localTasksCounter" value="191" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -475,7 +507,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修改222" />
     <MESSAGE value="今日接口" />
     <MESSAGE value="赛事结果" />
     <MESSAGE value="会员分润" />
@@ -500,6 +531,7 @@
     <MESSAGE value="返回上一页6" />
     <MESSAGE value="返回上一页6.1" />
     <MESSAGE value="返回上一页6.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="返回上一页6.2" />
+    <MESSAGE value="1.帮你改BUG" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.帮你改BUG" />
   </component>
 </project>
