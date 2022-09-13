@@ -627,11 +627,17 @@
 
 
 	// 注册
+	var registerForm = true;
 	$('#register-form').on('submit', function(e) {
 		e.preventDefault();
-
+		if(!registerForm){
+			swal("请不要重复操作",'', "error")
+			return false
+		}
 		var form = $(this);
-		$('button').attr("disabled", true);
+
+		registerForm = false
+		// console.log($('button').attr('disabled'))
 
 		console.log(form.serialize())
 		$.ajax({
@@ -642,7 +648,7 @@
 				withCredentials: true
 			},
 			success: function(response) {
-				$('button').attr("disabled", false);
+				registerForm = true
 				console.log(response)
 				if (response.code == 0) {
 					swal("注册完成", "返回登入", "success").then(function() {
@@ -658,7 +664,8 @@
 
 			},
 			complete:function (){
-				$('button').attr("disabled", false);
+				registerForm = true
+				// $('button').attr("disabled", false);
 			}
 		})
 
