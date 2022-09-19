@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9719a456-191b-4e38-86d5-33ef124b23c5" name="变更" comment="1.帮你改BUG">
+    <list default="true" id="9719a456-191b-4e38-86d5-33ef124b23c5" name="变更" comment="1.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/account.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/announcement.html" beforeDir="false" afterPath="$PROJECT_DIR$/announcement.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/slick-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/slick-theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/MAX logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/MAXlogo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/immediate.html" beforeDir="false" afterPath="$PROJECT_DIR$/immediate.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/investment.html" beforeDir="false" afterPath="$PROJECT_DIR$/investment.html" afterDir="false" />
@@ -17,7 +16,7 @@
       <change beforePath="$PROJECT_DIR$/investment/newsTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/investment/newsTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/investment/notopen.html" beforeDir="false" afterPath="$PROJECT_DIR$/investment/notopen.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/investment2.html" beforeDir="false" afterPath="$PROJECT_DIR$/investment2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market.html" beforeDir="false" afterPath="$PROJECT_DIR$/market.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market/mobile.html" beforeDir="false" afterPath="$PROJECT_DIR$/market/mobile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market2.html" beforeDir="false" afterPath="$PROJECT_DIR$/market2.html" afterDir="false" />
@@ -61,6 +60,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/market.html" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/css/slick-theme.css" root0="SKIP_HIGHLIGHTING" />
@@ -76,8 +83,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CopyPro" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -144,21 +152,9 @@
       <workItem from="1662277953916" duration="3165000" />
       <workItem from="1662446926621" duration="801000" />
       <workItem from="1662449739736" duration="1982000" />
-      <workItem from="1662622972279" duration="1553000" />
-    </task>
-    <task id="LOCAL-00142" summary="赛事结果">
-      <created>1660492449574</created>
-      <option name="number" value="00142" />
-      <option name="presentableId" value="LOCAL-00142" />
-      <option name="project" value="LOCAL" />
-      <updated>1660492449574</updated>
-    </task>
-    <task id="LOCAL-00143" summary="赛事结果">
-      <created>1660492631117</created>
-      <option name="number" value="00143" />
-      <option name="presentableId" value="LOCAL-00143" />
-      <option name="project" value="LOCAL" />
-      <updated>1660492631117</updated>
+      <workItem from="1662622972279" duration="2426000" />
+      <workItem from="1663054477271" duration="979000" />
+      <workItem from="1663332361503" duration="6418000" />
     </task>
     <task id="LOCAL-00144" summary="会员分润">
       <created>1660492856909</created>
@@ -489,7 +485,21 @@
       <option name="project" value="LOCAL" />
       <updated>1660811643903</updated>
     </task>
-    <option name="localTasksCounter" value="191" />
+    <task id="LOCAL-00191" summary="1.">
+      <created>1662966460571</created>
+      <option name="number" value="00191" />
+      <option name="presentableId" value="LOCAL-00191" />
+      <option name="project" value="LOCAL" />
+      <updated>1662966460571</updated>
+    </task>
+    <task id="LOCAL-00192" summary="1.">
+      <created>1663404161679</created>
+      <option name="number" value="00192" />
+      <option name="presentableId" value="LOCAL-00192" />
+      <option name="project" value="LOCAL" />
+      <updated>1663404161680</updated>
+    </task>
+    <option name="localTasksCounter" value="193" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,7 +517,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="今日接口" />
     <MESSAGE value="赛事结果" />
     <MESSAGE value="会员分润" />
     <MESSAGE value="小问题" />
@@ -532,6 +541,7 @@
     <MESSAGE value="返回上一页6.1" />
     <MESSAGE value="返回上一页6.2" />
     <MESSAGE value="1.帮你改BUG" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.帮你改BUG" />
+    <MESSAGE value="1." />
+    <option name="LAST_COMMIT_MESSAGE" value="1." />
   </component>
 </project>

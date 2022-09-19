@@ -104,6 +104,22 @@ $(".onKefu").on('click' , function () {
 	window.canCustomerServer.getCustomeServer();
 })
 
+$(".onKefu2").on('click' , function () {
+	console.log("客服2");
+	$(".kefu2").addClass("kai");
+	$(".kefuClose").addClass("kai");
+
+	$(".kefuUrl").attr('src' , 'http://47.242.198.247:8035/im/text/104eac.html')
+
+})
+
+$('body').on('click','.kefuClose',function(){
+	console.log("客服2 关闭");
+	$(".kefu2").removeClass("kai")
+	$(".kefuClose").removeClass("kai")
+
+})
+
 
 
 
